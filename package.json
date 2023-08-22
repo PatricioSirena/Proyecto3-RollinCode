@@ -1,5 +1,5 @@
 {
-  "name": "pryecto3-rolling",
+  "name": "ejemplo_react_roter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.1",
+    "formik": "^2.4.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-router-dom": "^6.15.0",
+    "sweetalert2": "^11.7.27"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
