@@ -1,46 +1,22 @@
-// import {NavLink,Link,Navigate} from 'react-router-dom';
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-// function MyNav(props) {
-//   const logout=()=>{
-//     props.setAdmin(false);
-//     props.setUser({});
-//     props.setIslogueado(false);
-//     window.localStorage.removeItem("user")
-//   }
-//   return (
-//     <>
-//       <Navbar bg="dark" data-bs-theme="dark">
-//         <Container>
-//         <Nav className="me-auto">
-//           {props.isLogueado?
+function MyNav() {
+    return (
+        <>
+            <Navbar bg="dark" data-bs-theme="dark">
+                <Container>
+                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#features">Features</Nav.Link>
+                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </>
+    );
+}
 
-//           <>
-//             <NavLink to={"/products"} className={'nav-item nav-link'}>Products</NavLink>
-//             <NavLink to={"/"} className={'nav-item nav-link'} onClick={logout}>Logout</NavLink>
-//           </>
-//           :
-//           <>
-//             <NavLink to={"/"} className={'nav-item nav-link'}>Inicio</NavLink>
-//             <NavLink to={"/login"} className={'nav-item nav-link'}>Login</NavLink>
-//             <NavLink to={"/register"} className={'nav-item nav-link'}>Register</NavLink>
-//         </>
-//           }
-//           {props.admin && 
-//           <>
-
-//             <NavLink to={"/admin"} className={'nav-item nav-link'}>Admin</NavLink>
-//             <NavLink to={"/admin/addProduct"} className={'nav-item nav-link'}>Añadir Producto</NavLink>
-
-//           </>
-//           }
-//           </Nav>
-//         </Container>
-//       </Navbar>
-//     </>
-//   );
-// }
-
-// export default MyNav;
+export default MyNav;
