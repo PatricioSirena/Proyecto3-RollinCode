@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Menu from "./components/Menu";
+import Portada from "./components/Portada";
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
     return (
         <>
             <MyNav />
+            <Portada />
             <section className='d-flex justify-content-around'>
-            <Menu />
-            <Menu />
-            <Menu />
+                <Menu />
+                <Menu />
+                <Menu />
             </section>
             <Footer className="footer" />
         </>

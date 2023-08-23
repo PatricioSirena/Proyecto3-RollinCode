@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .logo{
   width: 150px;
   height: 150px;
@@ -10,8 +16,17 @@
   justify-content: center;
   width: 100vw;
   height: 120px;
-  position: absolute;
   bottom: 0;
   background-color: red;
 }
 
+.imagen-portada{
+  width: 300px;
+}
+
+.portada{
+  width: 100vw;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+}
