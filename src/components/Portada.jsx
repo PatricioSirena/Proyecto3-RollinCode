@@ -1,24 +1,22 @@
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import portada from '../assets/img/portada.jpg'
 
 
-const Portada = () => {
+const Portada = ({ titulo, descripccion }) => {
     return (
-        <Card className="container-fluid portada m-2 mb-5 d-flex">
-            <div className='row'>
-            <Card.Img className='col-sm-12 col-md-6 col-lg-6 imagen-portada' src={ portada }></Card.Img>
-            <section className='col-sm-12 col-md-6 col-lg-6'>
-            <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
-                <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-            </section>
+        <div className="container-fluid">
+            <div className="row portada">
+                <div className="col-lg-8 portada-imagen">
+                    <img src={portada} alt="" />
+                </div>
+                <div className="col-lg-4 mb-5 portada-descripccion">
+                    <h1 className='mt-3'>{ titulo }</h1>
+                    <p className="mb-5"> { descripccion } </p>
+                    <Button className='boton-portada mt-5' variant="outline-dark">Dark</Button>
+                </div>
             </div>
-        </Card>
+        </div>
     );
 }
 

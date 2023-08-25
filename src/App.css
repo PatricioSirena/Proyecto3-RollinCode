@@ -18,15 +18,23 @@
   height: 120px;
   bottom: 0;
   background-color: red;
-}
-
-.imagen-portada{
-  width: 300px;
+  margin-top: 50px;
 }
 
 .portada{
   width: 100vw;
-  height: 350px;
+  height: 450px;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  overflow-y: hidden;
+}
+
+.portada-descripccion{
+  overflow-y: hidden;
+}
+
+.boton-portada{
+  margin-left: 75%;
 }

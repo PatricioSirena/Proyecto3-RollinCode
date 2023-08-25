@@ -5,7 +5,7 @@ import MyNav from "./components/MyNav";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Menu from "./components/Menu";
+import Cartas from "./components/Cartas";
 import Portada from "./components/Portada";
 
 
@@ -14,11 +14,11 @@ function App() {
     return (
         <>
             <MyNav />
-            <Portada />
+            <Portada 
+            titulo={'Titulo'} 
+            descripccion={'soy una descripccion de prueba para ver si todo funciona bien! soy una descripccion de prueba para ver si todo funciona bien! soy una descripccion de prueba para ver si todo funciona bien!'} />
             <section className='d-flex justify-content-around'>
-                <Menu />
-                <Menu />
-                <Menu />
+                <Cartas />
             </section>
             <Footer className="footer" />
         </>
