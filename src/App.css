@@ -23,7 +23,7 @@
 
 .portada{
   width: 100vw;
-  height: 450px;
+  height: 90vh;
   display: flex;
   justify-content: space-evenly;
   margin-top: 50px;
@@ -37,4 +37,20 @@
 
 .boton-portada{
   margin-left: 75%;
+}
+
+.tarjetaInfo{
+  height: 50vh;
+  background-color: coral;
+  margin-top: 20px;
+}
+
+.tarjetaInfoDerecha{
+  height: 50vh;
+  background-color: rgba(5, 10, 85, 0.432);
+  margin-top: 20px;
+}
+
+.imagenTarjeta{
+  height: 100%;
 }
