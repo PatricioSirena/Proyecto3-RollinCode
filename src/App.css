@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 120px;
+  height: 120vh;
   bottom: 0;
   background-color: red;
   margin-top: 50px;
@@ -53,4 +53,17 @@
 
 .imagenTarjeta{
   height: 100%;
+}
+
+#tarjeta2{
+  display: flex;
+  background-color: red;
+}
+
+#tarjeta2 .uno{
+  order: 1;
+}
+
+#tarjeta2 .dos{
+  order: 0;
 }

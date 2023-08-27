@@ -1,20 +1,23 @@
-import ListGroup from 'react-bootstrap/ListGroup';
+
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white d-flex footer">
-
-            <ListGroup.Item action href="#link1">
-                Link 1
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link2">
-                Link 2
-            </ListGroup.Item>
-            <ListGroup.Item action >
-                This one is a button
-            </ListGroup.Item>
-
-
+        <footer className="bg-dark text-white d-flex footer"> 
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6">
+                    </div>
+                    <div className="col-lg-6"></div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-4"></div>
+                    <div className="col-lg-4"></div>
+                    <div className="col-lg-4"></div>
+                </div>
+            </div>
+            <div className="copyright"></div>
         </footer>
     )
 }

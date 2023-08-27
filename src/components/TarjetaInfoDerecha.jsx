@@ -4,7 +4,7 @@ import imagen3 from "../assets/img/flores.webp";
 
 const TarjetaInfoDerecha = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" id={3}>
             <div className="row tarjetaInfo">
                 <div className="col-lg-5">
                     <Card.Img className="imagenTarjeta" src={imagen3} />
