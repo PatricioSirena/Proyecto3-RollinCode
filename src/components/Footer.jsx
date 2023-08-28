@@ -1,20 +1,16 @@
-import ListGroup from 'react-bootstrap/ListGroup';
+import MapaFormulario from "./MapaFormulario";
+import Redes from "./Redes";
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white d-flex justify-content-lg-between">
-
-            <ListGroup.Item action href="#link1">
-                Link 1
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link2">
-                Link 2
-            </ListGroup.Item>
-            <ListGroup.Item action >
-                This one is a button
-            </ListGroup.Item>
-
-
+        <footer className="bg-dark text-white footer">
+            <MapaFormulario />
+            <Redes />
+            <div className="copyright text-center mb-4">
+                <span>
+                    &copy;2023, GameSquad. All right reserved.
+                </span>
+            </div>
         </footer>
     )
 }
