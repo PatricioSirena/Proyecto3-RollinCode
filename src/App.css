@@ -1,6 +1,13 @@
 *{
   margin: 0;
   padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
   overflow-x: hidden;
 }
 
@@ -9,16 +16,6 @@
   height: 150px;
   display: flex;
   justify-content: center;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 120vh;
-  bottom: 0;
-  background-color: red;
-  margin-top: 50px;
 }
 
 .portada{
@@ -45,12 +42,6 @@
   margin-top: 20px;
 }
 
-.tarjetaInfoDerecha{
-  height: 50vh;
-  background-color: rgba(5, 10, 85, 0.432);
-  margin-top: 20px;
-}
-
 .imagenTarjeta{
   height: 100%;
 }
@@ -58,6 +49,43 @@
 #tarjeta2{
   display: flex;
   background-color: red;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.footer {
+  width: 100vw !important;
+  bottom: 0;
+  background-color: red;
+  margin-top: 50px;
+}
+
+.footerMapa {
+  width: 100vw;
+  height: 60vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footerRedes {
+  width: 100vw;
+  height: 60vh;
+}
+
+.portada {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  overflow-y: hidden;
 }
 
 #tarjeta2 .uno{

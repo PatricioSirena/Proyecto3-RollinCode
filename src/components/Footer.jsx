@@ -1,23 +1,16 @@
-
+import MapaFormulario from "./MapaFormulario";
+import Redes from "./Redes";
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white d-flex footer"> 
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6">
-                    </div>
-                    <div className="col-lg-6"></div>
-                </div>
+        <footer className="bg-dark text-white footer">
+            <MapaFormulario />
+            <Redes />
+            <div className="copyright text-center mb-4">
+                <span>
+                    &copy;2023, GameSquad. All right reserved.
+                </span>
             </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-4"></div>
-                    <div className="col-lg-4"></div>
-                    <div className="col-lg-4"></div>
-                </div>
-            </div>
-            <div className="copyright"></div>
         </footer>
     )
 }
