@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,11 +11,44 @@
   overflow-x: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.logo{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.portada{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  overflow-y: hidden;
+}
+
+.portada-descripccion{
+  overflow-y: hidden;
+}
+
+.boton-portada{
+  margin-left: 75%;
+}
+
+.tarjetaInfo{
+  height: 50vh;
+  background-color: coral;
+  margin-top: 20px;
+}
+
+.imagenTarjeta{
+  height: 100%;
+}
+
+#tarjeta2{
+  display: flex;
+  background-color: red;
 }
 
 .logo:hover {
@@ -20,7 +58,6 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 
 .footer {
   width: 100vw !important;
@@ -51,10 +88,10 @@
   overflow-y: hidden;
 }
 
-.card {
-  padding: 2em;
+#tarjeta2 .uno{
+  order: 1;
 }
 
-.read-the-docs {
-  color: #888;
+#tarjeta2 .dos{
+  order: 0;
 }
