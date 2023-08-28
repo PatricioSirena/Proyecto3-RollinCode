@@ -4,6 +4,39 @@
   overflow-x: hidden;
 }
 
+.portada{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  overflow-y: hidden;
+}
+
+.portada-descripccion{
+  overflow-y: hidden;
+}
+
+.boton-portada{
+  margin-left: 75%;
+}
+
+.tarjetaInfo{
+  height: 50vh;
+  background-color: coral;
+  margin-top: 20px;
+}
+
+.imagenTarjeta{
+  height: 100%;
+}
+
+#tarjeta2{
+  display: flex;
+  background-color: red;
+}
+
 .footer {
   width: 100vw !important;
   bottom: 0;
@@ -23,12 +56,10 @@
   height: 60vh;
 }
 
-.portada {
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  margin-bottom: 120px;
-  overflow-y: hidden;
+#tarjeta2 .uno{
+  order: 1;
+}
+
+#tarjeta2 .dos{
+  order: 0;
 }
