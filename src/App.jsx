@@ -6,6 +6,7 @@ import './App.css';
 import Cartas from "./components/Cartas";
 import Portada from "./components/Portada";
 import TarjetasInfo from "./components/TarjetasInfo";
+import MyNav from "./components/MyNav";
 
 
 function App() {

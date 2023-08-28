@@ -20,8 +20,7 @@
 
 .portada{
   width: 100vw;
-  height: 90vh;
-  display: flex;
+  height: 100vh;
   justify-content: space-evenly;
   margin-top: 50px;
   margin-bottom: 120px;
