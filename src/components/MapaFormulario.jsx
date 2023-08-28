@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MapaFormulario = () => {
     return (
-        <Container className="footerMapa">
+        <Container fluid className="footerMapa">
             <Row>
                 <Col className="text-center">
                     <h2 className="mb-3">Aqui nos podes encontrar</h2>

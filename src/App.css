@@ -1,21 +1,7 @@
 *{
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0px;
+  margin: 0px;
   overflow-x: hidden;
-}
-
-.logo{
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
 }
 
 .portada{
@@ -51,14 +37,6 @@
   background-color: red;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 .footer {
   width: 100vw !important;
   bottom: 0;
@@ -76,16 +54,6 @@
 .footerRedes {
   width: 100vw;
   height: 60vh;
-}
-
-.portada {
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  margin-bottom: 120px;
-  overflow-y: hidden;
 }
 
 #tarjeta2 .uno{
