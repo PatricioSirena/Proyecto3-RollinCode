@@ -1,5 +1,4 @@
 import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
 import portada from '../assets/img/portada.jpg'
 
 
