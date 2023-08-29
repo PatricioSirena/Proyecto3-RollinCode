@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logoPagina from "../assets/img/logo-pagina.jpg";
+import {FaInstagram,FaFacebook,FaYoutube} from "react-icons/fa"
 
 
 const Redes = () => {
@@ -10,10 +11,22 @@ const Redes = () => {
             <Row>
                 <Col className="p-5 mt-5 text-center accesoRedes">
                     <h5>Seguinos en:</h5>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul className="iconosRedes">
+                        <li>
+                            <a className="iconoRedes" href="#!">
+                                <FaInstagram />                                
+                            </a>
+                        </li>
+                        <li>
+                            <a className="iconoRedes" href="#!">
+                                <FaFacebook />
+                            </a>
+                        </li>
+                        <li>
+                            <a className="iconoRedes" href="#!">
+                                <FaYoutube />
+                            </a>
+                        </li>
                     </ul>
                 </Col>
                 <Col className="p-5 text-center">
