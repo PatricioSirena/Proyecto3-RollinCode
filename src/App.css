@@ -46,14 +46,28 @@
 
 .footerMapa {
   width: 100vw;
-  height: 60vh;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .footerRedes {
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
+}
+
+.logoFooter{
+  width: 150px;
+  border-radius: 100px;
+  margin-top: 50px;
+}
+
+.listaFooter{
+  margin-top: 50px;
+}
+
+.listaFooter ul li{
+  margin-right: 30px;
+  margin-top: 10px;
 }
 
 #tarjeta2 .uno{
