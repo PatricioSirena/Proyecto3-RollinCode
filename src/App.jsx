@@ -8,7 +8,7 @@ import Portada from "./components/Portada";
 import TarjetasInfo from "./components/TarjetasInfo";
 import MyNav from "./components/MyNav";
 
-
+hola
 function App() {
 
     return (
