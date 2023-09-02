@@ -11,14 +11,7 @@ function MyNav() {
     <>
     <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
       <Container fluid>
-        
-        <img
-                    src="./img/CFE972CF-072F-4524-95F2-ACEA6156465E.PNG"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                    alt="React Bootstrap logo"
-                />
+        <Navbar.Brand href="#home">HappyFood</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -27,7 +20,7 @@ function MyNav() {
             navbarScroll
           >
             <Nav.Link href="#action1">Iniciar Sesión</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="#action2">Admin</Nav.Link>
             
           </Nav>
           <Form className="d-flex">
@@ -48,4 +41,4 @@ function MyNav() {
 
 export default MyNav;
 
-// <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+// 
