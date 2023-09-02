@@ -1,18 +1,20 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {NavLink} from "react-router-dom";
+
 
 function MyNav() {
     return (
         <>
             <Navbar className='navbar' bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    </Nav>
+                        <NavLink exact to="/" className={'nav-item nav-link'}>Home</NavLink>
+                        <NavLink exact to="/admin" className={'nav-item nav-link'}>Admin</NavLink>
+                        <NavLink exact to="/login" className={'nav-item nav-link'}>Login</NavLink>
+                        <NavLink exact to="/registro" className={'nav-item nav-link'}>Registro</NavLink>
+                    </Nav>  
                 </Container>
             </Navbar>
         </>

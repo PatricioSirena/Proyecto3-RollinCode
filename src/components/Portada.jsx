@@ -2,8 +2,8 @@ import Button from 'react-bootstrap/Button';
 import portada from '../assets/img/portada.jpg'
 
 
-const Portada = ({ titulo, descripccion, users }) => {
-    const misUsers = users.map(user => <p>{user.email}</p>)
+const Portada = ({ titulo, descripccion }) => {
+    // const misUsers = users.map(user => <p>{user.email}</p>)
 
     return (
         <>
@@ -22,9 +22,9 @@ const Portada = ({ titulo, descripccion, users }) => {
             </div>
 
             <div>
-                {
+                {/* {
                     misUsers
-                }
+                } */}
             </div>
         </>
     );
