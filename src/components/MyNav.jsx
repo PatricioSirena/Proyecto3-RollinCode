@@ -3,22 +3,23 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Happyfood from "../img/valenn.jpg";
+import '../styles/MyNav.css'
 
 function MyNav() {
   return (
     <>
-    <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
+    <Navbar expand="lg" className="bg-body-tertiary" id="nav" data-bs-theme="light">
       <Container fluid>
         <Navbar.Brand href="#home">HappyFood</Navbar.Brand>
+        <img src={Happyfood} alt="" />
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
+            <Nav
+                className="me-auto my-2 my-lg-0"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+            >
             <Nav.Link href="#action1">Iniciar Sesión</Nav.Link>
             <Nav.Link href="#action2">Admin</Nav.Link>
             
