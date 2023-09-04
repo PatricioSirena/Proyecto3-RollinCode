@@ -1,8 +1,9 @@
 import ListGroup from 'react-bootstrap/ListGroup';
+import '../styles/footer.css'
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white d-flex justify-content-lg-between">
+        <footer className="text-white d-flex justify-content-lg-between">
 
             <ListGroup.Item action href="#link1">
                 Link 1

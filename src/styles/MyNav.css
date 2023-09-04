@@ -1,3 +1,26 @@
 #nav{
-    background-color: rgb(93, 32, 117) !important;
-  }
+    background-color: rgb(255, 255, 255) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 17px;
+    margin-bottom: 10% !important;
+    margin-top: 1% !important;
+    border-top-left-radius: 4cqw;
+    border-top-right-radius: 4cqw;
+    border-bottom-left-radius: 4cqw;
+    border-bottom-right-radius: 4cqw;
+}
+
+.link{
+  color: #333131;
+}
+
+.logo{
+  margin-right: 3% !important;
+  margin-left: 1% !important;
+  width: 130px;
+}
+
+.carrito{
+  width: 40px;
+  margin-right: 2% !important;
+}
