@@ -7,6 +7,8 @@ import './App.css';
 import Admin from "./pages/Admin";
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Registro from './pages/Registro';
 
 
 const rutaUsuarios = import.meta.env.VITE_ENV_USERS;
@@ -28,8 +30,8 @@ function App() {
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/admin" element={<Admin />} />
-                        <Route exact path="/login" element={<Admin />} />
-                        <Route exact path="/registro" element={<Admin />} />
+                        <Route exact path="/login" element={<Login />} />
+                        <Route exact path="/registro" element={<Registro />} />
                     </Routes>
             </BrowserRouter>
             {/* <Home /> */}

@@ -74,3 +74,97 @@
 // }
 
 // export default Login
+
+
+// import { useState } from "react";
+// import { Form, Button } from "react-bootstrap";
+// import { Navigate } from 'react-router-dom'
+// import Home from "./Home";
+
+// const Login = () => {
+//     const [username, setUsername] = useState("");
+//     const [password, setPassword] = useState("");
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+
+//         // Enviar los datos de inicio de sesión al servidor.
+//         console.log('');
+//         if (username === "admin" && password === "password") {
+//             <Navigate to={<Home/>}/>
+//             // Redirigir al usuario a la página de inicio.
+//         } else {
+//             // Mostrar un mensaje de error.
+//         }
+//     };
+
+//     return (
+//         <Form onSubmit={handleSubmit}>
+//             <Form.Group controlId="formBasicEmail">
+//                 <Form.Label>Nombre de usuario</Form.Label>
+//                 <Form.Control
+//                     type="text"
+//                     placeholder="Introduzca su nombre de usuario"
+//                     value={username}
+//                     onChange={(e) => setUsername(e.target.value)}
+//                 />
+//             </Form.Group>
+
+//             <Form.Group controlId="formBasicPassword">
+//                 <Form.Label>Contraseña</Form.Label>
+//                 <Form.Control
+//                     type="password"
+//                     placeholder="Introduzca su contraseña"
+//                     value={password}
+//                     onChange={(e) => setPassword(e.target.value)}
+//                 />
+//             </Form.Group>
+
+//             <Button variant="primary" type="submit">
+//                 Iniciar sesión
+//             </Button>
+//         </Form>
+//     );
+// };
+
+// export default Login;
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+const Login = () => {
+    return (
+        <>
+            <Container>
+                <Row>
+                    <Col>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima sit quos provident enim ipsa repellendus nostrum rerum libero nesciunt ratione, velit dolores, laboriosam debitis. Tempore distinctio obcaecati provident pariatur rerum.</p>
+                    </Col>
+                    <Col>
+                        <form className='text-center'>
+                            <div>
+                                <label htmlFor="nombre">Nombre de usuario</label>
+                                <input
+                                    id="nombre"
+                                    type="text"
+                                    name="nombre"
+                                    placeholder="Nombre de usuario" />
+                            </div>
+                            <div>
+                                <label htmlFor="password">Contraseña</label>
+                                <input
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Contraseña" />
+                            </div>
+                                <button className="btn btn-dark mt-3 mb-5 w-50" >Ingresar</button>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
+        </>
+    )
+}
+
+export default Login
