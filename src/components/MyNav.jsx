@@ -15,13 +15,14 @@ function MyNav() {
         <a href="../index.html" className='logo'>
         <img src={Happyfood} className='logo' alt="Logo" />
         </a>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll" id="hamburguesa" />
         <Navbar.Collapse id="navbarScroll">
             <Nav
                 className="me-auto my-4 my-lg-0"
                 style={{ maxHeight: '100px' }}
                 navbarScroll
             >
+            <Nav.Link href="#action2" className='link'>Inicio</Nav.Link>
             <Nav.Link href="#action2" className='link'>Nuestros Platos</Nav.Link>
             <Nav.Link href="#action2" className='link'>Admin</Nav.Link>
             <Nav.Link href="#action1" className='link'>Iniciar Sesión</Nav.Link>

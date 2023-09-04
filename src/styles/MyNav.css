@@ -4,10 +4,10 @@
     font-size: 17px;
     margin-bottom: 10% !important;
     margin-top: 1% !important;
-    border-top-left-radius: 4cqw;
-    border-top-right-radius: 4cqw;
-    border-bottom-left-radius: 4cqw;
-    border-bottom-right-radius: 4cqw;
+    border-top-left-radius: 5cqw;
+    border-top-right-radius: 5cqw;
+    border-bottom-left-radius: 5cqw;
+    border-bottom-right-radius: 5cqw;
 }
 
 .link{
@@ -22,5 +22,9 @@
 
 .carrito{
   width: 40px;
+  margin-right: 2% !important;
+}
+
+#hamburguesa{
   margin-right: 2% !important;
 }
