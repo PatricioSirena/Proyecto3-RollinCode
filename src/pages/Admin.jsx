@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import ModalForm from '../components/ModalForm';
 
 const Admin = () => {
   return (
@@ -6,7 +7,8 @@ const Admin = () => {
       <section className="productos text-center">
         <h2>Productos</h2>
         <div className='d-flex justify-content-end'>
-        <Button variant="dark">Agregar</Button>
+          <ModalForm />
+        {/* <Button variant="dark">Agregar</Button> */}
         </div>
         <h3>Comidas</h3>
         <ul className='listaComida'>
