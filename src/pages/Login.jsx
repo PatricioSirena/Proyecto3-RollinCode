@@ -128,41 +128,94 @@
 // };
 
 // export default Login;
+import { Formik } from "formik";
+import '../estilos/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import imagen from "../assets/img/portada.jpg";
 
 const Login = () => {
     return (
         <>
-            <Container>
-                <Row>
-                    <Col>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima sit quos provident enim ipsa repellendus nostrum rerum libero nesciunt ratione, velit dolores, laboriosam debitis. Tempore distinctio obcaecati provident pariatur rerum.</p>
-                    </Col>
-                    <Col>
-                        <form className='text-center'>
-                            <div>
-                                <label htmlFor="nombre">Nombre de usuario</label>
-                                <input
-                                    id="nombre"
-                                    type="text"
-                                    name="nombre"
-                                    placeholder="Nombre de usuario" />
-                            </div>
-                            <div>
-                                <label htmlFor="password">Contraseña</label>
-                                <input
-                                    id="password"
-                                    type="password"
-                                    name="password"
-                                    placeholder="Contraseña" />
-                            </div>
-                                <button className="btn btn-dark mt-3 mb-5 w-50" >Ingresar</button>
-                        </form>
-                    </Col>
-                </Row>
-            </Container>
+            <Formik
+                initialValues={{
+                    usuario: '',
+                    contraseña: ''
+                }}
+                validate={(valores) =>{
+                    let errores = {};
+
+                    if (!valores.usuario){
+                        errores.usuario = 'Por favor ingresar el usuario.'
+                    } else if (!/^[A-Za-z0-9]+$/g.test(valores.usuario)) {
+                        errores.usuario = 'El usuario solo puede tener letras y numeros.'
+                    }
+                    
+                    if (!valores.contraseña){
+                        errores.contraseña = 'Por favor ingresar la contraseña.'
+                    } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)){
+                        errores.contraseña = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                    }
+
+                    return errores;
+                }}
+                onSubmit={(valores) => {
+                    console.log(valores);
+                    console.log('Formulario enviado');
+                }}
+            >
+                {({handleSubmit, values, handleChange, handleBlur, errors}) => (
+                    <Container className='containerLogin'>
+                        <Row>
+                            <Col>
+                                <img className='h-25' src={imagen} alt="" />
+                                <div className='d-flex justify-content-around'>
+                                    <p>No tenes cuenta?</p>
+                                    <button className='btn btn-dark'>Click aqui</button>
+                                </div>
+                            </Col>
+                            <Col>
+                                <form className='formulario text-center' onSubmit={handleSubmit}>
+                                    <div>
+                                        <label htmlFor="usuario">Usuario</label>
+                                        <br />
+                                        <input
+                                            id="usuario"
+                                            type="text"
+                                            name="usuario"
+                                            placeholder="Usuario" 
+                                            value={values.usuario}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            />
+                                            {errors.usuario && <div className="error">{errors.usuario}</div>}
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contraseña">Contraseña</label>
+                                        <br />
+                                        <input
+                                            id="contraseña"
+                                            type="password"
+                                            name="contraseña"
+                                            placeholder="Contraseña"
+                                            value={values.contraseña} 
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            />
+                                            {errors.contraseña && <div className="error">{errors.contraseña}</div>}
+                                    </div>
+                                    <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Ingresar</button>
+                                    <div className='d-flex justify-content-center'>
+                                        <p>Olvidaste tu contraseña?</p>
+                                        <a href="#!">Click Here</a>
+                                    </div>
+                                </form>
+                            </Col>
+                        </Row>
+                    </Container>
+                )}
+            </Formik>
         </>
     )
 }
