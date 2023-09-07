@@ -12,7 +12,7 @@ const Carta = ({ titulo, text, imgSource, url }) => {
                     {text ? text : 'El texto es requerido'}
                 </Card.Text>
                 <Button className='btn-dark' variant="primary">
-                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Sin miedo al exito</a>
+                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Ver más</a>
                 </Button>
             </Card.Body>
         </Card>

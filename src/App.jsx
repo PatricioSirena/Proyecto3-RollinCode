@@ -17,7 +17,7 @@ function App() {
             <Portada
                 className='tituloo'
                 titulo={'De primero, felicidad. De segundo, relax.'}
-                descripccion={'soy una descripcion de prueba para ver si todo funciona bien! soy una descripcion de prueba para ver si todo funciona bien! soy una descripccion de prueba para ver si todo funciona bien!'} />
+                descripccion={'Soy una descripción de prueba para ver si todo funciona bien! soy una descripción de prueba para ver si todo funciona bien! soy una descripción de prueba para ver si todo funciona bien!'} />
             <section className='d-flex justify-content-around'>
                 <Cartas />
             </section>
