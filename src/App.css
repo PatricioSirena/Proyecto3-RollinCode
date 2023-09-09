@@ -3,19 +3,33 @@
   margin: 0px;
   overflow-x: hidden;
 }
+body {
+  background-image: url('./assets/img/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .portada{
+  background-image: url('./assets/img/back-portada.jpg');
+
   width: 100vw;
-  height: 90vh;
+  height: 60vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 50px;
   margin-bottom: 120px;
   overflow-y: hidden;
+
+}
+.portada-imagen{
+justify-content: center;
 }
 
 .portada-descripccion{
   overflow-y: hidden;
+  padding-right: 50px;
+ 
+  
 }
 
 .boton-portada{
