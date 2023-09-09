@@ -9,30 +9,24 @@ const Redes = () => {
     return (
         <Container fluid className="footerRedes">
             <Row>
-                <Col className="p-5 mt-5 text-center accesoRedes">
+                <Col className="p-1 mt-5 sm text-center accesoRedes">
                     <h5>Seguinos en:</h5>
                     <ul className="iconosRedes">
                         <li>
-                            <a className="iconoRedes" href="#!">
-                                <FaInstagram />                                
-                            </a>
+                            <a className="iconoRedes" href="#!"><FaInstagram /></a>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!">
-                                <FaFacebook />
-                            </a>
+                            <a className="iconoRedes" href="#!"><FaFacebook /></a>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!">
-                                <FaYoutube />
-                            </a>
+                            <a className="iconoRedes" href="#!"><FaYoutube /></a>
                         </li>
                     </ul>
                 </Col>
-                <Col className="p-5 text-center">
+                <Col className="p-1 sm text-center">
                     <img src={logoPagina} className="logoFooter" alt="" />
                 </Col>
-                <Col className="p-5 text-center listaFooter">
+                <Col className="p-1 sm text-center listaFooter">
                     <h5>Titulo de lista a ninguna parte</h5>
                     <ul>
                         <li>Link a ninguna parte</li>

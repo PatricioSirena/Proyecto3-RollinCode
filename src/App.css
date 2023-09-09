@@ -57,7 +57,10 @@ body{
     text-decoration: none;
     color: white !important;
   }
-  
+  .boton{
+    margin-top: 5%;
+    width: 100%;
+  }
 
   .tarjetaInfo{
     height: 50vh;
@@ -93,34 +96,34 @@ body{
   }
   
   .footerMapa {
-    width: 100vw;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px; /*container del mapa y el formulario*/
   }
   
   .footerRedes {
-    width: 100vw;
-    height: 50vh;
     align-items: center;
   }
   
   .logoFooter{
     width: 220px;
     border-radius: 100px;
-    margin-top: 50px;
-    margin-left: 40px;
+    margin-top: 10%;
   }
   
   .listaFooter{
     margin-top: 50px;
-    margin-right: 50px;
+    /*margin-right: 50px;*/
   }
   
   .listaFooter ul li{
     margin-top: 10px;
     margin-right: 30px;
+    list-style: none;
   }
   
+.contact{
+    width: 70%;
+}
   
   .iconosRedes{
     display: flex;
