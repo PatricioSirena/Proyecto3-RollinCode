@@ -6,7 +6,7 @@ const Portada = ({ titulo, descripccion }) => {
     return (
         <div>
             <div>
-                <div className="col-lg-4 mb-5 portada-descripccion">
+                <div className="col-lg-4 mb-5 portada_home">
                     <img src={portada} alt="Portada" className='portada_home' />
                     <h1 className='mt-3'>{ titulo }</h1>
                     <p className="mb-5"> { descripccion } </p>
@@ -23,5 +23,5 @@ export default Portada
 
 //className="col-lg-8 portada-imagen" className="row portada" 
 /*<div>
-    imagen            
+    imagen            portada-descripccion
 </div>*/

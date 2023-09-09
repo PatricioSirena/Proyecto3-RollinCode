@@ -36,8 +36,11 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
-  background-image: url("../assets/img/portada.jpg");
-  
+  /*background-image: url("../assets/img/portada.jpg") !important;*/
+}
+.portada_home > h1 > p{
+  text-align: left;
+  position: -webkit-sticky;
 }
 
 /*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
