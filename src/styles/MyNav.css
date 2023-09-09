@@ -8,6 +8,7 @@
     border-top-right-radius: 5cqw;
     border-bottom-left-radius: 5cqw;
     border-bottom-right-radius: 5cqw;
+    position: sticky !important;
 }
 
 .link{
