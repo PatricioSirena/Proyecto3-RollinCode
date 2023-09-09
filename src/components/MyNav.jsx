@@ -1,6 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from "react-router-dom";
+import '../estilos/navbar.css'
 
 function MyNav() {
     return (
@@ -9,9 +11,11 @@ function MyNav() {
                 <Container>
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <NavLink exact to="/" className='btn btn-dark'>Home</NavLink>
+                        <NavLink exact to='/Menu' className='btn btn-dark'>Menu</NavLink>
+                        <NavLink exact to='/Carrito' className='btn btn-dark carrito'>
+                            Carrito
+                        </NavLink>
                     </Nav>
                 </Container>
             </Navbar>
