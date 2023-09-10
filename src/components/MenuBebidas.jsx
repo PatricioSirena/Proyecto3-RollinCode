@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import { bebidas } from "../data";
+import bebidas from "../bebidas.json";
 
 const MenuBebidas = () => {
     return (
@@ -12,6 +12,7 @@ const MenuBebidas = () => {
                         bebidas.map((bebida) => (
                             <Col xs={12} md={6} xl={4} xxl={4} className="mb-5" key={bebida.id}>
                                 <PlatosMenu
+                                    id={bebida.id}
                                     titulo={bebida.titulo}
                                     imgSource={bebida.imagen}
                                     text={bebida.texto}

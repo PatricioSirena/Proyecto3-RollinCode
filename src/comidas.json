@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+        "id": 2,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+        "id": 3,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+        "id": 4,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+        "id": 5,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+        "id": 6,
+        "titulo": "Mila con papas",
+        "precio": 20.56,
+        "texto": "Alguna descripcion random para probar si funciona!",
+        "categoria": "comida",
+        "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    }
+    
+]
+
+
