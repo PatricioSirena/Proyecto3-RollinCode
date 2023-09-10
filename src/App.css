@@ -10,11 +10,30 @@
   overflow-x: hidden;
 }*/
 
+/* All delay classes will take 2x longer to start */
+:root {
+  --animate-delay: 2s !important;
+  --animate-repeat: 2 !important;
+}
+
 body{
   background-color: rgb(238, 237, 237);
   font-family: 'Inter', sans-serif;
   /*font-family: 'Noto Sans', sans-serif;
   font-family: 'Poppins', sans-serif;*/
+}
+
+h1, h2 , h3, h4, h5{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.animate__zoomInLeft{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: zoomInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2.4s; /* don't forget to set a duration! */
+  animation-iteration-count: 1, 1, 1, 1;
 }
 
 .tituloo{
@@ -36,7 +55,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
-  /*background-image: url("../assets/img/portada.jpg") !important;*/
+  background-image: url("../img/IMG_4501.jpg");
 }
 .portada_home > h1 > p{
   text-align: left;
@@ -143,4 +162,38 @@ body{
 
 #tarjeta2 .dos{
   order: 0;
+}
+
+/*===================================================================================*/
+
+@media screen and (min-width: 360px) and (max-width: 640px){ /*(móvil pequeño)*/
+  body{
+    background-color: rgb(221, 160, 168);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1366px){ /*(ordenador portátil medio)*/
+  body{
+    background-color: rgb(146, 56, 146);
+  }
+  
+}
+@media screen and (min-width: 1080px) and (max-width: 1920px){ /*(escritorio grande)*/
+  body{
+    background-color: rgb(160, 221, 221);
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 667px){ /*(móvil medio)*/
+  body{
+    background-color: plum;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1440px){ /*(escritorio medio)*/
+  body{
+    background-color: rgba(167, 196, 168, 0.897);
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1280px){ /*(móvil grande)*/
+  body{
+    background-color: rgb(247, 150, 121);
+  }
 }

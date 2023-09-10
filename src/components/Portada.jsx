@@ -1,19 +1,19 @@
 import Button from 'react-bootstrap/Button';
-import portada from '../assets/img/portada.jpg'
+import portada from '../img/IMG_4484.jpg'
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 
 const Portada = ({ titulo, descripccion }) => {
     return (
-        <div>
-            <div>
-                <div className="col-lg-4 mb-5 portada_home">
-                    <img src={portada} alt="Portada" className='portada_home' />
-                    <h1 className='mt-3'>{ titulo }</h1>
+        <Row>
+            <Col className="col-lg-4 mb-5">
+            <img src={portada} alt="Portada" className='portada_home' />
+                    <h1 className='mt-3 animate__zoomInLeft'>{ titulo }</h1>
                     <p className="mb-5"> { descripccion } </p>
                     <Button className='boton-portada mt-5' variant="outline-light">Click</Button>
-                </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
     );
 }
 
@@ -25,3 +25,5 @@ export default Portada
 /*<div>
     imagen            portada-descripccion
 </div>*/
+
+//<img src={portada} alt="Portada" className='portada_home' />

@@ -15,7 +15,7 @@ function App() {
         <>
             <MyNav />
             <Portada
-                className='tituloo'
+                className='tituloo animate__zoomInLeft'
                 titulo={'De primero, felicidad. De segundo, relax.'}
                 descripccion={'Soy una descripción de prueba para ver si todo funciona bien! soy una descripción de prueba para ver si todo funciona bien! soy una descripción de prueba para ver si todo funciona bien!'} />
             <section className='d-flex justify-content-around'>
