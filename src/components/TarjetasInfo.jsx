@@ -1,7 +1,7 @@
 import TarjetaInfo from "./TarjetaInfo";
-import imagen1 from "../assets/img/comida.webp";
+import imagen1 from "../assets/img/comida.jpg";
 import imagen2 from "../assets/img/bebida.jpg";
-import imagen3 from "../assets/img/flores.webp";
+import imagen3 from "../assets/img/flores.jpg";
 
 
 const tarjetas = [
