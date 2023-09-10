@@ -29,7 +29,7 @@ const cartas = [
 
 const Cartas = () => {
     return (
-        <div className="container d-flex justify-content-center align-items-center">
+        <div className="container-fluid d-flex justify-content-center align-items-center">
             <div className="row">
                     {
                         cartas.map((carta) => (
