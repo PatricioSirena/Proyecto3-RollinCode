@@ -4,9 +4,9 @@ import bebidas from "../bebidas.json";
 
 const MenuBebidas = () => {
     return (
-        <>
+        <div className="text-center">
             <h2 className="mb-5">Menu de Bebidas</h2>
-            <Container className="container d-flex justify-content-center align-items-center">
+            <Container>
                 <Row>
                     {
                         bebidas.map((bebida) => (
@@ -22,7 +22,7 @@ const MenuBebidas = () => {
                     }
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 

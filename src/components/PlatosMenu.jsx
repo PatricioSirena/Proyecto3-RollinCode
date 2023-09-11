@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { CarritoContexto } from '../context/ContextoCarrito';
 
 
+
 const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
 
     const [carrito, setCarrito] = useContext(CarritoContexto);
@@ -21,7 +22,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
                     }
                 });
             } else {
-                return [...itemActual, { id, quantity: 1, titulo, precio }];
+                return [...itemActual, { id, quantity: 1, precio }];
             }
         });
     };
@@ -49,7 +50,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
     const cantidadPorItem = cantidadPorId(id);
 
     return (
-        <Card className='text-center' style={{ width: '20rem' }}>
+        <Card className='text-center' style={{ width: '22rem', height: '30rem' }}>
             <Card.Img variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} />
             <Card.Body>
                 <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
@@ -87,7 +88,7 @@ PlatosMenu.propTypes = {
     text: PropTypes.string.isRequired,
     imgSource: PropTypes.string.isRequired,
     precio: PropTypes.number.isRequired,
-    url: PropTypes.string
+    id: PropTypes.number.isRequired
 }
 
 export default PlatosMenu

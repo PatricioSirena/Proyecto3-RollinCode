@@ -4,9 +4,9 @@ import comidas from "../comidas.json";
 
 const MenuComidas = () => {
     return (
-        <>
+        <div className="text-center">
             <h2 className="mb-5">Menu comdias</h2>
-            <Container className="container d-flex justify-content-center align-items-center">
+            <Container>
                 <Row>
                     {
                         comidas.map((comida) => (
@@ -22,7 +22,7 @@ const MenuComidas = () => {
                     }
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 

@@ -4,9 +4,9 @@ import flores from "../flores.json";
 
 const MenuFlores = () => {
     return (
-        <>
+        <div className="text-center">
             <h2 className="mb-5">Menu de Flores</h2>
-            <Container className="container d-flex justify-content-center align-items-center">
+            <Container>
                 <Row>
                     {
                         flores.map((flor) => (
@@ -22,7 +22,7 @@ const MenuFlores = () => {
                     }
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 
