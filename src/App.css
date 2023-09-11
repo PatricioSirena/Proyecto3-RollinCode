@@ -117,6 +117,7 @@ h1, h2 , h3, h4, h5, p{
 .tarjetaInfo{
   height: 40vh;
   /*background-color: rgba(59, 143, 77, 0.651);*/
+  color: rgb(46, 46, 46) !important;
   margin-top: 60px;
   margin-bottom: 40px;
   vertical-align: middle !important;
