@@ -22,7 +22,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
                     }
                 });
             } else {
-                return [...itemActual, { id, quantity: 1, precio }];
+                return [...itemActual, { id, titulo, quantity: 1, precio }];
             }
         });
     };

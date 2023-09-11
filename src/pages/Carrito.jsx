@@ -15,11 +15,24 @@ const Carrito = () => {
 
     return (
         <div className="contenedor-carrito text-center">
-        <div>Items en el carrito: {carrito} + {cantidad}</div>
-        <br />
-        <div>Total: ${precioTotal}</div>
-        <br />
-        <button onClick={() => console.log(carrito)}>Checkout</button>
+            <div>
+                <h3>Items en el carrito:</h3>
+                {
+                    carrito.map((item) => {
+                        return <li key={item.id}>
+                            {item.titulo}
+                        </li>
+                    })
+                }
+                <div className="mt-3">
+                    <h5>Cantidad total:</h5>
+                </div>
+                {cantidad}
+            </div>
+            <br />
+            <div>Total: ${precioTotal}</div>
+            <br />
+            <button onClick={() => console.log(carrito)}>Checkout</button>
         </div>
     )
 }
