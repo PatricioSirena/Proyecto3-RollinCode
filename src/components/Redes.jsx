@@ -27,11 +27,11 @@ const Redes = () => {
                     <img src={logoPagina} className="logoFooter" alt="" />
                 </Col>
                 <Col className="p-1 sm text-center listaFooter">
-                    <h5>Titulo de lista a ninguna parte</h5>
-                    <ul>
-                        <li>Link a ninguna parte</li>
-                        <li>Link a ninguna parte</li>
-                        <li>Link a ninguna parte</li>
+                    <h5 className="link_titulo">Nuestros Platos</h5>
+                    <ul className="links">
+                        <li>Hamburguesa Americana</li>
+                        <li>Hamburguesa 4to de Libra</li>
+                        <li>Hamburguesa Crispy</li>
                     </ul>
                 </Col>
             </Row>

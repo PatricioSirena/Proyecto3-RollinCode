@@ -3,6 +3,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer";
 import './App.css';
+import './styles/footer.css'
 import Cartas from "./components/Cartas";
 import Portada from "./components/Portada";
 import TarjetasInfo from "./components/TarjetasInfo";
