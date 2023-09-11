@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import bebidas from '../datos/bebidas.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, ModalBody, ModalHeader, ModalFooter} from 'reactstrap';
+import { string } from 'prop-types';
 
 function App() {
 
@@ -86,7 +87,7 @@ setItemSeleccionado(elemento);
         </thead>
         <tbody>
           {data.map(elemento=>(
-            <tr>
+            <tr key={elemento.id}>
               <td>{elemento.id}</td>
               <td>{elemento.titulo}</td>
               <td>{elemento.precio}</td>
@@ -133,8 +134,8 @@ setItemSeleccionado(elemento);
             <input
               className="form-control"
               type="text"
-              name="minutos"
-              value={itemSeleccionado && itemSeleccionado.minutos}
+              name="precio"
+              value={itemSeleccionado && itemSeleccionado.precio}
               onChange={handleChange}
             />
             <br />
