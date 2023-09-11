@@ -49,29 +49,30 @@ function MyNav() {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <div className="contenedor-carrito text-center">
-                                        <div className='tituloModal'>
+                                    <div className="contenedor-carrito ">
+                                        <div className='tituloModal text-center'>
                                             <h3>Items en el carrito:</h3>
                                         </div>
-                                        <div className='articulosModal text-center'>
+                                        <div className='articulosModal'>
                                             {
                                                 carrito.map((item) => {
-                                                    return <li key={item.id}>
-                                                        {item.titulo}
+                                                    return <li style={{marginLeft: '2rem'}} key={item.id}>
+                                                        {item.titulo}{'   *'}
+                                                        {item.quantity}
                                                     </li>
                                                 })
                                             }
                                             </div>
-                                            <div className="mt-3">
-                                                <span>Cantidad total: {cantidad}</span>
+                                            <div className="mt-3 text-center">
+                                                <span><b>Cantidad total: {cantidad}</b></span>
                                             </div>
                                         <br />
-                                        <div>
+                                        <div className='text-center'>
                                             <h5>Total a pagar:</h5>
                                             <p>${precioTotal}</p>
                                         </div>
                                         <br />
-                                        <button onClick={() => console.log(carrito)}>Finalizar compra</button>
+                                        <button style={{marginLeft: '4rem'}} className='btn btn-secondary' onClick={() => console.log(carrito)}>Finalizar compra</button>
                                     </div>
                                 </Modal.Body>
                             </Modal>
