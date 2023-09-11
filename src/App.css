@@ -69,7 +69,6 @@ h1, h2 , h3, h4, h5, p{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;*/
-  background-image: url("../img/pasta--.jpg");
 }
 .row_portada > h1 > p{
   text-align: center !important;
@@ -135,11 +134,11 @@ h1, h2 , h3, h4, h5, p{
 
 #tarjeta2{
   display: flex;
-  background: linear-gradient(to right, rgba(202, 148, 67, 0.836), rgba(245, 209, 176, 0.76));
+  background: linear-gradient(to right, rgba(202, 148, 67, 0.966), rgba(245, 209, 176, 0.76));
   margin-left: 13%;
 }
 #tarjeta1, #tarjeta3{
-  background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.76));
+  background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
   margin-right: 13%;
 }
 

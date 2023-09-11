@@ -1,26 +1,26 @@
 import Carta from "./Carta";
-import imagen1 from "../img/IMG_4480.jpg";
-import imagen2 from "../img/IMG_4516.jpg";
-import imagen3 from "../img/IMG_4507.jpg";
+import imagen1 from "../img/burger_1.jpg";
+import imagen2 from "../img/beer.jpg";
+import imagen3 from "../img/0473F1BF-4228-44F3-9CD1-33C159917F1B.jpg";
 
 const cartas = [
     {
         id: 1,
-        titulo: 'Fusilli con salsa mixta 🍝',
+        titulo: 'prueba',
         imagen: imagen1,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'
     },
     {
         id: 2,
-        titulo: 'Mojito fresh pink 🍹',
+        titulo: 'prueba',
         imagen: imagen2,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'
     },
     {
         id: 3,
-        titulo: 'Florcitas 🍃',
+        titulo: 'prueba',
         imagen: imagen3,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'
