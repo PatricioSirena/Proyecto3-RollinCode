@@ -2,7 +2,7 @@ import {useState} from 'react';
 import bebidas from '../datos/bebidas.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, ModalBody, ModalHeader, ModalFooter} from 'reactstrap';
-import { string } from 'prop-types';
+
 
 function App() {
 
