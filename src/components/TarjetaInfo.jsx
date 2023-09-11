@@ -4,9 +4,9 @@ import Card from 'react-bootstrap/Card';
 const TarjetaInfo = ({id, titulo, texto, imgSource }) => {
     return (
         <div className="container-fluid">
-            <div className="row tarjetaInfo d-flex" id={id? id: 'Ponele un id culiao'}>
+            <div className="row tarjetaInfo d-flex" id={id? id: 'Ponele un id'}>
                 <div className="col-lg-7 uno">
-                    <h3>{titulo ? titulo : 'Debe ingresar un titulo'}</h3>
+                    <h2 className="card_tittle">{titulo ? titulo : 'Debe ingresar un titulo'}</h2>
                     <p>{texto ? texto : 'El texto es requerido'}</p>
                 </div>
                 <div className="col-lg-5 dos">

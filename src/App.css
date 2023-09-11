@@ -23,43 +23,56 @@ body{
   font-family: 'Poppins', sans-serif;*/
 }
 
-h1, h2 , h3, h4, h5{
+h1, h2 , h3, h4, h5, p{
+  margin: 5%;
   font-family: 'Noto Sans', sans-serif;
+  text-align: center !important;
+}
+.spoiler{
+  font-family: 'Ultra', serif !important;
+  margin-bottom: 6% !important;
+  margin-top: 7% !important;
+}
+.card_tittle{
+  font-family: 'Lobster', cursive;
 }
 
 .animate__zoomInLeft{
   display: inline-block;
   margin: 0 0.5rem;
-
+  text-align: center !important;
+  justify-content: center;
   animation: zoomInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2.4s; /* don't forget to set a duration! */
-  animation-iteration-count: 1, 1, 1, 1;
+  animation-iteration-count: 1;
 }
 
 .tituloo{
-  font-family: 'Ultra', serif !important;
   color: beige !important;
+  font-family: 'Ultra', serif;
+  margin-top: 20% !important;
 }
 
-.logo{
+/*.logo{
   width: 150px;
   height: 150px;
   display: flex;
   justify-content: center;
-}
+}*/
 
-.portada_home{
+.row_portada{
   height:100vh;
-  width: 100vw;
-  background-position:center;
+  width: 100.9%;
+  background-color: rgba(67, 107, 69, 0.822);
+  color: white;
+  /*background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-attachment: fixed;*/
-  background-image: url("../img/IMG_4501.jpg");
+  background-attachment: fixed;*/
+  background-image: url("../img/pasta--.jpg");
 }
-.portada_home > h1 > p{
-  text-align: left;
-  position: -webkit-sticky;
+.row_portada > h1 > p{
+  text-align: center !important;
 }
 
 /*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
@@ -102,19 +115,31 @@ h1, h2 , h3, h4, h5{
 }*/
 
 .tarjetaInfo{
-  height: 50vh;
-  background-color: rgba(59, 143, 77, 0.651);
-  margin-top: 20px;
+  height: 40vh;
+  /*background-color: rgba(59, 143, 77, 0.651);*/
+  margin-top: 60px;
+  margin-bottom: 40px;
+  vertical-align: middle !important;
+  justify-content: center !important;
 }
 
 .imagenTarjeta{
-  height: 100%;
-  border-bottom-left-radius: 9cqw;
+  width: 210px;
+  margin-top: 3.5%;
+  border-top-left-radius: 10cqw;
+  border-top-right-radius: 10cqw;
+  border-bottom-left-radius: 10cqw;
+  border-bottom-right-radius: 10cqw;
 }
 
 #tarjeta2{
   display: flex;
-  background-color: rgba(216, 175, 129, 0.438);
+  background: linear-gradient(to right, rgba(202, 148, 67, 0.836), rgba(245, 209, 176, 0.76));
+  margin-left: 13%;
+}
+#tarjeta1, #tarjeta3{
+  background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.76));
+  margin-right: 13%;
 }
 
 .footer {
@@ -168,32 +193,32 @@ h1, h2 , h3, h4, h5{
 
 @media screen and (min-width: 360px) and (max-width: 640px){ /*(móvil pequeño)*/
   body{
-    background-color: rgb(221, 160, 168);
+    background-color: rgb(238, 237, 237);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1366px){ /*(ordenador portátil medio)*/
   body{
-    background-color: rgb(146, 56, 146);
+    background-color: rgb(238, 237, 237);
   }
   
 }
 @media screen and (min-width: 1080px) and (max-width: 1920px){ /*(escritorio grande)*/
   body{
-    background-color: rgb(160, 221, 221);
+    background-color: rgb(238, 237, 237);
   }
 }
 @media screen and (min-width: 375px) and (max-width: 667px){ /*(móvil medio)*/
   body{
-    background-color: plum;
+    background-color: rgb(238, 237, 237);
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1440px){ /*(escritorio medio)*/
   body{
-    background-color: rgba(167, 196, 168, 0.897);
+    background-color: rgb(238, 237, 237);
   }
 }
 @media screen and (min-width: 720px) and (max-width: 1280px){ /*(móvil grande)*/
   body{
-    background-color: rgb(247, 150, 121);
+    background-color: rgb(238, 237, 237);
   }
 }
