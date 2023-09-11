@@ -76,9 +76,9 @@ h1, h2 , h3, h4, h5, p{
 
 /*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
 .btn{
-  background-color: rgb(33, 85, 46);
+  background-color: rgb(73, 119, 75);
   color: white;
-  border-color: rgb(33, 85, 46);
+  border-color: rgb(73, 119, 75);
   font-weight: 500;
   border-radius: 10cqw;
 }
@@ -87,8 +87,8 @@ h1, h2 , h3, h4, h5, p{
 }
 .btn:hover{
   color: white !important;
-  background: rgb(43, 110, 60);
-  border-color: rgb(43, 110, 60);
+  background: rgba(80, 126, 82, 0.993);
+  border-color: rgba(80, 126, 82, 0.993);
   transition: 1s ease;
 }
 .btn > a{

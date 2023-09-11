@@ -1,3 +1,7 @@
 .imagenPortada{
-    background-image: url('../img/Portada.jpeg');
+    /*background-image: url('../img/Portada.jpeg');*/
+    background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
+}
+.txt-portada{
+    color: beige;
 }
