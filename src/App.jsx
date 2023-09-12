@@ -6,7 +6,6 @@ import Menu from "./pages/Menu";
 import './App.css';
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
-import Carrito from "./pages/Carrito";
 import ContextoCarrito from './context/ContextoCarrito';
 
 
@@ -20,7 +19,6 @@ function App() {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/Menu' element={<Menu />} />
-                <Route exact path='/Carrito' element={<Carrito/>} />
             </Routes>
             </Router>
         </ContextoCarrito>

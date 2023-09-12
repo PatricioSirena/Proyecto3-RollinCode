@@ -30,9 +30,6 @@ function MyNav() {
                     <Nav className="me-auto">
                         <NavLink exact to="/" className='btn btn-dark'>Home</NavLink>
                         <NavLink exact to="/Menu" className='btn btn-dark'>Menu</NavLink>
-                        {/* <NavLink exact to="/Carrito" className='btn btn-dark'>
-                            Carrito <span className='cantidadCarrito'>{cantidad}</span>
-                        </NavLink> */}
                         <Button onClick={() => setSmShow(true)} className="me-2 btn-dark">
                             Carrito <span className='cantidadCarrito'>{cantidad}</span>
                         </Button>

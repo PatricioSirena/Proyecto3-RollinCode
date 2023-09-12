@@ -3,27 +3,28 @@ import imagen1 from "../assets/img/comida.jpg";
 import imagen2 from "../assets/img/bebida.jpg";
 import imagen3 from "../assets/img/flores.jpg";
 
+
 const cartas = [
     {
         id: 1,
         titulo: 'Para bajonear',
         imagen: imagen1,
         texto: 'Texto de prueba',
-        url: 'https://instagram.com'
+        url: "/Menu"
     },
     {
         id: 2,
         titulo: 'Para tomar',
         imagen: imagen2,
         texto: 'Texto de prueba',
-        url: 'https://instagram.com'
+        url: "/Menu"
     },
     {
         id: 3,
         titulo: 'Para fumar',
         imagen: imagen3,
         texto: 'Texto de prueba',
-        url: 'https://instagram.com'
+        url: "/Menu"
     }
 ]
 
