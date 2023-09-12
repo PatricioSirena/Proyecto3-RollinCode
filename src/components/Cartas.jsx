@@ -6,21 +6,21 @@ import imagen3 from "../img/0473F1BF-4228-44F3-9CD1-33C159917F1B.jpg";
 const cartas = [
     {
         id: 1,
-        titulo: 'prueba',
+        titulo: 'Burgers',
         imagen: imagen1,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'
     },
     {
         id: 2,
-        titulo: 'prueba',
+        titulo: 'Birras',
         imagen: imagen2,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'
     },
     {
         id: 3,
-        titulo: 'prueba',
+        titulo: 'Flores',
         imagen: imagen3,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'

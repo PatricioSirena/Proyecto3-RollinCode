@@ -1,19 +1,20 @@
 import PropTypes from "prop-types"
 import Card from 'react-bootstrap/Card';
+import { Row, Col, Container } from 'react-bootstrap';
 
 const TarjetaInfo = ({id, titulo, texto, imgSource }) => {
     return (
-        <div className="container-fluid">
-            <div className="row tarjetaInfo d-flex" id={id? id: 'Ponele un id'}>
-                <div className="col-lg-7 uno">
+        <Row className="container-fluid">
+            <Col className="row tarjetaInfo d-flex" id={id? id: 'Ponele un id'}>
+                <Col className="col-lg-7 uno">
                     <h2 className="card_tittle">{titulo ? titulo : 'Debe ingresar un titulo'}</h2>
                     <p>{texto ? texto : 'El texto es requerido'}</p>
-                </div>
-                <div className="col-lg-5 dos">
+                </Col>
+                <Col className="col-lg-5 dos">
                     <Card.Img className="imagenTarjeta" src={imgSource ? imgSource : 'Debe ingresar una imagen'} />
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Col>
+        </Row>
     )
 }
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Carta = ({ titulo, text, imgSource, url }) => {
     return (
-        <Card className= 'text-center' style={{ width: '18rem' }}>
+        <Card className= 'carta text-center' style={{ width: '100%'}}>
             <Card.Img variant="top" src={imgSource? imgSource : 'La imagen es requerida'} /> 
             <Card.Body>
                 <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
@@ -28,4 +28,4 @@ Carta.propTypes = {
 
 export default Carta
 
-// {imgSource ? imgSource : 'La imagen es requerida'}
+//18rem carta

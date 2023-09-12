@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
 }
-
-/*#root {
-  max-width: 1280px;
+/*CON ESTO SE VE BIEN EN RESPONSIVE*/
+#root {
+  /*max-width: 1300px;*/
   margin: 0 auto;
   text-align: center;
   overflow-x: hidden;
-}*/
+}
 
 /* All delay classes will take 2x longer to start */
 :root {
@@ -65,10 +65,6 @@ h1, h2 , h3, h4, h5, p{
   width: 100.9%;
   background-color: rgba(67, 107, 69, 0.822);
   color: white;
-  /*background-position:center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;*/
 }
 .row_portada > h1 > p{
   text-align: center !important;
@@ -96,25 +92,8 @@ h1, h2 , h3, h4, h5, p{
   color: white !important;
 }
 
-/*.portada{
-  width: 100vw;
-  height: 100vh;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  margin-bottom: 120px;
-  overflow-y: hidden;
-}
-
-.portada-descripccion{
-  overflow-y: hidden;
-}*/
-
-/*.boton-portada{
-  margin-left: 75%;
-}*/
-
 .tarjetaInfo{
-  height: 40vh;
+  height: 60vh;
   /*background-color: rgba(59, 143, 77, 0.651);*/
   color: rgb(46, 46, 46) !important;
   margin-top: 60px;
@@ -124,7 +103,7 @@ h1, h2 , h3, h4, h5, p{
 }
 
 .imagenTarjeta{
-  width: 210px;
+  width: 300px;
   margin-top: 3.5%;
   border-top-left-radius: 10cqw;
   border-top-right-radius: 10cqw;
@@ -141,6 +120,9 @@ h1, h2 , h3, h4, h5, p{
   background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
   margin-right: 13%;
 }
+/*#tarjeta3 .imagenTarjeta{
+  width: 280px;
+}*/
 
 .footer {
   width: 100% !important;
@@ -166,21 +148,6 @@ h1, h2 , h3, h4, h5, p{
   margin-bottom: 30px;
 }
 
-/*.footerRedes {
-  width: 100vw;
-  height: 60vh;
-}*/
-
-/*.portada {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  /*justify-content: space-evenly;
-  margin-top: 50px;
-  margin-bottom: 120px;*/
-  /*overflow-y: hidden;
-}*/
-
 #tarjeta2 .uno{
   order: 1;
 }
@@ -192,8 +159,26 @@ h1, h2 , h3, h4, h5, p{
 /*===================================================================================*/
 
 @media screen and (min-width: 360px) and (max-width: 640px){ /*(móvil pequeño)*/
-  body{
-    background-color: rgb(238, 237, 237);
+  .logoPortadaa , .container-txt{
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  .logoPortadaa , .imagen_portada_yunga{
+    margin: 0 auto !important;
+  }
+
+  .imagenTarjeta{
+    width: 260px;
+    margin-top: 3.5%;
+    border-top-left-radius: 10cqw;
+    border-top-right-radius: 10cqw;
+    border-bottom-left-radius: 10cqw;
+    border-bottom-right-radius: 10cqw;
+    margin: 0 auto;
+  }
+  .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
+    display: block !important;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1366px){ /*(ordenador portátil medio)*/
@@ -208,8 +193,26 @@ h1, h2 , h3, h4, h5, p{
   }
 }
 @media screen and (min-width: 375px) and (max-width: 667px){ /*(móvil medio)*/
-  body{
-    background-color: rgb(238, 237, 237);
+  .logoPortadaa , .container-txt{
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  .logoPortadaa , .imagen_portada_yunga{
+    margin: 0 auto !important;
+  }
+
+  .imagenTarjeta{
+    width: 260px;
+    margin-top: 3.5%;
+    border-top-left-radius: 10cqw;
+    border-top-right-radius: 10cqw;
+    border-bottom-left-radius: 10cqw;
+    border-bottom-right-radius: 10cqw;
+    margin: 0 auto;
+  }
+  .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
+    display: block !important;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1440px){ /*(escritorio medio)*/
