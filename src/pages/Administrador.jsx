@@ -21,6 +21,7 @@ function Administrador() {
   });
 
   const seleccionarItem=(elemento, caso)=>{
+    console.log(elemento);
 setItemSeleccionado(elemento);
 (caso==='Editar')?setModalEditar(true):setModalEliminar(true)
   }
@@ -35,6 +36,8 @@ setItemSeleccionado(elemento);
 
   const editar=()=>{
     var dataNueva=data;
+    if(itemSeleccionado.titulo == "") {
+      console.log("no puede ");}
     dataNueva.map(bebida=>{
       if(bebida.id===itemSeleccionado.id){
         bebida.titulo=itemSeleccionado.titulo;
