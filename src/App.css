@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Ultra&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -20,7 +22,8 @@ body{
   background-color: rgb(238, 237, 237);
   font-family: 'Inter', sans-serif;
   /*font-family: 'Noto Sans', sans-serif;
-  font-family: 'Poppins', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Ultra', serif !important;*/
 }
 
 h1, h2 , h3, h4, h5, p{
@@ -29,13 +32,19 @@ h1, h2 , h3, h4, h5, p{
   text-align: center !important;
 }
 .spoiler{
-  font-family: 'Ultra', serif !important;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
   margin-bottom: 6% !important;
   margin-top: 7% !important;
+  color: rgb(57, 92, 59);
 }
 .card_tittle{
   font-family: 'Lobster', cursive;
 }
+.carta{
+  color: rgb(52, 59, 53);
+}
+
 
 .animate__zoomInLeft{
   display: inline-block;
@@ -45,12 +54,6 @@ h1, h2 , h3, h4, h5, p{
   animation: zoomInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2.4s; /* don't forget to set a duration! */
   animation-iteration-count: 1;
-}
-
-.tituloo{
-  color: beige !important;
-  font-family: 'Ultra', serif;
-  margin-top: 20% !important;
 }
 
 /*.logo{
@@ -113,7 +116,7 @@ h1, h2 , h3, h4, h5, p{
 
 #tarjeta2{
   display: flex;
-  background: linear-gradient(to right, rgba(202, 148, 67, 0.966), rgba(245, 209, 176, 0.76));
+  background: linear-gradient(to right, rgb(175, 141, 101), rgba(245, 209, 176, 0.76));
   margin-left: 13%;
 }
 #tarjeta1, #tarjeta3{

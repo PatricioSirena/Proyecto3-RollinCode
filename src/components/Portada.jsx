@@ -16,10 +16,10 @@ const Portada = ({ titulo, descripccion }) => {
                 <Col className='logoPortadaa text-center'>
                     <img className="imagen_portada_yunga" src={LogoYunga} width={'170px'} alt="" />
                 </Col>
-                <Col className="container-txt text-center">
+                <Col lg={4}className="container-txt text-center">
                     <h1 className='tituloo text-center mb-4 animate__zoomInLeft'>{titulo}</h1>
                     <p className="txt-portada text-center mb-5"> {descripccion} </p>
-                    <Button className='boton-portada mt-3' variant="outline-light">Ver</Button>
+                    <Button className='boton-portada mt-3' variant="outline-light">Conócenos</Button>
                 </Col>
             </Row>
         </Container>

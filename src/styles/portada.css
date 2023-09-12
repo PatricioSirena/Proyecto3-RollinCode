@@ -1,13 +1,19 @@
 .imagenPortada{
     /*background-image: url('../img/Portada.jpeg');*/
-    background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
+    background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgb(73, 119, 75));
 }
 
+.tituloo{
+    color: beige !important;
+    font-family: 'Archivo Black', sans-serif;
+    margin-top: 10% !important;
+    font-size: 3.5rem;
+}
 .txt-portada{
     color: beige;
 }
 .container-txt{
-    margin-right: 3%;
+    margin-right: 4%;
 }
 
 .logoPortadaa , .container-txt{
@@ -16,14 +22,15 @@
 }
 
 .logoPortadaa , .imagen_portada_yunga{
-    margin-left: 20%;
+    margin-left: 14%;
     margin-top: 9.5%;
 }
 
 .boton-portada{
     background-color: rgb(175, 141, 101);
     border-color: rgb(175, 141, 101);
-    width: 30%;
+    width: 50%;
+    margin-bottom: 25%;
 }
 .boton-portada:focus{
     text-decoration: none;
