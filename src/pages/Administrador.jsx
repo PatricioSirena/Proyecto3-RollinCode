@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, ModalBody, ModalHeader, ModalFooter} from 'reactstrap';
 
 
-function App() {
+function Administrador() {
 
   const [data, setData] = useState(bebidas);
   const [modalEditar, setModalEditar] = useState(false);
@@ -145,6 +145,7 @@ setItemSeleccionado(elemento);
               type="text"
               name="texto"
               value={itemSeleccionado && itemSeleccionado.texto}
+              onChange={handleChange}
             />
             <br />
             <label>Categoría</label>
@@ -153,6 +154,7 @@ setItemSeleccionado(elemento);
               type="text"
               name="categoria"
               value={itemSeleccionado && itemSeleccionado.categoria}
+              onChange={handleChange}
             />
             <br />
             <label>Imagen</label>
@@ -161,6 +163,7 @@ setItemSeleccionado(elemento);
               type="text"
               name="imagen"
               value={itemSeleccionado && itemSeleccionado.imagen}
+              onChange={handleChange}
             />
             <br />
           </div>
@@ -281,4 +284,4 @@ setItemSeleccionado(elemento);
   );
 }
 
-export default App;
+export default Administrador;
