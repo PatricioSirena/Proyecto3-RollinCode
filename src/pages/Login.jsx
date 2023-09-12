@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import '../estilos/login.css'
+import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -43,13 +43,16 @@ const Login = () => {
             >
                 {({ errors }) => (
                     <Container className='containerLogin'>
+                        <input type="checkbox" id="flip"></input>
                         <Row>
-                            <Col className="colImagen">
-                                <img className='h-25' src={imagen} alt="" />
-                                <div className='d-flex justify-content-around'>
-                                    <p>No tenes cuenta?</p>
-                                    <button className='btn btn-dark'>Click aqui</button>
-                                </div>
+                            <Col className="cover">
+                                <Col className="front">
+                                {/*<img className='h-25' src={imagen} alt="" />*/}
+                                    <Col className="text">
+                                        <span className="text-1">Bienvenido! <br /> A Happy Food</span>
+                                        <span className="text-2">Conectémonos</span>
+                                    </Col>  
+                                </Col>
                             </Col>
                             <Col className="colFormulario">
                                 <Form className='formulario text-center'>
@@ -60,7 +63,7 @@ const Login = () => {
                                             id="usuario"
                                             type="text"
                                             name="usuario"
-                                            placeholder="Usuario"
+                                            placeholder="Introduce tu usuario"
                                         />
                                         <ErrorMessage name="usuario" component={() => (
                                             <div className="error">{errors.usuario}</div>
@@ -73,17 +76,16 @@ const Login = () => {
                                             id="contraseña"
                                             type="password"
                                             name="contraseña"
-                                            placeholder="Contraseña"
+                                            placeholder="Introduce tu contraseña"
                                         />
                                         <ErrorMessage name="contraseña" component={() => (
                                             <div className="error">{errors.contraseña}</div>
                                         )} />
                                     </div>
-                                    <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Ingresar</button>
+                                    <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Iniciar Sesión</button>
                                     {datosEnviados && <p className="usuarioRegistrado">Te registraste con exito!</p>}
                                     <div className='d-flex justify-content-center'>
-                                        <p>Olvidaste tu contraseña?</p>
-                                        <a href="#!">Click Here</a>
+                                        <a href="#!"><p>Has olvidado tu contraseña?</p></a>
                                     </div>
                                 </Form>
                             </Col>
@@ -96,3 +98,6 @@ const Login = () => {
 }
 
 export default Login
+
+                                {/*<img className='h-25' src={imagen} alt="" /> IMAGEN*/}
+                                    {/*<p>No tienes una cuenta?</p>*/}

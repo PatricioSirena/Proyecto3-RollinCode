@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import '../estilos/login.css'
+import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -54,8 +54,8 @@ const Registro = () => {
                             <Col className="colImagen">
                                 <img className='h-25' src={imagen} alt="" />
                                 <div className='d-flex justify-content-around'>
-                                    <p>Ya tenes cuenta?</p>
-                                    <button className='btn btn-dark'>Click aqui</button>
+                                    <p>Ya tienes una cuenta?</p>
+                                    <button className='btn btn-dark'>Inicia Sesión</button>
                                 </div>
                             </Col>
                             <Col className="colFormulario">
@@ -67,20 +67,20 @@ const Registro = () => {
                                             id="usuario"
                                             type="text"
                                             name="usuario"
-                                            placeholder="Usuario"
+                                            placeholder="Introduce tu usuario"
                                         />
                                         <ErrorMessage name="usuario" component={() => (
                                             <div className="error">{errors.usuario}</div>
                                         )} />
                                     </div>
                                     <div>
-                                        <label htmlFor="correo">Correo electronico</label>
+                                        <label htmlFor="correo">Email</label>
                                         <br />
                                         <Field
                                             id="correo"
                                             type="text"
                                             name="correo"
-                                            placeholder="Correo electronico"
+                                            placeholder="Introduce tu email"
                                         />
                                         <ErrorMessage name="correo" component={() => (
                                             <div className="error">{errors.correo}</div>
@@ -93,7 +93,7 @@ const Registro = () => {
                                             id="contraseña"
                                             type="password"
                                             name="contraseña"
-                                            placeholder="Contraseña"
+                                            placeholder="Introduce tu contraseña"
                                         />
                                         <ErrorMessage name="contraseña" component={() => (
                                             <div className="error">{errors.contraseña}</div>
