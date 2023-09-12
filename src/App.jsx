@@ -1,8 +1,4 @@
-
-// test 1
-
 import { useState } from 'react'
-// import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
