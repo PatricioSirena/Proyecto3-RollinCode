@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bebidas from '../datos/bebidas.json'
+import menu from '../datos/menu.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
 import Form from 'react-bootstrap/Form'
@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from 'react-bootstrap';
 
 function Administrador() {
 
-  const [data, setData] = useState(bebidas);
+  const [data, setData] = useState(menu);
   const [modalEditar, setModalEditar] = useState(false);
   const [modalEliminar, setModalEliminar] = useState(false);
   const [modalInsertar, setModalInsertar] = useState(false);
@@ -143,7 +143,7 @@ function Administrador() {
             <tr key={elemento.id}>
               <td>{elemento.id}</td>
               <td>{elemento.titulo}</td>
-              <td>{elemento.precio}</td>
+              <td>${elemento.precio}</td>
               <td>{elemento.texto}</td>
               <td>{elemento.categoria}</td>
               <td>checkbox</td>
