@@ -1,7 +1,9 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import bebidas from '../datos/bebidas.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Modal, ModalBody, ModalHeader, ModalFooter} from 'reactstrap';
+import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import Form from 'react-bootstrap/Form'
+import { FormControl, FormGroup } from 'react-bootstrap';
 
 
 function Administrador() {
@@ -20,50 +22,98 @@ function Administrador() {
     imagen: ''
   });
 
-  const seleccionarItem=(elemento, caso)=>{
+  const seleccionarItem = (elemento, caso) => {
     console.log(elemento);
-setItemSeleccionado(elemento);
-(caso==='Editar')?setModalEditar(true):setModalEliminar(true)
+    setItemSeleccionado(elemento);
+    (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
   }
 
-  const handleChange=e=>{
-    const {name, value}=e.target;
-    setItemSeleccionado((prevState)=>({
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setItemSeleccionado((prevState) => ({
       ...prevState,
       [name]: value
     }));
   }
 
-  const editar=()=>{
-    var dataNueva=data;
-    if(itemSeleccionado.titulo == "") {
-      console.log("no puede ");}
-    dataNueva.map(bebida=>{
-      if(bebida.id===itemSeleccionado.id){
-        bebida.titulo=itemSeleccionado.titulo;
-        bebida.precio=itemSeleccionado.precio;
-        bebida.texto=itemSeleccionado.texto;
-        bebida.categoria=itemSeleccionado.categoria;
-        bebida.imagen=itemSeleccionado.imagen;
+  const editar = () => {
+    var dataNueva = data;
+    if (itemSeleccionado.titulo === "") {
+      return alert("Debe ingresar el Nombre")
+    }else if (!/^[A-Za-z0-9\s]{4,30}$/g.test(itemSeleccionado.titulo)){
+      return alert('El nombre puede tener letras y numero y debe tener entre 4 y 30 caracteres');
+    }
+    if (itemSeleccionado.precio === "") {
+      return alert("Debe ingresar el Precio")
+    }else if (!/^[0-9]*(\.[0-9]+)?$/g.test(itemSeleccionado.precio)){
+      return alert('El precio solo puede tener numeros y un punto.');
+    }
+    if (itemSeleccionado.texto === "") {
+      return alert("Debe ingresar el Detalle")
+    }else if (!/^[A-Za-z0-9\s]{4,50}$/g.test(itemSeleccionado.texto)){
+      return alert('El detalle puede tener letras y numero y debe tener entre 4 y 50 caracteres');
+    }
+        if (itemSeleccionado.categoria === "") {
+      return alert("Debe ingresar la Categoria")
+    }else if (!/^[a-z\s]{4,8}$/g.test(itemSeleccionado.categoria)){
+      return alert('La categoria no puede tener mayusculas y debe ser "comidas", "bebidas" o "flores"');
+    }
+    if (itemSeleccionado.imagen === "") {
+      return alert("Debe ingresar la Url de la imagen")
+    }else if (!/^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/g.test(itemSeleccionado.imagen)){
+      return alert('No es una Url valida');
+    }
+    dataNueva.map(bebida => {
+      if (bebida.id === itemSeleccionado.id) {
+        bebida.titulo = itemSeleccionado.titulo;
+        bebida.precio = itemSeleccionado.precio;
+        bebida.texto = itemSeleccionado.texto;
+        bebida.categoria = itemSeleccionado.categoria;
+        bebida.imagen = itemSeleccionado.imagen;
       }
     });
     setData(dataNueva);
     setModalEditar(false);
   }
 
-  const eliminar =()=>{
-    setData(data.filter(bebida=>bebida.id!==itemSeleccionado.id));
+  const eliminar = () => {
+    setData(data.filter(bebida => bebida.id !== itemSeleccionado.id));
     setModalEliminar(false);
   }
 
-  const abrirModalInsertar=()=>{
+  const abrirModalInsertar = () => {
     setItemSeleccionado(null);
     setModalInsertar(true);
   }
 
-  const insertar =()=>{
-    var valorInsertar=itemSeleccionado;
-    valorInsertar.id=data[data.length-1].id+1;
+  const insertar = () => {
+        if (itemSeleccionado.titulo === '') {
+      return alert("Debe ingresar el Nombre")
+    }else if (!/^[A-Za-z0-9\s]{4,30}$/g.test(itemSeleccionado.titulo)){
+      return alert('El nombre puede tener letras y numero y debe tener entre 4 y 30 caracteres');
+    }
+    if (itemSeleccionado.precio === '') {
+      return alert("Debe ingresar el Precio")
+    }else if (!/^[0-9]*(\.[0-9]+)?$/g.test(itemSeleccionado.precio)){
+      return alert('El precio solo puede tener numeros y un punto.');
+    }
+    if (itemSeleccionado.texto === '') {
+      return alert("Debe ingresar el Detalle")
+    }else if (!/^[A-Za-z0-9\s]{4,50}$/g.test(itemSeleccionado.texto)){
+      return alert('El detalle puede tener letras y numero y debe tener entre 4 y 50 caracteres');
+    }
+        if (itemSeleccionado.categoria === '') {
+      return alert("Debe ingresar la Categoria")
+    }else if (!/^[a-z\s]{4,8}$/g.test(itemSeleccionado.categoria)){
+      return alert('La categoria no puede tener mayusculas y debe ser "comidas", "bebidas" o "flores"');
+    }
+    if (itemSeleccionado.imagen === '') {
+      return alert("Debe ingresar la Url de la imagen")
+    }else if (!/^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/g.test(itemSeleccionado.imagen)){
+      return alert('No es una Url valida');
+    }
+    var valorInsertar = itemSeleccionado;
+    valorInsertar.id = data[data.length - 1].id + 1;
     var dataNueva = data;
     dataNueva.push(valorInsertar);
     setData(dataNueva);
@@ -74,8 +124,8 @@ setItemSeleccionado(elemento);
     <div className="App">
       <h2>titulo ramdom</h2>
       <br />
-    <button className="btn btn-success" onClick={()=>abrirModalInsertar()}>Insertar</button>
-    <br /><br />
+      <button className="btn btn-success" onClick={() => abrirModalInsertar()}>Insertar</button>
+      <br /><br />
       <table className="table table-bordered">
         <thead>
           <tr>
@@ -89,7 +139,7 @@ setItemSeleccionado(elemento);
           </tr>
         </thead>
         <tbody>
-          {data.map(elemento=>(
+          {data.map(elemento => (
             <tr key={elemento.id}>
               <td>{elemento.id}</td>
               <td>{elemento.titulo}</td>
@@ -97,8 +147,8 @@ setItemSeleccionado(elemento);
               <td>{elemento.texto}</td>
               <td>{elemento.categoria}</td>
               <td>checkbox</td>
-              <td><button className="btn btn-primary" onClick={()=>seleccionarItem(elemento, 'Editar')}>Editar</button> {"   "} 
-              <button className="btn btn-danger" onClick={()=>seleccionarItem(elemento, 'Eliminar')}>Eliminar</button></td>
+              <td><button className="btn btn-primary" onClick={() => seleccionarItem(elemento, 'Editar')}>Editar</button> {"   "}
+                <button className="btn btn-danger" onClick={() => seleccionarItem(elemento, 'Eliminar')}>Eliminar</button></td>
             </tr>
           ))
           }
@@ -113,71 +163,83 @@ setItemSeleccionado(elemento);
         </ModalHeader>
         <ModalBody>
           <div className="form-group">
-            <label>ID</label>
-            <input
-              className="form-control"
-              readOnly
-              type="text"
-              name="id"
-              value={itemSeleccionado && itemSeleccionado.id}
-            />
-            <br />
-
-            <label>Nombre</label>
-            <input
-              className="form-control"
-              type="text"
-              name="titulo"
-              value={itemSeleccionado && itemSeleccionado.titulo}
-              onChange={handleChange}
-            />
-            <br />
-
-            <label>Precio</label>
-            <input
-              className="form-control"
-              type="text"
-              name="precio"
-              value={itemSeleccionado && itemSeleccionado.precio}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Detalle</label>
-            <input
-              className="form-control"
-              type="text"
-              name="texto"
-              value={itemSeleccionado && itemSeleccionado.texto}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Categoría</label>
-            <input
-              className="form-control"
-              type="text"
-              name="categoria"
-              value={itemSeleccionado && itemSeleccionado.categoria}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Imagen</label>
-            <input
-              className="form-control"
-              type="text"
-              name="imagen"
-              value={itemSeleccionado && itemSeleccionado.imagen}
-              onChange={handleChange}
-            />
-            <br />
+            <Form>
+              <FormGroup>
+                <Form.Label>ID</Form.Label>
+                <FormControl
+                  className="form-control"
+                  readOnly
+                  type="text"
+                  name="id"
+                  value={itemSeleccionado && itemSeleccionado.id}
+                />
+              </FormGroup>
+              <br />
+              <FormGroup>
+                <Form.Label>Nombre</Form.Label>
+                <FormControl
+                  className="form-control"
+                  type="text"
+                  name="titulo"
+                  value={itemSeleccionado && itemSeleccionado.titulo}
+                  onChange={handleChange}
+                />
+              </FormGroup>
+              <br />
+              <FormGroup>
+              <Form.Label>Precio</Form.Label>
+              <FormControl
+                className="form-control"
+                type="text"
+                name="precio"
+                value={itemSeleccionado && itemSeleccionado.precio}
+                onChange={handleChange}
+              />
+              </FormGroup>
+              <br />
+              <FormGroup>
+              <Form.Label>Detalle</Form.Label>
+              <FormControl
+                className="form-control"
+                type="text"
+                name="texto"
+                value={itemSeleccionado && itemSeleccionado.texto}
+                onChange={handleChange}
+              />
+              </FormGroup>
+              <br />
+              <FormGroup>
+              <Form.Label>Categoría</Form.Label>
+              <FormControl
+                className="form-control"
+                type="text"
+                name="categoria"
+                value={itemSeleccionado && itemSeleccionado.categoria}
+                onChange={handleChange}
+              />
+              </FormGroup>
+              <br />
+              <FormGroup>
+              <Form.Label>Imagen</Form.Label>
+              <FormControl
+                className="form-control"
+                type="text"
+                name="imagen"
+                value={itemSeleccionado && itemSeleccionado.imagen}
+                onChange={handleChange}
+              />
+              </FormGroup>
+              <br />
+            </Form>
           </div>
         </ModalBody>
         <ModalFooter>
-          <button className="btn btn-primary" onClick={()=>editar()}>
+          <button className="btn btn-primary" onClick={() => editar()}>
             Actualizar
           </button>
           <button
             className="btn btn-danger"
-            onClick={()=>setModalEditar(false)}
+            onClick={() => setModalEditar(false)}
           >
             Cancelar
           </button>
@@ -190,12 +252,12 @@ setItemSeleccionado(elemento);
           Estás Seguro que deseas eliminar este ítem? {itemSeleccionado && itemSeleccionado.titulo}
         </ModalBody>
         <ModalFooter>
-          <button className="btn btn-danger" onClick={()=>eliminar()}>
+          <button className="btn btn-danger" onClick={() => eliminar()}>
             Sí
           </button>
           <button
             className="btn btn-secondary"
-            onClick={()=>setModalEliminar(false)}
+            onClick={() => setModalEliminar(false)}
           >
             No
           </button>
@@ -203,7 +265,7 @@ setItemSeleccionado(elemento);
       </Modal>
 
 
-        <Modal isOpen={modalInsertar}>
+      <Modal isOpen={modalInsertar}>
         <ModalHeader>
           <div>
             <h3>Insertar Item</h3>
@@ -217,7 +279,7 @@ setItemSeleccionado(elemento);
               readOnly
               type="text"
               name="id"
-              value={data[data.length-1].id+1}
+              value={data[data.length - 1].id + 1}
             />
             <br />
 
@@ -226,7 +288,7 @@ setItemSeleccionado(elemento);
               className="form-control"
               type="text"
               name="titulo"
-              value={itemSeleccionado ? itemSeleccionado.titulo: ''}
+              value={itemSeleccionado ? itemSeleccionado.titulo : ''}
               onChange={handleChange}
             />
             <br />
@@ -236,7 +298,7 @@ setItemSeleccionado(elemento);
               className="form-control"
               type="text"
               name="precio"
-              value={itemSeleccionado ? itemSeleccionado.precio: ''}
+              value={itemSeleccionado ? itemSeleccionado.precio : ''}
               onChange={handleChange}
             />
             <br />
@@ -245,7 +307,7 @@ setItemSeleccionado(elemento);
               className="form-control"
               type="text"
               name="texto"
-              value={itemSeleccionado ? itemSeleccionado.texto: ''}
+              value={itemSeleccionado ? itemSeleccionado.texto : ''}
               onChange={handleChange}
             />
             <br />
@@ -254,7 +316,7 @@ setItemSeleccionado(elemento);
               className="form-control"
               type="text"
               name="categoria"
-              value={itemSeleccionado ? itemSeleccionado.categoria: ''}
+              value={itemSeleccionado ? itemSeleccionado.categoria : ''}
               onChange={handleChange}
             />
             <br />
@@ -263,21 +325,21 @@ setItemSeleccionado(elemento);
               className="form-control"
               type="text"
               name="imagen"
-              value={itemSeleccionado ? itemSeleccionado.imagen: ''}
+              value={itemSeleccionado ? itemSeleccionado.imagen : ''}
               onChange={handleChange}
             />
             <br />
-        
+
           </div>
         </ModalBody>
         <ModalFooter>
           <button className="btn btn-primary"
-          onClick={()=>insertar()}>
+            onClick={() => insertar()}>
             Insertar
           </button>
           <button
             className="btn btn-danger"
-            onClick={()=>setModalInsertar(false)}
+            onClick={() => setModalInsertar(false)}
           >
             Cancelar
           </button>
