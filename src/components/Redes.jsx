@@ -9,7 +9,7 @@ const Redes = () => {
     return (
         <Container fluid className="footerRedes">
             <Row>
-                <Col className="p-1 mt-5 sm text-center accesoRedes">
+                <Col lg={4} className="p-1 mt-5 sm text-center accesoRedes">
                     <h5>Seguinos en:</h5>
                     <ul className="iconosRedes">
                         <li>
@@ -23,10 +23,10 @@ const Redes = () => {
                         </li>
                     </ul>
                 </Col>
-                <Col className="p-1 sm text-center">
+                <Col lg={4} className="p-1 sm text-center">
                     <img src={logoPagina} className="logoFooter" alt="" />
                 </Col>
-                <Col className="p-1 sm text-center listaFooter">
+                <Col lg={4} className="p-1 sm text-center listaFooter">
                     <h5 className="link_titulo">Nuestros Platos</h5>
                     <ul className="links">
                         <li>Hamburguesa Americana</li>
