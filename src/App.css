@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Titan+One&family=Ultra&display=swap');
 
 *{
   margin: 0;
@@ -37,12 +37,32 @@ h1, h2 , h3, h4, h5, p{
   margin-bottom: 6% !important;
   margin-top: 7% !important;
   color: rgb(57, 92, 59);
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
 }
+.spoiler:hover{
+  color: rgb(175, 141, 101);
+}
+
 .card_tittle{
-  font-family: 'Lobster', cursive;
+  padding: 5%;
+  font-family: 'Titan One', cursive;
+  color: rgb(40, 44, 41);
+}
+.pp{
+  padding: 1%;
+  color: rgb(46, 51, 47);
 }
 .carta{
-  color: rgb(52, 59, 53);
+  color: rgb(49, 54, 50);
+  margin: 0 auto !important;
+  cursor: pointer;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.carta:hover{
+  -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+  box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
 }
 
 
@@ -97,7 +117,6 @@ h1, h2 , h3, h4, h5, p{
 
 .tarjetaInfo{
   height: 60vh;
-  /*background-color: rgba(59, 143, 77, 0.651);*/
   color: rgb(46, 46, 46) !important;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -112,6 +131,11 @@ h1, h2 , h3, h4, h5, p{
   border-top-right-radius: 10cqw;
   border-bottom-left-radius: 10cqw;
   border-bottom-right-radius: 10cqw;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.imagenTarjeta:hover{
+  opacity: 0.7;
 }
 
 #tarjeta2{
@@ -123,9 +147,8 @@ h1, h2 , h3, h4, h5, p{
   background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
   margin-right: 13%;
 }
-/*#tarjeta3 .imagenTarjeta{
-  width: 280px;
-}*/
+
+
 
 .footer {
   width: 100% !important;
@@ -183,6 +206,14 @@ h1, h2 , h3, h4, h5, p{
   .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
     display: block !important;
   }
+
+  .carta{
+    color: rgb(49, 54, 50);
+    margin: 0 auto !important;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    width: 20rem !important;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1366px){ /*(ordenador portátil medio)*/
   body{
@@ -216,6 +247,14 @@ h1, h2 , h3, h4, h5, p{
   }
   .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
     display: block !important;
+  }
+
+  .carta{
+    color: rgb(49, 54, 50);
+    margin: 0 auto !important;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    width: 20rem !important;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1440px){ /*(escritorio medio)*/

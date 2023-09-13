@@ -7,20 +7,20 @@ import imagen3 from "../img/burger_mano.jpg";
 const tarjetas = [
     {
         id: 'tarjeta1',
-        titulo: 'prueba',
-        texto: 'Texto de prueba',
+        titulo: 'Conocé nuestro menú WE MAKE BURGERS',
+        texto: 'Nuestras burgers están hechas con carne 100% Angus.',
         imagen: imagen1
     },
     {
         id: 'tarjeta2',
-        titulo: 'prueba',
-        texto: 'Texto de prueba',
+        titulo: '20% OFF todos los jueves',
+        texto: 'Recibimos todos los medios de pago. :)',
         imagen: imagen2
     },
     {
         id: 'tarjeta3',
-        titulo: 'prueba',
-        texto: 'Texto de prueba',
+        titulo: 'Burger WARREN la recomendada del día',
+        texto: 'Dos medallones de 100 gr de pollo, doble queso cheddar, tomate, lechuga y nuestra exquisita salsa Ronnie.',
         imagen: imagen3
     }
 ]
