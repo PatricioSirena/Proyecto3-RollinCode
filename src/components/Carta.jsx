@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Carta = ({ titulo, text, imgSource, url }) => {
     return (
@@ -13,7 +13,7 @@ const Carta = ({ titulo, text, imgSource, url }) => {
                     {text ? text : 'El texto es requerido'}
                 </Card.Text>
                 <Button className='btn-dark' variant="primary">
-                    <Link to={url ? url : '#!'} target='_blank' rel='noreferrer'>Sin miedo al exito</Link>
+                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Sin miedo al exito</a>
                 </Button>
             </Card.Body>
         </Card>

@@ -1,5 +1,4 @@
 import MenuComidas from "../components/MenuComidas";
-import Portada from "../components/Portada";
 import Footer from "../components/Footer";
 import MenuBebidas from "../components/MenuBebidas";
 import MenuFlores from "../components/MenuFlores";
@@ -7,8 +6,9 @@ import MenuFlores from "../components/MenuFlores";
 const Menu = () => {
     return (
         <>
-
-            <Portada />
+            <div className="portadaMenu">
+                <img src="" alt="" />
+            </div>
             <MenuComidas />
             <MenuBebidas />
             <MenuFlores />

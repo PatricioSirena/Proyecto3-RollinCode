@@ -1,10 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import bebidas from "../bebidas.json";
+import menu from "../menu.json";
 
 const MenuBebidas = () => {
+    const bebidas = menu.filter((item) => item.categoria === "bebida");
     return (
-        <div className="text-center">
+        <div id="menuBebidas" className="text-center">
             <h2 className="mb-5">Menu de Bebidas</h2>
             <Container>
                 <Row>

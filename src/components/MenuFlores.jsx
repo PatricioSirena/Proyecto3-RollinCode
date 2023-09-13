@@ -1,8 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import flores from "../flores.json";
+import menu from "../menu.json";
 
 const MenuFlores = () => {
+    const flores = menu.filter((item) => item.categoria === "flor");
     return (
         <div className="text-center">
             <h2 className="mb-5">Menu de Flores</h2>

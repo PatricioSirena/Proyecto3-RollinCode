@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import portada from '../assets/img/portada.jpg'
+import PropTypes from "prop-types";
 
 
 const Portada = ({ titulo, descripccion }) => {
@@ -18,5 +19,10 @@ const Portada = ({ titulo, descripccion }) => {
         </div>
     );
 }
+
+Portada.propTypes = {
+    titulo:PropTypes.string.isRequired,
+    descripccion:PropTypes.string.isRequired
+};
 
 export default Portada
