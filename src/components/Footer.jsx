@@ -8,7 +8,7 @@ const Footer = () => {
             <Redes />
             <div className="copyright text-center mb-4">
                 <span>
-                    &copy;2023, GameSquad. All right reserved.
+                    &copy;2023, All right reserved.
                 </span>
             </div>
         </footer>

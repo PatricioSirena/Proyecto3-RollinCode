@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Titan+One&family=Ultra&display=swap');
 
 *{
+  padding: 0;
+  margin: 0;
   margin: 0;
   padding: 0;
 }
@@ -89,6 +91,79 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+body{
+    background-color: rgb(238, 237, 237);
+    font-family: 'Inter', sans-serif;
+    /*font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;*/
+  }
+  
+  .tituloo{
+    font-family: 'Ultra', serif !important;
+    color: beige !important;
+  }
+  
+  .logo{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .portada_home{
+    height:100vh;
+    width: 100vw;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .portada_home > h1 > p{
+    text-align: left;
+    position: -webkit-sticky;
+  }
+
+/*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
+.btn{
+    background-color: rgb(33, 85, 46);
+    color: white;
+    border-color: rgb(33, 85, 46);
+    font-weight: 500;
+    border-radius: 10cqw;
+  }
+  .btn:focus{
+    text-decoration: none;
+  }
+  .btn:hover{
+    color: white !important;
+    background: rgb(43, 110, 60);
+    border-color: rgb(43, 110, 60);
+    transition: 1s ease;
+  }
+  .btn > a{
+    text-decoration: none;
+    color: white !important;
+  }
+  .boton{
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .tarjetaInfo{
+    height: 50vh;
+    background-color: rgba(59, 143, 77, 0.651);
+    margin-top: 20px;
+  }
+  
+  .imagenTarjeta{
+    height: 100%;
+    border-bottom-left-radius: 9cqw;
+  }
+  
+  #tarjeta2{
+    display: flex;
+    background-color: rgba(216, 175, 129, 0.438);
+  }
 
 .portada{
   background-image: url('./assets/img/back-portada.jpg');
