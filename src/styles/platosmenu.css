@@ -41,6 +41,8 @@ body{
 .card-img {
     border-radius: .5rem;
     transition: .3s ease;
+    height: 40%;
+    width: 100%;
 }
 
 .card-info {

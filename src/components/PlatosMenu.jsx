@@ -52,6 +52,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
     const cantidadPorItem = cantidadPorId(id);
 
     return (
+        
         <Card className='card text-center' style={{ width: '19rem', height: '25rem' }}>
             <CardImg className='card-img' variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} ></CardImg>
 
