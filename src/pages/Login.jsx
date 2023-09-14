@@ -4,6 +4,7 @@ import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
@@ -75,9 +76,8 @@ const Login = () => {
                                         <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
                                     </Col>
                                     <button type="submit" className="btn">Iniciar Sesión</button>
-                                    {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
                                     <Col className="sign-link">
-                                        <p>No tienes una cuenta? <a href="Registro.jsx" className="signUp-link">Regístrate</a></p>
+                                        <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
                                     </Col>                                          
                                 </Form>
                             </Col>

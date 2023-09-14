@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { methPost } from '../helpers/index'
+import Login from './Login'
+import { Link } from "react-router-dom";
 
 const Registro = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
@@ -12,6 +14,7 @@ const Registro = () => {
         <>
             <Formik
                 initialValues={{
+                    activo: false,
                     admin: false,
                     usuario: '',
                     correo: '',
@@ -43,7 +46,6 @@ const Registro = () => {
                 onSubmit={(valores, { resetForm }) => {
                     let usuarioRegistrado = valores;
                     resetForm();
-                    console.log('Formulario enviado');
                     methPost(usuarioRegistrado);
                     cambiarDatosEnviados(true);
                     setTimeout(() => cambiarDatosEnviados(false), 5000)
@@ -82,7 +84,7 @@ const Registro = () => {
                                 <Col className="input-group">
                                     <Field
                                         id="contraseña"
-                                        type="email"
+                                        type="password"
                                         name="contraseña"
                                         placeholder="Contraseña"
                                     />
@@ -97,7 +99,7 @@ const Registro = () => {
                                 <button type="submit" className="btn">Registrarme</button>
                                 {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
                                 <Col className="sign-link">
-                                    <p>Ya tienes una cuenta? <a href="Login.jsx" className="signUp-link">Inicia Sesión</a></p>
+                                    <p>Ya tienes una cuenta? <Link to={"/Login"} className="signUp-link">Inicia Sesión</Link></p>
                                 </Col>                                      
                             </Form>
                         </Col>
