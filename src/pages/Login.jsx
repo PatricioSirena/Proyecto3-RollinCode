@@ -4,7 +4,7 @@ import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import imagen from "../assets/img/portada.jpg";
 
 const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
@@ -42,8 +42,59 @@ const Login = () => {
                 }}
             >
                 {({ errors }) => (
-                    <Container className='containerLogin'>
-                        <input type="checkbox" id="flip"></input>
+                
+                    <Row>
+                        <Container className='wrapper'>
+                            <Col className="form-wrapper sign-in col-sm ">
+                                <Form className='loginForm text-center'>
+                                    <p className="tittle">Inicie Sesión</p>
+                                    <Col className="input-group">
+                                        <Field
+                                            id="usuario"
+                                            type="text"
+                                            name="usuario"
+                                            placeholder="Usuario"
+                                        />
+                                        <label htmlFor="usuario"></label>
+                                        <ErrorMessage name="usuario" component={() => (
+                                        <div className="error">{errors.usuario}</div>
+                                        )} />  
+                                    </Col>
+                                    <Col className="input-group">
+                                        <Field
+                                            id="contraseña"
+                                            type="password"
+                                            name="contraseña"
+                                            placeholder="Contraseña"
+                                        />
+                                        <label htmlFor="contraseña"></label>
+                                        <ErrorMessage name="contraseña" component={() => (
+                                        <div className="error text-center">{errors.contraseña}</div>
+                                        )} />
+                                    </Col>  
+                                    <Col className="forgot-pass">
+                                        <a class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                    </Col>
+                                    <button type="submit" class="btn">Iniciar Sesión</button>
+                                    {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
+                                    <Col className="sign-link">
+                                        <p>No tienes una cuenta? <a href="Registro.jsx" class="signUp-link">Regístrate</a></p>
+                                    </Col>
+                                          
+                                </Form>
+                            </Col>
+                        </Container>
+                    </Row>
+                )}
+            </Formik>
+        </>
+    )
+}
+
+export default Login
+
+
+/*<input type="checkbox" id="flip"></input>
                         <Row>
                             <Col className="cover">
                                 <Col className="front">
@@ -83,6 +134,7 @@ const Login = () => {
                                         )} />
                                     </div>
                                     <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Iniciar Sesión</button>
+                                    {datosEnviados && <p className="usuarioRegistrado">Te registraste con exito!</p>}
                                     <div className='d-flex justify-content-center'>
                                         <a href="#!"><p>Has olvidado tu contraseña?</p></a>
                                     </div>
