@@ -4,9 +4,10 @@ import Proptypes from 'prop-types'
 import HappyBurger from '../img/portada_burger.jpg'
 import LogoYunga from '../img/yunga.jpg'
 import '../styles/portada.css'
-
+import portada from '../assets/img/yungannabis.png'
 
 const Portada = ({ titulo, descripccion }) => {
+
     return (
         <Container fluid className='imagenPortada'>
             <Row>
@@ -23,6 +24,20 @@ const Portada = ({ titulo, descripccion }) => {
                 </Col>
             </Row>
         </Container>
+        <>
+            <div className="container-fluid">
+                <div className="row portada">
+                    <div className="col-lg-8 portada-imagen">
+                        <img src={portada} alt="" />
+                    </div>
+                    <div className="col-lg-4 mb-5 portada-descripccion">
+                        <h1 className='mt-3'>{titulo}</h1>
+                        <p className="mb-5"> {descripccion} </p>
+                        <Button className='boton-portada mt-5' variant="outline-dark">Conocenos!</Button>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
 

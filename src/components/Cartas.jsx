@@ -35,6 +35,7 @@ const Cartas = () => {
                     {
                         cartas.map((carta) => (
                             <div className="col-lg-3 m-4 justify-content-center" key={carta.id}>
+                            <div className="col-lg-4 mb-5" key={carta.id}>
                                 <Carta 
                                 titulo={carta.titulo} 
                                 imgSource={carta.imagen} 
