@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import imagen from "../assets/img/portada.jpg";
+import { methPost } from '../helpers/index'
 
 const Registro = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
@@ -44,7 +45,7 @@ const Registro = () => {
                     let usuarioRegistrado = valores;
                     resetForm();
                     console.log('Formulario enviado');
-                    console.log(usuarioRegistrado);
+                    methPost(usuarioRegistrado);
                     cambiarDatosEnviados(true);
                     setTimeout(() => cambiarDatosEnviados(false), 5000)
                 }}

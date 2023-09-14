@@ -4,7 +4,7 @@ import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import imagen from "../assets/img/portada.jpg";
+// import imagen from "../assets/img/portada.jpg";
 
 const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
