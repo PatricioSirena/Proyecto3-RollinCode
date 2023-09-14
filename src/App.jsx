@@ -3,11 +3,16 @@ import { useState } from 'react'
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Menu from "./pages/Menu";
+import './App.css';
+import MyNav from "./components/MyNav";
+import Home from './pages/Home';
+import ContextoCarrito from './context/ContextoCarrito';
 import './App.css';
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
 import Administrador from './pages/Administrador';
-
 
 const rutaUsuarios = import.meta.env.VITE_ENV_USERS;
 
@@ -23,6 +28,15 @@ function App() {
     }
     return (
         <>
+        <ContextoCarrito>
+        <Router>
+            <MyNav />
+            <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/Menu' element={<Menu />} />
+            </Routes>
+            </Router>
+        </ContextoCarrito>
             <BrowserRouter>
                 <MyNav />
                     <Routes>
