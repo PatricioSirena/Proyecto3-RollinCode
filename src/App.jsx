@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
 import { methGet } from './helpers/index'
-import Productos from './pages/Productos';
 
 
 const rutaUsuarios = import.meta.env.VITE_ENV_URL_USERS;
@@ -38,12 +37,11 @@ function App() {
                 <MyNav />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        <Route exact path="/admin" element={<Admin />} />
+                        {/* <Route exact path="/admin" element={<Admin />} /> */}
                         <Route exact path="/login" element={<Login />} />
                         <Route exact path="/registro" element={<Registro />} />
                     </Routes>
             </BrowserRouter>
-            {/* <Home /> */}
         </>
     )
 }

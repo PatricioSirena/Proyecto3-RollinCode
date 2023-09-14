@@ -4,7 +4,6 @@ import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import imagen from "../assets/img/portada.jpg";
 import { methPost } from '../helpers/index'
 
 const Registro = () => {
@@ -93,14 +92,13 @@ const Registro = () => {
                                     )} />
                                 </Col>  
                                 <Col className="forgot-pass">
-                                    <a class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                    <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
                                 </Col>
-                                <button type="submit" class="btn">Registrarme</button>
+                                <button type="submit" className="btn">Registrarme</button>
                                 {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
                                 <Col className="sign-link">
-                                    <p>Ya tienes una cuenta? <a href="Login.jsx" class="signUp-link">Inicia Sesión</a></p>
-                                </Col>
-                                      
+                                    <p>Ya tienes una cuenta? <a href="Login.jsx" className="signUp-link">Inicia Sesión</a></p>
+                                </Col>                                      
                             </Form>
                         </Col>
                     </Container>
@@ -113,60 +111,3 @@ const Registro = () => {
 
 export default Registro
 
-/*<Container className='containerRegistro'>
-                        <Row>
-                            <Col className="colImagen">
-                                <img className='h-25' src={imagen} alt="" />
-                                <div className='d-flex justify-content-around'>
-                                    <p>Ya tienes una cuenta?</p>
-                                    <button className='btn btn-dark'>Inicia Sesión</button>
-                                </div>
-                            </Col>
-                            <Col className="colFormulario">
-                                <Form className='formulario text-center'>
-                                    <div>
-                                        <label htmlFor="usuario">Usuario</label>
-                                        <br />
-                                        <Field
-                                            id="usuario"
-                                            type="text"
-                                            name="usuario"
-                                            placeholder="Introduce tu usuario"
-                                        />
-                                        <ErrorMessage name="usuario" component={() => (
-                                            <div className="error">{errors.usuario}</div>
-                                        )} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="correo">Email</label>
-                                        <br />
-                                        <Field
-                                            id="correo"
-                                            type="text"
-                                            name="correo"
-                                            placeholder="Introduce tu email"
-                                        />
-                                        <ErrorMessage name="correo" component={() => (
-                                            <div className="error">{errors.correo}</div>
-                                        )} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="contraseña">Contraseña</label>
-                                        <br />
-                                        <Field
-                                            id="contraseña"
-                                            type="password"
-                                            name="contraseña"
-                                            placeholder="Introduce tu contraseña"
-                                        />
-                                        <ErrorMessage name="contraseña" component={() => (
-                                            <div className="error">{errors.contraseña}</div>
-                                        )} />
-                                    </div>
-                                    <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Registrarme</button>
-                                    {datosEnviados && <p className="usuarioRegistrado">Te registraste con exito!</p>}
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Container>
- */
