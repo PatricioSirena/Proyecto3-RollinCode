@@ -3,7 +3,6 @@ const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
 
 import axios from 'axios';
 
-
 export const methPost= async(obj)=>{
     try {
         axios.post(URL_productos + "/createProducts/",obj)
@@ -46,6 +45,7 @@ export const  methGet=async()=>{
     }
 }
 
+
 export const  methGetUsers=async()=>{
     try {
         let users = await axios.get(URL_usuarios + "/getUsers")
@@ -54,6 +54,7 @@ export const  methGetUsers=async()=>{
         console.log(error);
     }
 }
+
 export const ingresar=async(user)=>{
     let users = await methGetUsers();
     let objs = users.data;
@@ -73,6 +74,7 @@ export const methoDeleteOne=(id)=>{
         console.log(error);
     }
 }
+
 export const methoDeleteOneUser=(id)=>{
     try {
         let productos =axios.delete(`${URL_usuarios}/deleteUser/${id}`)

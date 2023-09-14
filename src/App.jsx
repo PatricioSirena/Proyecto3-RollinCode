@@ -1,22 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+// import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Axios from "axios";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Menu from "./pages/Menu";
 import './App.css';
-import './styles/footer.css'
-import Cartas from "./components/Cartas";
-import Portada from "./components/Portada";
-import TarjetasInfo from "./components/TarjetasInfo";
+import Admin from "./pages/Admin";
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
-import ContextoCarrito from './context/ContextoCarrito';
-import Administrador from './pages/Administrador';
 
-const rutaUsuarios = import.meta.env.VITE_ENV_USERS;
+
+const rutaUsuarios = import.meta.env.VITE_ENV_URL_USERS;
 
 function App() {
     const [users, setUsers] = useState([])
+    const [products, setProducts] = useState([])
+
     const backEnd = async () => {
         try {
             const result = await Axios.get(rutaUsuarios + '/getUsers');
@@ -25,6 +23,14 @@ function App() {
             return
         }
     }
+    useEffect(() => {
+        methGet().then(data => setProducts(data.data.data))
+
+        return () => {
+
+        }
+    }, [])
+
     return (
         <>
         <ContextoCarrito>
@@ -40,10 +46,9 @@ function App() {
                 <MyNav />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        {/* <Route exact path="/admin" element={<Admin />} /> */}
-                        <Route exact path="/admin" element={<Administrador />} />
-                        {/* <Route exact path="/login" element={<Admin />} /> */}
-                        {/* <Route exact path="/registro" element={<Admin />} /> */}
+                        <Route exact path="/admin" element={<Admin />} />
+                        <Route exact path="/login" element={<Admin />} />
+                        <Route exact path="/registro" element={<Admin />} />
                     </Routes>
             </BrowserRouter>
         </>
