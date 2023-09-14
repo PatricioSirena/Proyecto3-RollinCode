@@ -51,6 +51,14 @@ justify-content: center;
   background-color: red;
 }
 
+#tarjeta2 .uno{
+  order: 1;
+}
+
+#tarjeta2 .dos{
+  order: 0;
+}
+
 .footer {
   width: 100vw !important;
   bottom: 0;
@@ -60,20 +68,43 @@ justify-content: center;
 
 .footerMapa {
   width: 100vw;
-  height: 60vh;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .footerRedes {
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
+  align-items: center;
 }
 
-#tarjeta2 .uno{
-  order: 1;
+.logoFooter{
+  width: 150px;
+  border-radius: 100px;
+  margin-top: 50px;
+  margin-left: 40px;
 }
 
-#tarjeta2 .dos{
-  order: 0;
+.listaFooter{
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.listaFooter ul li{
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+
+.iconosRedes{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-right: 55px;
+}
+
+.iconoRedes{
+  font-size: 30px;
+  color: white;
+  margin: 10px;
 }
