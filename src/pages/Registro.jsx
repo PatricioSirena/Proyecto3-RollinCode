@@ -13,8 +13,6 @@ const Registro = () => {
         <>
             <Formik
                 initialValues={{
-                    activo: false,
-                    admin: false,
                     usuario: '',
                     correo: '',
                     contraseña: ''
