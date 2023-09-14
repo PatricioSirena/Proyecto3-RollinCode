@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
-import '../estilos/navbar.css'
+import '../styles/navbar.css'
 import { useContext, useState } from 'react';
 import { CarritoContexto } from '../context/ContextoCarrito';
 import Modal from 'react-bootstrap/Modal';

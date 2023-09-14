@@ -6,7 +6,7 @@ const MenuFlores = () => {
     const flores = menu.filter((item) => item.categoria === "flor");
     return (
         <div className="text-center">
-            <h2 className="mb-5">Menu de Flores</h2>
+            <h1 className="text-menu mb-5">Flores</h1>
             <Container>
                 <Row>
                     {

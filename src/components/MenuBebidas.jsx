@@ -6,7 +6,7 @@ const MenuBebidas = () => {
     const bebidas = menu.filter((item) => item.categoria === "bebida");
     return (
         <div id="menuBebidas" className="text-center">
-            <h2 className="mb-5">Menu de Bebidas</h2>
+            <h1 className="text-menu mb-5">Bebidas</h1>
             <Container>
                 <Row>
                     {

@@ -7,7 +7,7 @@ const MenuComidas = () => {
 
     return (
         <div className="text-center">
-            <h2 className="mb-5">Menu comidas</h2>
+            <h1 className="text-menu mb-5">Burgers</h1>
             <Container>
                 <Row>
                     {
