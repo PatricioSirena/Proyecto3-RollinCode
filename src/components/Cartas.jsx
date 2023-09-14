@@ -13,7 +13,7 @@ const cartas = [
     },
     {
         id: 2,
-        titulo: 'Birras',
+        titulo: 'Bebidas',
         imagen: imagen2,
         texto: 'Texto de prueba',
         url: 'https://instagram.com'

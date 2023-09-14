@@ -66,13 +66,13 @@ h1, h2 , h3, h4, h5, p{
 }
 
 
-.animate__zoomInLeft{
+.animate__backInRight{
   display: inline-block;
   margin: 0 0.5rem;
   text-align: center !important;
   justify-content: center;
-  animation: zoomInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2.4s; /* don't forget to set a duration! */
+  animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
   animation-iteration-count: 1;
 }
 
