@@ -50,7 +50,7 @@ const Registro = () => {
                 }}
             >
                 {({ errors }) => (
-                    <Row>
+                <Row>
                     <Container className='wrapper'>
                         <Col className="form-wrapper sign-in col-sm ">
                             <Form className='loginForm text-center'>
