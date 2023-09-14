@@ -16,7 +16,7 @@ export const methPost= async(obj)=>{
 export const methPostUsers= async(obj)=>{
     obj.admin=false;
     try {
-        axios.post(URL_usuarios,obj)
+        axios.post(URL_usuarios + "/createUser",obj)
     } catch (error) {
         console.log(error);
     }
@@ -25,6 +25,14 @@ export const methoGetOne=(id)=>{
     try {
         let productos =axios.get(`${URL_productos}/getOneProduct/${id}`)
         return productos;
+    } catch (error) {
+        console.log(error);
+    }
+}
+export const methoGetOneUser=(id)=>{
+    try {
+        let usuario =axios.get(`${URL_usuarios}//getOneUser/${id}`)
+        return usuario;
     } catch (error) {
         console.log(error);
     }
@@ -66,12 +74,29 @@ export const methoDeleteOne=(id)=>{
         console.log(error);
     }
 }
+export const methoDeleteOneUser=(id)=>{
+    try {
+        let productos =axios.delete(`${URL_usuarios}/deleteUser/${id}`)
+        return productos;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 export const methUpdate= async(obj,id)=>{
     console.log(obj,id);
     try {
         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`,obj)
         return editProduct
+    } catch (error) {
+        console.log(error);
+    }
+}
+export const methUpdateUser= async(obj,id)=>{
+    console.log(obj,id);
+    try {
+        let editUsuario = axios.put(`${URL_usuarios}//updateUser/${id}`,obj)
+        return editUsuario
     } catch (error) {
         console.log(error);
     }
