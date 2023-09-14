@@ -50,7 +50,69 @@ const Registro = () => {
                 }}
             >
                 {({ errors }) => (
-                    <Container className='containerRegistro'>
+                    <Row>
+                    <Container className='wrapper'>
+                        <Col className="form-wrapper sign-in col-sm ">
+                            <Form className='loginForm text-center'>
+                                <p className="tittle">Regístrate</p>
+                                <Col className="input-group">
+                                    <Field
+                                        id="usuario"
+                                        type="text"
+                                        name="usuario"
+                                        placeholder="Usuario"
+                                    />
+                                    <label htmlFor="usuario"></label>
+                                    <ErrorMessage name="usuario" component={() => (
+                                    <div className="error">{errors.usuario}</div>
+                                    )} />  
+                                </Col>
+                                <Col className="input-group">
+                                    <Field
+                                        id="correo"
+                                        type="text"
+                                        name="correo"
+                                        placeholder="Email"
+                                    />
+                                    <label htmlFor="correo"></label>
+                                    <ErrorMessage name="correo" component={() => (
+                                    <div className="error">{errors.correo}</div>
+                                    )} />  
+                                </Col>
+                                <Col className="input-group">
+                                    <Field
+                                        id="contraseña"
+                                        type="email"
+                                        name="contraseña"
+                                        placeholder="Contraseña"
+                                    />
+                                    <label htmlFor="contraseña"></label>
+                                    <ErrorMessage name="contraseña" component={() => (
+                                    <div className="error text-center">{errors.contraseña}</div>
+                                    )} />
+                                </Col>  
+                                <Col className="forgot-pass">
+                                    <a class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                </Col>
+                                <button type="submit" class="btn">Registrarme</button>
+                                {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
+                                <Col className="sign-link">
+                                    <p>Ya tienes una cuenta? <a href="Login.jsx" class="signUp-link">Inicia Sesión</a></p>
+                                </Col>
+                                      
+                            </Form>
+                        </Col>
+                    </Container>
+                </Row>
+                )}
+            </Formik>
+        </>
+    )
+}
+
+export default Registro
+
+/*<Container className='containerRegistro'>
                         <Row>
                             <Col className="colImagen">
                                 <img className='h-25' src={imagen} alt="" />
@@ -106,10 +168,4 @@ const Registro = () => {
                             </Col>
                         </Row>
                     </Container>
-                )}
-            </Formik>
-        </>
-    )
-}
-
-export default Registro
+ */
