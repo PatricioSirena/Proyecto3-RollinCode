@@ -42,53 +42,50 @@ const Login = () => {
                 }}
             >
                 {({ errors }) => (
-                
-                    <Row>
-                        <Container className='wrapper'>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <Col className="form-wrapper sign-in col-sm ">
-                                <Form className='loginForm text-center'>
-                                    <p className="tittle">Inicie Sesión</p>
-                                    <Col className="input-group">
-                                        <Field
-                                            id="usuario"
-                                            type="text"
-                                            name="usuario"
-                                            placeholder="Usuario"
-                                        />
-                                        <label htmlFor="usuario"></label>
-                                        <ErrorMessage name="usuario" component={() => (
+                    <div className="row">
+                    <Container className='wrapper'>
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <Col className="form-wrapper sign-in col-sm ">
+                            <Form className='loginForm text-center'>
+                                <p className="tittle">Inicie Sesión</p>
+                                <Col className="input-group">
+                                    <Field
+                                        id="usuario"
+                                        type="text"
+                                        name="usuario"
+                                        placeholder="Usuario"
+                                    />
+                                    <label htmlFor="usuario"></label>
+                                    <ErrorMessage name="usuario" component={() => (
                                         <div className="error">{errors.usuario}</div>
-                                        )} />  
-                                    </Col>
-                                    <Col className="input-group">
-                                        <Field
-                                            id="contraseña"
-                                            type="password"
-                                            name="contraseña"
-                                            placeholder="Contraseña"
-                                        />
-                                        <label htmlFor="contraseña"></label>
-                                        <ErrorMessage name="contraseña" component={() => (
+                                    )} />
+                                </Col>
+                                <Col className="input-group">
+                                    <Field
+                                        id="contraseña"
+                                        type="password"
+                                        name="contraseña"
+                                        placeholder="Contraseña"
+                                    />
+                                    <label htmlFor="contraseña"></label>
+                                    <ErrorMessage name="contraseña" component={() => (
                                         <div className="error text-center">{errors.contraseña}</div>
-                                        )} />
-                                    </Col>  
-                                    <Col className="forgot-pass">
-                                        <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
-                                    </Col>
-                                    <button type="submit" className="btn">Iniciar Sesión</button>
-                                    <Col className="sign-link">
-                                        <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
-                                    </Col>                                          
-                                        <p>No tienes una cuenta? <a href="Registro.jsx" class="signUp-link">Regístrate</a></p>
-                                    </Col>
-                                </Form>
-                            </Col>
-                        </Container>
-                    </Row>
+                                    )} />
+                                </Col>
+                                <Col className="forgot-pass">
+                                    <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                </Col>
+                                <button type="submit" className="btn">Iniciar Sesión</button>
+                                <Col className="sign-link">
+                                    <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
+                                </Col>
+                            </Form>
+                        </Col>
+                    </Container>
+                    </div>
                 )}
-            </Formik>
+            </Formik >
         </>
     )
 }

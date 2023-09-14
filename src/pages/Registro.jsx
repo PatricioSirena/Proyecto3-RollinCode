@@ -49,10 +49,10 @@ const Registro = () => {
                 }}
             >
                 {({ errors }) => (
-                <Row>
+                <div className="row">
                     <Container className='wrapper'>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
+                        <div className="circle"></div>
+                        <div className="circle"></div>
                         <Col className="form-wrapper sign-in col-sm ">
                             <Form className='loginForm text-center'>
                                 <p className="tittle">Regístrate</p>
@@ -103,7 +103,7 @@ const Registro = () => {
                             </Form>
                         </Col>
                     </Container>
-                </Row>
+                </div>
                 )}
             </Formik>
         </>
