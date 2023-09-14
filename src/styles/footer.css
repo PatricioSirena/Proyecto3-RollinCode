@@ -117,4 +117,8 @@
 @media screen and (min-width: 720px) and (max-width: 1280px){ /*(móvil grande)*/
   
   
-}
+footer{
+    margin-top: 20%;
+    background-color: rgba(45, 90, 50, 0.959) !important;
+    padding: 6%;
+}}
