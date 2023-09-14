@@ -10,8 +10,8 @@ function Home() {
     return (
         <>
             <Portada
-                titulo={'Titulo'}
-                descripccion={'soy una descripccion de prueba para ver si todo funciona bien! soy una descripccion de prueba para ver si todo funciona bien! soy una descripccion de prueba para ver si todo funciona bien!'} />
+                titulo={'Conectando Cannabis con la Comunidad'}
+                descripccion={'Desde la Fundación buscamos contribuir a toda la cadena de producción y suministro de cannabis terapéutico y cáñamo, aportar valor bio-económico, ayudar al desarrollo de la salud física, mental y espiritual de las personas y reconectar con la naturaleza de manera íntegra y sinérgica para el mayor bienestar.'} />
             <section className='d-flex justify-content-around'>
                 <Cartas />
             </section>

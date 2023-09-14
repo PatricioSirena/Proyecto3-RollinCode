@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import portada from '../assets/img/portada.jpg'
+import portada from '../assets/img/yungannabis.png'
 
 
 const Portada = ({ titulo, descripccion }) => {
@@ -7,6 +7,8 @@ const Portada = ({ titulo, descripccion }) => {
 
     return (
         <>
+            
+
             <div className="container-fluid">
                 <div className="row portada">
                     <div className="col-lg-8 portada-imagen">
@@ -15,8 +17,7 @@ const Portada = ({ titulo, descripccion }) => {
                     <div className="col-lg-4 mb-5 portada-descripccion">
                         <h1 className='mt-3'>{titulo}</h1>
                         <p className="mb-5"> {descripccion} </p>
-                        <Button className='boton-portada mt-5' variant="outline-dark">Dark</Button>
-
+                        <Button className='boton-portada mt-5' variant="outline-dark">Conocenos!</Button>
                     </div>
                 </div>
             </div>
