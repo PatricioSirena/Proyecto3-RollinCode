@@ -45,6 +45,8 @@ const Login = () => {
                 
                     <Row>
                         <Container className='wrapper'>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
                             <Col className="form-wrapper sign-in col-sm ">
                                 <Form className='loginForm text-center'>
                                     <p className="tittle">Inicie Sesión</p>
@@ -79,6 +81,8 @@ const Login = () => {
                                     <Col className="sign-link">
                                         <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
                                     </Col>                                          
+                                        <p>No tienes una cuenta? <a href="Registro.jsx" class="signUp-link">Regístrate</a></p>
+                                    </Col>
                                 </Form>
                             </Col>
                         </Container>
