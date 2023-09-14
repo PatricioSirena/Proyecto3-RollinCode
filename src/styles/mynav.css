@@ -1,4 +1,5 @@
 #nav{
+  height: 100px;
     background-color: rgb(255, 255, 255) !important;
     font-family: 'Inter', sans-serif !important;
     font-size: 17px;
@@ -17,12 +18,14 @@
 
 .link{
   color: #333131;
+  margin: 5px;
 }
 
 .logo{
   margin-right: 3% !important;
   margin-left: 1% !important;
   width: 130px;
+  height: 70px;
 }
 
 .carrito{

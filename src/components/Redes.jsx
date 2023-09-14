@@ -3,6 +3,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logoPagina from "../img/logohappy.jpg";
 import {FaInstagram,FaFacebook,FaYoutube} from "react-icons/fa"
+import '../styles/footer.css'
+import { Link } from "react-router-dom";
+
 
 
 const Redes = () => {
@@ -13,13 +16,13 @@ const Redes = () => {
                     <h5>Seguinos en:</h5>
                     <ul className="iconosRedes">
                         <li>
-                            <a className="iconoRedes" href="#!"><FaInstagram /></a>
+                            <Link className="iconoRedes" to="#!"><FaInstagram /></Link>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!"><FaFacebook /></a>
+                            <Link className="iconoRedes" to="#!"><FaFacebook /></Link>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!"><FaYoutube /></a>
+                            <Link className="iconoRedes" to="#!"><FaYoutube /></Link>
                         </li>
                     </ul>
                 </Col>

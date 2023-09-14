@@ -1,5 +1,6 @@
 import MapaFormulario from "./MapaFormulario";
 import Redes from "./Redes";
+import '../styles/footer.css'
 
 const Footer = () => {
     return (
