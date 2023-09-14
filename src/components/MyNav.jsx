@@ -107,6 +107,7 @@ import '../styles/mynav.css'
 import Happyfood from "../img/happy.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/mynav.css'
+import { NavLink } from 'react-router-dom';
 
 function MyNav() {
     return (
@@ -130,11 +131,11 @@ function MyNav() {
                             style={{ maxHeight: '200px' }}
 
                         >
-                            <Nav.Link href="#action2" className='link'>Inicio</Nav.Link>
-                            <Nav.Link href="#action2" className='link'>Menu</Nav.Link>
-                            <Nav.Link href="#action2" className='link'>Admin</Nav.Link>
-                            <Nav.Link href="#action1" className='link'>Iniciar Sesión</Nav.Link>
-                            <Nav.Link href="#action1" className='link'>Registrarme</Nav.Link>
+                            <NavLink to="/" className='link'>Inicio</NavLink>
+                            <NavLink to="/Menu" className='link'>Menu</NavLink>
+                            <NavLink to="/Admin" className='link'>Admin</NavLink>
+                            <NavLink to="/Login" className='link'>Iniciar Sesión</NavLink>
+                            <NavLink to="/Registro" className='link'>Registrarme</NavLink>
                         </Nav>
                         <a href="#" className='carrito'>
                             <img src={Carrito} className='carrito' alt="Carrito" />

@@ -1,7 +1,4 @@
 import TarjetaInfo from "./TarjetaInfo";
-import imagen1 from "../assets/img/comida.jpg";
-import imagen2 from "../assets/img/bebida.jpg";
-import imagen3 from "../assets/img/flores.jpg";
 import imagen1 from "../img/burger_4.jpg";
 import imagen2 from "../img/coquita.jpg";
 import imagen3 from "../img/burger_mano.jpg";

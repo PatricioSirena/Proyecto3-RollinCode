@@ -3,17 +3,15 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { methPost } from '../helpers/index'
 import { Link } from "react-router-dom";
 
-const Registro = () => {
+const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
     return (
         <>
             <Formik
                 initialValues={{
                     usuario: '',
-                    correo: '',
                     contraseña: ''
                 }}
                 validate={(valores) => {
@@ -22,13 +20,7 @@ const Registro = () => {
                     if (!valores.usuario) {
                         errores.usuario = 'Por favor ingrese el usuario.'
                     } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
-                        errores.usuario = 'El usuario solo puede tener letras y numeros y debe tener entre 4 y 20 caracteres.'
-                    }
-
-                    if (!valores.correo) {
-                        errores.correo = 'Por favor ingrese el correo electronico.'
-                    } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
-                        errores.correo = 'No es un correo electronico valido.'
+                        errores.usuario = 'El usuario solo puede tener letras y numeros.'
                     }
 
                     if (!valores.contraseña) {
@@ -42,19 +34,20 @@ const Registro = () => {
                 onSubmit={(valores, { resetForm }) => {
                     let usuarioRegistrado = valores;
                     resetForm();
-                    methPost(usuarioRegistrado);
+                    console.log('Formulario enviado');
+                    console.log(usuarioRegistrado);
                     cambiarDatosEnviados(true);
                     setTimeout(() => cambiarDatosEnviados(false), 5000)
                 }}
             >
                 {({ errors }) => (
-                <div className="row">
+                    <div className="row">
                     <Container className='wrapper'>
                         <div className="circle"></div>
                         <div className="circle"></div>
                         <Col className="form-wrapper sign-in col-sm ">
                             <Form className='loginForm text-center'>
-                                <p className="tittle">Regístrate</p>
+                                <p className="tittle">Inicie Sesión</p>
                                 <Col className="input-group">
                                     <Field
                                         id="usuario"
@@ -64,20 +57,8 @@ const Registro = () => {
                                     />
                                     <label htmlFor="usuario"></label>
                                     <ErrorMessage name="usuario" component={() => (
-                                    <div className="error">{errors.usuario}</div>
-                                    )} />  
-                                </Col>
-                                <Col className="input-group">
-                                    <Field
-                                        id="correo"
-                                        type="text"
-                                        name="correo"
-                                        placeholder="Email"
-                                    />
-                                    <label htmlFor="correo"></label>
-                                    <ErrorMessage name="correo" component={() => (
-                                    <div className="error">{errors.correo}</div>
-                                    )} />  
+                                        <div className="error">{errors.usuario}</div>
+                                    )} />
                                 </Col>
                                 <Col className="input-group">
                                     <Field
@@ -88,26 +69,24 @@ const Registro = () => {
                                     />
                                     <label htmlFor="contraseña"></label>
                                     <ErrorMessage name="contraseña" component={() => (
-                                    <div className="error text-center">{errors.contraseña}</div>
+                                        <div className="error text-center">{errors.contraseña}</div>
                                     )} />
-                                </Col>  
+                                </Col>
                                 <Col className="forgot-pass">
                                     <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
                                 </Col>
-                                <button type="submit" className="btn">Registrarme</button>
-                                {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
+                                <button type="submit" className="btn">Iniciar Sesión</button>
                                 <Col className="sign-link">
-                                    <p>Ya tienes una cuenta? <Link to={"/Login"} className="signUp-link">Inicia Sesión</Link></p>
-                                </Col>                                      
+                                    <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
+                                </Col>
                             </Form>
                         </Col>
                     </Container>
-                </div>
+                    </div>
                 )}
-            </Formik>
+            </Formik >
         </>
     )
 }
 
-export default Registro
-
+export default Login
