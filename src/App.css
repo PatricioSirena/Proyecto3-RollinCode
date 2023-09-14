@@ -1,4 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Titan+One&family=Ultra&display=swap');
+
 *{
+  margin: 0;
+  padding: 0;
+}
+/*CON ESTO SE VE BIEN EN RESPONSIVE*/
+#root {
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* All delay classes will take 2x longer to start */
+:root {
+  --animate-delay: 2s !important;
+  --animate-repeat: 2 !important;
+}
+
+body{
+  background-color: rgb(238, 237, 237);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2 , h3, h4, h5, p{
+  margin: 5%;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center !important;
+}
+.spoiler{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 6% !important;
+  margin-top: 7% !important;
+  color: rgb(57, 92, 59);
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
+}
+.spoiler:hover{
+  color: rgb(175, 141, 101);
+}
+
+.card_tittle{
+  padding: 5%;
+  font-family: 'Titan One', cursive;
+  color: rgb(40, 44, 41);
+}
+.pp{
+  padding: 1%;
+  color: rgb(46, 51, 47);
+}
+.carta{
+  color: rgb(49, 54, 50);
+  margin: 0 auto !important;
+  cursor: pointer;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.carta:hover{
+  -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+  box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+}
+
+
+.animate__backInRight{
+  display: inline-block;
+  margin: 0 0.5rem;
+  text-align: center !important;
+  justify-content: center;
+  animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation-iteration-count: 1;
+}
+
+.row_portada{
+  height:100vh;
+  width: 100.9%;
+  background-color: rgba(67, 107, 69, 0.822);
+  color: white;
+}
+.row_portada > h1 > p{
+  text-align: center !important;
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
@@ -28,27 +109,62 @@ justify-content: center;
 .portada-descripccion{
   overflow-y: hidden;
   padding-right: 50px;
- 
-  
 }
 
-.boton-portada{
-  margin-left: 75%;
+/*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
+.btn{
+  background-color: rgb(73, 119, 75);
+  color: white;
+  border-color: rgb(73, 119, 75);
+  font-weight: 500;
+  border-radius: 10cqw;
+}
+.btn:focus{
+  text-decoration: none;
+}
+.btn:hover{
+  color: white !important;
+  background: rgba(80, 126, 82, 0.993);
+  border-color: rgba(80, 126, 82, 0.993);
+  transition: 1s ease;
+}
+.btn > a{
+  text-decoration: none;
+  color: white !important;
 }
 
 .tarjetaInfo{
-  height: 50vh;
-  background-color: coral;
-  margin-top: 20px;
+  height: 60vh;
+  color: rgb(46, 46, 46) !important;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  vertical-align: middle !important;
+  justify-content: center !important;
 }
 
 .imagenTarjeta{
-  height: 100%;
+  width: 300px;
+  margin-top: 3.5%;
+  border-top-left-radius: 10cqw;
+  border-top-right-radius: 10cqw;
+  border-bottom-left-radius: 10cqw;
+  border-bottom-right-radius: 10cqw;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+.imagenTarjeta:hover{
+  opacity: 0.7;
 }
 
 #tarjeta2{
   display: flex;
-  background-color: red;
+  background: linear-gradient(to right, rgb(175, 141, 101), rgba(245, 209, 176, 0.76));
+  margin-left: 13%;
+}
+
+#tarjeta1, #tarjeta3{
+  background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
+  margin-right: 13%;
 }
 
 #tarjeta2 .uno{
@@ -60,17 +176,123 @@ justify-content: center;
 }
 
 .footer {
-  width: 100vw !important;
+  width: 100% !important;
   bottom: 0;
-  background-color: red;
-  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.692) !important;
+  color: rgb(66, 66, 66) !important;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  text-align: center;
+  overflow-x: hidden;
+  border-top-left-radius: 5cqw;
+  border-top-right-radius: 5cqw;
+  border-bottom-left-radius: 5cqw;
+  border-bottom-right-radius: 5cqw;
 }
 
 .footerMapa {
+  width: 90vw;
+  height: 60vh;
   width: 100vw;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
+#tarjeta2 .uno{
+  order: 1;
+}
+
+#tarjeta2 .dos{
+  order: 0;
+}
+
+/*===================================================================================*/
+
+@media screen and (min-width: 360px) and (max-width: 640px){ /*(móvil pequeño)*/
+  .logoPortadaa , .container-txt{
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  .logoPortadaa , .imagen_portada_yunga{
+    margin: 0 auto !important;
+  }
+
+  .imagenTarjeta{
+    width: 260px;
+    margin-top: 3.5%;
+    border-top-left-radius: 10cqw;
+    border-top-right-radius: 10cqw;
+    border-bottom-left-radius: 10cqw;
+    border-bottom-right-radius: 10cqw;
+    margin: 0 auto;
+  }
+  .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
+    display: block !important;
+  }
+
+  .carta{
+    color: rgb(49, 54, 50);
+    margin: 0 auto !important;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    width: 20rem !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1366px){ /*(ordenador portátil medio)*/
+  body{
+    background-color: rgb(238, 237, 237);
+  }
+  
+}
+@media screen and (min-width: 1080px) and (max-width: 1920px){ /*(escritorio grande)*/
+  body{
+    background-color: rgb(238, 237, 237);
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 667px){ /*(móvil medio)*/
+  .logoPortadaa , .container-txt{
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  .logoPortadaa , .imagen_portada_yunga{
+    margin: 0 auto !important;
+  }
+
+  .imagenTarjeta{
+    width: 260px;
+    margin-top: 3.5%;
+    border-top-left-radius: 10cqw;
+    border-top-right-radius: 10cqw;
+    border-bottom-left-radius: 10cqw;
+    border-bottom-right-radius: 10cqw;
+    margin: 0 auto;
+  }
+  .imagenTarjeta, #tarjeta1, #tarjeta3, #tarjeta2{
+    display: block !important;
+  }
+
+  .carta{
+    color: rgb(49, 54, 50);
+    margin: 0 auto !important;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    width: 20rem !important;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1440px){ /*(escritorio medio)*/
+  body{
+    background-color: rgb(238, 237, 237);
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1280px){ /*(móvil grande)*/
+  body{
+    background-color: rgb(238, 237, 237);
+  }
 
 .footerRedes {
   width: 100vw;

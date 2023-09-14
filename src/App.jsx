@@ -1,3 +1,4 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { useState } from 'react'
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -26,12 +27,12 @@ function App() {
                 <MyNav />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
+                        {/* <Route exact path="/admin" element={<Admin />} /> */}
                         <Route exact path="/admin" element={<Administrador />} />
                         {/* <Route exact path="/login" element={<Admin />} /> */}
                         {/* <Route exact path="/registro" element={<Admin />} /> */}
                     </Routes>
             </BrowserRouter>
-            {/* <Home /> */}
         </>
     )
 }

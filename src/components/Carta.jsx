@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Carta = ({ titulo, text, imgSource, url }) => {
     return (
-        <Card className= 'text-center' style={{ width: '18rem' }}>
+        <Card className= 'carta text-center bg-transparent border-success' style={{ width: '110%'}}>
             <Card.Img variant="top" src={imgSource? imgSource : 'La imagen es requerida'} /> 
             <Card.Body>
                 <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
@@ -12,7 +12,7 @@ const Carta = ({ titulo, text, imgSource, url }) => {
                     {text ? text : 'El texto es requerido'}
                 </Card.Text>
                 <Button className='btn-dark' variant="primary">
-                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Sin miedo al exito</a>
+                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Ver más</a>
                 </Button>
             </Card.Body>
         </Card>
@@ -28,4 +28,4 @@ Carta.propTypes = {
 
 export default Carta
 
-// {imgSource ? imgSource : 'La imagen es requerida'}
+//18rem carta
