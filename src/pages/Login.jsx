@@ -1,76 +1,92 @@
-// import React, { useState } from 'react'
-// import { Button, FormControl, FormGroup } from 'react-bootstrap';
-// import Form from 'react-bootstrap/Form'
-// import { useForm } from 'react-hook-form'
-// import { ingresar } from '../helpers/index'
-// import Swal from 'sweetalert2'
-// import { Navigate } from 'react-router-dom'
-// const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, logueado }) => {
-//     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+import { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import '../styles/login.css'
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
-//     const onSubmit = (user) => {
-//         ingresar(user)
-//             .then(data => {
-//                 if (data.length == 0) {
-//                     Swal.fire('¡Usuario o contraseña incorrecto!')
-//                 } else {
-//                     let { admin, firstName, lastName, email, id } = data[0];
-//                     setUser(data[0])
-//                     setAdmin(data[0].admin)
-//                     setIslogueado(true)
-//                     window.localStorage.setItem("user", JSON.stringify({ admin, firstName, lastName, email, id }))
-//                 }
-//             })
+const Login = () => {
+    const [datosEnviados, cambiarDatosEnviados] = useState(false);
+    return (
+        <>
+            <Formik
+                initialValues={{
+                    usuario: '',
+                    contraseña: ''
+                }}
+                validate={(valores) => {
+                    let errores = {};
 
-//     }
-//     return (
-//         <div>
-//             {logueado ? <Navigate to="/products" /> :
-//                 <Form className='w-50 bg-info p-3 bg-opacity-25' onSubmit={handleSubmit(onSubmit)}>
-//                     <FormGroup>
-//                         <Form.Label>Email</Form.Label>
-//                         <FormControl
-//                             type='email'
-//                             {...register("email", {
-//                                 required: "Hay que llenar el campo email es obligatorio",
-//                                 pattern: {
-//                                     value: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
-//                                     message: "El formato del email es incorrecto!"
-//                                 }
-//                             })}
+                    if (!valores.usuario) {
+                        errores.usuario = 'Por favor ingrese el usuario.'
+                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
+                        errores.usuario = 'El usuario solo puede tener letras y numeros.'
+                    }
 
-//                         />
-//                         <Form.Text className="text-danger">
-//                             {errors.email?.message}
-//                         </Form.Text>
+                    if (!valores.contraseña) {
+                        errores.contraseña = 'Por favor ingrese la contraseña.'
+                    } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
+                        errores.contraseña = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                    }
 
-//                     </FormGroup>
-//                     <FormGroup>
-//                         <Form.Label>Contraseña</Form.Label>
-//                         <FormControl
-//                             type='password'
-//                             {...register("password", {
-//                                 required: "hay que llenar el campo de la contraseña!",
-//                                 pattern: {
-//                                     value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-//                                     message: "La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito númerico, al menos una minúscula y al menos una mayúscula."
-//                                 }
-//                             })}
+                    return errores;
+                }}
+                onSubmit={(valores, { resetForm }) => {
+                    let usuarioRegistrado = valores;
+                    resetForm();
+                    console.log('Formulario enviado');
+                    console.log(usuarioRegistrado);
+                    cambiarDatosEnviados(true);
+                    setTimeout(() => cambiarDatosEnviados(false), 5000)
+                }}
+            >
+                {({ errors }) => (
+                    <div className="row">
+                    <Container className='wrapper'>
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <Col className="form-wrapper sign-in col-sm ">
+                            <Form className='loginForm text-center'>
+                                <p className="tittle">Inicie Sesión</p>
+                                <Col className="input-group">
+                                    <Field
+                                        id="usuario"
+                                        type="text"
+                                        name="usuario"
+                                        placeholder="Usuario"
+                                    />
+                                    <label htmlFor="usuario"></label>
+                                    <ErrorMessage name="usuario" component={() => (
+                                        <div className="error">{errors.usuario}</div>
+                                    )} />
+                                </Col>
+                                <Col className="input-group">
+                                    <Field
+                                        id="contraseña"
+                                        type="password"
+                                        name="contraseña"
+                                        placeholder="Contraseña"
+                                    />
+                                    <label htmlFor="contraseña"></label>
+                                    <ErrorMessage name="contraseña" component={() => (
+                                        <div className="error text-center">{errors.contraseña}</div>
+                                    )} />
+                                </Col>
+                                <Col className="forgot-pass">
+                                    <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                </Col>
+                                <button type="submit" className="btn">Iniciar Sesión</button>
+                                <Col className="sign-link">
+                                    <p>No tienes una cuenta? <Link to={"/Registro"} className="signUp-link">Regístrate</Link></p>
+                                </Col>
+                            </Form>
+                        </Col>
+                    </Container>
+                    </div>
+                )}
+            </Formik >
+        </>
+    )
+}
 
-//                         />
-//                         <Form.Text className="text-danger">
-//                             {errors.password?.message}
-//                         </Form.Text>
-//                     </FormGroup>
-//                     <FormGroup>
-//                         <Button type='submit'>Ingresar</Button>
-//                     </FormGroup>
-
-//                 </Form>
-//             }
-
-//         </div>
-//     )
-// }
-
-// export default Login
+export default Login
