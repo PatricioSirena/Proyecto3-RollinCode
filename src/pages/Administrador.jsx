@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import menu from '../datos/menu.json'
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
 import Form from 'react-bootstrap/Form'
@@ -8,10 +7,20 @@ import {methGet} from '../helpers/index';
 
 
 function Administrador() {
+  const [menu, setMenu] = useState([]);
   const [data, setData] = useState(menu);
   const [modalEditar, setModalEditar] = useState(false);
   const [modalEliminar, setModalEliminar] = useState(false);
   const [modalInsertar, setModalInsertar] = useState(false);
+
+  useEffect(() => {
+    methGet()
+    .then(data => data.data.data)
+    .then(response => {
+      setMenu(response)
+      console.log(response);
+    })
+  },[])
 
   const [itemSeleccionado, setItemSeleccionado] = useState({
     id: '',
@@ -19,7 +28,7 @@ function Administrador() {
     precio: '',
     texto: '',
     categoria: '',
-    activo: false,
+    // activo: false,
     imagen: ''
   });
 
@@ -288,7 +297,7 @@ function Administrador() {
               readOnly
               type="text"
               name="id"
-              value={data[data.length - 1].id + 1}
+              // value={data[data.length - 1].id + 1}
             />
             <br />
 
