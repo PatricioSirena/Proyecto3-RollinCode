@@ -2,8 +2,7 @@ const URL_productos = import.meta.env.VITE_ENV_URL_PRODUCTS;
 const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
 
 import axios from 'axios';
-//CRUD create read update delete
-//ABM altas bajas y modificaciones
+
 
 export const methPost= async(obj)=>{
     try {

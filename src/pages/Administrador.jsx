@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
 import Form from 'react-bootstrap/Form'
 import { FormControl, FormGroup } from 'react-bootstrap';
+import {methGet} from '../helpers/index';
 
 
 function Administrador() {
-
   const [data, setData] = useState(menu);
   const [modalEditar, setModalEditar] = useState(false);
   const [modalEliminar, setModalEliminar] = useState(false);
