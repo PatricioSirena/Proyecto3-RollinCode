@@ -74,12 +74,18 @@ const Login = () => {
                                     <Col className="forgot-pass">
                                         <a class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
                                     </Col>
-                                    <button type="submit" class="btn">Iniciar Sesión</button>
+                                    <button type="submit" class="button ">
+                                    Iniciar Sesión
+                                        <div class="hoverEffect">
+                                            <div>
+                                            </div>  
+                                        </div>
+                                    </button>
+                                    
                                     {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
                                     <Col className="sign-link">
                                         <p>No tienes una cuenta? <a href="Registro.jsx" class="signUp-link">Regístrate</a></p>
                                     </Col>
-                                          
                                 </Form>
                             </Col>
                         </Container>
