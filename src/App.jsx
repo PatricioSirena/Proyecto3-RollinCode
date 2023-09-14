@@ -4,7 +4,6 @@ import Axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Admin from "./pages/Admin";
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -29,7 +28,7 @@ function App() {
                 <MyNav />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        <Route exact path="/admin" element={<Admin />} />
+                        {/* <Route exact path="/admin" element={<Admin />} /> */}
                         <Route exact path="/login" element={<Login />} />
                         <Route exact path="/registro" element={<Registro />} />
                     </Routes>

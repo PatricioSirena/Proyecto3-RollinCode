@@ -22,8 +22,8 @@ const Registro = () => {
 
                     if (!valores.usuario) {
                         errores.usuario = 'Por favor ingrese el usuario.'
-                    } else if (!/^[A-Za-z0-9]+$/g.test(valores.usuario)) {
-                        errores.usuario = 'El usuario solo puede tener letras y numeros.'
+                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
+                        errores.usuario = 'El usuario solo puede tener letras y numeros y debe tener entre 4 y 20 caracteres.'
                     }
 
                     if (!valores.correo) {

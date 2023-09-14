@@ -4,7 +4,7 @@ import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import imagen from "../assets/img/portada.jpg";
+
 
 const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
@@ -20,7 +20,7 @@ const Login = () => {
 
                     if (!valores.usuario) {
                         errores.usuario = 'Por favor ingrese el usuario.'
-                    } else if (!/^[A-Za-z0-9]+$/g.test(valores.usuario)) {
+                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
                         errores.usuario = 'El usuario solo puede tener letras y numeros.'
                     }
 
@@ -83,7 +83,6 @@ const Login = () => {
                                         )} />
                                     </div>
                                     <button type="submit" className="btn btn-dark mt-3 mb-5 w-50" >Iniciar Sesión</button>
-                                    {datosEnviados && <p className="usuarioRegistrado">Te registraste con exito!</p>}
                                     <div className='d-flex justify-content-center'>
                                         <a href="#!"><p>Has olvidado tu contraseña?</p></a>
                                     </div>
