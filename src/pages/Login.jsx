@@ -44,6 +44,8 @@ const Login = () => {
                 
                     <Row>
                         <Container className='wrapper'>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
                             <Col className="form-wrapper sign-in col-sm ">
                                 <Form className='loginForm text-center'>
                                     <p className="tittle">Inicie Sesión</p>
