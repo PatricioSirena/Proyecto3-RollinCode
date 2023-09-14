@@ -19,6 +19,7 @@ function Administrador() {
     precio: '',
     texto: '',
     categoria: '',
+    activo: false,
     imagen: ''
   });
 
@@ -120,6 +121,14 @@ function Administrador() {
     setModalInsertar(false);
   }
 
+  const activar=()=>{
+    if (itemSeleccionado.activo === false) {
+      itemSeleccionado.activo = true
+    }else {
+      itemSeleccionado.activo = false;
+    }
+  }
+
   return (
     <div className="App">
       <h2>titulo ramdom</h2>
@@ -146,7 +155,7 @@ function Administrador() {
               <td>${elemento.precio}</td>
               <td>{elemento.texto}</td>
               <td>{elemento.categoria}</td>
-              <td>checkbox</td>
+              <td><input type='checkbox' onClick={() => activar()}/> </td>
               <td><button className="btn btn-primary" onClick={() => seleccionarItem(elemento, 'Editar')}>Editar</button> {"   "}
                 <button className="btn btn-danger" onClick={() => seleccionarItem(elemento, 'Eliminar')}>Eliminar</button></td>
             </tr>
