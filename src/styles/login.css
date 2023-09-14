@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(227, 228, 227, 0.89);
+    background: rgba(228, 227, 227, 0.89);
     overflow: hidden;
 }
 
@@ -226,76 +226,5 @@ box-shadow:  35px 35px 70px #bebebe,
 @media screen and (min-width: 720px) and (max-width: 1280px){ /*(móvil grande)*/
     
 }
-   
-div::-webkit-scrollbar {
-    display: none !important;
-}
+  
 
-.button {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2%;
-    border: 0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10rem;
-    transition: all 0.02s;
-    font-weight: 700 !important;
-    color: rgb(45, 77, 46);
-    z-index: 0;
-    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-  }
-  
-  .button:hover {
-    background: rgba(67, 129, 64, 0.726);
-    color: rgb(48, 83, 45);
-  }
-  
-  .button:active {
-    transform: scale(0.97);
-  }
-  
-  .hoverEffect {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-  
-  .hoverEffect div {
-    /*background: #025309;*/
-    background: linear-gradient(90deg, rgb(0, 194, 26) 0%, #025309 49%, rgb(230, 149, 0) 100%);
-    border-radius: 40rem;
-    width: 30rem;
-    height: 30rem;
-    transition: 0.4s;
-    filter: blur(17px);
-    animation: effect infinite 4s linear;
-    opacity: 0.5;
-  }
-  
-  .button:hover .hoverEffect div {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  @keyframes effect {
-  
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  
