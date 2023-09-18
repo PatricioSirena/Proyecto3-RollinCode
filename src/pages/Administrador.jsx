@@ -1,370 +1,186 @@
-import { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
-import Form from 'react-bootstrap/Form'
-import { FormControl, FormGroup } from 'react-bootstrap';
-import {methGet} from '../helpers/index';
+import {useEffect, useState} from 'react';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import { show_alerta } from '../helpers/alerta';
 
+const Administrador = () => {
+    const url="http://localhost:3000/menu";
+    const [products,setProducts]= useState([]);
+    const [id,setId]= useState('');
+    const [name,setName]= useState('');
+    const [description,setDescription]= useState('');
+    const [price,setPrice]= useState('');
+    const [operation,setOperation]= useState(0);
+    const [title,setTitle]= useState('');
 
-function Administrador() {
-  const [menu, setMenu] = useState([]);
-  const [data, setData] = useState(menu);
-  const [modalEditar, setModalEditar] = useState(false);
-  const [modalEliminar, setModalEliminar] = useState(false);
-  const [modalInsertar, setModalInsertar] = useState(false);
+    useEffect( ()=>{
+        getProducts();
+    },[]);
 
-  useEffect(() => {
-    methGet()
-    .then(data => data.data.data)
-    .then(response => {
-      setMenu(response)
-      console.log(response);
-    })
-  },[])
-
-  const [itemSeleccionado, setItemSeleccionado] = useState({
-    id: '',
-    titulo: '',
-    precio: '',
-    texto: '',
-    categoria: '',
-    // activo: false,
-    imagen: ''
-  });
-
-  const seleccionarItem = (elemento, caso) => {
-    console.log(elemento);
-    setItemSeleccionado(elemento);
-    (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
-  }
-
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setItemSeleccionado((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
-  }
-
-  const editar = () => {
-    var dataNueva = data;
-    if (itemSeleccionado.titulo === "") {
-      return alert("Debe ingresar el Nombre")
-    }else if (!/^[A-Za-z0-9\s]{4,30}$/g.test(itemSeleccionado.titulo)){
-      return alert('El nombre puede tener letras y numero y debe tener entre 4 y 30 caracteres');
+    const getProducts = async () => {
+        const respuesta = await axios.get(url);
+        setProducts(respuesta.data);
     }
-    if (itemSeleccionado.precio === "") {
-      return alert("Debe ingresar el Precio")
-    }else if (!/^[0-9]*(\.[0-9]+)?$/g.test(itemSeleccionado.precio)){
-      return alert('El precio solo puede tener numeros y un punto.');
+    const openModal = (op,id, name, description, price) =>{
+        setId('');
+        setName('');
+        setDescription('');
+        setPrice('');
+        setOperation(op);
+        if(op === 1){
+            setTitle('Registrar Producto');
+        }
+        else if(op === 2){
+            setTitle('Editar Producto');
+            setId(id);
+            setName(name);
+            setDescription(description);
+            setPrice(price);
+        }
+        window.setTimeout(() => {
+            document.getElementById('nombre').focus();
+        },500);
     }
-    if (itemSeleccionado.texto === "") {
-      return alert("Debe ingresar el Detalle")
-    }else if (!/^[A-Za-z0-9\s]{4,50}$/g.test(itemSeleccionado.texto)){
-      return alert('El detalle puede tener letras y numero y debe tener entre 4 y 50 caracteres');
+    const validar = () => {
+        var parametros;
+        var metodo;
+        if(name.trim() === ''){
+            show_alerta('Escribe el nombre del producto','warning');
+        }
+        else if(description.trim() === ''){
+            show_alerta('Escribe la descripción del producto','warning');
+        }
+        else if(price === ''){
+            show_alerta('Escribe el precio del producto','warning');
+        }
+        else{
+            if(operation === 1){
+                parametros= {name:name.trim(),description: description.trim(),price:price};
+                metodo= 'POST';
+            }
+            else{
+                parametros={id:id,name:name.trim(),description: description.trim(),price:price};
+                metodo= 'PUT';
+            }
+            envarSolicitud(metodo,parametros);
+        }
     }
-        if (itemSeleccionado.categoria === "") {
-      return alert("Debe ingresar la Categoria")
-    }else if (!/^[a-z\s]{4,8}$/g.test(itemSeleccionado.categoria)){
-      return alert('La categoria no puede tener mayusculas y debe ser "comidas", "bebidas" o "flores"');
+    const envarSolicitud = async(metodo,parametros) => {
+        await axios({ method:metodo, url: url, data:parametros}).then(function(respuesta){
+            var tipo = respuesta.data[0];
+            var msj = respuesta.data[1];
+            show_alerta(msj,tipo);
+            if(tipo === 'success'){
+                document.getElementById('btnCerrar').click();
+                getProducts();
+            }
+        })
+        .catch(function(error){
+            show_alerta('Error en la solicitud','error');
+            console.log(error);
+        });
     }
-    if (itemSeleccionado.imagen === "") {
-      return alert("Debe ingresar la Url de la imagen")
-    }else if (!/^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/g.test(itemSeleccionado.imagen)){
-      return alert('No es una Url valida');
+    const deleteProduct= (id,name) =>{
+        const MySwal = withReactContent(Swal);
+        MySwal.fire({
+            title:'¿Seguro de eliminar el producto '+name+' ?',
+            icon: 'question',text:'No se podrá dar marcha atrás',
+            showCancelButton:true,confirmButtonText:'Si, eliminar',cancelButtonText:'Cancelar'
+        }).then((result) =>{
+            if(result.isConfirmed){
+                setId(id);
+                envarSolicitud('DELETE',{id:id});
+            }
+            else{
+                show_alerta('El producto NO fue eliminado','info');
+            }
+        });
     }
-    dataNueva.map(bebida => {
-      if (bebida.id === itemSeleccionado.id) {
-        bebida.titulo = itemSeleccionado.titulo;
-        bebida.precio = itemSeleccionado.precio;
-        bebida.texto = itemSeleccionado.texto;
-        bebida.categoria = itemSeleccionado.categoria;
-        bebida.imagen = itemSeleccionado.imagen;
-      }
-    });
-    setData(dataNueva);
-    setModalEditar(false);
-  }
-
-  const eliminar = () => {
-    setData(data.filter(bebida => bebida.id !== itemSeleccionado.id));
-    setModalEliminar(false);
-  }
-
-  const abrirModalInsertar = () => {
-    setItemSeleccionado(null);
-    setModalInsertar(true);
-  }
-
-  const insertar = () => {
-        if (itemSeleccionado.titulo === '') {
-      return alert("Debe ingresar el Nombre")
-    }else if (!/^[A-Za-z0-9\s]{4,30}$/g.test(itemSeleccionado.titulo)){
-      return alert('El nombre puede tener letras y numero y debe tener entre 4 y 30 caracteres');
-    }
-    if (itemSeleccionado.precio === '') {
-      return alert("Debe ingresar el Precio")
-    }else if (!/^[0-9]*(\.[0-9]+)?$/g.test(itemSeleccionado.precio)){
-      return alert('El precio solo puede tener numeros y un punto.');
-    }
-    if (itemSeleccionado.texto === '') {
-      return alert("Debe ingresar el Detalle")
-    }else if (!/^[A-Za-z0-9\s]{4,50}$/g.test(itemSeleccionado.texto)){
-      return alert('El detalle puede tener letras y numero y debe tener entre 4 y 50 caracteres');
-    }
-        if (itemSeleccionado.categoria === '') {
-      return alert("Debe ingresar la Categoria")
-    }else if (!/^[a-z\s]{4,8}$/g.test(itemSeleccionado.categoria)){
-      return alert('La categoria no puede tener mayusculas y debe ser "comidas", "bebidas" o "flores"');
-    }
-    if (itemSeleccionado.imagen === '') {
-      return alert("Debe ingresar la Url de la imagen")
-    }else if (!/^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/g.test(itemSeleccionado.imagen)){
-      return alert('No es una Url valida');
-    }
-    var valorInsertar = itemSeleccionado;
-    valorInsertar.id = data[data.length - 1].id + 1;
-    var dataNueva = data;
-    dataNueva.push(valorInsertar);
-    setData(dataNueva);
-    setModalInsertar(false);
-  }
-
-  const activar=()=>{
-    if (itemSeleccionado.activo === false) {
-      itemSeleccionado.activo = true
-    }else {
-      itemSeleccionado.activo = false;
-    }
-  }
 
   return (
-    <div className="App">
-      <h2>titulo ramdom</h2>
-      <br />
-      <button className="btn btn-success" onClick={() => abrirModalInsertar()}>Insertar</button>
-      <br /><br />
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Detalle</th>
-            <th>Categoria</th>
-            <th>Activo</th>
-            <th>Controles</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(elemento => (
-            <tr key={elemento.id}>
-              <td>{elemento.id}</td>
-              <td>{elemento.titulo}</td>
-              <td>${elemento.precio}</td>
-              <td>{elemento.texto}</td>
-              <td>{elemento.categoria}</td>
-              <td><input type='checkbox' onClick={() => activar()}/> </td>
-              <td><button className="btn btn-primary" onClick={() => seleccionarItem(elemento, 'Editar')}>Editar</button> {"   "}
-                <button className="btn btn-danger" onClick={() => seleccionarItem(elemento, 'Eliminar')}>Eliminar</button></td>
-            </tr>
-          ))
-          }
-        </tbody>
-      </table>
-
-      <Modal isOpen={modalEditar}>
-        <ModalHeader>
-          <div>
-            <h3>Editar Item</h3>
-          </div>
-        </ModalHeader>
-        <ModalBody>
-          <div className="form-group">
-            <Form>
-              <FormGroup>
-                <Form.Label>ID</Form.Label>
-                <FormControl
-                  className="form-control"
-                  readOnly
-                  type="text"
-                  name="id"
-                  value={itemSeleccionado && itemSeleccionado.id}
-                />
-              </FormGroup>
-              <br />
-              <FormGroup>
-                <Form.Label>Nombre</Form.Label>
-                <FormControl
-                  className="form-control"
-                  type="text"
-                  name="titulo"
-                  value={itemSeleccionado && itemSeleccionado.titulo}
-                  onChange={handleChange}
-                />
-              </FormGroup>
-              <br />
-              <FormGroup>
-              <Form.Label>Precio</Form.Label>
-              <FormControl
-                className="form-control"
-                type="text"
-                name="precio"
-                value={itemSeleccionado && itemSeleccionado.precio}
-                onChange={handleChange}
-              />
-              </FormGroup>
-              <br />
-              <FormGroup>
-              <Form.Label>Detalle</Form.Label>
-              <FormControl
-                className="form-control"
-                type="text"
-                name="texto"
-                value={itemSeleccionado && itemSeleccionado.texto}
-                onChange={handleChange}
-              />
-              </FormGroup>
-              <br />
-              <FormGroup>
-              <Form.Label>Categoría</Form.Label>
-              <FormControl
-                className="form-control"
-                type="text"
-                name="categoria"
-                value={itemSeleccionado && itemSeleccionado.categoria}
-                onChange={handleChange}
-              />
-              </FormGroup>
-              <br />
-              <FormGroup>
-              <Form.Label>Imagen</Form.Label>
-              <FormControl
-                className="form-control"
-                type="text"
-                name="imagen"
-                value={itemSeleccionado && itemSeleccionado.imagen}
-                onChange={handleChange}
-              />
-              </FormGroup>
-              <br />
-            </Form>
-          </div>
-        </ModalBody>
-        <ModalFooter>
-          <button className="btn btn-primary" onClick={() => editar()}>
-            Actualizar
-          </button>
-          <button
-            className="btn btn-danger"
-            onClick={() => setModalEditar(false)}
-          >
-            Cancelar
-          </button>
-        </ModalFooter>
-      </Modal>
-
-
-      <Modal isOpen={modalEliminar}>
-        <ModalBody>
-          Estás Seguro que deseas eliminar este ítem? {itemSeleccionado && itemSeleccionado.titulo}
-        </ModalBody>
-        <ModalFooter>
-          <button className="btn btn-danger" onClick={() => eliminar()}>
-            Sí
-          </button>
-          <button
-            className="btn btn-secondary"
-            onClick={() => setModalEliminar(false)}
-          >
-            No
-          </button>
-        </ModalFooter>
-      </Modal>
-
-
-      <Modal isOpen={modalInsertar}>
-        <ModalHeader>
-          <div>
-            <h3>Insertar Item</h3>
-          </div>
-        </ModalHeader>
-        <ModalBody>
-          <div className="form-group">
-            <label>ID</label>
-            <input
-              className="form-control"
-              readOnly
-              type="text"
-              name="id"
-              // value={data[data.length - 1].id + 1}
-            />
-            <br />
-
-            <label>Nombre</label>
-            <input
-              className="form-control"
-              type="text"
-              name="titulo"
-              value={itemSeleccionado ? itemSeleccionado.titulo : ''}
-              onChange={handleChange}
-            />
-            <br />
-
-            <label>Precio</label>
-            <input
-              className="form-control"
-              type="text"
-              name="precio"
-              value={itemSeleccionado ? itemSeleccionado.precio : ''}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Detalle</label>
-            <input
-              className="form-control"
-              type="text"
-              name="texto"
-              value={itemSeleccionado ? itemSeleccionado.texto : ''}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Categoria</label>
-            <input
-              className="form-control"
-              type="text"
-              name="categoria"
-              value={itemSeleccionado ? itemSeleccionado.categoria : ''}
-              onChange={handleChange}
-            />
-            <br />
-            <label>Imagen</label>
-            <input
-              className="form-control"
-              type="text"
-              name="imagen"
-              value={itemSeleccionado ? itemSeleccionado.imagen : ''}
-              onChange={handleChange}
-            />
-            <br />
-
-          </div>
-        </ModalBody>
-        <ModalFooter>
-          <button className="btn btn-primary"
-            onClick={() => insertar()}>
-            Insertar
-          </button>
-          <button
-            className="btn btn-danger"
-            onClick={() => setModalInsertar(false)}
-          >
-            Cancelar
-          </button>
-        </ModalFooter>
-      </Modal>
+    <div className='App'>
+        <div className='container-fluid'>
+            <div className='row mt-3'>
+                <div className='col-md-4 offset-md-4'>
+                    <div className='d-grid mx-auto'>
+                        <button onClick={()=> openModal(1)} className='btn btn-dark' data-bs-toggle='modal' data-bs-target='#modalProducts'>
+                            <i className='fa-solid fa-circle-plus'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div className='row mt-3'>
+                <div className='col-12 col-lg-8 offset-0 offset-lg-2'>
+                    <div className='table-responsive'>
+                        <table className='table table-bordered'>
+                            <thead>
+                                <tr><th>#</th><th>PRODUCTO</th><th>DESCRIPCION</th><th>PRECIO</th><th></th></tr>
+                            </thead>
+                            <tbody className='table-group-divider'>
+                                {products.map( (product,i)=>(
+                                    <tr key={product.id}>
+                                        <td>{(i+1)}</td>
+                                        <td>{product.name}</td>
+                                        <td>{product.description}</td>
+                                        <td>${new Intl.NumberFormat('es-mx').format(product.price)}</td>
+                                        <td>
+                                            <button onClick={() => openModal(2,product.id,product.name,product.description,product.price)}
+                                                 className='btn btn-warning' data-bs-toggle='modal' data-bs-target='#modalProducts'>
+                                                <i className='fa-solid fa-edit'></i>
+                                            </button>
+                                            &nbsp; 
+                                            <button onClick={()=>deleteProduct(product.id,product.name)} className='btn btn-danger'>
+                                                <i className='fa-solid fa-trash'></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='modalProducts' className='modal fade' aria-hidden='true'>
+            <div className='modal-dialog'>
+                <div className='modal-content'>
+                    <div className='modal-header'>
+                        <label className='h5'>{title}</label>
+                        <button type='button' className='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                    </div>
+                    <div className='modal-body'>
+                        <input type='hidden' id='id'></input>
+                        <div className='input-group mb-3'>
+                            <span className='input-group-text'><i className='fa-solid fa-gift'></i></span>
+                            <input type='text' id='nombre' className='form-control' placeholder='Nombre' value={name}
+                            onChange={(e)=> setName(e.target.value)}></input>
+                        </div>
+                        <div className='input-group mb-3'>
+                            <span className='input-group-text'><i className='fa-solid fa-comment'></i></span>
+                            <input type='text' id='descripcion' className='form-control' placeholder='Descripción' value={description}
+                            onChange={(e)=> setDescription(e.target.value)}></input>
+                        </div>
+                        <div className='input-group mb-3'>
+                            <span className='input-group-text'><i className='fa-solid fa-dollar-sign'></i></span>
+                            <input type='text' id='precio' className='form-control' placeholder='Precio' value={price}
+                            onChange={(e)=> setPrice(e.target.value)}></input>
+                        </div>
+                        <div className='d-grid col-6 mx-auto'>
+                            <button onClick={() => validar()} className='btn btn-success'>
+                                <i className='fa-solid fa-floppy-disk'></i> Guardar
+                            </button>
+                        </div>
+                    </div>
+                    <div className='modal-footer'>
+                        <button type='button' id='btnCerrar' className='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  );
+  )
 }
 
-export default Administrador;
+export default Administrador
