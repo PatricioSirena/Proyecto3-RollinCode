@@ -1,0 +1,224 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Mila con papas",
+      "description": "La mejor mila napoliatana con papas de Tuc",
+      "price": 2200
+    },
+    {
+      "id": 2,
+      "name": "Hamburguesa",
+      "description": "La mejor mila napoliatana con papas de Tuc",
+      "price": 2000
+    },
+    {
+      "id": 3,
+      "name": "Pasta",
+      "description": "La mejor mila napoliatana con papas de Tuc",
+      "price": 1800
+    },
+    {
+      "id": 4,
+      "name": "Asado",
+      "description": "La mejor mila napoliatana con papas de Tuc",
+      "price": 2600
+    },
+    {
+      "id": 5,
+      "name": "Humita",
+      "description": "La mejor mila napoliatana con papas de Tuc",
+      "price": 2100
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "titulo": "Mila con papas",
+      "precio": 2.3,
+      "texto": "Milanesa a la napolitana con papas fritas crujientes",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 2,
+      "titulo": "Hamburguesa con cheddar y bacon",
+      "precio": 1800,
+      "texto": "Hamburguesa de carne vacuna con cheddar, bacon y salsa especial, acompañada con papas",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 3,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 4,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 5,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 6,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "comida",
+      "activo": false,
+      "imagen": "https://www.lanacion.com.ar/resizer/v2/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg?auth=335fda04cf2733e39d11ca0ba979c1d0a8a55e6cdec15e4d5b00cfd59fbf9ed8&width=420&height=280&quality=70&smart=true"
+    },
+    {
+      "id": 7,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 9,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 10,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 11,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 12,
+      "titulo": "jugo de naranja y apio",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "bebida",
+      "activo": false,
+      "imagen": "https://cdn-3.expansion.mx/dims4/default/35c3139/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
+    },
+    {
+      "id": 13,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    },
+    {
+      "id": 14,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    },
+    {
+      "id": 15,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    },
+    {
+      "id": 16,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    },
+    {
+      "id": 17,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    },
+    {
+      "id": 18,
+      "titulo": "Mila con papas",
+      "precio": 20.56,
+      "texto": "Alguna descripcion random para probar si funciona!",
+      "categoria": "flor",
+      "activo": false,
+      "imagen": "https://www.growbarato.net/blog/wp-content/uploads/2019/03/cuando-florece-la-marihuana-1.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "usuario": "nereida92",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 1
+    },
+    {
+      "usuario": "nereida08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirenas23",
+      "admin": false,
+      "activo": false,
+      "id": 2
+    },
+    {
+      "usuario": "nereida9",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 3
+    }
+  ]
+}
