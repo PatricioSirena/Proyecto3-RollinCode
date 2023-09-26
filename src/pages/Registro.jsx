@@ -8,7 +8,19 @@ import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 const Registro = () => {
-    // const [datosEnviados, cambiarDatosEnviados] = useState(false);
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
     return (
         <>
             <Formik
@@ -46,15 +58,18 @@ const Registro = () => {
                             if (data.length === 0) {
                                 methPostUsers(valores);
                                 resetForm();
-                                Swal.fire('Te registraste con exito!!')
-                                return window.location = "/login"
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: 'Te registraste con exito, redirigiendo al login'
+                                })
+                                setTimeout(() => {
+                                    return window.location = "/login"
+                                }, 2000);
                             } else {
                                 Swal.fire(`Ya existe el usuario ${valores.usuario}`)
                             }
                         })
-                    // cambiarDatosEnviados(true);
-                    // setTimeout(() => cambiarDatosEnviados(false), 5000)
-                }}
+                    }}
             >
                 {({ errors }) => (
                     <div className="row">
@@ -103,7 +118,7 @@ const Registro = () => {
                                     <button type="submit" className="btn">Registrarme</button>
                                     {/* {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>} */}
                                     <Col className="sign-link">
-                                        <p>Ya tienes una cuenta? <Link to={"/Login"} className="signUp-link">Inicia Sesión</Link></p>
+                                        <p>Ya tienes una cuenta? <Link to={"/login"} className="signUp-link">Inicia Sesión</Link></p>
                                     </Col>
                                 </Form>
                             </Col>

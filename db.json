@@ -200,7 +200,7 @@
       "usuario": "nereida92",
       "correo": "patobsirena@gmail.com",
       "password": "Sirena123",
-      "admin": false,
+      "admin": true,
       "activo": false,
       "id": 1
     },
@@ -219,6 +219,94 @@
       "admin": false,
       "activo": false,
       "id": 3
+    },
+    {
+      "usuario": "patobs",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 4
+    },
+    {
+      "usuario": "nereida22",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 5
+    },
+    {
+      "usuario": "nereida22",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 6
+    },
+    {
+      "usuario": "patobsirena",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 7
+    },
+    {
+      "usuario": "nere92",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 8
+    },
+    {
+      "usuario": "nere08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 9
+    },
+    {
+      "usuario": "nereida920",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 10
+    },
+    {
+      "usuario": "nereida9222",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 11
+    },
+    {
+      "usuario": "patobs21",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 12
+    },
+    {
+      "usuario": "nereida87",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 13
+    },
+    {
+      "usuario": "patobs08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 14
     }
   ]
 }
