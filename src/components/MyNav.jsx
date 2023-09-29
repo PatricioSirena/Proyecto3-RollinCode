@@ -32,6 +32,7 @@ function MyNav() {
             <Nav.Link href="#action2" className='link'>Admin</Nav.Link>
             <Nav.Link href="#action1" className='link'>Iniciar Sesión</Nav.Link>
             <Nav.Link href="#action1" className='link'>Registrarme</Nav.Link>
+            <Nav.Link href="#action1" className='link'>Acerca de Nosotros</Nav.Link>
           </Nav>
           <a href="#" className='carrito'>
           <img src={Carrito} className='carrito' alt="Carrito" />
