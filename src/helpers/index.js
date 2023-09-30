@@ -5,18 +5,16 @@ const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
 
 
 export const methPostUsers = async (obj) => {
-    obj.admin = false;
-    obj.activo = false;
     try {
-        axios.post(URL_usuarios, obj)
+        await axios.post(URL_usuarios + "/createUser", obj)
     } catch (error) {
         console.log(error);
     }
 }
 
-export const methoGetOneUser = async (id) => {
+export const methGetOneUser = async (id) => {
     try {
-        let usuario = await axios.get(`${URL_usuarios}${id}`)
+        let usuario = await axios.get(`${URL_usuarios}/getOneUser${id}`)
         return usuario;
     } catch (error) {
         console.log(error);
@@ -25,7 +23,7 @@ export const methoGetOneUser = async (id) => {
 
 export const methGetUsers = async () => {
     try {
-        let users = await axios.get(URL_usuarios)
+        let users = await axios.get(URL_usuarios + "/getUsers")
         return users;
     } catch (error) {
         console.log(error);
@@ -34,7 +32,7 @@ export const methGetUsers = async () => {
 
 export const methoDeleteOneUser = (id) => {
     try {
-        let productos = axios.delete(`${URL_usuarios}${id}`)
+        let productos = axios.delete(`${URL_usuarios}/deleteUser${id}`)
         return productos;
     } catch (error) {
         console.log(error);
@@ -52,11 +50,12 @@ export const ingresar = async (user) => {
     return myUser;
 }
 
-export const register = async (user) => {
+export const register = async (valores) => {
     let users = await methGetUsers();
-    let objs = users.data;
+    let objs = users.data.usr;
+    console.log(objs);
     let myUser = objs.filter((obj) => {
-        if (obj.usuario === user.usuario) {
+        if (obj.usuario === valores.usuario) {
             return obj;
         }
     })

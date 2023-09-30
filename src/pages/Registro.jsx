@@ -7,6 +7,7 @@ import { methPostUsers, register } from '../helpers/index'
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 
+
 const Registro = () => {
 
     const Toast = Swal.mixin({
@@ -53,8 +54,9 @@ const Registro = () => {
                     return errores;
                 }}
                 onSubmit={(valores, { resetForm }) => {
+                    console.log(valores);
                     register(valores)
-                        .then(data => {
+                        .then(data => {console.log(data);
                             if (data.length === 0) {
                                 methPostUsers(valores);
                                 resetForm();
@@ -62,9 +64,9 @@ const Registro = () => {
                                     icon: 'success',
                                     title: 'Te registraste con exito, redirigiendo al login'
                                 })
-                                setTimeout(() => {
-                                    return window.location = "/login"
-                                }, 2000);
+                                // setTimeout(() => {
+                                //     return window.location = "/login"
+                                // }, 2000);
                             } else {
                                 Swal.fire(`Ya existe el usuario ${valores.usuario}`)
                             }
