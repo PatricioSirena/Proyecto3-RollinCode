@@ -114,16 +114,16 @@ const URL_productos = import.meta.env.VITE_ENV_URL_PRODUCTS;
 
 export const methPost = async (obj) => {
     try {
-        axios.post(URL_productos + obj)
+        axios.post(URL_productos, obj)
     } catch (error) {
         console.log(error);
     }
 }
 
-export const methoGetOne = async (id) => {
+export const methGetOne = async (id) => {
     try {
-        let productos = await axios.get(`${URL_productos}${id}`)
-        return productos;
+        let producto = await axios.get(`${URL_productos}/${id}`)
+        return producto;
     } catch (error) {
         console.log(error);
     }
@@ -138,7 +138,7 @@ export const methGet = async () => {
     }
 }
 
-export const methoDeleteOne = (id) => {
+export const methDeleteOne = (id) => {
     try {
         let productos = axios.delete(`${URL_productos}${id}`)
         return productos;
@@ -149,9 +149,9 @@ export const methoDeleteOne = (id) => {
 
 
 export const methUpdate = async (obj, id) => {
-    console.log(obj, id);
+    // console.log(obj, id);
     try {
-        let editProduct = axios.put(`${URL_productos}${id}`, obj)
+        let editProduct = axios.put(`${URL_productos}/${id}`, obj)
         return editProduct
     } catch (error) {
         console.log(error);
