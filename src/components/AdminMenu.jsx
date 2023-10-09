@@ -3,8 +3,7 @@ import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { methGet, methPost, methGetOne, methUpdate } from '../helpers/index'
-// import '../styles/administrador.css'
+import { methGet, methPost, methGetOne, methUpdate, methDeleteOne } from '../helpers/index'
 
 const AdminMenu = () => {
 
@@ -12,6 +11,7 @@ const AdminMenu = () => {
     const [menu, setMenu] = useState([]);
     const [show, setShow] = useState(false);
     const [modalEditar, setModalEditar] = useState(false)
+    const [modalEliminar, setModalEliminar] = useState(false)
     const [platoSeleccionado, setPlatoSeleccionado] = useState({
         id: '',
         titulo: '',
@@ -38,24 +38,28 @@ const AdminMenu = () => {
     }, [])
 
     const insertar = (plato) => {
-        plato.id = menu.length + 1;
+        if (menu.length === 0) {
+            plato.id = 1
+        } else {
+            plato.id = menu[menu.length - 1].id + 1;
+        }
         setMenu([...menu, plato]);
     }
 
     const onSubmit = handleSubmit((data) => {
-        insertar(data)
-        methPost(data),
-            handleClose()
-
+        insertar(data);
+        methPost(data);
+        handleClose();
     })
 
     const seleccionarPlato = (plato, caso) => {
+        setPlatoSeleccionado({})
         reset()
         methGetOne(plato.id)
-        .then((datos)=>{return datos.data})
-        .then((response)=> setPlatoSeleccionado(response))
-        console.log(platoSeleccionado);
-        (caso === 'Editar') && setModalEditar(true)
+            .then((datos) => { return datos.data })
+            .then((response) => setPlatoSeleccionado(response));
+        (caso === 'Editar') && setModalEditar(true);
+        (caso === 'Eliminar') && setModalEliminar(true);
     }
 
     const handleChange = e => {
@@ -77,16 +81,20 @@ const AdminMenu = () => {
                 plato.imagen === platoSeleccionado.imagen
             }
         });
-        // setMenu(menuNuevo);
         methUpdate(platoSeleccionado, platoSeleccionado.id);
         setModalEditar(false)
+        window.location.replace('');
+    }
+
+    const eliminar = () => {
+        methDeleteOne(platoSeleccionado.id)
         window.location.replace('');
     }
 
     return (
         <>
             <div className='w-100 text-center'>
-                <Button variant="primary" onClick={handleShow}>
+                <Button onClick={handleShow}>
                     Agregar Plato
                 </Button>
             </div>
@@ -103,14 +111,6 @@ const AdminMenu = () => {
                 </div>
                 <div className='agregarPlato'>
                     <form onSubmit={onSubmit}>
-                        {/* {id} */}
-                        {/* <label htmlFor="id">ID</label>
-                        <input
-                            className='form-control'
-                            name='id'
-                            type="text"
-                            readOnly
-                        /> */}
                         {/* {Nombre} */}
                         <label htmlFor='titulo'>Nombre</label>
                         <input
@@ -159,7 +159,7 @@ const AdminMenu = () => {
                                     message: "La descripción es requerida"
                                 },
                                 pattern: {
-                                    value: /^.{4,50}$/,
+                                    value: /^.{4,100}$/,
                                     message: 'Solo letras y numeros, hasta 50 caracteres.'
                                 }
                             }
@@ -215,7 +215,7 @@ const AdminMenu = () => {
 
                         <div className='botones'>
                             <button className='btn btn-dark' type='submit'>Guardar</button>
-                            <button className='btn btn-dark' onClick={handleClose}>Cancelar</button>
+                            <button className='btn btn-secondary' onClick={handleClose}>Cancelar</button>
 
                         </div>
 
@@ -225,7 +225,6 @@ const AdminMenu = () => {
 
             <Modal
                 show={modalEditar}
-                onHide={() => setModalEditar(false)}
                 backdrop="static"
                 keyboard={false}
                 className='modalEditar'
@@ -359,12 +358,29 @@ const AdminMenu = () => {
                         </div>
 
                         <div className='botones'>
-                            <button className='btn btn-dark' onClick={()=>editar()}>Actualizar</button>
-                            <button className='btn btn-dark' onClick={() => setModalEditar(false)}>Cancelar</button>
-
+                            <button className='btn btn-dark' onClick={() => editar()}>Actualizar</button>
+                            <button className='btn btn-secondary' onClick={() => setModalEditar(false)}>Cancelar</button>
                         </div>
-
                     </form>
+                </div>
+            </Modal>
+
+            <Modal
+                show={modalEliminar}
+                onHide={() => setModalEliminar(false)}
+                backdrop="static"
+                keyboard={false}
+                className='modalEliminar'
+            >
+                <div className='text-center m-3'>
+                    <h4>Desea eliminar este plato?</h4>
+                </div>
+                <div className='text-center'>
+                    <p>{platoSeleccionado.titulo}</p>
+                </div>
+                <div className='botonesEliminar d-flex justify-content-center'>
+                    <button className='btn btn-danger' onClick={() => eliminar()}>Eliminar</button>
+                    <button className='btn btn-secondary' onClick={() => setModalEliminar(false)}>Cancelar</button>
                 </div>
             </Modal>
 
@@ -390,17 +406,15 @@ const AdminMenu = () => {
                                 <td>{plato.texto}</td>
                                 <td>{plato.categoria}</td>
                                 <td>{plato.activo ? 'Publicado' : 'No publicado'}</td>
-                                <td className='text-center'>
+                                <td className='text-center d-flex justify-content-center'>
                                     <button className='btn btn-dark' onClick={() => seleccionarPlato(plato, 'Editar')}>Editar</button>
-                                    <button className='btn btn-primary'>Eliminar</button>
+                                    <button className='btn btn-danger' onClick={() => seleccionarPlato(plato, 'Eliminar')}>Eliminar</button>
                                 </td>
                             </tr>
                         ))
                     }
                 </tbody>
             </table>
-
-
         </>
     )
 }

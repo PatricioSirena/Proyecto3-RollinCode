@@ -140,7 +140,7 @@ export const methGet = async () => {
 
 export const methDeleteOne = (id) => {
     try {
-        let productos = axios.delete(`${URL_productos}${id}`)
+        let productos = axios.delete(`${URL_productos}/${id}`)
         return productos;
     } catch (error) {
         console.log(error);
