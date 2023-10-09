@@ -200,8 +200,8 @@
       "usuario": "nereida92",
       "correo": "patobsirena@gmail.com",
       "password": "Sirena123",
-      "admin": true,
-      "activo": false,
+      "admin": false,
+      "activo": true,
       "id": 1
     },
     {

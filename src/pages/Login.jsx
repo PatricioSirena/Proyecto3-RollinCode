@@ -12,12 +12,12 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
         toast: true,
         position: 'center',
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1500,
         timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
+        // didOpen: (toast) => {
+        //     toast.addEventListener('mouseenter', Swal.stopTimer)
+        //     toast.addEventListener('mouseleave', Swal.resumeTimer)
+        // }
     })
     
     return (
@@ -50,9 +50,10 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                     onSubmit={(user) => {
                         ingresar(user)
                             .then(data => {
-                                console.log(data);
                                 if (data.length === 0) {
                                     Swal.fire('Usuario o Contraseña incorrectos')
+                                }else if (data[0].activo === false) {
+                                    Swal.fire('Debe esperar que un administrador autorice su ingreso')
                                 } else {
                                     let { admin, correo, id } = data[0];
                                     setUser(data[0])
@@ -64,8 +65,8 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                                         title: 'Logueado con exito, redirigiendo a inicio!'
                                     })
                                     setTimeout(() => {
-                                        window.location = '/'
-                                    }, 2000);
+                                        <Navigate to="/" />
+                                    }, 1500);
                                 }
                             })
                     }}

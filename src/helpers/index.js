@@ -23,7 +23,7 @@ export const methGetOneUser = async (id) => {
 
 export const methGetUsers = async () => {
     try {
-        let users = await axios.get(URL_usuarios + "/getUsers")
+        let users = await axios.get(URL_usuarios)
         return users;
     } catch (error) {
         console.log(error);
