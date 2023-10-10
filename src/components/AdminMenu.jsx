@@ -27,7 +27,7 @@ const AdminMenu = () => {
 
     useEffect(() => {
         methGet()
-            .then((datos) => { return datos.data })
+            .then((datos) => {return datos.data.data})
             .then((response) => {
                 if (response.length != 0) {
                     setMenu(response)
@@ -356,7 +356,7 @@ const AdminMenu = () => {
                     </form>
                 </div>
             </Modal>
-                            
+
             <Modal
                 show={modalEliminar}
                 onHide={() => setModalEliminar(false)}

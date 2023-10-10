@@ -2,7 +2,6 @@ import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import { methGetUsers, methGetOneUser, methUpdateUser } from '../helpers/index'
 
-
 const AdminUsuarios = () => {
     const [users, setUsers] = useState([]);
     const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
@@ -16,7 +15,7 @@ const AdminUsuarios = () => {
 
     useEffect(() => {
         methGetUsers()
-            .then((datos) => { return datos.data })
+            .then((datos) => {return datos.data.usr})
             .then((response) => {
                 if (response.length != 0) {
                     setUsers(response)
