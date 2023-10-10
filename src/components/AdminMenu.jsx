@@ -235,15 +235,6 @@ const AdminMenu = () => {
                 </div>
                 <div className='agregarPlato'>
                     <form onSubmit={onSubmit}>
-                        {/* {id} */}
-                        <label htmlFor="id">ID</label>
-                        <input
-                            className='form-control'
-                            name='id'
-                            type="text"
-                            readOnly
-                            value={platoSeleccionado && platoSeleccionado.id}
-                        />
                         {/* {Nombre} */}
                         <label htmlFor='titulo'>Nombre</label>
                         <input
@@ -365,7 +356,7 @@ const AdminMenu = () => {
                     </form>
                 </div>
             </Modal>
-
+                            
             <Modal
                 show={modalEliminar}
                 onHide={() => setModalEliminar(false)}
@@ -388,7 +379,6 @@ const AdminMenu = () => {
             <table className='container table table-bordered'>
                 <thead>
                     <tr className='text-center'>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Descripción</th>
@@ -401,7 +391,6 @@ const AdminMenu = () => {
                     {
                         menu.map(plato => (
                             <tr className='text-center' key={plato.id}>
-                                <td>{plato.id}</td>
                                 <td>{plato.titulo}</td>
                                 <td>{plato.precio}</td>
                                 <td>{plato.texto}</td>

@@ -65,56 +65,9 @@ export const methUpdateUser = async (id,obj) => {
 const URL_productos = import.meta.env.VITE_ENV_URL_PRODUCTS;
 
 
-// export const methPost = async (obj) => {
-//     try {
-//         await axios.post(URL_productos + "/createProducts/", obj)
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-// export const methoGetOne = async (id) => {
-//     try {
-//         let productos = await axios.get(`${URL_productos}/getOneProduct/${id}`)
-//         return productos;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-// export const methGet = async () => {
-//     try {
-//         let productos = await axios.get(URL_productos + "/getProducts")
-//         return productos;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-// export const methoDeleteOne = (id) => {
-//     try {
-//         let productos = axios.delete(`${URL_productos}/deleteProduct/${id}`)
-//         return productos;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-
-// export const methUpdate = async (obj, id) => {
-//     console.log(obj, id);
-//     try {
-//         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
-//         return editProduct
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-
 export const methPost = async (obj) => {
     try {
-        axios.post(URL_productos, obj)
+        await axios.post(URL_productos + "/createProducts/", obj)
     } catch (error) {
         console.log(error);
     }
@@ -122,8 +75,8 @@ export const methPost = async (obj) => {
 
 export const methGetOne = async (id) => {
     try {
-        let producto = await axios.get(`${URL_productos}/${id}`)
-        return producto;
+        let productos = await axios.get(`${URL_productos}/getOneProduct/${id}`)
+        return productos;
     } catch (error) {
         console.log(error);
     }
@@ -131,7 +84,7 @@ export const methGetOne = async (id) => {
 
 export const methGet = async () => {
     try {
-        let productos = await axios.get(URL_productos)
+        let productos = await axios.get(URL_productos + "/getProducts")
         return productos;
     } catch (error) {
         console.log(error);
@@ -140,7 +93,7 @@ export const methGet = async () => {
 
 export const methDeleteOne = (id) => {
     try {
-        let productos = axios.delete(`${URL_productos}/${id}`)
+        let productos = axios.delete(`${URL_productos}/deleteProduct/${id}`)
         return productos;
     } catch (error) {
         console.log(error);
@@ -149,11 +102,58 @@ export const methDeleteOne = (id) => {
 
 
 export const methUpdate = async (obj, id) => {
-    // console.log(obj, id);
+    console.log(obj, id);
     try {
-        let editProduct = axios.put(`${URL_productos}/${id}`, obj)
+        let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
         return editProduct
     } catch (error) {
         console.log(error);
     }
 }
+
+
+// export const methPost = async (obj) => {
+//     try {
+//         axios.post(URL_productos, obj)
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// export const methGetOne = async (id) => {
+//     try {
+//         let producto = await axios.get(`${URL_productos}/${id}`)
+//         return producto;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// export const methGet = async () => {
+//     try {
+//         let productos = await axios.get(URL_productos)
+//         return productos;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// export const methDeleteOne = (id) => {
+//     try {
+//         let productos = axios.delete(`${URL_productos}/${id}`)
+//         return productos;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+
+// export const methUpdate = async (obj, id) => {
+//     // console.log(obj, id);
+//     try {
+//         let editProduct = axios.put(`${URL_productos}/${id}`, obj)
+//         return editProduct
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
