@@ -33,23 +33,145 @@
   ],
   "products": [
     {
-      "titulo": "Pizza",
-      "precio": "12345",
-      "texto": "Pizza",
+      "titulo": "Hamburugesa",
+      "precio": "12321",
+      "texto": "ñkasjdnf",
       "categoria": "comida",
-      "imagen": "Pizza",
+      "imagen": "askldjfn",
+      "activo": false,
+      "id": 4
+    },
+    {
+      "titulo": "lsdh",
+      "precio": "2321",
+      "texto": "ñslkdnf",
+      "categoria": "comida",
+      "imagen": "ñlskdnf",
+      "activo": false,
+      "id": 5
+    },
+    {
+      "titulo": "askldjf",
+      "precio": "123",
+      "texto": "askjdnf",
+      "categoria": "comida",
+      "imagen": "laskdjfnsd",
+      "activo": false,
+      "id": 6
+    }
+  ],
+  "usuarios": [
+    {
+      "usuario": "nereida92",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": true,
+      "activo": true,
+      "id": 1
+    },
+    {
+      "usuario": "nereida08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirenas23",
+      "admin": true,
       "activo": false,
       "id": 2
     },
     {
-      "titulo": "asdkfh",
-      "precio": "123",
-      "texto": "askldjfsd",
-      "categoria": "comida",
-      "imagen": "askljdnf",
+      "usuario": "nereida9",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": true,
       "activo": false,
       "id": 3
+    },
+    {
+      "usuario": "patobs",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": true,
+      "activo": false,
+      "id": 4
+    },
+    {
+      "usuario": "nereida22",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": true,
+      "activo": false,
+      "id": 5
+    },
+    {
+      "usuario": "nereida22",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 6
+    },
+    {
+      "usuario": "patobsirena",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 7
+    },
+    {
+      "usuario": "nere92",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 8
+    },
+    {
+      "usuario": "nere08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 9
+    },
+    {
+      "usuario": "nereida920",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 10
+    },
+    {
+      "usuario": "nereida9222",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 11
+    },
+    {
+      "usuario": "patobs21",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 12
+    },
+    {
+      "usuario": "nereida87",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 13
+    },
+    {
+      "usuario": "patobs08",
+      "correo": "patobsirena@gmail.com",
+      "password": "Sirena123",
+      "admin": false,
+      "activo": false,
+      "id": 14
     }
-  ],
-  "usuarios": []
+  ]
 }

@@ -13,9 +13,9 @@ export const methPostUsers = async (obj) => {
     }
 }
 
-export const methoGetOneUser = async (id) => {
+export const methGetOneUser = async (id) => {
     try {
-        let usuario = await axios.get(`${URL_usuarios}/getOneUser/${id}`)
+        let usuario = await axios.get(`${URL_usuarios}/${id}`)
         return usuario;
     } catch (error) {
         console.log(error);
@@ -24,7 +24,7 @@ export const methoGetOneUser = async (id) => {
 
 export const methGetUsers = async () => {
     try {
-        let users = await axios.get(URL_usuarios + "/getUsers")
+        let users = await axios.get(URL_usuarios)
         return users;
     } catch (error) {
         console.log(error);
@@ -51,10 +51,10 @@ export const ingresar = async (user) => {
     return myUser;
 }
 
-export const methUpdateUser = async (obj, id) => {
+export const methUpdateUser = async (id,obj) => {
     console.log(obj, id);
     try {
-        let editUsuario = axios.put(`${URL_usuarios}//updateUser/${id}`, obj)
+        let editUsuario = axios.put(`${URL_usuarios}/${id}`, obj)
         return editUsuario
     } catch (error) {
         console.log(error);

@@ -58,6 +58,7 @@ const AdminMenu = () => {
         methGetOne(plato.id)
             .then((datos) => { return datos.data })
             .then((response) => setPlatoSeleccionado(response));
+            console.log(platoSeleccionado);
         (caso === 'Editar') && setModalEditar(true);
         (caso === 'Eliminar') && setModalEliminar(true);
     }
@@ -386,7 +387,7 @@ const AdminMenu = () => {
 
             <table className='container table table-bordered'>
                 <thead>
-                    <tr>
+                    <tr className='text-center'>
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Precio</th>
@@ -399,7 +400,7 @@ const AdminMenu = () => {
                 <tbody>
                     {
                         menu.map(plato => (
-                            <tr key={plato.id}>
+                            <tr className='text-center' key={plato.id}>
                                 <td>{plato.id}</td>
                                 <td>{plato.titulo}</td>
                                 <td>{plato.precio}</td>
