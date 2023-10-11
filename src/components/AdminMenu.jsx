@@ -27,8 +27,9 @@ const AdminMenu = () => {
 
     useEffect(() => {
         methGet()
-            .then((datos) => {return datos.data.data})
+            .then((datos) => console.log(datos))
             .then((response) => {
+                console.log(response);
                 if (response.length != 0) {
                     setMenu(response)
                 } else {
@@ -37,17 +38,17 @@ const AdminMenu = () => {
             })
     }, [])
 
-    const insertar = (plato) => {
-        if (menu.length === 0) {
-            plato.id = 1
-        } else {
-            plato.id = menu[menu.length - 1].id + 1;
-        }
-        setMenu([...menu, plato]);
-    }
+    // const insertar = (plato) => {
+    //     if (menu.length === 0) {
+    //         plato.id = 1
+    //     } else {
+    //         plato.id = menu[menu.length - 1].id + 1;
+    //     }
+    //     setMenu([...menu, plato]);
+    // }
 
     const onSubmit = handleSubmit((data) => {
-        insertar(data);
+        setMenu([...menu, data]);
         methPost(data);
         handleClose();
     })
@@ -56,7 +57,7 @@ const AdminMenu = () => {
         setPlatoSeleccionado({})
         reset()
         methGetOne(plato.id)
-            .then((datos) => { return datos.data })
+            .then((datos) => {return datos.data.producto })
             .then((response) => setPlatoSeleccionado(response));
             console.log(platoSeleccionado);
         (caso === 'Editar') && setModalEditar(true);

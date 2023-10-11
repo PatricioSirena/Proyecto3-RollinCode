@@ -4,18 +4,10 @@ import { methGetUsers, methGetOneUser, methUpdateUser } from '../helpers/index'
 
 const AdminUsuarios = () => {
     const [users, setUsers] = useState([]);
-    const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({
-        id: '',
-        correo: '',
-        usuario: '',
-        activo: '',
-        admin: '',
-        password: ''
-    });
 
     useEffect(() => {
         methGetUsers()
-            .then((datos) => {return datos.data.usr})
+            .then((datos) => { return datos.data.usr })
             .then((response) => {
                 if (response.length != 0) {
                     setUsers(response)
@@ -25,26 +17,39 @@ const AdminUsuarios = () => {
             })
     }, [])
 
-    const seleccionarUsuario = (usuario) => {
+    const cambiarAdmin = (usuario) => {
         // setUsuarioSeleccionado({})
-        methGetOneUser(usuario.id)
-            .then((datos) => { return datos.data })
-            .then((response) => setUsuarioSeleccionado(response));
-            usuarioSeleccionado({
-                id: '',
-                correo: '',
-                usuario: '',
-                activo: '',
-                admin: '',
-                password: ''
+        methGetOneUser(usuario.uid)
+            .then((datos) => { return datos.data.usuario })
+            .then((response) => {
+                if (response.admin === false) {
+                    response.admin = true;
+                } else {
+                    response.admin = false;
+                }
+                methUpdateUser(response.uid, response);
             })
-        if (usuarioSeleccionado.admin === false) {
-            usuarioSeleccionado.admin = true;
-        } else {
-            usuarioSeleccionado.admin = false;
-        }
-        methUpdateUser(usuarioSeleccionado.id, usuarioSeleccionado);
-        window.location='/admin'
+            setTimeout(() => {
+                window.location='/admin'
+            }, 2000);
+    }
+
+    const cambiarActivo = (usuario) => {
+        // setUsuarioSeleccionado({})
+        methGetOneUser(usuario.uid)
+            .then((datos) => { return datos.data.usuario })
+            .then((response) => {
+                if (response.activo === false) {
+                    response.activo = true;
+                } else {
+                    response.activo = false;
+                }
+                console.log(response);
+                methUpdateUser(response.uid, response);
+            })
+            setTimeout(() => {
+                // window.location='/admin'
+            }, 2000);
     }
 
     // const editar = () => {
@@ -73,7 +78,6 @@ const AdminUsuarios = () => {
             <table className='container w-25 table table-bordered'>
                 <thead>
                     <tr className='text-center'>
-                        <th>ID</th>
                         <th>Usuario</th>
                         <th>Correo</th>
                         <th>Usuario/Administrador</th>
@@ -83,14 +87,13 @@ const AdminUsuarios = () => {
                 <tbody>
                     {
                         users.map(user => (
-                            <tr className='text-center' key={user.id}>
-                                <td>{user.id}</td>
+                            <tr className='text-center' key={user.uid}>
                                 <td>{user.usuario}</td>
                                 <td>{user.correo}</td>
-                                <td>{user.admin ? <button className='btn btn-dark' onClick={() => seleccionarUsuario(user, 'Administrador')}>Usuario</button>
-                                    : <button className='btn btn-danger' onClick={() => seleccionarUsuario(user, 'Usuario')}>Administrador</button>}</td>
-                                <td>{user.activo ? <button className='btn btn-dark'>Desactivar</button>
-                                    : <button className='btn btn-danger'>Activar</button>}</td>
+                                <td>{user.admin ? <button className='btn btn-dark' onClick={() => cambiarAdmin(user)}>Usuario</button>
+                                    : <button className='btn btn-danger' onClick={() => cambiarAdmin(user)}>Administrador</button>}</td>
+                                <td>{user.activo ? <button className='btn btn-dark' onClick={()=>cambiarActivo(user)}>Desactivar</button>
+                                    : <button className='btn btn-danger' onClick={()=>cambiarActivo(user)}>Activar</button>}</td>
                             </tr>
                         ))
                     }
