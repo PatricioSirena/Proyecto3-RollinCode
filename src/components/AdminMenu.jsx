@@ -27,7 +27,7 @@ const AdminMenu = () => {
 
     useEffect(() => {
         methGet()
-            .then((datos) => console.log(datos))
+            .then((datos) => {return datos.data.data})
             .then((response) => {
                 console.log(response);
                 if (response.length != 0) {
@@ -83,9 +83,10 @@ const AdminMenu = () => {
                 plato.imagen === platoSeleccionado.imagen
             }
         });
+        console.log(platoSeleccionado);
         methUpdate(platoSeleccionado, platoSeleccionado.id);
         setModalEditar(false)
-        window.location.replace('');
+        // window.location.replace('');
     }
 
     const eliminar = () => {
