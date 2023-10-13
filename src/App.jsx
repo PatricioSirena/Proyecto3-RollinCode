@@ -42,14 +42,14 @@ function App() {
                     setUser={setUser}
                 />
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/menu" element={<Menu
+                    <Route path="/" element={<Home />} />
+                    <Route path="/menu" element={<Menu
                         isLogueado={isLogueado}
                     />} />
                     <Route element={<PrivateRoute admin={admin}/>}>
                         <Route path='/admin' element={<Administrador/>}/>
                     </Route>
-                    <Route exact path="/login" element=
+                    <Route path="/login" element=
                         {<Login
                             MyUser={user}
                             setUser={setUser}
@@ -58,7 +58,7 @@ function App() {
                             setIslogueado={setIslogueado}
                             isLogueado={isLogueado}
                         />} />
-                    <Route exact path="/registro" element={<Registro />} />
+                    <Route path="/registro" element={<Registro />} />
                 </Routes>
             </Router>
         </>

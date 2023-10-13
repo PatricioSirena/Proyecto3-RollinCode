@@ -41,7 +41,8 @@ export const methoDeleteOneUser = (id) => {
 
 export const ingresar = async (user) => {
     let users = await methGetUsers();
-    let objs = users.data;
+    let objs = users.data.usr;
+    console.log(users.data.usr);
     let myUser = objs.filter((obj) => {
         if (obj.usuario === user.usuario && obj.password === user.password) {
             return obj;
@@ -54,6 +55,7 @@ export const register = async (valores) => {
     let users = await methGetUsers();
     let objs = users.data.usr;
     console.log(objs);
+    console.log(valores);
     let myUser = objs.filter((obj) => {
         if (obj.usuario === valores.usuario) {
             return obj;

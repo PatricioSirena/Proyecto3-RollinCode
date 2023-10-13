@@ -28,7 +28,9 @@ const Registro = () => {
                 initialValues={{
                     usuario: '',
                     correo: '',
-                    password: ''
+                    password: '',
+                    admin: false,
+                    activo: false
                 }}
                 validate={(valores) => {
                     let errores = {};
@@ -64,9 +66,9 @@ const Registro = () => {
                                     icon: 'success',
                                     title: 'Te registraste con exito, redirigiendo al login'
                                 })
-                                // setTimeout(() => {
-                                //     return window.location = "/login"
-                                // }, 2000);
+                                setTimeout(() => {
+                                    // return window.location = "/login"
+                                }, 2000);
                             } else {
                                 Swal.fire(`Ya existe el usuario ${valores.usuario}`)
                             }

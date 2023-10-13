@@ -50,12 +50,15 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
     <>
       <div className="warning">
         <div className="warning__icon">
-
         </div>
-        <div className="warning__title">☻ Todos los Jueves 20% de Descuento en TODOS Nuestros Productos | Cod: BIENVENIDA_HAPPY</div>
+        <div className="warning__title">
+          <span>
+          ☻ Todos los Jueves 20% de Descuento en TODOS Nuestros Productos | Cod: BIENVENIDA_HAPPY
+          </span>
+          </div>
         <div className="warning__close"><svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z" fill="#393a37"></path></svg></div>
       </div>
-      <Navbar expand="lg" sticky="top" className="bg-body-tertiary" id="nav" data-bs-theme="light" roundedCircle>
+      <Navbar expand="lg" sticky="top" className="bg-body-tertiary" id="nav" data-bs-theme="light">
         <Container fluid>
           <NavLink to="/" className='logo'>
             <img src={Happyfood} className='logo' alt="Logo" />
@@ -69,18 +72,18 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             >
               {isLogueado ?
                 <>
-                  <NavLink to={"/"} className={'nav-item nav-link'} onClick={logout}>Logout</NavLink>
+                  <NavLink to="/" className={'nav-item nav-link'} onClick={logout}>Logout</NavLink>
                 </>
                 :
                 <>
-                  <NavLink exact to="/login" className={'nav-item nav-link'}>Login</NavLink>
-                  <NavLink exact to="/registro" className={'nav-item nav-link'}>Registro</NavLink>
+                  <NavLink to="/login" className={'nav-item nav-link'}>Login</NavLink>
+                  <NavLink to="/registro" className={'nav-item nav-link'}>Registro</NavLink>
                 </>
               }
               {admin &&
-                <NavLink exact to="/admin" className={'nav-item nav-link'}>Admin</NavLink>
+                <NavLink to="/admin" className={'nav-item nav-link'}>Admin</NavLink>
               }
-              <NavLink exact to="/menu" className={'nav-item nav-link'}>Nuestros Platos</NavLink>
+              <NavLink to="/menu" className={'nav-item nav-link'}>Nuestros Platos</NavLink>
 
             </Nav>
             <NavLink href="#" className='carrito'>
