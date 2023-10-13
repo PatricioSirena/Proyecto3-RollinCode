@@ -49,7 +49,9 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
 
                     onSubmit={(user) => {
                         ingresar(user)
-                            .then(response => {return response})
+                            .then(response => {
+                                console.log(response);
+                                return response})
                                 .then(data => {
                                     console.log(data);
                                 if (data.length === 0) {

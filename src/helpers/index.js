@@ -42,12 +42,15 @@ export const methoDeleteOneUser = (id) => {
 export const ingresar = async (user) => {
     let users = await methGetUsers();
     let objs = users.data.usr;
+    console.log(user);
     console.log(users.data.usr);
     let myUser = objs.filter((obj) => {
         if (obj.usuario === user.usuario && obj.password === user.password) {
+            console.log(obj);
             return obj;
         }
     })
+    console.log(myUser);
     return myUser;
 }
 
