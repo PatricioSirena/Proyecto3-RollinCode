@@ -22,20 +22,20 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
     
     return (
         <>
-            {isLogueado ? <Navigate to="/" />
-                :
+            {/* {isLogueado ? <Navigate to="/" />
+                : */}
                 <Formik
                     initialValues={{
-                        usuario: '',
+                        correo: '',
                         password: ''
                     }}
                     validate={(valores) => {
                         let errores = {};
 
-                        if (!valores.usuario) {
-                            errores.usuario = 'Por favor ingrese el usuario.'
-                        } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
-                            errores.usuario = 'El usuario solo puede tener letras y numeros.'
+                        if (!valores.correo) {
+                            errores.correo = 'Por favor ingrese el correo electronico.'
+                        } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
+                            errores.correo = 'No es un correo electronico valido.'
                         }
 
                         if (!valores.password) {
@@ -48,29 +48,27 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                     }}
 
                     onSubmit={(user) => {
+                        // console.log(user);
                         ingresar(user)
-                            .then(response => {
-                                console.log(response);
-                                return response})
-                                .then(data => {
-                                    console.log(data);
+                            .then(data => {
+                                    // console.log(data);
                                 if (data.length === 0) {
                                     Swal.fire('Usuario o Contraseña incorrectos')
-                                }else if (data[0].activo === false) {
+                                }else if (data.activo === false) {
                                     Swal.fire('Debe esperar que un administrador autorice su ingreso')
                                 } else {
-                                    let { admin, correo, id } = data[0];
-                                    setUser(data[0])
-                                    setAdmin(data[0].admin)
+                                    let { admin, correo, uid } = data;
+                                    setUser(data)
+                                    setAdmin(data.admin)
                                     setIslogueado(true)
-                                    window.localStorage.setItem("user", JSON.stringify({ admin, correo, id }));
+                                    window.localStorage.setItem("user", JSON.stringify({ admin, correo, uid }));
                                     Toast.fire({
                                         icon: 'success',
                                         title: 'Logueado con exito, redirigiendo a inicio!'
                                     })
-                                    setTimeout(() => {
-                                        <Navigate to="/" />
-                                    }, 1500);
+                                    // setTimeout(() => {
+                                    //     <Navigate to="/" />
+                                    // }, 1500);
                                 }
                             })
                     }}
@@ -85,14 +83,14 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                                         <p className="tittle">Inicie Sesión</p>
                                         <Col className="input-group">
                                             <Field
-                                                id="usuario"
+                                                id="correo"
                                                 type="text"
-                                                name="usuario"
-                                                placeholder="Usuario"
+                                                name="correo"
+                                                placeholder="Correo"
                                             />
-                                            <label htmlFor="usuario"></label>
-                                            <ErrorMessage name="usuario" component={() => (
-                                                <div className="error">{errors.usuario}</div>
+                                            <label htmlFor="correo"></label>
+                                            <ErrorMessage name="correo" component={() => (
+                                                <div className="error">{errors.correo}</div>
                                             )} />
                                         </Col>
                                         <Col className="input-group">
@@ -120,7 +118,7 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                         </div>
                     )}
                 </Formik >
-            }
+            {/* } */}
 
         </>
     )

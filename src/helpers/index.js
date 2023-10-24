@@ -2,9 +2,11 @@ import axios from 'axios';
 
 //  ----------------- Usuarios -----------------
 const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
+const URL_auth = import.meta.env.VITE_ENV_URL_AUTH;
 
 
 export const methPostUsers = async (obj) => {
+    console.log(obj);
     try {
         await axios.post(URL_usuarios + "/createUser", obj)
     } catch (error) {
@@ -39,28 +41,34 @@ export const methoDeleteOneUser = (id) => {
     }
 }
 
-export const ingresar = async (user) => {
-    let users = await methGetUsers();
-    let objs = users.data.usr;
-    console.log(user);
-    console.log(users.data.usr);
-    let myUser = objs.filter((obj) => {
-        if (obj.usuario === user.usuario && obj.password === user.password) {
-            console.log(obj);
-            return obj;
-        }
-    })
-    console.log(myUser);
-    return myUser;
+export const ingresar = async(user)=>{
+    // console.log(user);
+    let usr = await axios.post(URL_auth, user);
+    let usuario = usr.data.user;
+    return usuario;    
 }
+
+// export const ingresar = async (user) => {
+//     let users = await methGetUsers();
+//     let objs = users.data.data;
+//     console.log(user);
+//     console.log(objs);
+//     let myUser = objs.filter((obj) => {
+//         if (obj.correo === user.correo && obj.password === user.password) {
+//             console.log(obj);
+//             return obj;
+//         }
+//     })
+//     console.log(myUser);
+//     return myUser;
+// }
 
 export const register = async (valores) => {
     let users = await methGetUsers();
     let objs = users.data.usr;
     console.log(objs);
-    console.log(valores);
     let myUser = objs.filter((obj) => {
-        if (obj.usuario === valores.usuario) {
+        if (obj.correo === valores.correo) {
             return obj;
         }
     })
@@ -70,7 +78,7 @@ export const register = async (valores) => {
 export const methUpdateUser = async (obj, id) => {
     console.log(obj, id);
     try {
-        let editUsuario = axios.put(`${URL_usuarios}//updateUser/${id}`, obj)
+        let editUsuario = axios.put(`${URL_usuarios}/updateUser/${id}`, obj)
         return editUsuario
     } catch (error) {
         console.log(error);

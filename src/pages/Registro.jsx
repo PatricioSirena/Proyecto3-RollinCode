@@ -26,19 +26,22 @@ const Registro = () => {
         <>
             <Formik
                 initialValues={{
-                    usuario: '',
+                    nombre: '',
+                    apellido: '',
                     correo: '',
-                    password: '',
-                    admin: false,
-                    activo: false
+                    password: ''
+                    // admin: false,
+                    // activo: false
                 }}
                 validate={(valores) => {
                     let errores = {};
 
-                    if (!valores.usuario) {
-                        errores.usuario = 'Por favor ingrese el usuario.'
-                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
-                        errores.usuario = 'El usuario solo puede tener letras y numeros y debe tener entre 4 y 20 caracteres.'
+                    if (!valores.nombre) {
+                        errores.nombre = 'Por favor ingrese el nombre.'
+                    }
+
+                    if (!valores.apellido) {
+                        errores.apellido = 'Por favor ingrese el apellido.'
                     }
 
                     if (!valores.correo) {
@@ -58,7 +61,8 @@ const Registro = () => {
                 onSubmit={(valores, { resetForm }) => {
                     console.log(valores);
                     register(valores)
-                        .then(data => {console.log(data);
+                        .then(data => {
+                            console.log(data);
                             if (data.length === 0) {
                                 methPostUsers(valores);
                                 resetForm();
@@ -70,10 +74,10 @@ const Registro = () => {
                                     // return window.location = "/login"
                                 }, 2000);
                             } else {
-                                Swal.fire(`Ya existe el usuario ${valores.usuario}`)
+                                Swal.fire(`Ya existe el usuario ${valores.correo}`)
                             }
                         })
-                    }}
+                }}
             >
                 {({ errors }) => (
                     <div className="row">
@@ -85,16 +89,30 @@ const Registro = () => {
                                     <p className="tittle">Regístrate</p>
                                     <Col className="input-group">
                                         <Field
-                                            id="usuario"
+                                            id="nombre"
                                             type="text"
-                                            name="usuario"
-                                            placeholder="Usuario"
+                                            name="nombre"
+                                            placeholder="nombre"
                                         />
-                                        <label htmlFor="usuario"></label>
-                                        <ErrorMessage name="usuario" component={() => (
-                                            <div className="error">{errors.usuario}</div>
+                                        <label htmlFor="nombre"></label>
+                                        <ErrorMessage name="nombre" component={() => (
+                                            <div className="error">{errors.nombre}</div>
                                         )} />
                                     </Col>
+
+                                    <Col className="input-group">
+                                        <Field
+                                            id="apellido"
+                                            type="text"
+                                            name="apellido"
+                                            placeholder="apellido"
+                                        />
+                                        <label htmlFor="apellido"></label>
+                                        <ErrorMessage name="apellido" component={() => (
+                                            <div className="error">{errors.apellido}</div>
+                                        )} />
+                                    </Col>
+
                                     <Col className="input-group">
                                         <Field
                                             id="correo"
@@ -107,6 +125,7 @@ const Registro = () => {
                                             <div className="error">{errors.correo}</div>
                                         )} />
                                     </Col>
+
                                     <Col className="input-group">
                                         <Field
                                             id="password"
@@ -119,11 +138,14 @@ const Registro = () => {
                                             <div className="error text-center">{errors.password}</div>
                                         )} />
                                     </Col>
+
                                     <button type="submit" className="btn">Registrarme</button>
                                     {/* {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>} */}
+                                    
                                     <Col className="sign-link">
                                         <p>Ya tienes una cuenta? <Link to={"/login"} className="signUp-link">Inicia Sesión</Link></p>
                                     </Col>
+
                                 </Form>
                             </Col>
                         </Container>
