@@ -6,7 +6,7 @@ import { Link, Navigate } from "react-router-dom";
 import { ingresar } from '../helpers/index'
 import Swal from "sweetalert2";
 
-const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) => {
+const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
 
     const Toast = Swal.mixin({
         toast: true,
@@ -19,11 +19,11 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
         //     toast.addEventListener('mouseleave', Swal.resumeTimer)
         // }
     })
-    
+
     return (
         <>
-            {/* {isLogueado ? <Navigate to="/" />
-                : */}
+            {isLogueado ? <Navigate to="/" />
+                :
                 <Formik
                     initialValues={{
                         correo: '',
@@ -48,27 +48,29 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                     }}
 
                     onSubmit={(user) => {
-                        // console.log(user);
                         ingresar(user)
                             .then(data => {
-                                    // console.log(data);
-                                if (data.length === 0) {
+                                if (data === 401) {
                                     Swal.fire('Usuario o Contraseña incorrectos')
-                                }else if (data.activo === false) {
+                                } else if (data === 404) {
+                                    Swal.fire('Usuario inexistente')
+                                } else if (data.user.activo === false) {
                                     Swal.fire('Debe esperar que un administrador autorice su ingreso')
                                 } else {
-                                    let { admin, correo, uid } = data;
-                                    setUser(data)
-                                    setAdmin(data.admin)
-                                    setIslogueado(true)
+                                    let { admin, correo, uid } = data.user;
+                                    let token = data.token;
+                                    setUser(data.user)
+                                    setAdmin(data.user.admin)
                                     window.localStorage.setItem("user", JSON.stringify({ admin, correo, uid }));
+                                    window.localStorage.setItem("token", JSON.stringify(token));
                                     Toast.fire({
                                         icon: 'success',
                                         title: 'Logueado con exito, redirigiendo a inicio!'
                                     })
-                                    // setTimeout(() => {
-                                    //     <Navigate to="/" />
-                                    // }, 1500);
+                                    setTimeout(() => {
+                                    setIslogueado(true);
+                                        <Navigate to="/" />
+                                    }, 1500);
                                 }
                             })
                     }}
@@ -118,8 +120,7 @@ const Login = ({ admin, setAdmin, MyUser, setUser, setIslogueado, isLogueado }) 
                         </div>
                     )}
                 </Formik >
-            {/* } */}
-
+            }
         </>
     )
 }

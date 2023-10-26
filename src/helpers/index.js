@@ -42,10 +42,13 @@ export const methoDeleteOneUser = (id) => {
 }
 
 export const ingresar = async(user)=>{
-    // console.log(user);
-    let usr = await axios.post(URL_auth, user);
-    let usuario = usr.data.user;
-    return usuario;    
+    try {
+        let usr = await axios.post(URL_auth, user);
+        let usuario = usr.data;
+        return usuario;    
+        } catch (error) {
+        return error.response.status
+    }
 }
 
 // export const ingresar = async (user) => {

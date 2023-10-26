@@ -40,6 +40,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             setUser({}),
             setIslogueado(false),
             window.localStorage.removeItem("user"),
+            window.localStorage.removeItem("token"),
             window.location = "/"
         }, 2000);
       }

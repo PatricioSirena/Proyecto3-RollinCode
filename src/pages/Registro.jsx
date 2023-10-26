@@ -71,7 +71,7 @@ const Registro = () => {
                                     title: 'Te registraste con exito, redirigiendo al login'
                                 })
                                 setTimeout(() => {
-                                    // return window.location = "/login"
+                                    window.location = "/login"
                                 }, 2000);
                             } else {
                                 Swal.fire(`Ya existe el usuario ${valores.correo}`)

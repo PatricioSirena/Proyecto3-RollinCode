@@ -51,9 +51,9 @@ function App() {
                     </Route>
                     <Route path="/login" element=
                         {<Login
-                            MyUser={user}
+                            // MyUser={user}
                             setUser={setUser}
-                            admin={admin}
+                            // admin={admin}
                             setAdmin={setAdmin}
                             setIslogueado={setIslogueado}
                             isLogueado={isLogueado}
