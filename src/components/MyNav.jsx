@@ -33,6 +33,7 @@ function MyNav() {
                             <NavLink to="/Admin" className='link'>Admin</NavLink>
                             <NavLink to="/Login" className='link'>Iniciar Sesión</NavLink>
                             <NavLink to="/Registro" className='link'>Registrarme</NavLink>
+                            <NavLink to="/AboutUs" className='link'>Acerca de Nosotros</NavLink>
                         </Nav>
                         <a href="#" className='carrito'>
                             <img src={Carrito} className='carrito' alt="Carrito" />

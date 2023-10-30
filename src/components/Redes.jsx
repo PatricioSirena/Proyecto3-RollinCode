@@ -5,6 +5,7 @@ import logoPagina from "../img/logohappy.jpg";
 import {FaInstagram,FaFacebook,FaYoutube} from "react-icons/fa"
 import '../styles/footer.css'
 import { Link } from "react-router-dom";
+import AboutUs from "../pages/AboutUs";
 
 
 
@@ -32,7 +33,7 @@ const Redes = () => {
                 <Col lg={4} className="p-1 sm text-center listaFooter">
                     <h5 className="link_titulo">Nuestros Platos</h5>
                     <ul className="links">
-                        <li>Hamburguesa Americana</li>
+                        <li><a href="/AboutUs">Acerca de Nosotros</a></li>
                         <li>Hamburguesa 4to de Libra</li>
                         <li>Hamburguesa Crispy</li>
                     </ul>
