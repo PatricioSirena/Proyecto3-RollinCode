@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import '../styles/login.css'
 import Container from 'react-bootstrap/Container';
@@ -30,8 +29,6 @@ const Registro = () => {
                     apellido: '',
                     correo: '',
                     password: ''
-                    // admin: false,
-                    // activo: false
                 }}
                 validate={(valores) => {
                     let errores = {};
@@ -92,7 +89,7 @@ const Registro = () => {
                                             id="nombre"
                                             type="text"
                                             name="nombre"
-                                            placeholder="nombre"
+                                            placeholder="Nombre"
                                         />
                                         <label htmlFor="nombre"></label>
                                         <ErrorMessage name="nombre" component={() => (
@@ -105,7 +102,7 @@ const Registro = () => {
                                             id="apellido"
                                             type="text"
                                             name="apellido"
-                                            placeholder="apellido"
+                                            placeholder="Apellido"
                                         />
                                         <label htmlFor="apellido"></label>
                                         <ErrorMessage name="apellido" component={() => (
@@ -131,7 +128,7 @@ const Registro = () => {
                                             id="password"
                                             type="password"
                                             name="password"
-                                            placeholder="contraseña"
+                                            placeholder="Contraseña"
                                         />
                                         <label htmlFor="password"></label>
                                         <ErrorMessage name="password" component={() => (
@@ -140,7 +137,6 @@ const Registro = () => {
                                     </Col>
 
                                     <button type="submit" className="btn">Registrarme</button>
-                                    {/* {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>} */}
                                     
                                     <Col className="sign-link">
                                         <p>Ya tienes una cuenta? <Link to={"/login"} className="signUp-link">Inicia Sesión</Link></p>

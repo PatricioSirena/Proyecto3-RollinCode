@@ -13,11 +13,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
         position: 'center',
         showConfirmButton: false,
         timer: 1500,
-        timerProgressBar: true,
-        // didOpen: (toast) => {
-        //     toast.addEventListener('mouseenter', Swal.stopTimer)
-        //     toast.addEventListener('mouseleave', Swal.resumeTimer)
-        // }
+        timerProgressBar: true
     })
 
     return (
@@ -100,7 +96,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                                                 id="password"
                                                 type="password"
                                                 name="password"
-                                                placeholder="contraseña"
+                                                placeholder="Contraseña"
                                             />
                                             <label htmlFor="password"></label>
                                             <ErrorMessage name="password" component={() => (
