@@ -12,24 +12,15 @@ const AdminMenu = () => {
     const [show, setShow] = useState(false);
     const [modalEditar, setModalEditar] = useState(false)
     const [modalEliminar, setModalEliminar] = useState(false)
-    const [platoSeleccionado, setPlatoSeleccionado] = useState({
-        id: '',
-        titulo: '',
-        precio: '',
-        texto: '',
-        categoria: '',
-        activo: '',
-        imagen: ''
-    })
+    const [platoSeleccionado, setPlatoSeleccionado] = useState({})
 
     const handleClose = () => setShow(false);
     const handleShow = () => { reset(); setShow(true); }
 
     useEffect(() => {
         methGet()
-            .then((datos) => {return datos.data.data})
+            .then((datos) => {return datos.data.data })
             .then((response) => {
-                console.log(response);
                 if (response.length != 0) {
                     setMenu(response)
                 } else {
@@ -38,16 +29,8 @@ const AdminMenu = () => {
             })
     }, [])
 
-    // const insertar = (plato) => {
-    //     if (menu.length === 0) {
-    //         plato.id = 1
-    //     } else {
-    //         plato.id = menu[menu.length - 1].id + 1;
-    //     }
-    //     setMenu([...menu, plato]);
-    // }
-
     const onSubmit = handleSubmit((data) => {
+        console.log(data);
         setMenu([...menu, data]);
         methPost(data);
         handleClose();
@@ -57,9 +40,9 @@ const AdminMenu = () => {
         setPlatoSeleccionado({})
         reset()
         methGetOne(plato.id)
-            .then((datos) => {return datos.data.producto })
+            .then((datos) => { return datos.data.producto })
             .then((response) => setPlatoSeleccionado(response));
-            console.log(platoSeleccionado);
+        console.log(platoSeleccionado);
         (caso === 'Editar') && setModalEditar(true);
         (caso === 'Eliminar') && setModalEliminar(true);
     }
@@ -84,14 +67,35 @@ const AdminMenu = () => {
             }
         });
         console.log(platoSeleccionado);
-        methUpdate(platoSeleccionado, platoSeleccionado.id);
+        methUpdate(platoSeleccionado.id, platoSeleccionado);
         setModalEditar(false)
-        // window.location.replace('');
+        setTimeout(() => {
+            window.location = "/admin";
+        }, 2000);
+    }
+
+    const cambiarActivo = (plato) => {
+        methGetOne(plato.id)
+            .then((datos) => { return datos.data.producto })
+            .then((response) => {
+                if (response.activo === false) {
+                    response.activo = true;
+                } else {
+                    response.activo = false;
+                }
+                console.log(response);
+                methUpdate(response.id, response);
+            })
+        setTimeout(() => {
+            window.location = '/admin'
+        }, 2000);
     }
 
     const eliminar = () => {
-        methDeleteOne(platoSeleccionado.id)
-        window.location.replace('');
+        methDeleteOne(platoSeleccionado.id);
+        setTimeout(() => {
+            window.location.replace('');
+        }, 2000);
     }
 
     return (
@@ -104,7 +108,6 @@ const AdminMenu = () => {
 
             <Modal
                 show={show}
-                // onHide={handleClose}
                 backdrop="static"
                 keyboard={false}
                 className='modalInsertar'
@@ -114,7 +117,7 @@ const AdminMenu = () => {
                 </div>
                 <div className='agregarPlato'>
                     <form onSubmit={onSubmit}>
-                        {/* {Nombre} */}
+                        
                         <label htmlFor='titulo'>Nombre</label>
                         <input
                             {...register('titulo', {
@@ -134,7 +137,6 @@ const AdminMenu = () => {
                         />
                         {errors.titulo && <span>{errors.titulo.message}</span>}
 
-                        {/* {Precio} */}
                         <label htmlFor="precio">Precio</label>
                         <input
                             {...register('precio', {
@@ -153,7 +155,7 @@ const AdminMenu = () => {
                             name='precio'
                         />
                         {errors.precio && <span>{errors.precio.message}</span>}
-                        {/* {Descripcion} */}
+
                         <label htmlFor="texto">Descripción</label>
                         <input
                             {...register('texto', {
@@ -172,7 +174,7 @@ const AdminMenu = () => {
                             name='texto'
                         />
                         {errors.texto && <span>{errors.texto.message}</span>}
-                        {/* {Categoria} */}
+
                         <label htmlFor="categoria">Categoria</label>
                         <select
                             {...register('categoria', {
@@ -190,7 +192,7 @@ const AdminMenu = () => {
                             <option value="flor">Flor</option>
                         </select>
                         {errors.categoria && <span>{errors.categoria.message}</span>}
-                        {/* {imagen} */}
+
                         <label htmlFor="imagen">URL Imagen</label>
                         <input
                             {...register('imagen', {
@@ -198,21 +200,20 @@ const AdminMenu = () => {
                                     value: true,
                                     message: "La imagen es requerida"
                                 }
-                            }
-                            )}
+                            })}
                             className='form-control'
                             type="text"
                             name='imagen'
                         />
                         {errors.imagen && <span>{errors.imagen.message}</span>}
-                        {/* {Activo} */}
+
                         <div className='platoActivo'>
                             <label htmlFor="activo">Publicar Plato</label>
                             <input
                                 {...register('activo')}
                                 // className='form-control'
                                 type="checkbox"
-                                name='platoActivo'
+                                name='activo'
                             />
                         </div>
 
@@ -339,7 +340,7 @@ const AdminMenu = () => {
                         />
                         {errors.imagen && <span>{errors.imagen.message}</span>}
                         {/* {Activo} */}
-                        <div className='platoActivo'>
+                        {/* <div className='platoActivo'>
                             <label htmlFor="activo">Publicar Plato</label>
                             <input
                                 {...register('activo')}
@@ -349,7 +350,7 @@ const AdminMenu = () => {
                                 value={platoSeleccionado && platoSeleccionado.activo}
                                 onChange={handleChange}
                             />
-                        </div>
+                        </div> */}
 
                         <div className='botones'>
                             <button className='btn btn-dark' onClick={() => editar()}>Actualizar</button>
@@ -394,10 +395,11 @@ const AdminMenu = () => {
                         menu.map(plato => (
                             <tr className='text-center' key={plato.id}>
                                 <td>{plato.titulo}</td>
-                                <td>{plato.precio}</td>
+                                <td>${plato.precio}</td>
                                 <td>{plato.texto}</td>
                                 <td>{plato.categoria}</td>
-                                <td>{plato.activo ? 'Publicado' : 'No publicado'}</td>
+                                <td>{plato.activo ? <button className='btn btn-danger' onClick={() => cambiarActivo(plato)}>No Publicar</button>
+                                    : <button className='btn btn-dark' onClick={() => cambiarActivo(plato)}>Publicar</button>}</td>
                                 <td className='text-center d-flex justify-content-center'>
                                     <button className='btn btn-dark' onClick={() => seleccionarPlato(plato, 'Editar')}>Editar</button>
                                     <button className='btn btn-danger' onClick={() => seleccionarPlato(plato, 'Eliminar')}>Eliminar</button>

@@ -27,11 +27,12 @@ const AdminUsuarios = () => {
                 } else {
                     response.admin = false;
                 }
+                console.log(response);
                 methUpdateUser(response.uid, response);
             })
-            setTimeout(() => {
-                window.location='/admin'
-            }, 2000);
+        setTimeout(() => {
+            window.location = '/admin'
+        }, 2000);
     }
 
     const cambiarActivo = (usuario) => {
@@ -47,9 +48,9 @@ const AdminUsuarios = () => {
                 console.log(response);
                 methUpdateUser(response.uid, response);
             })
-            setTimeout(() => {
-                // window.location='/admin'
-            }, 2000);
+        setTimeout(() => {
+            window.location = '/admin'
+        }, 2000);
     }
 
     // const editar = () => {
@@ -78,7 +79,8 @@ const AdminUsuarios = () => {
             <table className='container w-25 table table-bordered'>
                 <thead>
                     <tr className='text-center'>
-                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
                         <th>Correo</th>
                         <th>Usuario/Administrador</th>
                         <th>Activar/Desactivar</th>
@@ -88,12 +90,13 @@ const AdminUsuarios = () => {
                     {
                         users.map(user => (
                             <tr className='text-center' key={user.uid}>
-                                <td>{user.usuario}</td>
+                                <td>{user.nombre}</td>
+                                <td>{user.apellido}</td>
                                 <td>{user.correo}</td>
-                                <td>{user.admin ? <button className='btn btn-dark' onClick={() => cambiarAdmin(user)}>Usuario</button>
-                                    : <button className='btn btn-danger' onClick={() => cambiarAdmin(user)}>Administrador</button>}</td>
-                                <td>{user.activo ? <button className='btn btn-dark' onClick={()=>cambiarActivo(user)}>Desactivar</button>
-                                    : <button className='btn btn-danger' onClick={()=>cambiarActivo(user)}>Activar</button>}</td>
+                                <td>{user.admin ? <button className='btn btn-dark' onClick={() => cambiarAdmin(user)}>Hacer Usuario</button>
+                                    : <button className='btn btn-danger' onClick={() => cambiarAdmin(user)}>Hacer Admin</button>}</td>
+                                <td>{user.activo ? <button className='btn btn-dark' onClick={() => cambiarActivo(user)}>Desactivar</button>
+                                    : <button className='btn btn-danger' onClick={() => cambiarActivo(user)}>Activar</button>}</td>
                             </tr>
                         ))
                     }

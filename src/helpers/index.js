@@ -102,7 +102,7 @@ export const methDeleteOne = (id) => {
 
 
 export const methUpdate = async (id,obj) => {
-    console.log(obj, id);
+    console.log(id, obj);
     try {
         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
         return editProduct
