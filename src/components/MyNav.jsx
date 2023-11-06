@@ -25,7 +25,19 @@ function MyNav() {
     const precioTotal = totalPrice.toFixed(2)
 
     const enviarPedido = () => {
-        let comidas = carrito.filter((elemento) => elemento.titulo)
+
+        function extraerAtributos(arrayObjetos, atributo1, atributo2) {
+            let concatenado = "";
+
+            for (let i = 0; i < arrayObjetos.length; i++) {
+                concatenado += arrayObjetos[i][atributo1] + " x " + arrayObjetos[i][atributo2] + ". ";
+            }
+
+            return concatenado.trim();
+        }
+
+        let comidas = extraerAtributos(carrito, "titulo", "quantity")
+
         let pedido = {
             platos: comidas,
             precio: precioTotal,
