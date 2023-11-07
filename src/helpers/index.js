@@ -31,7 +31,7 @@ export const methGetUsers = async () => {
     }
 }
 
-export const methoDeleteOneUser = (id) => {
+export const methDeleteOneUser = (id) => {
     try {
         let productos = axios.delete(`${URL_usuarios}/deleteUser/${id}`)
         return productos;
@@ -112,48 +112,51 @@ export const methUpdate = async (id,obj) => {
 }
 
 
-// export const methPost = async (obj) => {
-//     try {
-//         axios.post(URL_productos, obj)
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+//  ----------------- Pedidos -----------------
+const URL_orders = import.meta.env.VITE_ENV_URL_ORDERS;
 
-// export const methGetOne = async (id) => {
-//     try {
-//         let producto = await axios.get(`${URL_productos}/${id}`)
-//         return producto;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const methPostOrder = async (obj) => {
+    try {
+        axios.post(URL_orders + "/createOrder/", obj)
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// export const methGet = async () => {
-//     try {
-//         let productos = await axios.get(URL_productos)
-//         return productos;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const methGetOneOrder = async (id) => {
+    try {
+        let order = await axios.get(`${URL_orders}/getOneOrder/${id}`)
+        return order;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// export const methDeleteOne = (id) => {
-//     try {
-//         let productos = axios.delete(`${URL_productos}/${id}`)
-//         return productos;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const methGetOrders = async () => {
+    try {
+        let orders = await axios.get(URL_orders + "/getOrders")
+        return orders;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
+export const methUpdateOrder = async (obj, id) => {
+    console.log(obj, id);
+    try {
+        let editOrder = axios.put(`${URL_orders}/updateOrder/${id}`, obj)
+        return editOrder
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// export const methUpdate = async (obj, id) => {
-//     // console.log(obj, id);
-//     try {
-//         let editProduct = axios.put(`${URL_productos}/${id}`, obj)
-//         return editProduct
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const methDeleteOneOrder = (id) => {
+    console.log(id);
+    try {
+        let order = axios.delete(`${URL_orders}/deleteOrder/${id}`)
+        return order;
+    } catch (error) {
+        console.log(error);
+    }
+}

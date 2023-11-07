@@ -18,7 +18,6 @@ const AdminUsuarios = () => {
     }, [])
 
     const cambiarAdmin = (usuario) => {
-        // setUsuarioSeleccionado({})
         methGetOneUser(usuario.uid)
             .then((datos) => { return datos.data.usuario })
             .then((response) => {
@@ -36,7 +35,6 @@ const AdminUsuarios = () => {
     }
 
     const cambiarActivo = (usuario) => {
-        // setUsuarioSeleccionado({})
         methGetOneUser(usuario.uid)
             .then((datos) => { return datos.data.usuario })
             .then((response) => {
@@ -53,30 +51,9 @@ const AdminUsuarios = () => {
         }, 2000);
     }
 
-    // const editar = () => {
-    //     menu.map((plato) => {
-    //         if ((plato.id === platoSeleccionado.id)) {
-    //             plato.titulo === platoSeleccionado.titulo
-    //             plato.precio === platoSeleccionado.precio
-    //             plato.texto === platoSeleccionado.texto
-    //             plato.categoria === platoSeleccionado.categoria
-    //             plato.activo === platoSeleccionado.activo
-    //             plato.imagen === platoSeleccionado.imagen
-    //         }
-    //     });
-    //     methUpdate(platoSeleccionado, platoSeleccionado.id);
-    //     setModalEditar(false)
-    //     window.location.replace('');
-    // }
-
-    // const eliminar = () => {
-    //     methDeleteOne(platoSeleccionado.id)
-    //     window.location.replace('');
-    // }
-
     return (
         <>
-            <table className='container w-25 table table-bordered'>
+            <table className='container-fluid w-50 table table-bordered'>
                 <thead>
                     <tr className='text-center'>
                         <th>Nombre</th>
