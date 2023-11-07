@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import '../styles/mynav.css'
 import { NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
+import {methPostOrder} from '../helpers/index'
 
 function MyNav() {
     const [smShow, setSmShow] = useState(false);
@@ -44,8 +45,9 @@ function MyNav() {
             pendiente: true
         }
         console.log(pedido);
-        window.localStorage.setItem("pedidos", JSON.stringify(pedido));
+        // window.localStorage.setItem("pedidos", JSON.stringify(pedido));
         setSmShow(false);
+        methPostOrder(pedido)
         setCarrito([])
         Swal.fire({
             position: 'center',
