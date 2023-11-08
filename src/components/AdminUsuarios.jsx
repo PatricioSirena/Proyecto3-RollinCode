@@ -1,9 +1,18 @@
 import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import { methGetUsers, methGetOneUser, methUpdateUser } from '../helpers/index'
+import Swal from "sweetalert2";
 
 const AdminUsuarios = () => {
     const [users, setUsers] = useState([]);
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true
+    })
 
     useEffect(() => {
         methGetUsers()
@@ -28,6 +37,10 @@ const AdminUsuarios = () => {
                 }
                 console.log(response);
                 methUpdateUser(response.uid, response);
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Usuario actualizado con exito!'
+                })
             })
         setTimeout(() => {
             window.location = '/admin'
@@ -45,6 +58,10 @@ const AdminUsuarios = () => {
                 }
                 console.log(response);
                 methUpdateUser(response.uid, response);
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Usuario actualizado con exito!'
+                })
             })
         setTimeout(() => {
             window.location = '/admin'

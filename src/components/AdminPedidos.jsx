@@ -17,7 +17,6 @@ const AdminPedidos = () => {
         timerProgressBar: true
     })
 
-
     useEffect(() => {
         methGetOrders()
             .then((datos) => {return datos.data.data})
@@ -40,12 +39,14 @@ const AdminPedidos = () => {
                 console.log(response);
                 methUpdateOrder(response, response.id);
             })
+
             Toast.fire({
                 icon: 'success',
                 title: 'Pedido aceptado!'
             })
+
         setTimeout(() => {
-            // window.location = '/admin'
+            window.location = '/admin'
         }, 2000);
     }
 
@@ -58,8 +59,8 @@ const AdminPedidos = () => {
         console.log(pedido);
         methDeleteOneOrder(pedido.id)
         Toast.fire({
-                icon: 'error',
-                title: 'Pedido aceptado!'
+                icon: 'success',
+                title: 'Pedido eliminado!'
             })
         setTimeout(() => {
             window.location = '/admin'

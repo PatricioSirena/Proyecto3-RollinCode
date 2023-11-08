@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { methGet, methPost, methGetOne, methUpdate, methDeleteOne } from '../helpers/index'
+import Swal from "sweetalert2";
 
 const AdminMenu = () => {
 
@@ -14,12 +15,20 @@ const AdminMenu = () => {
     const [modalEliminar, setModalEliminar] = useState(false)
     const [platoSeleccionado, setPlatoSeleccionado] = useState({})
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true
+    })
+
     const handleClose = () => setShow(false);
     const handleShow = () => { reset(); setShow(true); }
 
     useEffect(() => {
         methGet()
-            .then((datos) => {return datos.data.data })
+            .then((datos) => { return datos.data.data })
             .then((response) => {
                 if (response.length != 0) {
                     setMenu(response)
@@ -32,6 +41,10 @@ const AdminMenu = () => {
     const onSubmit = handleSubmit((data) => {
         console.log(data);
         setMenu([...menu, data]);
+        Toast.fire({
+            icon: 'success',
+            title: 'Plato agregado con exito!'
+        })
         methPost(data);
         handleClose();
     })
@@ -67,6 +80,10 @@ const AdminMenu = () => {
             }
         });
         console.log(platoSeleccionado);
+        Toast.fire({
+            icon: 'success',
+            title: 'Plato editado con exito!'
+        })
         methUpdate(platoSeleccionado.id, platoSeleccionado);
         setModalEditar(false)
         setTimeout(() => {
@@ -84,6 +101,10 @@ const AdminMenu = () => {
                     response.activo = false;
                 }
                 console.log(response);
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Plato editado con exito!'
+                })
                 methUpdate(response.id, response);
             })
         setTimeout(() => {
@@ -92,6 +113,10 @@ const AdminMenu = () => {
     }
 
     const eliminar = () => {
+        Toast.fire({
+            icon: 'success',
+            title: 'Plato eliminado con exito!'
+        })
         methDeleteOne(platoSeleccionado.id);
         setTimeout(() => {
             window.location.replace('');
@@ -117,7 +142,7 @@ const AdminMenu = () => {
                 </div>
                 <div className='agregarPlato'>
                     <form onSubmit={onSubmit}>
-                        
+
                         <label htmlFor='titulo'>Nombre</label>
                         <input
                             {...register('titulo', {
