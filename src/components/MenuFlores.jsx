@@ -1,9 +1,29 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import menu from "../menu.json";
+import { methGet } from '../helpers/index'
+import { useEffect, useState } from "react";
 
 const MenuFlores = () => {
-    const flores = menu.filter((item) => item.categoria === "flor");
+    const [flores, setFlores] = useState([])
+
+    useEffect(() => {
+        methGet()
+            .then((datos) => {return datos.data.data})
+            .then((response) => {
+                function filtrarPorCategoria(objetos, categoria) {
+                    let filtrados = [];
+                    for (let i = 0; i < objetos.length; i++) {
+                        if (objetos[i].categoria === categoria) {
+                            filtrados.push(objetos[i]);
+                        }
+                    }
+                    return filtrados;
+                }
+                let flowers = filtrarPorCategoria(response, "flores")
+                setFlores(flowers)
+            })
+    }, [])
+
     return (
         <div className="text-center">
             <h1 className="text-menu mb-5">Flores</h1>

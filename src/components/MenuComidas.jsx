@@ -1,9 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import menu from "../menu.json";
+import {methGet} from '../helpers/index'
+import { useEffect, useState } from "react";
 
 const MenuComidas = () => {
-    const comidas = menu.filter((item) => item.categoria === "comida");
+    const [comidas, setComidas] = useState([]);
+
+    useEffect(() => {
+        methGet()
+            .then((datos) => {return datos.data.data })
+            .then((response) => {
+                function filtrarPorCategoria(objetos, categoria) {
+                    let filtrados = [];
+                    for (let i = 0; i < objetos.length; i++) {
+                        if (objetos[i].categoria === categoria) {
+                            filtrados.push(objetos[i]);
+                        }
+                    }
+                    return filtrados;
+                }
+                let food = filtrarPorCategoria(response, "comida")
+                setComidas(food)
+            })
+    }, [])
 
     return (
         <div className="text-center">

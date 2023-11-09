@@ -1,9 +1,29 @@
 import { Col, Container, Row } from "react-bootstrap";
 import PlatosMenu from "./PlatosMenu";
-import menu from "../menu.json";
+import {methGet} from '../helpers/index'
+import { useEffect, useState } from "react";
 
 const MenuBebidas = () => {
-    const bebidas = menu.filter((item) => item.categoria === "bebida");
+    const [bebidas, setBebidas] = useState([]);
+
+    useEffect(() => {
+        methGet()
+            .then((datos) => {return datos.data.data })
+            .then((response) => {
+                function filtrarPorCategoria(objetos, categoria) {
+                    let filtrados = [];
+                    for (let i = 0; i < objetos.length; i++) {
+                        if (objetos[i].categoria === categoria) {
+                            filtrados.push(objetos[i]);
+                        }
+                    }
+                    return filtrados;
+                }
+                let drinks = filtrarPorCategoria(response, "bebida")
+                setBebidas(drinks)
+            })
+    }, [])
+    
     return (
         <div id="menuBebidas" className="text-center">
             <h1 className="text-menu mb-5">Bebidas</h1>

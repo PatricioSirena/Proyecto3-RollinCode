@@ -48,7 +48,6 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
     const cantidadPorId = (id) => {
         return carrito.find((item) => item.id === id)?.quantity || 0
     };
-
     const cantidadPorItem = cantidadPorId(id);
 
     return (
@@ -81,10 +80,8 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
                         </Button>
                     )
                 }
-
                 {cantidadPorItem > 0 && (
                     <div>{cantidadPorItem}</div>)}
-
             </div>
         </Card>
     );
@@ -94,37 +91,8 @@ PlatosMenu.propTypes = {
     titulo: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     imgSource: PropTypes.string.isRequired,
-    precio: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired
+    precio: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
 }
 
 export default PlatosMenu
-
-
-/* <Card.Body>
-                <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
-                <Card.Text>
-                    {text ? text : 'El texto es requerido'}
-                </Card.Text>
-                <Card.Text>
-                    ${precio ? precio : 'El precio es requerido'}
-                </Card.Text>
-                {
-                    cantidadPorItem >= 0 && (
-                        <Button className='btn-dark m-1' onClick={() => agregarAlCarrito()}>
-                            + Agregar
-                        </Button>
-                    ) 
-                }
-                {
-                    cantidadPorItem > 0 && (
-                        <Button className='btn-dark m-1' onClick={() => removerDelCarrito(id)}>
-                        - Eliminar
-                    </Button>
-                    )
-                }
-                <div>
-                    {cantidadPorItem > 0 && (
-                        <div>{cantidadPorItem}</div>)}
-                </div>
-            </Card.Body> */

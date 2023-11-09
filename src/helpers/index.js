@@ -6,7 +6,6 @@ const URL_auth = import.meta.env.VITE_ENV_URL_AUTH;
 
 
 export const methPostUsers = async (obj) => {
-    console.log(obj);
     try {
         await axios.post(URL_usuarios + "/createUser", obj)
     } catch (error) {
@@ -54,7 +53,6 @@ export const ingresar = async(user)=>{
 export const register = async (valores) => {
     let users = await methGetUsers();
     let objs = users.data.usr;
-    console.log(objs);
     let myUser = objs.filter((obj) => {
         if (obj.correo === valores.correo) {
             return obj;
@@ -64,7 +62,6 @@ export const register = async (valores) => {
 }
 
 export const methUpdateUser = async (obj, id) => {
-    console.log(obj, id);
     try {
         let editUsuario = axios.put(`${URL_usuarios}/updateUser/${id}`, obj)
         return editUsuario
@@ -114,7 +111,6 @@ export const methoDeleteOne = (id) => {
 
 
 export const methUpdate = async (obj, id) => {
-    console.log(obj, id);
     try {
         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
         return editProduct
@@ -154,7 +150,6 @@ export const methGetOrders = async () => {
 }
 
 export const methUpdateOrder = async (obj, id) => {
-    console.log(obj, id);
     try {
         let editOrder = axios.put(`${URL_orders}/updateOrder/${id}`, obj)
         return editOrder

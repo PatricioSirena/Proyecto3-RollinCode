@@ -1,5 +1,4 @@
 import MenuComidas from "../components/MenuComidas";
-import Footer from "../components/Footer";
 import MenuBebidas from "../components/MenuBebidas";
 import MenuFlores from "../components/MenuFlores";
 
@@ -12,7 +11,6 @@ const Menu = () => {
             <MenuComidas />
             <MenuBebidas />
             <MenuFlores />
-            <Footer />
         </>
     )
 }
