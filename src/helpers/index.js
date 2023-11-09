@@ -52,7 +52,6 @@ export const ingresar = async (user) => {
 }
 
 export const methUpdateUser = async (id,obj) => {
-    // console.log(obj, id);
     try {
         let editUsuario = axios.put(`${URL_usuarios}/updateUser/${id}`, obj)
         return editUsuario
@@ -142,7 +141,6 @@ export const methGetOrders = async () => {
 }
 
 export const methUpdateOrder = async (obj, id) => {
-    console.log(obj, id);
     try {
         let editOrder = axios.put(`${URL_orders}/updateOrder/${id}`, obj)
         return editOrder
@@ -152,7 +150,6 @@ export const methUpdateOrder = async (obj, id) => {
 }
 
 export const methDeleteOneOrder = (id) => {
-    console.log(id);
     try {
         let order = axios.delete(`${URL_orders}/deleteOrder/${id}`)
         return order;

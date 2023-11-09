@@ -35,7 +35,6 @@ const AdminUsuarios = () => {
                 } else {
                     response.admin = false;
                 }
-                console.log(response);
                 methUpdateUser(response.uid, response);
                 Toast.fire({
                     icon: 'success',
@@ -56,7 +55,6 @@ const AdminUsuarios = () => {
                 } else {
                     response.activo = false;
                 }
-                console.log(response);
                 methUpdateUser(response.uid, response);
                 Toast.fire({
                     icon: 'success',

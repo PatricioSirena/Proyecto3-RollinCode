@@ -19,7 +19,7 @@ const AdminPedidos = () => {
 
     useEffect(() => {
         methGetOrders()
-            .then((datos) => {return datos.data.data})
+            .then((datos) => { return datos.data.data })
             .then((response) => {
                 if (response.length != 0) {
                     setPedidos(response)
@@ -31,19 +31,17 @@ const AdminPedidos = () => {
 
     const aceptarPedido = (pedido) => {
         methGetOneOrder(pedido.id)
-            .then((datos) => {return datos.data.order})
+            .then((datos) => { return datos.data.order })
             .then((response) => {
                 if (response.pendiente === true) {
                     response.pendiente = false;
                 }
-                console.log(response);
                 methUpdateOrder(response, response.id);
             })
-
-            Toast.fire({
-                icon: 'success',
-                title: 'Pedido aceptado!'
-            })
+        Toast.fire({
+            icon: 'success',
+            title: 'Pedido aceptado!'
+        })
 
         setTimeout(() => {
             window.location = '/admin'
@@ -56,12 +54,12 @@ const AdminPedidos = () => {
     }
 
     const eliminarPedido = (pedido) => {
-        console.log(pedido);
         methDeleteOneOrder(pedido.id)
+        setModalEliminar(false)
         Toast.fire({
-                icon: 'success',
-                title: 'Pedido eliminado!'
-            })
+            icon: 'success',
+            title: 'Pedido eliminado!'
+        })
         setTimeout(() => {
             window.location = '/admin'
         }, 2000);
@@ -69,7 +67,7 @@ const AdminPedidos = () => {
 
     return (
         <>
-                    <Modal
+            <Modal
                 show={modalEliminar}
                 onHide={() => setModalEliminar(false)}
                 backdrop="static"

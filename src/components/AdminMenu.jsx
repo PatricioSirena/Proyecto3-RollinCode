@@ -39,7 +39,6 @@ const AdminMenu = () => {
     }, [])
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
         setMenu([...menu, data]);
         Toast.fire({
             icon: 'success',
@@ -47,6 +46,9 @@ const AdminMenu = () => {
         })
         methPost(data);
         handleClose();
+        setTimeout(() => {
+            window.location = "/admin";
+        }, 2000);
     })
 
     const seleccionarPlato = (plato, caso) => {
@@ -55,7 +57,6 @@ const AdminMenu = () => {
         methGetOne(plato.id)
             .then((datos) => { return datos.data.producto })
             .then((response) => setPlatoSeleccionado(response));
-        console.log(platoSeleccionado);
         (caso === 'Editar') && setModalEditar(true);
         (caso === 'Eliminar') && setModalEliminar(true);
     }
@@ -79,7 +80,6 @@ const AdminMenu = () => {
                 plato.imagen === platoSeleccionado.imagen
             }
         });
-        console.log(platoSeleccionado);
         Toast.fire({
             icon: 'success',
             title: 'Plato editado con exito!'
@@ -100,7 +100,6 @@ const AdminMenu = () => {
                 } else {
                     response.activo = false;
                 }
-                console.log(response);
                 Toast.fire({
                     icon: 'success',
                     title: 'Plato editado con exito!'
@@ -113,6 +112,7 @@ const AdminMenu = () => {
     }
 
     const eliminar = () => {
+        setModalEliminar(false)
         Toast.fire({
             icon: 'success',
             title: 'Plato eliminado con exito!'
@@ -236,7 +236,6 @@ const AdminMenu = () => {
                             <label htmlFor="activo">Publicar Plato</label>
                             <input
                                 {...register('activo')}
-                                // className='form-control'
                                 type="checkbox"
                                 name='activo'
                             />
@@ -263,7 +262,7 @@ const AdminMenu = () => {
                 </div>
                 <div className='agregarPlato'>
                     <form onSubmit={onSubmit}>
-                        {/* {Nombre} */}
+
                         <label htmlFor='titulo'>Nombre</label>
                         <input
                             {...register('titulo', {
@@ -285,7 +284,6 @@ const AdminMenu = () => {
                         />
                         {errors.titulo && <span>{errors.titulo.message}</span>}
 
-                        {/* {Precio} */}
                         <label htmlFor="precio">Precio</label>
                         <input
                             {...register('precio', {
@@ -306,7 +304,7 @@ const AdminMenu = () => {
                             onChange={handleChange}
                         />
                         {errors.precio && <span>{errors.precio.message}</span>}
-                        {/* {Descripcion} */}
+
                         <label htmlFor="texto">Descripción</label>
                         <input
                             {...register('texto', {
@@ -327,7 +325,7 @@ const AdminMenu = () => {
                             onChange={handleChange}
                         />
                         {errors.texto && <span>{errors.texto.message}</span>}
-                        {/* {Categoria} */}
+
                         <label htmlFor="categoria">Categoria</label>
                         <select
                             {...register('categoria', {
@@ -347,7 +345,7 @@ const AdminMenu = () => {
                             <option value="flor">Flor</option>
                         </select>
                         {errors.categoria && <span>{errors.categoria.message}</span>}
-                        {/* {imagen} */}
+
                         <label htmlFor="imagen">URL Imagen</label>
                         <input
                             {...register('imagen', {
@@ -364,18 +362,6 @@ const AdminMenu = () => {
                             onChange={handleChange}
                         />
                         {errors.imagen && <span>{errors.imagen.message}</span>}
-                        {/* {Activo} */}
-                        {/* <div className='platoActivo'>
-                            <label htmlFor="activo">Publicar Plato</label>
-                            <input
-                                {...register('activo')}
-                                // className='form-control'
-                                type="checkbox"
-                                name='activo'
-                                value={platoSeleccionado && platoSeleccionado.activo}
-                                onChange={handleChange}
-                            />
-                        </div> */}
 
                         <div className='botones'>
                             <button className='btn btn-dark' onClick={() => editar()}>Actualizar</button>
