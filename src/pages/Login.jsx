@@ -8,14 +8,6 @@ import Swal from "sweetalert2";
 
 const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
 
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'center',
-        showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true
-    })
-
     return (
         <>
             {isLogueado ? <Navigate to="/" />
@@ -55,18 +47,12 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                                 } else {
                                     let { admin, correo, uid } = data.user;
                                     let token = data.token;
+                                    <Navigate to="/" />
                                     setUser(data.user)
                                     setAdmin(data.user.admin)
                                     window.localStorage.setItem("user", JSON.stringify({ admin, correo, uid }));
                                     window.localStorage.setItem("token", JSON.stringify(token));
-                                    Toast.fire({
-                                        icon: 'success',
-                                        title: 'Logueado con exito, redirigiendo a inicio!'
-                                    })
-                                    setTimeout(() => {
                                     setIslogueado(true);
-                                        <Navigate to="/" />
-                                    }, 1500);
                                 }
                             })
                     }}

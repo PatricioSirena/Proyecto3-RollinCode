@@ -56,19 +56,17 @@ const Registro = () => {
                     return errores;
                 }}
                 onSubmit={(valores, { resetForm }) => {
-                    console.log(valores);
                     register(valores)
                         .then(data => {
-                            console.log(data);
                             if (data.length === 0) {
                                 methPostUsers(valores);
                                 resetForm();
                                 Toast.fire({
                                     icon: 'success',
-                                    title: 'Te registraste con exito, redirigiendo al login'
+                                    title: 'Te registraste con exito!'
                                 })
                                 setTimeout(() => {
-                                    window.location = "/login"
+                                    window.location = "/"
                                 }, 2000);
                             } else {
                                 Swal.fire(`Ya existe el usuario ${valores.correo}`)

@@ -7,7 +7,6 @@ import Registro from './pages/Registro';
 import Menu from './pages/Menu';
 import { useEffect, useState } from 'react';
 import {PrivateRoute} from './components/PrivateRoute';
-import Administrador from './pages/Administrador';
 
 
 function App() {
@@ -29,8 +28,6 @@ function App() {
         recuperoUser()
     }, [])
 
-
-
     return (
         <>
             <Router>
@@ -47,13 +44,10 @@ function App() {
                         isLogueado={isLogueado}
                     />} />
                     <Route element={<PrivateRoute admin={admin}/>}>
-                        <Route path='/admin' element={<Administrador/>}/>
                     </Route>
                     <Route path="/login" element=
                         {<Login
-                            // MyUser={user}
                             setUser={setUser}
-                            // admin={admin}
                             setAdmin={setAdmin}
                             setIslogueado={setIslogueado}
                             isLogueado={isLogueado}

@@ -4,22 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Happyfood from "../img/happy.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/mynav.css'
+import '../App.css';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
-
-  const Toast = Swal.mixin({
-    toast: true,
-    position: 'center',
-    showConfirmButton: false,
-    timer: 2000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-})
 
   const logout = () => {
     Swal.fire({
@@ -30,19 +19,14 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Desloguearme'
     }).then((result) => {
+      console.log(result);
       if (result.isConfirmed) {
-        Toast.fire({
-          icon: 'success',
-          title: 'Usuario deslogueado'
-      })
-        setTimeout(() => {
-          setAdmin(false),
-            setUser({}),
-            setIslogueado(false),
-            window.localStorage.removeItem("user"),
-            window.localStorage.removeItem("token"),
-            window.location = "/"
-        }, 2000);
+      setAdmin(false),
+        setUser({}),
+        setIslogueado(false),
+        window.localStorage.removeItem("user"),
+        window.localStorage.removeItem("token"),
+        window.location = "/"
       }
     })
   }
