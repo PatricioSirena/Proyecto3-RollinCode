@@ -27,5 +27,3 @@ Carta.propTypes = {
 }
 
 export default Carta
-
-//18rem carta
