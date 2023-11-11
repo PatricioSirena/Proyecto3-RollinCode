@@ -2,7 +2,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logoPagina from "../img/logohappy.jpg";
-import {FaInstagram,FaFacebook,FaYoutube} from "react-icons/fa"
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"
+
 
 
 const Redes = () => {
