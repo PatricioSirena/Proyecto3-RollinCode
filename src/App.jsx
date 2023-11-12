@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
-// import MyNav from "./components/MyNav";
+import MyNav from "./components/MyNav";
 import Home from './pages/Home';
 // import Login from './pages/Login';
 // import Registro from './pages/Registro';
@@ -31,13 +31,13 @@ function App() {
     return (
         <>
             <Router>
-                {/* <MyNav
+                <MyNav
                     isLogueado={isLogueado}
                     admin={admin}
                     setIslogueado={setIslogueado}
                     setAdmin={setAdmin}
                     setUser={setUser}
-                /> */}
+                />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     {/* <Route path="/menu" element={<Menu
