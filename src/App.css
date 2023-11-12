@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&family=Lilita+One&family=Lobster&family=Noto+Sans:wght@600&family=Poppins:wght@300;500&family=Titan+One&family=Ultra&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 /*CON ESTO SE VE BIEN EN RESPONSIVE*/
@@ -19,8 +17,10 @@
 }
 
 body {
-    background-color: rgb(238, 237, 237);
-    font-family: 'Inter', sans-serif;
+    background-image: url('./assets/img/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 h1,
@@ -34,14 +34,9 @@ p {
     text-align: center !important;
 }
 
-.spoiler {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 6% !important;
-    margin-top: 7% !important;
-    color: rgb(57, 92, 59);
-    -webkit-transition: color 1s linear;
-    transition: color 1s linear;
+.portada-descripccion {
+    overflow-y: hidden;
+    padding-right: 50px;
 }
 
 .spoiler:hover {

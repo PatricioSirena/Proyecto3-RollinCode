@@ -1,0 +1,28 @@
+.agregarPlato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.platoActivo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin: 0.8rem;
+}
+
+label{
+    display: block;
+}
+
+input{
+    width: 100%;
+}
+
+span{
+    font-size: x-small;
+    color: red;
+}
