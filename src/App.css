@@ -17,7 +17,7 @@
 }
 
 body {
-    background-image: url('./assets/img/background.jpeg');
+    /* background-image: url('./assets/img/background.jpeg'); */
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -94,15 +94,8 @@ p {
     overflow-x: hidden;
 }
 
-body {
-    background-image: url('./assets/img/background.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .portada {
     background-image: url('./assets/img/back-portada.jpg');
-
     width: 100vw;
     height: 70vh;
     display: flex;
@@ -115,11 +108,6 @@ body {
 
 .portada-imagen {
     justify-content: center;
-}
-
-.portada-descripccion {
-    overflow-y: hidden;
-    padding-right: 50px;
 }
 
 /*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
@@ -182,40 +170,6 @@ body {
     background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
     margin-right: 13%;
 }
-
-#tarjeta2 .uno {
-    order: 1;
-}
-
-#tarjeta2 .dos {
-    order: 0;
-}
-
-.footer {
-    width: 100% !important;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.692) !important;
-    color: rgb(66, 66, 66) !important;
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-top: 6%;
-    margin-bottom: 2%;
-    text-align: center;
-    overflow-x: hidden;
-    border-top-left-radius: 5cqw;
-    border-top-right-radius: 5cqw;
-    border-bottom-left-radius: 5cqw;
-    border-bottom-right-radius: 5cqw;
-}
-
-.footerMapa {
-    width: 90vw;
-    height: 60vh;
-    width: 100vw;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 
 #tarjeta2 .uno {
     order: 1;
@@ -338,41 +292,4 @@ body {
     body {
         background-color: rgb(238, 237, 237);
     }
-}
-
-.footerRedes {
-    width: 100vw;
-    height: 50vh;
-    align-items: center;
-}
-
-.logoFooter {
-    width: 150px;
-    border-radius: 100px;
-    margin-top: 50px;
-    margin-left: 40px;
-}
-
-.listaFooter {
-    margin-top: 50px;
-    margin-right: 50px;
-}
-
-.listaFooter ul li {
-    margin-top: 10px;
-    margin-right: 30px;
-}
-
-
-.iconosRedes {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    margin-right: 55px;
-}
-
-.iconoRedes {
-    font-size: 30px;
-    color: white;
-    margin: 10px;
 }

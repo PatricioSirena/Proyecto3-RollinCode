@@ -1,8 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Happyfood from "../img/happy.jpg";
-import Carrito from "../img/carritobyn.jpg";
+// import Happyfood from "../img/happy.jpg";
+// import Carrito from "../img/carritobyn.jpg";
 import '../styles/Mynav.css'
 
 function MyNav() {
@@ -18,7 +18,7 @@ function MyNav() {
             <Navbar expand="lg" sticky="top" className="bg-body-tertiary" id="nav" data-bs-theme="light" >
                 <Container fluid>
                     <a href="../index.html" className='logo'>
-                        <img src={Happyfood} className='logo' alt="Logo" />
+                        {/* <img src={Happyfood} className='logo' alt="Logo" /> */}
                     </a>
                     <Navbar.Toggle aria-controls="navbarScroll" id="hamburguesa" />
                     <Navbar.Collapse>
@@ -32,7 +32,7 @@ function MyNav() {
                             <Nav.Link href="#action1" className='link'>Registrarme</Nav.Link>
                         </Nav>
                         <a href="#" className='carrito'>
-                            <img src={Carrito} className='carrito' alt="Carrito" />
+                            {/* <img src={Carrito} className='carrito' alt="Carrito" /> */}
                         </a>
                     </Navbar.Collapse>
                 </Container>
