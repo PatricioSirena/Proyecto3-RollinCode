@@ -3,6 +3,8 @@ import '../App.css';
 import Portada from "../components/Portada";
 import Cartas from "../components/Cartas";
 import TarjetasInfo from "../components/TarjetasInfo";
+import Footer from "../components/Footer";
+import '../styles/footer.css'
 
 function Home() {
     return (
@@ -15,6 +17,7 @@ function Home() {
                 <Cartas />
             </section>
             <TarjetasInfo />
+            <Footer className="footer" />
         </>
     )
 }
