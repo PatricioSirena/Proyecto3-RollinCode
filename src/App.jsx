@@ -54,7 +54,7 @@ function App() {
                     <Route path="/registro" element={<Registro />} /> */}
                 </Routes>
             </Router>
-        </>
+            </>
     )
 }
 
