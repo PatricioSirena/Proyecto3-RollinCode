@@ -85,7 +85,7 @@ export const methPost = async (obj) => {
     }
 }
 
-export const methoGetOne = async (id) => {
+export const methGetOne = async (id) => {
     try {
         let productos = await axios.get(`${URL_productos}/getOneProduct/${id}`)
         return productos;
@@ -103,7 +103,7 @@ export const methGet = async () => {
     }
 }
 
-export const methoDeleteOne = (id) => {
+export const methDeleteOne = (id) => {
     try {
         let productos = axios.delete(`${URL_productos}/deleteProduct/${id}`)
         return productos;
@@ -118,6 +118,54 @@ export const methUpdate = async (obj, id) => {
     try {
         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
         return editProduct
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//  ----------------- Pedidos -----------------
+
+const URL_orders = import.meta.env.VITE_ENV_URL_ORDERS;
+
+export const methPostOrder = async (obj) => {
+    try {
+        axios.post(URL_orders + "/createOrder/", obj)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const methGetOneOrder = async (id) => {
+    try {
+        let order = await axios.get(`${URL_orders}/getOneOrder/${id}`)
+        return order;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const methGetOrders = async () => {
+    try {
+        let orders = await axios.get(URL_orders + "/getOrders")
+        return orders;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const methUpdateOrder = async (obj, id) => {
+    try {
+        let editOrder = axios.put(`${URL_orders}/updateOrder/${id}`, obj)
+        return editOrder
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const methDeleteOneOrder = (id) => {
+    try {
+        let order = axios.delete(`${URL_orders}/deleteOrder/${id}`)
+        return order;
     } catch (error) {
         console.log(error);
     }
