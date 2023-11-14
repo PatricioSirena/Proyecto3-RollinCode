@@ -43,7 +43,7 @@ function App() {
                     <Route path="/menu" element={<Menu
                         isLogueado={isLogueado}
                     />} />
-                    <Route element={<PrivateRoute admin={admin}/>}>
+                    <Route path='/admin' element={<PrivateRoute admin={admin}/>}>
                     </Route>
                     <Route path="/login" element=
                         {<Login

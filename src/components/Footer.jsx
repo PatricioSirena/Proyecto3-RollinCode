@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-dark text-white footer">
             <MapaFormulario />
             <Redes />
-            <div className="copyright text-center mb-4">
+            <div className="copyright text-center">
                 <span>
                     &copy;2023, All right reserved.
                 </span>

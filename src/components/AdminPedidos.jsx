@@ -44,7 +44,7 @@ const AdminPedidos = () => {
         })
 
         setTimeout(() => {
-            window.location = '/admin'
+            location.reload()
         }, 2000);
     }
 
@@ -61,7 +61,7 @@ const AdminPedidos = () => {
             title: 'Pedido eliminado!'
         })
         setTimeout(() => {
-            window.location = '/admin'
+            location.reload()
         }, 2000);
     }
 
