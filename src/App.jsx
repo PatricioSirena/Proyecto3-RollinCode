@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Registro from './pages/Registro';
-// import Menu from './pages/Menu';
+import Login from './pages/Login';
+import Registro from './pages/Registro';
+import Menu from './pages/Menu';
 import { useEffect, useState } from 'react';
-// import {PrivateRoute} from './components/PrivateRoute';
+import { PrivateRoute } from './components/PrivateRoute';
+import ContextoCarrito from './context/ContextoCarrito';
 
 
 function App() {
@@ -30,31 +31,33 @@ function App() {
 
     return (
         <>
-            <Router>
-                <MyNav
-                    isLogueado={isLogueado}
-                    admin={admin}
-                    setIslogueado={setIslogueado}
-                    setAdmin={setAdmin}
-                    setUser={setUser}
-                />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    {/* <Route path="/menu" element={<Menu
+            <ContextoCarrito>
+                <Router>
+                    <MyNav
                         isLogueado={isLogueado}
-                    />} /> */}
-                    {/* <Route element={<PrivateRoute admin={admin}/>}/> */}
-                    {/* <Route path="/login" element=
-                        {<Login
-                            setUser={setUser}
-                            setAdmin={setAdmin}
-                            setIslogueado={setIslogueado}
+                        admin={admin}
+                        setIslogueado={setIslogueado}
+                        setAdmin={setAdmin}
+                        setUser={setUser}
+                    />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/menu" element={<Menu
                             isLogueado={isLogueado}
                         />} />
-                    <Route path="/registro" element={<Registro />} /> */}
-                </Routes>
-            </Router>
-            </>
+                        <Route element={<PrivateRoute admin={admin} />} />
+                        <Route path="/login" element=
+                            {<Login
+                                setUser={setUser}
+                                setAdmin={setAdmin}
+                                setIslogueado={setIslogueado}
+                                isLogueado={isLogueado}
+                            />} />
+                        <Route path="/registro" element={<Registro />} />
+                    </Routes>
+                </Router>
+            </ContextoCarrito>
+        </>
     )
 }
 
