@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { methGetOneOrder, methGetOrders, methUpdateOrder, methDeleteOneOrder } from '../helpers/index'
 import Modal from 'react-bootstrap/Modal';
 import Swal from "sweetalert2";
+import { Navigate } from 'react-router-dom';
 
 const AdminPedidos = () => {
     const [pedidos, setPedidos] = useState([]);
@@ -44,7 +45,8 @@ const AdminPedidos = () => {
         })
 
         setTimeout(() => {
-            location.reload()
+            // window.location = '/admin';
+            <Navigate to={'/admin'} />
         }, 2000);
     }
 
@@ -89,7 +91,7 @@ const AdminPedidos = () => {
             <table className='container-fluid w-50 table table-bordered'>
                 <thead>
                     <tr className='text-center'>
-                        {/* <th>Usuario</th> */}
+                        <th>Usuario</th>
                         <th>Pedido</th>
                         <th>Costo</th>
                         <th>Estado del Pedido</th>
@@ -99,6 +101,7 @@ const AdminPedidos = () => {
                     {
                         pedidos.map(pedido => (
                             <tr className='text-center' key={pedido.id}>
+                                <td>{pedido.usuario}</td>
                                 <td>{pedido.platos}</td>
                                 <td>{pedido.precio}</td>
                                 <td><button className='btn btn-dark' onClick={() => aceptarPedido(pedido)}>Aceptar Pedido</button>

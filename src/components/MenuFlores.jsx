@@ -3,7 +3,7 @@ import PlatosMenu from "./PlatosMenu";
 import { methGet } from '../helpers/index'
 import { useEffect, useState } from "react";
 
-const MenuFlores = () => {
+const MenuFlores = ({isLogueado}) => {
     const [flores, setFlores] = useState([])
 
     useEffect(() => {
@@ -33,6 +33,7 @@ const MenuFlores = () => {
                         flores.map((flor) => (
                             <Col xs={12} md={6} xl={4} xxl={4} className="mb-5" key={flor.id}>
                                 <PlatosMenu
+                                isLogueado={isLogueado}
                                     id={flor.id}
                                     titulo={flor.titulo}
                                     imgSource={flor.imagen}

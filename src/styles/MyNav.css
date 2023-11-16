@@ -27,7 +27,15 @@
     width: 130px;
 }
 
+.botonCarrito{
+width: 5%;
+background-color: white;
+border: white;
+}
+
 .carrito {
+    display: flex;
+    justify-content: center;
     width: 40px;
     margin-right: 2% !important;
 }

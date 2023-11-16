@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css';
+// import './App.css';
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -45,7 +45,7 @@ function App() {
                         <Route path="/menu" element={<Menu
                             isLogueado={isLogueado}
                         />} />
-                        <Route element={<PrivateRoute admin={admin} />} />
+                        <Route path='/admin' element={<PrivateRoute admin={admin} />} />
                         <Route path="/login" element=
                             {<Login
                                 setUser={setUser}

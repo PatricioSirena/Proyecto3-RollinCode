@@ -3,7 +3,7 @@ import PlatosMenu from "./PlatosMenu";
 import {methGet} from '../helpers/index'
 import { useEffect, useState } from "react";
 
-const MenuComidas = () => {
+const MenuComidas = ({isLogueado}) => {
     const [comidas, setComidas] = useState([]);
 
     useEffect(() => {
@@ -33,6 +33,7 @@ const MenuComidas = () => {
                         comidas.map((comida) => (
                             <Col xs={12} md={6} xl={4} xxl={4} className="mb-5" key={comida.id}>
                                 <PlatosMenu
+                                isLogueado={isLogueado}
                                     id={comida.id}
                                     titulo={comida.titulo}
                                     imgSource={comida.imagen}

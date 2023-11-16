@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Happyfood from "../img/happy.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/MyNav.css'
-import '../App.css';
+// import '../App.css';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useContext, useState } from 'react';
@@ -31,6 +31,9 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
 
     const enviarPedido = () => {
 
+        let userData = JSON.parse(window.localStorage.getItem("user"));
+        let usuario = userData.correo 
+
         function extraerAtributos(arrayObjetos, atributo1, atributo2) {
             let concatenado = "";
             for (let i = 0; i < arrayObjetos.length; i++) {
@@ -44,7 +47,8 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
         let pedido = {
             platos: comidas,
             precio: precioTotal,
-            pendiente: true
+            pendiente: true,
+            usuario
         }
         console.log(pedido);
         setSmShow(false);
@@ -55,7 +59,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             icon: 'success',
             title: 'Su pedido fue enviado, aguarde a que un administrador lo apruebe',
             showConfirmButton: false,
-            timer: 2000
+            timer: 1500
         })
     }
 
@@ -116,13 +120,13 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
                             {admin &&
                                 <NavLink to="/admin" className={'nav-item nav-link'}>Admin</NavLink>
                             }
-                            <NavLink to="/menu" className={'nav-item nav-link'}>Nuestros Platos</NavLink>
+                            <NavLink to="/menu" className={'nav-item nav-link'}>Menu</NavLink>
 
                         </Nav>
-                        <Button onClick={() => setSmShow(true)} className="me-2 btn-dark">
+                        <button onClick={() => setSmShow(true)} className="botonCarrito d-flex">
                             <img src={Carrito} className='carrito' alt="Carrito" />
                             <span className='cantidadCarrito'>{cantidad}</span>
-                        </Button>
+                        </button>
                         {
                             <Modal
                                 size="sm"

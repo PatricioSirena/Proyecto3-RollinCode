@@ -8,7 +8,7 @@ import { CardImg } from 'react-bootstrap';
 
 
 
-const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
+const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
 
     const [carrito, setCarrito] = useContext(CarritoContexto);
 
@@ -59,7 +59,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
                 <Card.Title className='text-title'>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
                 <p className='text-body'>{text ? text : 'El texto es requerido'}</p>
             </div>
-
+            {isLogueado?
             <div className="card-footer">
                 <span className="text-title">${precio ? precio : 'El precio es requerido'}</span>
 
@@ -83,6 +83,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id }) => {
                 {cantidadPorItem > 0 && (
                     <div>{cantidadPorItem}</div>)}
             </div>
+            : <span>Debe loguearse para poder agrear platos al carrito</span>}
         </Card>
     );
 }

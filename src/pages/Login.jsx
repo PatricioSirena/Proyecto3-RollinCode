@@ -92,7 +92,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                                         <Col className="forgot-pass text-center">
                                             <Link to="/" className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</Link>
                                         </Col>
-                                        <button type="submit" className="btn">Iniciar Sesión</button>
+                                        <button type="submit" className="botonInicio">Iniciar Sesión</button>
                                         <Col className="sign-link">
                                             <p>No tienes una cuenta? <Link to={"/registro"} className="signUp-link">Regístrate</Link></p>
                                         </Col>
