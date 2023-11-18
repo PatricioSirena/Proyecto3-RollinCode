@@ -27,7 +27,6 @@ const AdminUsuarios = () => {
     }, [])
 
     const cambiarAdmin = (usuario) => {
-        console.log(usuario);
         methGetOneUser(usuario.uid)
             .then((datos) => {return datos.data.usuario})
             .then((response) => {
@@ -36,7 +35,6 @@ const AdminUsuarios = () => {
                 } else {
                     response.admin = false;
                 }
-                console.log(response);
                 methUpdateUser(response.uid, response);
                 Toast.fire({
                     icon: 'success',
@@ -44,7 +42,7 @@ const AdminUsuarios = () => {
                 })
             })
         setTimeout(() => {
-            location.reload()
+            window.location = '/admin'
         }, 2000);
     }
 
@@ -64,7 +62,7 @@ const AdminUsuarios = () => {
                 })
             })
         setTimeout(() => {
-            location.reload()
+            window.location = '/admin'
         }, 2000);
     }
 

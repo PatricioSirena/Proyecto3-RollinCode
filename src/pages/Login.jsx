@@ -38,7 +38,6 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                     onSubmit={(user) => {
                         ingresar(user)
                             .then(data => {
-                                console.log(data);
                                 if (data === 401) {
                                     Swal.fire('Usuario o Contraseña incorrectos')
                                 } else if (data === 404) {

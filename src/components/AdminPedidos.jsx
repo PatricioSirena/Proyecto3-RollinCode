@@ -43,10 +43,9 @@ const AdminPedidos = () => {
             icon: 'success',
             title: 'Pedido aceptado!'
         })
-        const actualizarPagina = () =>{
-            location.reload()            
-        }
-        setTimeout(actualizarPagina, 2000);
+        setTimeout(() => {
+            window.location = '/admin'
+        }, 2000);
     }
 
     const seleccionarPedido = (pedido) => {

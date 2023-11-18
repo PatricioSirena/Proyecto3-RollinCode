@@ -50,7 +50,6 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             pendiente: true,
             usuario
         }
-        console.log(pedido);
         setSmShow(false);
         methPostOrder(pedido)
         setCarrito([])

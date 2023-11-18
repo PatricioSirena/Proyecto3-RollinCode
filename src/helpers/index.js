@@ -14,7 +14,6 @@ export const methPostUsers = async (obj) => {
 }
 
 export const methGetOneUser = async (id) => {
-    console.log(id);
     try {
         let usuario = await axios.get(`${URL_usuarios}/getOneUser/${id}`)
         return usuario;
@@ -42,10 +41,8 @@ export const methoDeleteOneUser = (id) => {
 }
 
 export const ingresar = async(user)=>{
-    console.log(user);
     try {
         let usr = await axios.post(URL_auth, user);
-        console.log(usr);
         let usuario = usr.data;
         return usuario;    
         } catch (error) {
