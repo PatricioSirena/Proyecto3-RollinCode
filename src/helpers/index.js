@@ -42,8 +42,10 @@ export const methoDeleteOneUser = (id) => {
 }
 
 export const ingresar = async(user)=>{
+    console.log(user);
     try {
         let usr = await axios.post(URL_auth, user);
+        console.log(usr);
         let usuario = usr.data;
         return usuario;    
         } catch (error) {
@@ -62,7 +64,7 @@ export const register = async (valores) => {
     return myUser;
 }
 
-export const methUpdateUser = async (obj, id) => {
+export const methUpdateUser = async (id, obj) => {
     try {
         let editUsuario = axios.put(`${URL_usuarios}/updateUser/${id}`, obj)
         return editUsuario
@@ -111,7 +113,7 @@ export const methDeleteOne = (id) => {
 }
 
 
-export const methUpdate = async (obj, id) => {
+export const methUpdate = async (id, obj) => {
     try {
         let editProduct = axios.put(`${URL_productos}/updateProduct/${id}`, obj)
         return editProduct

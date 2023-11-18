@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import './App.css';
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Menu from './pages/Menu';
 import { useEffect, useState } from 'react';
-import { PrivateRoute } from './components/PrivateRoute';
 import ContextoCarrito from './context/ContextoCarrito';
+import Administrador from './pages/Administrador';
 
 
 function App() {
@@ -45,7 +44,7 @@ function App() {
                         <Route path="/menu" element={<Menu
                             isLogueado={isLogueado}
                         />} />
-                        <Route path='/admin' element={<PrivateRoute admin={admin} />} />
+                        <Route path='/admin' element={<Administrador admin={admin} />} />
                         <Route path="/login" element=
                             {<Login
                                 setUser={setUser}

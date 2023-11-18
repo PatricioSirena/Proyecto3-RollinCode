@@ -119,7 +119,7 @@ const AdminMenu = () => {
         })
         methDeleteOne(platoSeleccionado.id);
         setTimeout(() => {
-            window.location.replace('');
+            window.location = '/admin'
         }, 2000);
     }
 
@@ -232,8 +232,8 @@ const AdminMenu = () => {
                         />
                         {errors.imagen && <span>{errors.imagen.message}</span>}
 
-                        <div className='platoActivo'>
-                            <label htmlFor="activo">Publicar Plato</label>
+                        <div className='platoActivo mt-3'>
+                            <label htmlFor="activo">Publicar</label>
                             <input
                                 {...register('activo')}
                                 type="checkbox"

@@ -72,7 +72,6 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Desloguearme'
         }).then((result) => {
-            console.log(result);
             if (result.isConfirmed) {
                 setAdmin(false),
                     setUser({}),

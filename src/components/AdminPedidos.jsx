@@ -43,11 +43,10 @@ const AdminPedidos = () => {
             icon: 'success',
             title: 'Pedido aceptado!'
         })
-
-        setTimeout(() => {
-            // window.location = '/admin';
-            <Navigate to={'/admin'} />
-        }, 2000);
+        const actualizarPagina = () =>{
+            location.reload()            
+        }
+        setTimeout(actualizarPagina, 2000);
     }
 
     const seleccionarPedido = (pedido) => {
@@ -63,7 +62,7 @@ const AdminPedidos = () => {
             title: 'Pedido eliminado!'
         })
         setTimeout(() => {
-            location.reload()
+            window.location = '/admin'
         }, 2000);
     }
 

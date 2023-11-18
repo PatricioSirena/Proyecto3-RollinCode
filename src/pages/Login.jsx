@@ -38,6 +38,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                     onSubmit={(user) => {
                         ingresar(user)
                             .then(data => {
+                                console.log(data);
                                 if (data === 401) {
                                     Swal.fire('Usuario o Contraseña incorrectos')
                                 } else if (data === 404) {
@@ -47,7 +48,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                                 } else {
                                     let { admin, correo, uid } = data.user;
                                     let token = data.token;
-                                    <Navigate to="/" />
+                                    // <Navigate to="/" />
                                     setUser(data.user)
                                     setAdmin(data.user.admin)
                                     window.localStorage.setItem("user", JSON.stringify({ admin, correo, uid }));

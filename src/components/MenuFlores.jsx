@@ -19,7 +19,7 @@ const MenuFlores = ({isLogueado}) => {
                     }
                     return filtrados;
                 }
-                let flowers = filtrarPorCategoria(response, "flores")
+                let flowers = filtrarPorCategoria(response, "flor")
                 setFlores(flowers)
             })
     }, [])
