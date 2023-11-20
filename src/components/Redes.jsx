@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import logoPagina from "../img/logohappy.jpg";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"
+import { NavLink } from "react-router-dom";
 
 
 
@@ -30,7 +31,7 @@ const Redes = () => {
                 <Col lg={4} className="p-1 sm text-center listaFooter">
                     <h5 className="link_titulo">Nuestros Platos</h5>
                     <ul className="links">
-                        <li>Hamburguesa Americana</li>
+                        <li><NavLink to='/about'>Acerca de nosotros</NavLink></li>
                         <li>Hamburguesa 4to de Libra</li>
                         <li>Hamburguesa Crispy</li>
                     </ul>

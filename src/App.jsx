@@ -7,6 +7,7 @@ import Menu from './pages/Menu';
 import { useEffect, useState } from 'react';
 import ContextoCarrito from './context/ContextoCarrito';
 import Administrador from './pages/Administrador';
+import AboutUs from './pages/AboutUs'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
                                 isLogueado={isLogueado}
                             />} />
                         <Route path="/registro" element={<Registro />} />
+                        <Route path='/about' element={<AboutUs />} />
                     </Routes>
                 </Router>
             </ContextoCarrito>
