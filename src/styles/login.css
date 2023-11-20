@@ -5,9 +5,9 @@
     padding: 0;
 }
 
-.row {
+.formLogin {
     font-family: 'Inter', sans-serif;
-    min-height: 100vh;
+    height: 86vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,9 +170,9 @@
     border-radius: 8px;
 }
 
-/*.wrapper:hover {
+.wrapper:hover {
     transform: scale(1.04) rotate(1deg);
-  }*/
+}
 
 .circle {
     width: 128px;

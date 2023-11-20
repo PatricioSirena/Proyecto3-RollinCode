@@ -58,7 +58,7 @@ const Login = ({ setAdmin, setUser, setIslogueado, isLogueado }) => {
                     }}
                 >
                     {({ errors }) => (
-                        <div className="row">
+                        <div className="formLogin">
                             <Container className='wrapper'>
                                 <div className="circle"></div>
                                 <div className="circle"></div>

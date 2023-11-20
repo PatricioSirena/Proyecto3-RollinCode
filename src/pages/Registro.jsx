@@ -75,7 +75,7 @@ const Registro = () => {
                 }}
             >
                 {({ errors }) => (
-                    <div className="row">
+                    <div className="formLogin">
                         <Container className='wrapper'>
                             <div className="circle"></div>
                             <div className="circle"></div>
@@ -134,7 +134,7 @@ const Registro = () => {
                                         )} />
                                     </Col>
 
-                                    <button type="submit" className="btn">Registrarme</button>
+                                    <button type="submit" className="botonInicio">Registrarme</button>
                                     
                                     <Col className="sign-link">
                                         <p>Ya tienes una cuenta? <Link to={"/login"} className="signUp-link">Inicia Sesión</Link></p>

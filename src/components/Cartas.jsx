@@ -1,3 +1,4 @@
+import { Col, Container, Row } from "react-bootstrap";
 import Carta from "./Carta";
 // import imagen1 from "../img/burger_1.jpg";
 // import imagen2 from "../img/beer.jpg";
@@ -29,24 +30,26 @@ const cartas = [
 
 const Cartas = () => {
     return (
-        <div className="container justify-content-center align-items-center">
-            <div className="row justify-content-center">
-                <h1 className="spoiler justify-content-center align-items-center animate__zoomInLeft">Spoilers que sí.</h1>
-                {
-                    cartas.map((carta) => (
-                        <div className="col-lg-3 m-4 justify-content-center" key={carta.id}>
-                            <div className="col-lg-4 mb-5" key={carta.id}>
-                                <Carta
-                                    titulo={carta.titulo}
-                                    imgSource={carta.imagen}
-                                    text={carta.texto}
-                                    url={carta.url} />
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
+        <>
+            <Container fluid className="justify-content-center align-items-center" >
+                <Row className="row justify-content-center">
+                    <h1 className="spoiler justify-content-center align-items-center animate__zoomInLeft">Spoilers que sí.</h1>
+                    {
+                        cartas.map((carta) => (
+                            <Col lg={3} className="m-4 justify-content-center" key={carta.id}>
+                                <div className="col-lg-4 mb-5" key={carta.id}>
+                                    <Carta
+                                        titulo={carta.titulo}
+                                        imgSource={carta.imagen}
+                                        text={carta.texto}
+                                        url={carta.url} />
+                                </div>
+                            </Col>
+                        ))
+                    }
+                </Row>
+            </Container>
+        </>
     )
 }
 

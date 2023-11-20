@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { methGetOneOrder, methGetOrders, methUpdateOrder, methDeleteOneOrder } from '../helpers/index'
 import Modal from 'react-bootstrap/Modal';
 import Swal from "sweetalert2";
-import { Navigate } from 'react-router-dom';
 
 const AdminPedidos = () => {
     const [pedidos, setPedidos] = useState([]);

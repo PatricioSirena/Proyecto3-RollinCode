@@ -9,7 +9,7 @@ const Portada = ({ titulo, descripccion }) => {
 
     return (
         <>
-            <Container fluid className='imagenPortada'>
+            <Container fluid className='containerPortada mb-5'>
                 <Row>
                     <Col lg={4} className='logoPortada text-center'>
                         {/* <img className="imagen_portada_logo" src={HappyBurger} width={'950px'} alt="" /> */}
