@@ -85,13 +85,15 @@ const AdminPedidos = () => {
                 </div>
             </Modal>
 
-            <table className='container-fluid w-50 table table-bordered'>
+            <h3 className='mb-3'>Pedidos</h3>
+
+            <table className='container-fluid table table-bordered'>
                 <thead>
                     <tr className='text-center'>
                         <th>Usuario</th>
                         <th>Pedido</th>
                         <th>Costo</th>
-                        <th>Estado del Pedido</th>
+                        <th>Aceptar/Rechazar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -101,8 +103,8 @@ const AdminPedidos = () => {
                                 <td>{pedido.usuario}</td>
                                 <td>{pedido.platos}</td>
                                 <td>{pedido.precio}</td>
-                                <td><button className='btn btn-dark' onClick={() => aceptarPedido(pedido)}>Aceptar Pedido</button>
-                                    <button className='btn btn-danger' onClick={() => seleccionarPedido(pedido)}>Rechazar Pedido</button></td>
+                                <td><button className='btn btn-dark' onClick={() => aceptarPedido(pedido)}>Aceptar</button>
+                                    <button className='btn btn-danger' onClick={() => seleccionarPedido(pedido)}>Rechazar</button></td>
                             </tr>
                         ))
                     }

@@ -1,4 +1,5 @@
 .containerPortada{
+    margin-top: 1%;
     /*background-image: url('../img/Portada.jpeg');*/
     background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgb(73, 119, 75));
 }

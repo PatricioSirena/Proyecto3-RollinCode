@@ -69,6 +69,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar',
             confirmButtonText: 'Desloguearme'
         }).then((result) => {
             if (result.isConfirmed) {
@@ -133,19 +134,19 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
                                 aria-labelledby="example-modal-sizes-title-sm"
                             >
                                 <Modal.Header closeButton>
-                                    <Modal.Title id="example-modal-sizes-title-sm text-center">
+                                    <Modal.Title className='tituloCarrito' id="example-modal-sizes-title-sm">
                                         Carrito
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <div className="contenedor-carrito ">
+                                    <div className="contenedor-carrito text-center">
                                         <div className='tituloModal text-center'>
                                             <h3>Items en el carrito:</h3>
                                         </div>
-                                        <div className='articulosModal'>
+                                        <div className='articulosModal text-center mt-3'>
                                             {
                                                 carrito.map((item) => {
-                                                    return <li style={{ marginLeft: '2rem' }} key={item.id}>
+                                                    return <li className='platosCarrito' key={item.id}>
                                                         {item.titulo}{'   x '}
                                                         {item.quantity}
                                                     </li>
@@ -153,17 +154,16 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
                                             }
                                         </div>
                                         <div className="mt-3 text-center">
-                                            <span><b>Cantidad total: {cantidad}</b></span>
+                                            <span className='spanCantidad'><b>Cantidad total: {cantidad}</b></span>
                                         </div>
                                         <br />
                                         <div className='text-center'>
                                             <h5>Total a pagar:</h5>
                                             <p>${precioTotal}</p>
                                         </div>
-                                        <br />
                                         <button
-                                            style={{ marginLeft: '4rem' }}
-                                            className='btn btn-secondary'
+                                            // style={{ marginLeft: '4rem' }}
+                                            className='btn'
                                             onClick={() => enviarPedido(carrito)}>Finalizar compra</button>
                                     </div>
                                 </Modal.Body>

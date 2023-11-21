@@ -28,7 +28,7 @@ const AdminUsuarios = () => {
 
     const cambiarAdmin = (usuario) => {
         methGetOneUser(usuario.uid)
-            .then((datos) => {return datos.data.usuario})
+            .then((datos) => { return datos.data.usuario })
             .then((response) => {
                 if (response.admin === false) {
                     response.admin = true;
@@ -68,6 +68,9 @@ const AdminUsuarios = () => {
 
     return (
         <>
+
+            <h3 className='mb-3'>Usuarios</h3>
+
             <table className='container-fluid w-50 table table-bordered'>
                 <thead>
                     <tr className='text-center'>

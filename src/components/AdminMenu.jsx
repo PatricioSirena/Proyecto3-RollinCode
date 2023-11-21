@@ -125,7 +125,10 @@ const AdminMenu = () => {
 
     return (
         <>
-            <div className='w-100 text-center'>
+
+            <h3 className='mt-5 mb-2'>Productos</h3>
+
+            <div className='w-100 text-center mb-3'>
                 <Button onClick={handleShow}>
                     Agregar Plato
                 </Button>

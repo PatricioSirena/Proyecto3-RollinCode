@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 p {
-    margin: 5%;
+    /* margin: 5%; */
     font-family: 'Noto Sans', sans-serif;
     text-align: center !important;
 }

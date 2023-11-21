@@ -1,4 +1,5 @@
 #nav {
+    margin: 0 auto;
     background-color: rgb(255, 255, 255) !important;
     font-family: 'Inter', sans-serif !important;
     font-size: 17px;
@@ -8,8 +9,7 @@
     border-top-right-radius: 5cqw;
     border-bottom-left-radius: 5cqw;
     border-bottom-right-radius: 5cqw;
-    max-width: 1380px;
-    /*editar si se desordena*/
+    width: 98vw;
 }
 
 .nav:-webkit-scrollbar {
@@ -102,6 +102,28 @@ border: white;
 
 .warning__close path {
     fill: #393A37;
+}
+
+.cantidadCarrito{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.articulosModal{
+    margin: 0 auto;
+}
+
+.platosCarrito{
+    list-style-type: none;
+}
+
+.spanCantidad{
+    font-size: medium;
+}
+
+.tituloCarrito{
+    margin-left: 35%;
+    font-weight: bold;
 }
 
 
