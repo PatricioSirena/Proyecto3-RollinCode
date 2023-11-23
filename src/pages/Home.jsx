@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
+import '../styles/index.css';
 import Portada from "../components/Portada";
 import Cartas from "../components/Cartas";
 import TarjetasInfo from "../components/TarjetasInfo";

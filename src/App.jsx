@@ -7,7 +7,7 @@ import Menu from './pages/Menu';
 import { useEffect, useState } from 'react';
 import ContextoCarrito from './context/ContextoCarrito';
 import Administrador from './pages/Administrador';
-import AboutUs from './pages/AboutUs'
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
