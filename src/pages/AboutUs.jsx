@@ -3,14 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
+import '../styles/aboutUs.css'
 
 const AboutUs = () => {
   return (
     <Container className='caja_aboutUs'>
-      <Row>
-        <Col>
-          <Card style={{ width: '18rem' }} className='card_aboutUs'>
+      <Row className='filaAboutUs'>
+        <Col className='colAboutUs'>
+          <Card style={{width: '18rem'}} className='cardAboutUs'>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Patricio Sirena</Card.Title>
@@ -22,8 +22,8 @@ const AboutUs = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Card style={{ width: '18rem' }} className='card_aboutUs'>
+        <Col className='colAboutUs'>
+          <Card style={{width: '18rem'}} className='cardAboutUs'>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Tutty Santochi</Card.Title>
@@ -37,9 +37,9 @@ const AboutUs = () => {
         </Col>
       </Row>
 
-      <Row>
-        <Col>
-          <Card style={{ width: '18rem' }} className='card_aboutUs'>
+      <Row className='filaAboutUs'>
+        <Col className='colAboutUs'>
+          <Card style={{width: '18rem'}} className='cardAboutUs'>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Valentina Caceres</Card.Title>
@@ -51,8 +51,8 @@ const AboutUs = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Card style={{ width: '18rem' }} className='card_aboutUs'>
+        <Col className='colAboutUs'>
+          <Card style={{width: '18rem'}} className='cardAboutUs'>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Mariano Spector</Card.Title>

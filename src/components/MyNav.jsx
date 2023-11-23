@@ -4,13 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Happyfood from "../img/happy.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/MyNav.css'
-// import '../App.css';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useContext, useState } from 'react';
 import { CarritoContexto } from '../context/ContextoCarrito';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import { methPostOrder } from '../helpers/index'
 
 
