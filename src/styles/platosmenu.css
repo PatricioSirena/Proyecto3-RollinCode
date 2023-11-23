@@ -4,9 +4,7 @@
 }
 
 body{
-    background: linear-gradient(to left, rgba(244, 250, 244, 0.979), rgba(182, 184, 179, 0.952));
     font-family: 'Inter', sans-serif;
-    animation: cambiar 10s ease infinite !important;
     position: relative;
 }
 
@@ -98,9 +96,3 @@ svg {
     background-color: #4b7547;
 }
 
-/*Animation*/
-@keyframes cambiar {
-    0%{background-position: 0 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0 50%;}
-}
