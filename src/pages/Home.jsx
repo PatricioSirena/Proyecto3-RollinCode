@@ -11,7 +11,7 @@ function Home() {
         <>
             <Portada
                 className=' animate__zoomInLeft'
-                titulo={'Bienvenido a HappyFood'}
+                titulo={'Bienvenido'}
                 descripccion={'Somos una Fundación construyendo una red para conectar pacientes, médicos, cultivadores, científicos, académicos y organismos del Estado. A través de este proyecto buscamos generar un espacio weed friendly para compartir momentos, recetas y experiencias!'} />
             <section className='d-flex justify-content-around'>
                 <Cartas />
