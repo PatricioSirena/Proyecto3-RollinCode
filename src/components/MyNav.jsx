@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Happyfood from "../img/happy.jpg";
+import Happyfood from "../img/logonuevo.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/Mynav.css'
 
