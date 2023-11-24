@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Happyfood from "../img/happy.jpg";
+import Happyfood from "../img/logonuevo.jpg";
 import Carrito from "../img/carritobyn.jpg";
 import '../styles/MyNav.css'
 import { NavLink } from 'react-router-dom';
@@ -84,10 +84,8 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
     return (
         <>
             <div className="warning">
-                <div className="warning__icon">
-                </div>
                 <div className="warning__title">
-                    <span>
+                    <span className='spann'>
                         ☻ Todos los Jueves 20% de Descuento en TODOS Nuestros Productos | Cod: BIENVENIDA_HAPPY
                     </span>
                 </div>

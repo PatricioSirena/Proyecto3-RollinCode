@@ -11,12 +11,12 @@ body{
 .text-menu{
     font-weight: 700 !important;
     margin-top: 5%;
-    color: #a1874a;
+    color: rgb(51, 110, 93);
     -webkit-transition: color 1s linear;
     transition: color 1s linear;
 }
 .text-menu:hover{
-    color: #375834;
+    color: #161616;
 }
 
 
@@ -27,7 +27,7 @@ body{
     position: relative;
     overflow: visible;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    color: #375834;
+    color: #000000;
 }
 .card-info::-webkit-scrollbar {
     display: none !important;
@@ -75,24 +75,121 @@ svg {
 
 /*Button*/
 .card-button {
-    border: 1px solid #a3a7a1;
+    border: 1px solid rgb(47, 87, 74) !important;
     display: flex;
     padding: .8em;
     cursor: pointer;
     border-radius: 50px;
     transition: .5s ease-in-out;
-    background-color: #ddd;
-    color: #375834;
+    background-color: rgb(47, 87, 74) !important;
 }
 
 /*Hover*/
 .card-img:hover {
     transform: translateY(-25%);
-    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(103, 145, 102, 0.795) 0px 8px 16px -8px;
+    box-shadow: rgba(39, 39, 39, 0.25) 0px 13px 47px -5px, rgba(88, 88, 88, 0.795) 0px 8px 16px -8px;
 }
 
 .card-button:hover {
-    border: 1px solid #487745;
-    background-color: #4b7547;
+    border: 1px solid rgb(79, 117, 105) !important;
+    background-color: rgb(66, 102, 91) !important;
 }
 
+/*********************************************************/
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+    /*(móvil pequeño)*/
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: .8em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg{
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+
+    /*(ordenador portátil medio)*/
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: .8em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg{
+        margin: auto;    
+    }
+
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+    /*(escritorio grande)*/
+    
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+
+    /*(móvil medio)*/
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: .8em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg{
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+
+    /*(escritorio medio)*/
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: .8em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg{
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+    /*(móvil grande)*/
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: .8em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg{
+        margin: auto;
+    }
+}

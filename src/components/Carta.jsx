@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Carta = ({ titulo, text, imgSource, url }) => {
     return (
-        <Card className='carta text-center bg-transparent border-success' style={{ width: '380px' }}>
+        <Card className='carta text-center bg-transparent border-dark' style={{ width: '380px' }}>
             <Card.Img variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} />
             <Card.Body>
                 <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>

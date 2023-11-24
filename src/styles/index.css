@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    background-color: rgb(228, 228, 228);
 }
 
 h1,
@@ -46,12 +47,12 @@ p {
 .card_tittle {
     padding: 5%;
     font-family: 'Titan One', cursive;
-    color: rgb(40, 44, 41);
+    color: rgb(10, 10, 10);
 }
 
 .pp {
     padding: 1%;
-    color: rgb(27, 29, 28);
+    color: rgb(20, 20, 20);
 }
 
 .carta {
@@ -83,7 +84,7 @@ p {
 .row_portada {
     height: 100vh;
     width: 100.9%;
-    background-color: rgba(67, 107, 69, 0.822);
+    background-color: rgba(0, 0, 0, 0.822);
     color: white;
 }
 
@@ -137,7 +138,7 @@ p {
 
 .tarjetaInfo {
     height: 60vh;
-    color: rgb(27, 27, 27) !important;
+    color: rgb(10, 10, 10) !important;
     margin-top: 60px;
     margin-bottom: 40px;
     vertical-align: middle !important;
@@ -213,7 +214,7 @@ p {
     }
 
     .carta {
-        color: rgb(24, 26, 24);
+        color: rgb(0, 0, 0);
         margin: 0 auto !important;
         -webkit-transition: 1s linear;
         transition: 1s linear;
@@ -224,18 +225,14 @@ p {
 @media screen and (min-width: 768px) and (max-width: 1366px) {
 
     /*(ordenador portátil medio)*/
-    body {
-        background-color: rgb(238, 237, 237);
-    }
+    
 
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1920px) {
 
     /*(escritorio grande)*/
-    body {
-        background-color: rgb(238, 237, 237);
-    }
+    
 }
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
@@ -270,7 +267,7 @@ p {
     }
 
     .carta {
-        color: rgb(49, 54, 50);
+        color: rgb(0, 0, 0);
         margin: 0 auto !important;
         -webkit-transition: 1s linear;
         transition: 1s linear;
@@ -281,15 +278,11 @@ p {
 @media screen and (min-width: 900px) and (max-width: 1440px) {
 
     /*(escritorio medio)*/
-    body {
-        background-color: rgb(238, 237, 237);
-    }
+    
 }
 
 @media screen and (min-width: 720px) and (max-width: 1280px) {
 
     /*(móvil grande)*/
-    body {
-        background-color: rgb(238, 237, 237);
-    }
+    
 }
