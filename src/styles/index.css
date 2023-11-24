@@ -40,7 +40,7 @@ p {
 }
 
 .spoiler:hover {
-    color: rgb(175, 141, 101);
+    color: rgb(57, 87, 73);
 }
 
 .card_tittle {
@@ -51,11 +51,11 @@ p {
 
 .pp {
     padding: 1%;
-    color: rgb(46, 51, 47);
+    color: rgb(27, 29, 28);
 }
 
 .carta {
-    color: rgb(49, 54, 50);
+    color: rgb(8, 8, 8);
     margin: 0 auto !important;
     cursor: pointer;
     -webkit-transition: 1s linear;
@@ -112,9 +112,9 @@ p {
 
 /*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
 .btn {
-    background-color: rgb(73, 119, 75);
+    background-color: rgb(0, 0, 0);
     color: white;
-    border-color: rgb(73, 119, 75);
+    border-color: rgb(0, 0, 0);
     font-weight: 500;
     border-radius: 10cqw;
 }
@@ -125,8 +125,8 @@ p {
 
 .btn:hover {
     color: white !important;
-    background: rgba(80, 126, 82, 0.993);
-    border-color: rgba(80, 126, 82, 0.993);
+    background: rgba(32, 32, 32, 0.993);
+    border-color: rgba(28, 29, 28, 0.993);
     transition: 1s ease;
 }
 
@@ -137,7 +137,7 @@ p {
 
 .tarjetaInfo {
     height: 60vh;
-    color: rgb(46, 46, 46) !important;
+    color: rgb(27, 27, 27) !important;
     margin-top: 60px;
     margin-bottom: 40px;
     vertical-align: middle !important;
@@ -161,13 +161,13 @@ p {
 
 #tarjeta2 {
     display: flex;
-    background: linear-gradient(to right, rgb(175, 141, 101), rgba(245, 209, 176, 0.76));
+    background: linear-gradient(to right, rgb(101, 117, 114), rgba(202, 202, 202, 0.76));
     margin-left: 13%;
 }
 
 #tarjeta1,
 #tarjeta3 {
-    background: linear-gradient(to right, rgba(228, 243, 228, 0.836), rgba(73, 119, 75, 0.993));
+    background: linear-gradient(to right, rgba(228, 243, 238, 0.836), rgba(83, 145, 126, 0.993));
     margin-right: 13%;
 }
 
@@ -213,7 +213,7 @@ p {
     }
 
     .carta {
-        color: rgb(49, 54, 50);
+        color: rgb(24, 26, 24);
         margin: 0 auto !important;
         -webkit-transition: 1s linear;
         transition: 1s linear;

@@ -1,7 +1,9 @@
 .containerPortada{
     margin-top: 1%;
-    /*background-image: url('../img/Portada.jpeg');*/
-    background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgb(73, 119, 75));
+    background-image: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .imagen_portada_logo{
     animation: zoom 5s infinite;
@@ -19,7 +21,7 @@
   }
 
 .tituloo{
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
     font-family: 'Archivo Black', sans-serif;
     margin-top: 10% !important;
     font-size: 40px;
@@ -30,7 +32,7 @@
   font-size: 50px;
 }
 .txt-portada{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .container-txt{
     margin-right: 4%;
