@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
+import Error404 from './pages/error404';
 
 
 const rutaUsuarios = import.meta.env.VITE_ENV_URL_USERS;
@@ -47,6 +48,7 @@ function App() {
                         <Route exact path="/Admin" element={<Admin />} />
                         <Route exact path="/Login" element={<Login />} />
                         <Route exact path="/Registro" element={<Registro />} />
+                        <Route path="/error404" element={<Error404/>} />
                     </Routes>
             </Router>
         </ContextoCarrito>

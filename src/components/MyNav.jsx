@@ -18,7 +18,7 @@ function MyNav() {
             </div>
             <Navbar expand="lg" sticky="top" className="bg-body-tertiary" id="nav" data-bs-theme="light" roundedCircle>
                 <Container fluid>
-                    <a href="../index.html" className='logo'>
+                    <a href="/" className='logo'>
                         <img src={Happyfood} className='logo' alt="Logo" />
                     </a>
                     <Navbar.Toggle aria-controls="navbarScroll" id="hamburguesa" />

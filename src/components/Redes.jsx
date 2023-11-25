@@ -16,7 +16,7 @@ const Redes = () => {
                     <h5>Seguinos en:</h5>
                     <ul className="iconosRedes">
                         <li>
-                            <Link className="iconoRedes" to="#!"><FaInstagram /></Link>
+                            <Link className="iconoRedes" to="#!"><FaInstagram /><a href="../error404"></a></Link>
                         </li>
                         <li>
                             <Link className="iconoRedes" to="#!"><FaFacebook /></Link>
@@ -35,7 +35,7 @@ const Redes = () => {
                         <li>Hamburguesa Americana</li>
                         <li>Hamburguesa 4to de Libra</li>
                         <li>Hamburguesa Crispy</li>
-                        <a href="">test</a>
+                        <a href="/error404">test</a>
                     </ul>
                 </Col>
             </Row>

@@ -1,24 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
-import Portada from "../components/Portada";
-import Cartas from "../components/Cartas";
-import TarjetasInfo from "../components/TarjetasInfo";
-import Footer from "../components/Footer";
+import { Link } from 'react-router-dom';
+import '../styles/error404.css';
 
-function Home() {
+const Error404 = () => {
     return (
-        <>
-            <Portada
-                className=' animate__zoomInLeft'
-                titulo={'Bienvenido a HappyFood'}
-                descripccion={'Somos una Fundación construyendo una red para conectar pacientes, médicos, cultivadores, científicos, académicos y organismos del Estado. A través de este proyecto buscamos generar un espacio weed friendly para compartir momentos, recetas y experiencias!'} />
-              <section className='d-flex justify-content-around'>
-                <Cartas />
-            </section>
-            <TarjetasInfo />
-            <Footer className="footer" />
-        </>
-    )
-}
+        <div className="container text-center div-error">
+            <div className='titulo'><h1 className='grande'>404</h1></div>
+            <div><p id='texto-arriba'>UPS! PAGINA NO ENCONTRADA.</p></div>
+            <div className='div-texto-abajo'><p id='texto-abajo'>Lo sentimos. La pagina que estas buscando no fue encontrada o no existe. Si crees que es un problema nuestro, reporta el problema.</p></div>
+            <Link to="/" className='link'>
+                <button className='botones' id='boton1'>Ir a la página de inicio</button>
+            </Link>
+            <Link to="/login" className='report'>
+                <button className='botones' id='boton2'>Reportar problema</button>
+            </Link>
+        </div>
+    );
+};
 
-export default Home
+export default Error404;
