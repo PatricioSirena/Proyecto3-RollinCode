@@ -4,12 +4,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.css';
+import '../styles/aboutUs.css'
 import val from '../img/val.jpg';
 import pato from '../img/pato.jpg';
 import tutty from '../img/tutty.jpg';
-import { Button } from 'bootstrap';
+import { Button } from 'react-bootstrap';
+
 
 const AboutUs = () => {
+
   return (
     <Container className='caja_aboutUs'>
       <Row className='filaAboutUs'>
