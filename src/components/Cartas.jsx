@@ -36,7 +36,7 @@ const Cartas = () => {
                     <h1 className="spoiler animate__zoomInLeft">Spoilers que sí.</h1>
                     {
                         cartas.map((carta) => (
-                            <Col lg={3} className="m-5" key={carta.id}>
+                            <Col sm={3} className="carta-index" key={carta.id}>
                                 <Carta
                                     titulo={carta.titulo}
                                     imgSource={carta.imagen}

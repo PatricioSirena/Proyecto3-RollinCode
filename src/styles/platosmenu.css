@@ -22,6 +22,9 @@ body{
 
 .card {
     margin: 0 auto !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     padding: .8em;
     background: #f5f5f5;
     position: relative;
@@ -36,11 +39,12 @@ body{
     display: none !important;
 }
 
-.card-img {
+.imagen-tarjeta-menu {
     border-radius: .5rem;
     transition: .3s ease;
     height: 40%;
     width: 100%;
+    background-color: #86B6A3;
 }
 
 .card-info {
@@ -77,16 +81,27 @@ svg {
 .card-button {
     border: 1px solid rgb(47, 87, 74) !important;
     display: flex;
-    padding: .8em;
+    padding: 1rem;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 100px !important;
     transition: .5s ease-in-out;
     background-color: rgb(47, 87, 74) !important;
+    margin-left: 2% !important;
+}
+
+svg-icon{
+    margin: auto !important;
 }
 
 /*Hover*/
-.card-img:hover {
+
+.imagen-tarjeta-menu:hover {
     transform: translateY(-25%);
+}
+
+.card-img:hover {
+    transform: translateY(-25px);
+
     box-shadow: rgba(39, 39, 39, 0.25) 0px 13px 47px -5px, rgba(88, 88, 88, 0.795) 0px 8px 16px -8px;
 }
 
@@ -99,18 +114,27 @@ svg {
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
     /*(móvil pequeño)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: .8em;
+        /*padding: .8em;*/
+        width: 35% !important;
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg{
-        margin: auto;
+    svg-icon{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 
 }
@@ -118,18 +142,27 @@ svg {
 @media screen and (min-width: 768px) and (max-width: 1366px) {
 
     /*(ordenador portátil medio)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: .8em;
+        padding: 1rem;
+        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg{
-        margin: auto;    
+    svg-icon{
+        top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);  
     }
 
 }
@@ -137,59 +170,91 @@ svg {
 @media screen and (min-width: 1080px) and (max-width: 1920px) {
 
     /*(escritorio grande)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
     
 }
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
     /*(móvil medio)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: .8em;
+        padding: 1rem;
+        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg{
-        margin: auto;
+    svg-icon{
+        top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
     }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1440px) {
 
     /*(escritorio medio)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: .8em;
+        padding: 1rem;
+        /*width: 50%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg{
-        margin: auto;
+    svg-icon{
+        top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
     }
 }
 
 @media screen and (min-width: 720px) and (max-width: 1280px) {
 
     /*(móvil grande)*/
+    .card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: .8em;
+        padding: 1rem;
+        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg{
-        margin: auto;
+    svg-icon{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 }

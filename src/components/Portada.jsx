@@ -9,8 +9,8 @@ const Portada = ({ titulo, descripccion }) => {
 
     return (
         <>
-            <Container fluid className='containerPortada mb-5'>
-                <Row>
+            <Container fluid className='containerPortada'>
+                <Row className='div-portada-cel'>
                     <Col lg={4} className='logoPortada text-center'>
                         <img className="imagen_portada_logo" src={HappyBurger} width={'470px'} alt="" />
                     </Col>
