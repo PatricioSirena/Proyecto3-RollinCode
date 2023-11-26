@@ -4,6 +4,15 @@
     border: 0;
 }
 
+.team{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.team:hover{
+    color: #02899C;
+}
+
 .filaAboutUs{
     margin-top: 3%;
 }

@@ -189,6 +189,16 @@ p {
     order: 0;
 }
 
+/*=====ABOUT======*/
+.team{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.team:hover{
+    color: rgb(50, 107, 99);
+}
+
 /*===================================================================================*/
 
 @media screen and (min-width: 360px) and (max-width: 640px) {
