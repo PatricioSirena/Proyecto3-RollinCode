@@ -32,7 +32,8 @@ const Redes = () => {
                     <h5 className="link_titulo">Nuestros Platos</h5>
                     <ul className="links">
                         <li><NavLink to='/about'>Acerca de nosotros</NavLink></li>
-                        <li>Hamburguesa 4to de Libra</li>
+                        <li><NavLink to='/error404'>Acerca de nosotros</NavLink></li>
+                        {/* <li>Hamburguesa 4to de Libra</li> */}
                         <li>Hamburguesa Crispy</li>
                     </ul>
                 </Col>

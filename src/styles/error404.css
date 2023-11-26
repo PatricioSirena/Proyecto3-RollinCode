@@ -1,0 +1,45 @@
+.div-error{
+    border: 14px solid rgb(130, 188, 167);
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 40%;
+    margin-top: 2%;  
+    border-radius: 8px;
+}
+
+.titulo{
+    height: 10%;    
+}
+
+.grande{
+    font-size: 10em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(178, 221, 205);
+    color: linear-gradient(90deg, rgba(212,218,186,1) 15%, rgba(150,185,167,1) 49%, rgba(36,118,86,1) 79%);
+}
+
+#texto-arriba{
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: 50px; */
+}
+
+#texto-abajo{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: 34px; */
+}
+
+.botones{
+    padding: 8px;
+    border-radius: 20px;
+    border: 3px solid rgb(178, 221, 205);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: fit-content;
+}
+
+#boton1{
+    margin-right: 30px;
+    background-color: rgb(178, 221, 205);
+
+}
