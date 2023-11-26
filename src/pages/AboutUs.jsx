@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.css';
+import '../styles/aboutUs.css';
+import { Button } from 'bootstrap';
 
 const AboutUs = () => {
   return (
@@ -40,17 +42,36 @@ const AboutUs = () => {
       <Row className='filaAboutUs'>
         <Col className='colAboutUs'>
           <Card style={{width: '18rem'}} className='cardAboutUs'>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img className='round' variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Valentina Caceres</Card.Title>
-              <Card.Text>
+              <h6 className='segundo-titulo-about'>Tucuman</h6>
+              <Card.Text className='texto'>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
               </Card.Text>
-
+              <Button className="primary">
+                Mensaje
+              </Button>
+              <Button className="prymary ghost">
+                Following
+              </Button>
+              <div className="skills">
+                <h6>Skills</h6>
+                <ul>
+                  <li>UI / UX</li>
+                  <li>Front End Development</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>Node</li>
+                </ul>
+              </div>
             </Card.Body>
           </Card>
         </Col>
+        
         <Col className='colAboutUs'>
           <Card style={{width: '18rem'}} className='cardAboutUs'>
             <Card.Img variant="top" src="holder.js/100px180" />
