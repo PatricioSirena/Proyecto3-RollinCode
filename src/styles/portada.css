@@ -82,7 +82,7 @@
     .containerPortada {
         height: 930px;
         margin-top: 0%;
-        background-image: url(../img/fondo-portada2.jpg);
+        background-image: url(../img/fondo-portada3.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -105,6 +105,14 @@
         animation: zoom 5s infinite;
     }
 
+    /*.txt-portada{
+        background-color: powderblue;
+        transition: background-color 0.5s; ESTO DA FONDO AL TEXTO PARA CEL
+    }
+    .txt-portada:hover{
+        background-color: gold;
+    }*/
+
     .container-txt {
         margin: 0 auto !important;
     }
@@ -116,7 +124,7 @@
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1366px) {
+@media screen and (min-width: 768px) and (max-width: 1180px) {
 
     /*(ordenador portátil medio)*/
     .containerPortada {

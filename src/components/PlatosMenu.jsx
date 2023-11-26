@@ -53,8 +53,8 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
 
     return (
 
-        <Card className='card text-center' style={{ width: '21rem', height: '27rem' }}>
-            <CardImg className='imagen-tarjeta-menu' variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} ></CardImg>
+        <Card className='cartaaaa-menu text-center' style={{ width: '21rem', height: '27rem' }}>
+            <CardImg className='imagen-menu' variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} ></CardImg>
 
             <div className="card-info">
                 <Card.Title className='text-title'>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>

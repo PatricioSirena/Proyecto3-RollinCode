@@ -4,7 +4,7 @@
     border: 0;
 }
 
-.team{
+/*.team{
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -22,7 +22,7 @@
     margin-bottom: 2%;
 }
 
-.cardAboutUs{
+.profile-AboutUs{
     box-shadow: 1px 1px 5px black;
     margin: 0 auto !important;
 }
@@ -37,7 +37,7 @@
 	line-height: 21px;
 }
 
-.cardAboutUs {
+.profile-AboutUs {
 	background-color: #231E39;
 	border-radius: 5px;
 	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
@@ -49,7 +49,7 @@
 	text-align: center;
 }
 
-.cardAboutUs .round {
+.profile-AboutUs .round {
 	border: 1px solid #03BFCB;
 	border-radius: 50%;
 	padding: 7px;
@@ -90,7 +90,7 @@
 	font-size: 12px;
 	margin: 0 7px 7px 0;
 	padding: 7px;
-}
+}*/
 
 
 

@@ -191,13 +191,100 @@ p {
 
 /*=====ABOUT======*/
 .team{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 8%;
+    margin-bottom: 10%;
 }
 
 .team:hover{
     color: rgb(50, 107, 99);
 }
+
+.cuerpo-about{
+    margin-bottom: 5%;
+}
+
+.caja__aboutUs{
+    display: grid !important;
+    text-align: center;
+}
+
+.filaAboutUs{
+    margin: auto !important;
+}
+
+.colAboutUs{
+    display: grid;/*con esto centro*/
+}
+
+.profile-AboutUs1{
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+.profile-AboutUs2{
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza2.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+.profile-AboutUs3{
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+.profile-AboutUs4{
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza3.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.profile-AboutUs1:hover{
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.profile-AboutUs2:hover{
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza2.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.profile-AboutUs3:hover{
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.profile-AboutUs4:hover{
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza3.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.foto-about{
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+
 
 /*===================================================================================*/
 
@@ -236,10 +323,49 @@ p {
 
     .carta-index{
         margin: 0 auto !important;
+        margin-bottom: 6% !important;
+        margin-top: 4% !important;
+    }
+
+    .filaAboutUs,
+    .profile-AboutUs1, 
+    .profile-AboutUs2,
+    .profile-AboutUs3,
+    .profile-AboutUs4,
+    .foto-about{
+        display: inline-block !important;
+    }
+
+    .foto-about{
+        width: 200px !important;
+    }
+
+    .profile-AboutUs1{
+        background-image: url(../img/pieza2.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs2{
+        background-image: url(../img/pieza1.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs3{
+        background-image: url(../img/pieza1.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs4{
+        background-image: url(../img/pieza3.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1366px) {
+@media screen and (min-width: 768px) and (max-width: 1180px) {
 
     /*(ordenador portátil medio)*/
 
@@ -258,16 +384,52 @@ p {
 
     .carta-index{
         margin: 0 auto !important;
-        /*width: 400px;
-        height: 390px;*/
+        margin-bottom: 6% !important;
+        margin-top: 3%;
+        width: 400px;
+        height: 450px;
     }
 
-    /*.imagen-carta-principal{
-        height: 180px;
-        width: 190px;
-        margin: 0 auto !important;
-    }*/
+    .imagenTarjeta {
+        width: 350px;
+        margin-top: 3.5%;
+        border-top-left-radius: 10cqw;
+        border-top-right-radius: 10cqw;
+        border-bottom-left-radius: 10cqw;
+        border-bottom-right-radius: 10cqw;
+        margin: 0 auto;
+    }
 
+    .imagenTarjeta,
+    #tarjeta1,
+    #tarjeta3,
+    #tarjeta2 {
+        display: block !important;
+    }
+
+    .profile-AboutUs1{
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs2{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs3{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs4{
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1920px) {
@@ -280,7 +442,8 @@ p {
 
     /*(móvil medio)*/
     .imagenTarjeta {
-        width: 260px;
+        width: 240px;
+        height: 240px;
         margin-top: 3.5%;
         border-top-left-radius: 10cqw;
         border-top-right-radius: 10cqw;
@@ -308,6 +471,35 @@ p {
         position: relative;
         overflow: visible;
     }
+
+    .carta-index{
+        margin-top: 4% !important;
+        margin-bottom: 6% !important;
+    }
+
+    .profile-AboutUs1{
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs2{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs3{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs4{
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1440px) {
@@ -323,9 +515,29 @@ p {
         overflow: visible;
     }
 
-    /*.imagen-carta-principal{
-        height: 100px !important;
-    }*/
+    .profile-AboutUs1{
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs2{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs3{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs4{
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
     
 }
 
@@ -343,6 +555,34 @@ p {
         width: 20rem !important;
         position: relative;
         overflow: visible;
+    }
+
+    .carta-index{
+        margin-bottom: 6% !important;
+    }
+
+    .profile-AboutUs1{
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs2{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs3{
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+    .profile-AboutUs4{
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     
 }

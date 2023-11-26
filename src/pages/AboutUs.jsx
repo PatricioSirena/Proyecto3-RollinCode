@@ -4,68 +4,62 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.css';
-import '../styles/aboutUs.css'
 import val from '../img/val.jpg';
 import pato from '../img/pato.jpg';
 import tutty from '../img/tutty.jpg';
-import { Button } from 'react-bootstrap';
 
 
 const AboutUs = () => {
 
   return (
-    <Container className='caja_aboutUs'>
+    <Container className='caja__aboutUs aligh-items-center justify-content-center'>
+      <h2 className='team'>El Team</h2>
       <Row className='filaAboutUs'>
-        <h2 className='team'>El Team</h2>
-        <Col className='colAboutUs'>
-          <Card style={{width: '18rem'}} className='cardAboutUs'>
-            <Card.Img variant="top" src={pato} />
-            <Card.Body>
+        <Col xs={6} className='colAboutUs mb-5'>
+          <Card style={{width: '18rem'}} className='profile-AboutUs1'>
+            <Card.Img className='foto-about fixed sticky' variant="top" src={pato} />
+            <Card.Body className='cuerpo-about'>
               <Card.Title>Patricio Sirena</Card.Title>
               <Card.Text>
                 Scrum Master / Web Dev
               </Card.Text>
-              <Button></Button>
             </Card.Body>
           </Card>
         </Col>
-        <Col className='colAboutUs'>
-          <Card style={{width: '18rem'}} className='cardAboutUs'>
-            <Card.Img variant="top" src={tutty} />
-            <Card.Body>
+        <Col xs={6} className='colAboutUs mb-5'>
+          <Card style={{width: '18rem'}} className='profile-AboutUs2'>
+            <Card.Img className='foto-about' variant="top" src={tutty} />
+            <Card.Body className='cuerpo-about'>
               <Card.Title>Tutty Santochi</Card.Title>
               <Card.Text>
                 Web Dev 
               </Card.Text>
-              <Button></Button>
             </Card.Body>
           </Card>
         </Col>
       </Row>
 
       <Row className='filaAboutUs'>
-        <Col className='colAboutUs'>
-          <Card style={{width: '18rem'}} className='cardAboutUs'>
-            <Card.Img variant="top" src={val} />
-            <Card.Body>
+        <Col xs={6} className='colAboutUs mb-5'>
+          <Card style={{width: '18rem'}} className='profile-AboutUs3'>
+            <Card.Img className='foto-about' variant="top" src={val} />
+            <Card.Body className='cuerpo-about'>
               <Card.Title>Valentina Caceres</Card.Title>
               <Card.Text>
                 Web Dev / UI Designer
               </Card.Text>
             </Card.Body>
-            <Button></Button>
           </Card>
         </Col>
         
-        <Col className='colAboutUs'>
-          <Card style={{width: '18rem'}} className='cardAboutUs'>
-            <Card.Img variant="top" src="" />
-            <Card.Body>
+        <Col xs={6} className='colAboutUs mb-5'>
+          <Card style={{width: '18rem'}} className='profile-AboutUs4'>
+            <Card.Img className='foto-about' variant="top" src="" />
+            <Card.Body className='cuerpo-about'>
               <Card.Title>Mariano Spector</Card.Title>
               <Card.Text>
                 Web Dev
               </Card.Text>
-              <Button></Button>
             </Card.Body>
           </Card>
         </Col>
