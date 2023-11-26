@@ -19,7 +19,9 @@ const Portada = ({ titulo, descripccion }) => {
                         <br />
                         <h1 className='titulo-portada text-center mb-4 animate__backInRight'>{titulo}</h1>
                         <p className="txt-portada text-center mb-5"> {descripccion} </p>
-                        <Button className='boton-portada mt-2' variant="outline-light">Conócenos</Button>
+                        <Button className='boton-portada mt-2' variant="outline-light">
+                        <a href="https://www.fundacionyungannabis.org.ar/" target='_blank'>Conocenos</a>
+                        </Button>
                     </Col>
                 </Row>
             </Container>
