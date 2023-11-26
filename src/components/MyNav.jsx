@@ -10,6 +10,7 @@ import { useContext, useState } from 'react';
 import { CarritoContexto } from '../context/ContextoCarrito';
 import Modal from 'react-bootstrap/Modal';
 import { methPostOrder } from '../helpers/index'
+import logoAdmin from '../img/logo-admin.jpg'
 
 
 function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
@@ -112,12 +113,14 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
                                     <NavLink to="/registro" className={'nav-item nav-link'}>Registro</NavLink>
                                 </>
                             }
-                            {admin &&
-                                <NavLink to="/admin" className={'nav-item nav-link'}>Admin</NavLink>
-                            }
                             <NavLink to="/menu" className={'nav-item nav-link'}>Menu</NavLink>
 
                         </Nav>
+                            {admin &&
+                                <NavLink to="/admin" className={'nav-item nav-link'}>
+                                <img src={logoAdmin} className='logoAdmin' alt="logo-admin" />
+                                </NavLink>
+                            }
                         <button onClick={() => setSmShow(true)} className="botonCarrito d-flex">
                             <img src={Carrito} className='carrito' alt="Carrito" />
                             <span className='cantidadCarrito'>{cantidad}</span>
