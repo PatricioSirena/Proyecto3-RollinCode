@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 const Carta = ({ titulo, text, imgSource, url }) => {
     return (
-        <Card className='carta text-center bg-transparent border-dark' style={{ width: '340px' }}>
-            <Card.Img style={{height: '300px'}} src={imgSource ? imgSource : 'La imagen es requerida'} />
+        <Card className='carta-index text-center bg-transparent border-dark' style={{ width: '290px' }}>
+            <Card.Img className='imagen-carta-principal' style={{height: '250px'}} src={imgSource ? imgSource : 'La imagen es requerida'} />
             <Card.Body>
                 <Card.Title>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
                 <Card.Text>

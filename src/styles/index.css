@@ -40,11 +40,17 @@ p {
     padding-right: 50px;
 }
 
+.spoiler{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .spoiler:hover {
     color: rgb(57, 87, 73);
 }
 
 .card_tittle {
+    font-weight: 600;
     padding: 5%;
     font-family: 'Titan One', cursive;
     color: rgb(10, 10, 10);
@@ -55,12 +61,14 @@ p {
     color: rgb(20, 20, 20);
 }
 
-.carta {
+.carta-index {
     color: rgb(8, 8, 8);
     margin: 0 auto !important;
     cursor: pointer;
     -webkit-transition: 1s linear;
     transition: 1s linear;
+    position: relative;
+    overflow: visible;
 }
 
 .carta:hover {
@@ -146,7 +154,8 @@ p {
 }
 
 .imagenTarjeta {
-    width: 300px;
+    width: 350px;
+    height: 330px;
     margin-top: 3.5%;
     border-top-left-radius: 10cqw;
     border-top-right-radius: 10cqw;
@@ -185,17 +194,6 @@ p {
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
     /*(móvil pequeño)*/
-    .logoPortadaa,
-    .container-txt {
-        display: block !important;
-        margin: 0 auto;
-    }
-
-    .logoPortadaa,
-    .imagen_portada_yunga {
-        margin: 0 auto !important;
-    }
-
     .imagenTarjeta {
         width: 260px;
         margin-top: 3.5%;
@@ -216,16 +214,49 @@ p {
     .carta {
         color: rgb(0, 0, 0);
         margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index{
+        margin: 0 auto !important;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1366px) {
 
     /*(ordenador portátil medio)*/
-    
+
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index{
+        margin: 0 auto !important;
+        /*width: 400px;
+        height: 390px;*/
+    }
+
+    /*.imagen-carta-principal{
+        height: 180px;
+        width: 190px;
+        margin: 0 auto !important;
+    }*/
 
 }
 
@@ -238,17 +269,6 @@ p {
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
     /*(móvil medio)*/
-    .logoPortadaa,
-    .container-txt {
-        display: block !important;
-        margin: 0 auto;
-    }
-
-    .logoPortadaa,
-    .imagen_portada_yunga {
-        margin: 0 auto !important;
-    }
-
     .imagenTarjeta {
         width: 260px;
         margin-top: 3.5%;
@@ -269,20 +289,50 @@ p {
     .carta {
         color: rgb(0, 0, 0);
         margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
+        position: relative;
+        overflow: visible;
     }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1440px) {
 
     /*(escritorio medio)*/
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    /*.imagen-carta-principal{
+        height: 100px !important;
+    }*/
     
 }
 
 @media screen and (min-width: 720px) and (max-width: 1280px) {
 
     /*(móvil grande)*/
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
     
 }

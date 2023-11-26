@@ -8,8 +8,7 @@
 }
 
 .imagen_portada_logo {
-    margin-top: 18%;
-    margin-left: -3%;
+    margin-top: 10% !important;
     animation: zoom 5s infinite;
 }
 
@@ -37,30 +36,19 @@
 }
 
 .tituloo:hover {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .txt-portada {
-    width: 95%;
+    width: 100%;
     color: rgb(0, 0, 0);
+    font-size: 19px !important;
 }
 
 .container-txt {
     margin-top: 2%;
     margin-left: 6%;
 }
-
-    /* .logoPortadaa,
-    .container-txt {
-        display: block !important;
-        margin-top: 6%;
-    } */
-
-/* .logoPortadaa,
-.imagen_portada_yunga {
-    margin-left: 14%;
-    margin-top: 9.5%;
-} */
 
 .imagen_portada_yunga {
     margin-left: 5%;
@@ -73,9 +61,7 @@
 }
 
 .boton-portada {
-    background-color: rgb(175, 141, 101);
-    border-color: rgb(175, 141, 101);
-    width: 50%;
+    width: 30%;
     margin-bottom: 25%;
 }
 
@@ -85,7 +71,143 @@
 
 .boton-portada:hover {
     color: white !important;
-    background: rgb(190, 153, 110);
-    border-color: rgb(190, 153, 110);
     transition: 2s ease;
+}
+
+
+/*********************************************************/
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+    /*(móvil pequeño)*/
+    .containerPortada {
+        height: 930px;
+        margin-top: 0%;
+        background-image: url(../img/fondo-portada2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin: 0 auto !important;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin-top: 1%;
+        margin-left: -3%;
+        animation: zoom 5s infinite;
+    }
+
+    .container-txt {
+        margin: 0 auto !important;
+    }
+    .boton-portada {
+        width: 80% !important;
+        height: 6% !important;
+        margin-bottom: 25%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+
+    /*(ordenador portátil medio)*/
+    .containerPortada {
+        height: 600px !important;
+        margin-top: 0%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+       
+
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+    /*(escritorio grande)*/
+    
+    
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+
+    /*(móvil medio)*/
+    .containerPortada {
+        height: 930px;
+        margin-top: 0%;
+        background-image: url(../img/fondo-portada2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin: 0 auto !important;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin-top: 1%;
+        margin-left: -3%;
+        animation: zoom 5s infinite;
+    }
+
+    .container-txt {
+        margin: 0 auto !important;
+    }
+   
+}
+
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+
+    /*(escritorio medio)*/
+    
+}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+    /*(móvil grande)*/
+    .containerPortada {
+        height: 800px;
+        margin-top: 0%;
+        background-image: url(../img/fondo-portada2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin: 0 auto !important;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin: 0 auto;
+        margin-left: -1%;
+        animation: zoom 5s infinite;
+    }
+
+    .container-txt {
+        margin: 0 auto !important;
+    }
 }
