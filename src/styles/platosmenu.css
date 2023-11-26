@@ -44,6 +44,7 @@ body{
     transition: .3s ease;
     height: 40%;
     width: 100%;
+    background-color: #86B6A3;
 }
 
 .card-info {
@@ -93,10 +94,15 @@ svg-icon{
 }
 
 /*Hover*/
-.imagen-tarjeta-menu:hover {
+<<<<<<< HEAD
+/*.imagen-tarjeta-menu:hover {
     transform: translateY(-25%);
+=======
+.card-img:hover {
+    transform: translateY(-25px);
+>>>>>>> 8b05598e820ee68fcc04b48a1acf4669c1c4d0ea
     box-shadow: rgba(39, 39, 39, 0.25) 0px 13px 47px -5px, rgba(88, 88, 88, 0.795) 0px 8px 16px -8px;
-}
+}*/
 
 .card-button:hover {
     border: 1px solid rgb(79, 117, 105) !important;
