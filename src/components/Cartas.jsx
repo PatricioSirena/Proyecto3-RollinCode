@@ -9,7 +9,7 @@ const cartas = [
         id: 1,
         titulo: 'Comidas',
         imagen: imagen1,
-        texto: 'Los mejores platos para bajonear',
+        texto: 'Para bajonear',
         url: 'https://instagram.com'
     },
     {
