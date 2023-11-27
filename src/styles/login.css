@@ -227,13 +227,12 @@
         filter: blur(50%);
     }
 
-    .btn {
+    /* .btn {
         position: relative;
         top: 0;
         left: 0;
         width: 90%;
         height: 40px;
-        /*background: linear-gradient(to right, rgba(199, 74, 151, 0.966), rgba(47, 10, 58, 0.856));*/
         background: rgb(0, 0, 0);
         box-shadow: 0px 10px 20px #c2c2c265;
         font-size: 16px;
@@ -243,7 +242,7 @@
         border-radius: 20px 20px 20px 20px;
         border: none;
         outline: none;
-    }
+    } */
 
     .input-group {
         position: relative;

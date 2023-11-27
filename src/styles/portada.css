@@ -42,7 +42,7 @@
 .txt-portada {
     width: 100%;
     color: rgb(0, 0, 0);
-    font-size: 19px !important;
+    font-size: 19px;
 }
 
 .container-txt {
@@ -74,11 +74,150 @@
     transition: 2s ease;
 }
 
+.imagen_portada_logo{
+    width: 400px;
+    margin-left: -90px;
+}
+
+.logoPortada{
+    margin-top: 5%;
+}
+
 
 /*********************************************************/
-@media screen and (min-width: 360px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 374px){
+    .containerPortada{
+        height: 540px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .titulo-portada{
+        font-size: 30px;
+    }
+    .txt-portada{
+        font-size: medium;
+    }
+    .boton-portada {
+        width: 40%;
+    }
+}
 
-    /*(móvil pequeño)*/
+@media screen and (min-width: 375px) and (max-width: 424px){
+    .containerPortada{
+        height: 630px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 325px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 30px;
+    }
+    .txt-portada{
+        font-size: medium;
+    }
+    .boton-portada {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px){
+    .containerPortada{
+        height: 690px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .containerPortada{
+        height: 500px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+    .containerPortada{
+        height: 500px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .imagen_portada_logo{
+        width: 370px;
+        margin-left: -110px;
+    }
+    .logoPortada{
+        margin-top: 3%;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 20%;
+    }
+}
+
+/* @media screen and (min-width: 360px) and (max-width: 640px) {
     .containerPortada {
         height: 930px;
         margin-top: 0%;
@@ -93,7 +232,6 @@
     }
 
     .imagen_portada_yunga {
-        margin: 0 auto !important;
         transition: transform 0.2s ease;
         cursor: pointer;
     }
@@ -104,15 +242,6 @@
         margin-left: -3%;
         animation: zoom 5s infinite;
     }
-
-    /*.txt-portada{
-        background-color: powderblue;
-        transition: background-color 0.5s; ESTO DA FONDO AL TEXTO PARA CEL
-    }
-    .txt-portada:hover{
-        background-color: gold;
-    }*/
-
     .container-txt {
         margin: 0 auto !important;
     }
@@ -121,12 +250,12 @@
         height: 6% !important;
         margin-bottom: 25%;
     }
-
+    .logoPortada{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1180px) {
-
-    /*(ordenador portátil medio)*/
     .containerPortada {
         height: 600px !important;
         margin-top: 0%;
@@ -134,12 +263,13 @@
         background-attachment: fixed;
         background-size: cover;
     }
+    .logoPortada{
+        display: none;
+    }
 }
 
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
-
-    /*(móvil medio)*/
     .containerPortada {
         height: 930px;
         margin-top: 0%;
@@ -152,9 +282,8 @@
     .div-portada-cel{
         margin: 0 auto !important;
     }
-
     .imagen_portada_yunga {
-        margin: 0 auto !important;
+        margin-left: -20%;
         transition: transform 0.2s ease;
         cursor: pointer;
     }
@@ -169,20 +298,13 @@
     .container-txt {
         margin: 0 auto !important;
     }
-   
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-
-    /*(escritorio medio)*/
     .logoPortada{
         display: none;
     }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1280px) {
 
-    /*(móvil grande)*/
+@media screen and (min-width: 720px) and (max-width: 1280px) {
     .containerPortada {
         height: 800px;
         margin-top: 0%;
@@ -212,4 +334,7 @@
     .container-txt {
         margin: 0 auto !important;
     }
-}
+    .logoPortada{
+        display: none;
+    }
+} */

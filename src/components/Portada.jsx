@@ -12,7 +12,7 @@ const Portada = ({ titulo, descripccion }) => {
             <Container fluid className='containerPortada'>
                 <Row className='div-portada-cel'>
                     <Col lg={4} className='logoPortada text-center'>
-                        <img className="imagen_portada_logo" src={HappyBurger} width={'470px'} alt="" />
+                        <img className="imagen_portada_logo" src={HappyBurger} alt="" />
                     </Col>
                     <Col lg={7} className="container-txt text-center">
                         <img className="imagen_portada_yunga" src={LogoYunga} width={'400px'} alt="" />
