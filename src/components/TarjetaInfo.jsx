@@ -6,7 +6,7 @@ import '../App.css'
 const TarjetaInfo = ({id, titulo, texto, imgSource }) => {
     return (
         <Container fluid>
-            <Row className="tarjetaInfo d-flex" id={id? id: 'Ponele un id'}>
+            <Row className="tarjetaInfo" id={id? id: 'Ponele un id'}>
                 <Col className="col-lg-7 uno">
                     <h2 className="card_tittle">{titulo ? titulo : 'Debe ingresar un titulo'}</h2>
                     <p className="pp">{texto ? texto : 'El texto es requerido'}</p>

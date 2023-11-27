@@ -432,12 +432,6 @@ p {
     }
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1920px) {
-
-    /*(escritorio grande)*/
-    
-}
-
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
     /*(móvil medio)*/
@@ -502,7 +496,7 @@ p {
     }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1440px) {
+@media screen and (min-width: 900px) and (max-width: 1300px) {
 
     /*(escritorio medio)*/
     .carta {
@@ -538,6 +532,19 @@ p {
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+
+    .tarjetaInfo{
+        max-height: 350px;
+    }
+
+    .uno {
+        
+    }
+/* 
+    .imagenTarjeta{
+        max-width: 250px;
+        max-height: 220px;
+    } */
     
 }
 
