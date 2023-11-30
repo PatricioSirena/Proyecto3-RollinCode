@@ -31,12 +31,12 @@ const cartas = [
 const Cartas = () => {
     return (
         <>
-            <Container fluid>
-                <Row className="row text-center">
+            <Container fluid className="containerCartas">
                     <h1 className="spoiler animate__zoomInLeft">Spoilers que sí.</h1>
+                <Row className="rowCartas text-center">
                     {
                         cartas.map((carta) => (
-                            <Col sm={3} className="carta-index" key={carta.id}>
+                            <Col sm={3} key={carta.id}>
                                 <Carta
                                     titulo={carta.titulo}
                                     imgSource={carta.imagen}

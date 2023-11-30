@@ -95,7 +95,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
             <Navbar expand="lg" sticky="top" className="bg-body-tertiary" id="nav" data-bs-theme="light">
                 <Container fluid>
                     <NavLink to="/" className='logo'>
-                        <img src={Happyfood} className='logo' alt="Logo" />
+                        <img src={Happyfood} className='logoNav' alt="Logo" />
                     </NavLink>
                     <Navbar.Toggle aria-controls="navbarScroll" id="hamburguesa" />
                     <Navbar.Collapse>

@@ -63,7 +63,7 @@ p {
 
 .carta-index {
     color: rgb(8, 8, 8);
-    margin: 0 auto !important;
+    margin: 0 auto;
     cursor: pointer;
     -webkit-transition: 1s linear;
     transition: 1s linear;
@@ -582,3 +582,74 @@ p {
     }
     
 }
+
+/* ------------------------------------------------------------------- */
+
+@media screen and (min-width: 320px) and (max-width: 374px){
+    .spoiler{
+        font-size: 23px;
+        margin: 20px;
+    }
+    .carta-index{
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+    .imagen-carta-principal{
+        width: 200px;
+        height: 170px;
+    }
+    .cuerpoTarjeta{
+        padding: 5px;
+        width: 100%;
+    }
+    .botonCarta{
+        font-size: 13px;
+        margin: 5px;
+    }
+    .textoCarta{
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px){
+    .spoiler{
+        font-size: 23px;
+        margin: 20px;
+    }
+    .carta-index{
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+    .imagen-carta-principal{
+        width: 200px;
+        height: 170px;
+    }
+    .cuerpoTarjeta{
+        padding: 5px;
+        width: 100%;
+    }
+    .botonCarta{
+        font-size: 13px;
+        margin: 5px;
+    }
+    .textoCarta{
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px){
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+
+}
+

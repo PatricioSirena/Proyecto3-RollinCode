@@ -8,13 +8,14 @@ import { useEffect, useState } from 'react';
 import ContextoCarrito from './context/ContextoCarrito';
 import Administrador from './pages/Administrador';
 import AboutUs from './pages/AboutUs';
-
+import Error404 from './pages/Error404'
 
 function App() {
 
     const [admin, setAdmin] = useState(false);
     const [user, setUser] = useState({});
     const [isLogueado, setIslogueado] = useState(false);
+
 
     const recuperoUser = () => {
         const usuario = JSON.parse(window.localStorage.getItem("user"));
@@ -55,6 +56,7 @@ function App() {
                             />} />
                         <Route path="/registro" element={<Registro />} />
                         <Route path='/about' element={<AboutUs />} />
+                        <Route path='/error404' element={<Error404/>}/>
                     </Routes>
                 </Router>
             </ContextoCarrito>

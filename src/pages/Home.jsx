@@ -5,8 +5,22 @@ import Cartas from "../components/Cartas";
 import TarjetasInfo from "../components/TarjetasInfo";
 import Footer from "../components/Footer";
 import '../styles/footer.css'
+import { useEffect } from 'react';
 
 function Home() {
+
+    useEffect(() => {
+        if (window.location.pathname === '/') {
+            const navbar = window.document.querySelector('#nav');
+            navbar.style.display = 'block';
+        }
+        if (window.location.pathname === '/') {
+            const warning = window.document.querySelector('.warning');
+            warning.style.display = 'flex';
+        }
+    }, [])
+
+
     return (
         <>
             <Portada
