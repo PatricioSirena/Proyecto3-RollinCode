@@ -3,6 +3,7 @@ import Carta from "./Carta";
 import imagen1 from "../img/burger-1.jpg";
 import imagen2 from "../img/beer.jpg";
 import imagen3 from "../img/flores.jpg";
+import '../styles/index.css'
 
 const cartas = [
     {
@@ -31,12 +32,12 @@ const cartas = [
 const Cartas = () => {
     return (
         <>
-            <Container fluid className="containerCartas">
+            <Container className="containerCartas text-center">
                     <h1 className="spoiler animate__zoomInLeft">Spoilers que sí.</h1>
-                <Row className="rowCartas text-center">
+                <Row className="rowCartas">
                     {
                         cartas.map((carta) => (
-                            <Col sm={3} key={carta.id}>
+                            <Col sm={4} key={carta.id}>
                                 <Carta
                                     titulo={carta.titulo}
                                     imgSource={carta.imagen}

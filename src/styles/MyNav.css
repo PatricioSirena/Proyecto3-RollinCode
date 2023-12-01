@@ -146,6 +146,10 @@
     .logoNav {
         width: 6.5em;
     }
+    
+    .spann{
+        font-size: 10px;
+    }
 }
 
 @media screen and (min-width: 375px) and (max-width: 424px) {
@@ -161,6 +165,10 @@
 
     .logoNav {
         width: 6.9em;
+    }
+
+    .spann{
+        font-size: 12px;
     }
 }
 
