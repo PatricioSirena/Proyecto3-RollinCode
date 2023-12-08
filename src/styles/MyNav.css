@@ -151,12 +151,12 @@
 
 @media screen and (min-width: 320px) and (max-width: 374px){
     .warning {
-        height: 45px;
+        height: 38px;
     }
     .ofertaNav {
         padding: 2px;
         font-size: 10px;
-        font-weight: 750;
+        font-weight: 700;
     }
     .logoNav {
         width: 6.5em;
@@ -201,11 +201,10 @@
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
     .warning {
-        height: 40px;
+        height: 38px;
     }
     .ofertaNav {
-        padding: 2px;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 650;
     }
     .logoNav {
@@ -235,12 +234,11 @@
 
 @media screen and (min-width: 425px) and (max-width: 767px){
     .warning {
-        height: 60px;
+        height: 38px;
     }
     .ofertaNav {
-        padding: 2px;
-        font-size: 13px;
-        font-weight: 750;
+        font-size: 10px;
+        font-weight: 700;
     }
     .logoNav {
         width: 8.2em;
@@ -319,11 +317,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .warning {
-        height: 45px;
+        height: 40px;
     }
     .ofertaNav {
-        padding: 2px;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 750;
     }
     .logoNav {
