@@ -17,14 +17,14 @@ const cartas = [
         id: 2,
         titulo: 'Bebidas',
         imagen: imagen2,
-        texto: 'Texto de prueba',
+        texto: 'Para tomar',
         url: 'https://instagram.com'
     },
     {
         id: 3,
         titulo: 'Flores',
         imagen: imagen3,
-        texto: 'Flores geneticas de Yunganabis',
+        texto: 'Para fumar',
         url: 'https://instagram.com'
     }
 ]
@@ -37,7 +37,7 @@ const Cartas = () => {
                 <Row className="rowCartas">
                     {
                         cartas.map((carta) => (
-                            <Col sm={4} key={carta.id}>
+                            <Col sm={12} md={4} lg={4} key={carta.id}>
                                 <Carta
                                     titulo={carta.titulo}
                                     imgSource={carta.imagen}
