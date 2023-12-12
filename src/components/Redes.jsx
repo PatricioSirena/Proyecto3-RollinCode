@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const Redes = () => {
     return (
-        <Container fluid className="footerRedes">
+        <Container fluid className="footerRedes mb-3">
             <Row>
                 <Col lg={4} className="p-1 mt-5 sm text-center accesoRedes">
                     <h5>Seguinos en:</h5>
@@ -25,16 +25,17 @@ const Redes = () => {
                         </li>
                     </ul>
                 </Col>
-                <Col lg={4} className="p-1 sm text-center">
+                <Col lg={4} className="p-1 text-center">
+                    <a href="#promo">
                     <img src={logoPagina} className="logoFooter" alt="" />
+                    </a>
                 </Col>
-                <Col lg={4} className="p-1 sm text-center listaFooter">
-                    <h5 className="link_titulo">Nuestros Platos</h5>
-                    <ul className="links">
-                        <li><NavLink to='/about'>Acerca de nosotros</NavLink></li>
-                        <li><NavLink to='/error404'>Acerca de nosotros</NavLink></li>
-                        {/* <li>Hamburguesa 4to de Libra</li> */}
-                        <li>Hamburguesa Crispy</li>
+                <Col lg={4} className="p-1  text-center listaFooter">
+                    <h5 className="link_titulo mb-3">Mas contenido</h5>
+                    <ul className="listaLink">
+                        <li><NavLink className="links" to='/about'>Acerca de nosotros</NavLink></li>
+                        <li><NavLink className="links" to='/error404'>Acerca de nosotros</NavLink></li>
+                        <li><NavLink className="links" to='/error404'>Acerca de nosotros</NavLink></li>
                     </ul>
                 </Col>
             </Row>

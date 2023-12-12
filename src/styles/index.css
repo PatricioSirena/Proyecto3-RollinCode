@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -40,7 +40,7 @@ p {
     padding-right: 50px;
 }
 
-.spoiler{
+.spoiler {
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -190,33 +190,34 @@ p {
 }
 
 /*=====ABOUT======*/
-.team{
+.team {
     margin-top: 8%;
     margin-bottom: 10%;
 }
 
-.team:hover{
+.team:hover {
     color: rgb(50, 107, 99);
 }
 
-.cuerpo-about{
+.cuerpo-about {
     margin-bottom: 5%;
 }
 
-.caja__aboutUs{
+.caja__aboutUs {
     display: grid !important;
     text-align: center;
 }
 
-.filaAboutUs{
+.filaAboutUs {
     margin: auto !important;
 }
 
-.colAboutUs{
-    display: grid;/*con esto centro*/
+.colAboutUs {
+    display: grid;
+    /*con esto centro*/
 }
 
-.profile-AboutUs1{
+.profile-AboutUs1 {
     background-color: rgb(118, 121, 121);
     background-image: url(../img/pieza1.jpg) !important;
     background-repeat: no-repeat;
@@ -224,7 +225,8 @@ p {
     color: black !important;
     font-weight: 600 !important;
 }
-.profile-AboutUs2{
+
+.profile-AboutUs2 {
     background-color: rgb(118, 121, 121);
     background-image: url(../img/pieza2.jpg) !important;
     background-repeat: no-repeat;
@@ -232,7 +234,8 @@ p {
     color: black !important;
     font-weight: 600 !important;
 }
-.profile-AboutUs3{
+
+.profile-AboutUs3 {
     background-color: rgb(118, 121, 121);
     background-image: url(../img/pieza1.jpg) !important;
     background-repeat: no-repeat;
@@ -240,7 +243,8 @@ p {
     color: black !important;
     font-weight: 600 !important;
 }
-.profile-AboutUs4{
+
+.profile-AboutUs4 {
     background-color: rgb(118, 121, 121);
     background-image: url(../img/pieza3.jpg) !important;
     background-repeat: no-repeat;
@@ -249,28 +253,31 @@ p {
     font-weight: 600 !important;
 }
 
-.profile-AboutUs1:hover{
+.profile-AboutUs1:hover {
     transition: 2s linear;
     background-color: rgb(95, 160, 146);
     background-image: url(../img/pieza1.jpg) !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.profile-AboutUs2:hover{
+
+.profile-AboutUs2:hover {
     transition: 2s linear;
     background-color: rgb(95, 160, 146);
     background-image: url(../img/pieza2.jpg) !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.profile-AboutUs3:hover{
+
+.profile-AboutUs3:hover {
     transition: 2s linear;
     background-color: rgb(95, 160, 146);
     background-image: url(../img/pieza1.jpg) !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.profile-AboutUs4:hover{
+
+.profile-AboutUs4:hover {
     transition: 2s linear;
     background-color: rgb(95, 160, 146);
     background-image: url(../img/pieza3.jpg) !important;
@@ -278,7 +285,7 @@ p {
     background-attachment: fixed;
 }
 
-.foto-about{
+.foto-about {
     border-radius: 50%;
     margin: 0 auto;
     padding: 10%;
@@ -286,22 +293,48 @@ p {
 
 /*===================================================================================*/
 
-@media screen and (min-width: 280px) and (max-width: 281px){
-    .spoiler{
+@media screen and (min-width: 280px) and (max-width: 281px) {
+    .spoiler {
         margin: 40px 0px;
     }
-    .carta-index{
+
+    .carta-index {
         width: 70vw;
         height: 330px;
         margin-bottom: 3rem;
     }
-    .imagen-carta-principal{
+
+    .imagen-carta-principal {
         width: 100%;
         height: 60%;
     }
-    .botonCarta{
+
+    .botonCarta {
         font-size: 12px;
         margin-top: -3px;
+    }
+    #tarjeta2{
+        display: block;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    #tarjeta2 .dos {
+        order: 0;
+    }
+    .tarjetaInfo{
+        height: 350px;
+    }
+    .card_tittle{
+        font-size: 16px;
+    }
+    .pp{
+        font-size: 13px;
+    }
+    .imagenTarjeta{
+        width: 180px;
+        height: 180px;
+        margin-top: -10px;
     }
 }
 
@@ -309,6 +342,9 @@ p {
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
     /*(móvil pequeño)*/
+    .card_tittle{
+        margin-top: -35px;
+    }
     .imagenTarjeta {
         width: 260px;
         margin-top: 3.5%;
@@ -319,7 +355,6 @@ p {
         margin: 0 auto;
     }
 
-    .imagenTarjeta,
     #tarjeta1,
     #tarjeta3,
     #tarjeta2 {
@@ -331,7 +366,7 @@ p {
         margin: 0 auto !important;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
@@ -339,44 +374,47 @@ p {
         overflow: visible;
     }
 
-    .carta-index{
+    .carta-index {
         margin: 0 auto !important;
         margin-bottom: 6% !important;
         margin-top: 4% !important;
     }
 
     .filaAboutUs,
-    .profile-AboutUs1, 
+    .profile-AboutUs1,
     .profile-AboutUs2,
     .profile-AboutUs3,
     .profile-AboutUs4,
-    .foto-about{
+    .foto-about {
         display: inline-block !important;
     }
 
-    .foto-about{
+    .foto-about {
         width: 200px !important;
     }
 
-    .profile-AboutUs1{
+    .profile-AboutUs1 {
         background-image: url(../img/pieza2.jpg) !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs2{
+
+    .profile-AboutUs2 {
         background-image: url(../img/pieza1.jpg) !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs3{
+
+    .profile-AboutUs3 {
         background-image: url(../img/pieza1.jpg) !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs4{
+
+    .profile-AboutUs4 {
         background-image: url(../img/pieza3.jpg) !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -392,7 +430,7 @@ p {
         margin: 0 auto !important;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
@@ -400,20 +438,27 @@ p {
         overflow: visible;
     }
 
-    .carta-index{
+    .carta-index {
         margin: 0 auto !important;
         margin-bottom: 6% !important;
         margin-top: 3%;
         width: 300px;
         height: 400px;
     }
-    .card-img{
+
+    .imagen-carta-principal {
         width: 300px;
         height: 250px;
     }
 
+    .tarjetaInfo{
+        height: 270px;
+        padding-top: 20px;
+    }
+
     .imagenTarjeta {
-        width: 350px;
+        width: 210px;
+        height: 210px;
         margin-top: 3.5%;
         border-top-left-radius: 10cqw;
         border-top-right-radius: 10cqw;
@@ -422,39 +467,48 @@ p {
         margin: 0 auto;
     }
 
-    .imagenTarjeta,
-    #tarjeta1,
-    #tarjeta3,
-    #tarjeta2 {
-        display: block !important;
-    }
-
-    .profile-AboutUs1{
+    .profile-AboutUs1 {
         background-image: url(../img/pieza2.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs2{
+
+    .profile-AboutUs2 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs3{
+
+    .profile-AboutUs3 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs4{
+
+    .profile-AboutUs4 {
         background-image: url(../img/pieza3.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    #tarjeta2 {
+        display: flex;
+        background: linear-gradient(to right, rgb(101, 117, 114), rgba(202, 202, 202, 0.76));
+        margin-left: 13%;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    
+    #tarjeta2 .dos {
+        order: 0;
+    }
 }
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
+
     /*(móvil medio)*/
     .imagenTarjeta {
         width: 240px;
@@ -479,7 +533,7 @@ p {
         margin: 0 auto !important;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
@@ -487,30 +541,33 @@ p {
         overflow: visible;
     }
 
-    .carta-index{
+    .carta-index {
         margin-top: 4% !important;
         margin-bottom: 6% !important;
     }
 
-    .profile-AboutUs1{
+    .profile-AboutUs1 {
         background-image: url(../img/pieza2.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs2{
+
+    .profile-AboutUs2 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs3{
+
+    .profile-AboutUs3 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs4{
+
+    .profile-AboutUs4 {
         background-image: url(../img/pieza3.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -530,33 +587,36 @@ p {
         overflow: visible;
     }
 
-    .profile-AboutUs1{
+    .profile-AboutUs1 {
         background-image: url(../img/pieza2.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs2{
+
+    .profile-AboutUs2 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs3{
+
+    .profile-AboutUs3 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs4{
+
+    .profile-AboutUs4 {
         background-image: url(../img/pieza3.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
 
-    .tarjetaInfo{
+    .tarjetaInfo {
         max-height: 350px;
-    }    
+    }
 }
 
 @media screen and (min-width: 720px) and (max-width: 1280px) {
@@ -567,7 +627,7 @@ p {
         margin: 0 auto !important;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         -webkit-transition: 1s linear;
         transition: 1s linear;
         width: 20rem !important;
@@ -575,147 +635,242 @@ p {
         overflow: visible;
     }
 
-    .carta-index{
+    .carta-index {
         margin-bottom: 6% !important;
     }
 
-    .profile-AboutUs1{
+    .profile-AboutUs1 {
         background-image: url(../img/pieza2.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs2{
+
+    .profile-AboutUs2 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs3{
+
+    .profile-AboutUs3 {
         background-image: url(../img/pieza1.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-y: bottom;
     }
-    .profile-AboutUs4{
+
+    .profile-AboutUs4 {
         background-image: url(../img/pieza3.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    
+
 }
 
 /* ------------------------------------------------------------------- */
 
-@media screen and (min-width: 320px) and (max-width: 374px){
-    .spoiler{
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .spoiler {
         font-size: 23px;
         margin: 20px;
     }
-    .carta-index{
+
+    .carta-index {
         width: 200px;
         height: 320px;
         margin: 15px auto;
         align-items: center;
     }
-    .imagen-carta-principal{
+
+    .imagen-carta-principal {
         width: 200px;
         height: 170px;
     }
-    .cuerpoTarjeta{
+
+    .cuerpoTarjeta {
         padding: 5px;
         width: 100%;
     }
-    .botonCarta{
+
+    .botonCarta {
         font-size: 13px;
         margin: 5px;
     }
-    .textoCarta{
+
+    .textoCarta {
         font-size: 13px;
         margin-bottom: 9px;
     }
+    #tarjeta2{
+        display: block;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    
+    #tarjeta2 .dos {
+        order: 0;
+    }
+    .tarjetaInfo{
+        height: 250px;
+        margin-top: 25px;
+    }
+    .card_tittle{
+        font-size: 13px;
+    }
+    .pp{
+        margin-top: -8px;
+        font-size: 9px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 140px;
+        height: 140px;
+    }
 }
 
-@media screen and (min-width: 375px) and (max-width: 424px){
-    .spoiler{
+@media screen and (min-width: 375px) and (max-width: 424px) {
+    .spoiler {
         font-size: 23px;
         margin: 20px;
     }
-    .carta-index{
+
+    .carta-index {
         width: 200px;
         height: 320px;
         margin: 15px auto;
         align-items: center;
     }
-    .imagen-carta-principal{
+
+    .imagen-carta-principal {
         width: 200px;
         height: 170px;
     }
-    .cuerpoTarjeta{
+
+    .cuerpoTarjeta {
         padding: 5px;
         width: 100%;
     }
-    .botonCarta{
+
+    .botonCarta {
         font-size: 13px;
         margin: 5px;
     }
-    .textoCarta{
+
+    .textoCarta {
         font-size: 14px;
         margin-bottom: 9px;
     }
+    .tarjetaInfo{
+        height: 270px;
+        margin-top: -5px;
+    }
+    .card_tittle{
+        font-size: 13px;
+        margin-top: -35px;
+    }
+    .pp{
+        margin-top: -8px;
+        font-size: 9px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 140px;
+        height: 140px;
+    }
 }
 
-@media screen and (min-width: 425px) and (max-width: 767px){
-    .carta-index{
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .carta-index {
         width: 200px;
         height: 320px;
         margin: 15px auto;
         align-items: center;
     }
-    .card-img{
+
+    .imagen-carta-principal {
         width: 200px;
         height: 170px;
     }
-    .textoCarta{
+
+    .textoCarta {
         font-size: 12px;
     }
-    .botonCarta{
+
+    .botonCarta {
         margin: 0 auto;
         width: 70px;
         height: 30px;
     }
-    .botonCarta a{
+
+    .botonCarta a {
         display: block;
         font-size: 11px;
         align-items: center;
     }
+    .tarjetaInfo{
+        height: 260px;
+        margin-top: -5px;
+    }
+    .card_tittle{
+        font-size: 13px;
+        margin-top: -35px;
+    }
+    .pp{
+        margin-top: -8px;
+        font-size: 9px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 140px;
+        height: 140px;
+    }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px){
-    .carta-index{
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .carta-index {
         width: 200px;
         height: 320px;
         margin: 15px auto;
         align-items: center;
     }
-    .card-img{
+
+    .imagen-carta-principal {
         width: 200px;
         height: 170px;
     }
-    .textoCarta{
+
+    .textoCarta {
         font-size: 12px;
     }
-    .botonCarta{
+
+    .botonCarta {
         margin: 0 auto;
         width: 70px;
         height: 30px;
     }
-    .botonCarta a{
+
+    .botonCarta a {
         display: block;
         font-size: 11px;
         align-items: center;
     }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px){
 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .tarjetaInfo{
+        height: 310px;
+        padding-top: 20px;
+    }
+    .imagenTarjeta {
+        width: 240px;
+        height: 240px;
+        margin-top: 3.5%;
+        border-top-left-radius: 10cqw;
+        border-top-right-radius: 10cqw;
+        border-bottom-left-radius: 10cqw;
+        border-bottom-right-radius: 10cqw;
+        margin: 0 auto;
+    }
 }
-

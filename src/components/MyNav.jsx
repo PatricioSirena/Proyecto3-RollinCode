@@ -84,7 +84,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
 
     return (
         <>
-            <div className="warning">
+            <div id='promo' className="warning">
                     <span className='ofertaNav'>
                         ☻ Todos los Jueves 20% de Descuento en TODOS Nuestros Productos | Cod: BIENVENIDA_HAPPY
                     </span>
