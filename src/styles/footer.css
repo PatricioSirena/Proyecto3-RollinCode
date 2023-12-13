@@ -93,7 +93,40 @@ svg{
 /*===================================================================================*/
 
 @media screen and (min-width: 280px) and (max-width: 285px) {
+  .tituloMapa{
+    font-size: 19px;
 
+  }
+  #mapa{
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+  }
+  .tituloFormulario{
+    font-size: 19px;
+  }
+  .parrafoFormulario{
+    font-size: 13px;
+  }
+  .mensajeFormulario{
+    height: 120px;
+  }
+  .footerRedes{
+    margin-top: -50px;
+  }
+  .logoFooter{
+    width: 170px;
+  }
+  .link_titulo{
+    font-size: 19px;
+  }
+  .links li{
+    color: #000;
+  }
+  svg{
+    width: 35px !important;
+    height: 35px !important;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px){
@@ -132,13 +165,21 @@ svg{
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 640px) {
+@media screen and (min-width: 360px) and (max-width: 361px) {
   .contact{
-    width: 60%;
     margin: 0 auto !important;
   }
-  .map {
-    margin-bottom: 80px;
+  .footerMapa{
+    margin-top: -15px;
+    margin-bottom: -100px;
+  }
+  .parrafoFormulario{
+    width: 70vw;
+    margin-left: -40px;
+  }
+  .mensajeFormulario{
+    width: 70vw;
+    margin-left: -40px;
   }
 }
 
@@ -152,12 +193,18 @@ svg{
   #mapa{
     width: 260px;
     height: 260px;
+    margin-bottom: -20px;
   }
   .tituloFormulario{
     font-size: 25px;
   }
+  .contact{
+    align-items: center;
+  }
   .parrafoFormulario{
-    font-size: 16px;
+    width: 80vw;
+    margin-left: -70px;
+    font-size: 15px;
     margin-bottom: 30px;
   }
   .mensajeFormulario{
@@ -193,8 +240,19 @@ svg{
   }
 }
 
-@media screen and (min-width: 412px) and (max-width: 420px) {
+@media screen and (min-width: 412px) and (max-width: 413px) {
+  .mensajeFormulario{
+      width: 70vw;
+      margin-bottom: 10px;
+      margin-left: -55px;
+  }
+}
 
+@media screen and (min-width: 414px) and (max-width: 420px) {
+  .mensajeFormulario{
+      width: 70vw;
+      margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px){
@@ -207,12 +265,15 @@ svg{
   #mapa{
     width: 260px;
     height: 260px;
+    margin-bottom: -30px;
   }
   .tituloFormulario{
     font-size: 28px;
   }
   .parrafoFormulario{
-    font-size: 18px;
+    width: 80vw;
+    margin-left: -70px;
+    font-size: 16px;
     margin-bottom: 30px;
   }
   .mensajeFormulario{
@@ -238,24 +299,142 @@ svg{
   }
 }
 
-@media screen and (min-width: 430px) and (max-width: 431px){
-
+@media screen and (min-width: 540px) and (max-width: 541px){
+  .parrafoFormulario{
+    margin-left: -85px;
+  }
+  .mensajeFormulario{
+    width: 70vw;
+    margin-left: -60px;
+  }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1023px) {
-
-}
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
+  .footerMapa{
+    margin-bottom: 100px;
+  }
   .contact{
-    width: 60%;
+    /* width: 60%; */
     margin: 0 auto !important;
   }
-  .map {
-    margin-bottom: 80px;
+  .tituloMapa{
+    font-size: 24px;
+  }
+  #mapa{
+    width: 230px;
+    height: 230px;
+    margin-top: 10px;
+  }
+  .tituloFormulario{
+    font-size: 24px;
+  }
+  .parrafoFormulario{
+    width: 80vw;
+    margin-left: -185px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .mensajeFormulario{
+    width: 280px;
+    height: 110px;
+    margin-left: -15px;
+  }
+  .footerRedes{
+    margin-top: -120px;
+  }
+  .logoFooter{
+    margin-top: 60px;
+    width: 200px;
+  }
+  .link_titulo{
+    font-size: 24px;
+  }
+  .links li{
+    color: #000;
+  }
+  svg{
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 821px) {
+  .emailFormulario{
+    width: 230px;
+    margin-left: 17px;
+  }
+  .mensajeFormulario{
+    width: 300px;
+    height: 110px;
+  }
+}
+
+@media screen and (min-width: 912px) and (max-width: 913px) {
+  .parrafoFormulario{
+    margin-left: -200px;
+  }
+  .emailFormulario{
+    width: 230px;
+    margin-left: 40px;
+  }
+  .mensajeFormulario{
+    width: 300px;
+    height: 110px;
+    margin-left: 3px;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px){
+  #mapa{
+    width: 300px;
+    height: 300px;
+  }
+  .contact{
+    align-content: center;
+  }
+  .emailFormulario{
+    margin-left: 45px;
+    width: 250px;
+  }
+  .mensajeFormulario{
+    width: 360px;
+    height: 110px;
+    margin-left: -7px;
+  }
+}
 
+@media screen and (min-width: 1280px) and (max-width: 1281px){
+  #mapa{
+    width: 300px;
+    height: 300px;
+  }
+  .contact{
+    align-content: center;
+  }
+  .emailFormulario{
+    margin-left: 85px;
+    width: 250px;
+  }
+  .mensajeFormulario{
+    width: 360px;
+    height: 130px;
+    margin-left: 35px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1441px){
+  .contact{
+    align-content: center;
+  }
+  .emailFormulario{
+    margin-left: 100px;
+    width: 250px;
+  }
+  .mensajeFormulario{
+    width: 360px;
+    height: 150px;
+    margin-left: 40px;
+    
+  }
 }
