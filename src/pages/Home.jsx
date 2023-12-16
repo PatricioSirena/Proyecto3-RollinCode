@@ -14,10 +14,7 @@ function Home() {
             const navbar = window.document.querySelector('#nav');
             navbar.style.display = 'block';
         }
-        if (window.location.pathname === '/') {
-            const warning = window.document.querySelector('.warning');
-            warning.style.display = 'flex';
-        }
+        
     }, [])
 
 
