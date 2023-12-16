@@ -25,8 +25,8 @@ const MenuFlores = ({isLogueado}) => {
     }, [])
 
     return (
-        <div className="text-center">
-            <h1 className="text-menu mb-5">Flores</h1>
+        <div id="menuFlores" className="text-center">
+            <h1 className="text-menu mb-4">Flores</h1>
             <Container>
                 <Row>
                     {
