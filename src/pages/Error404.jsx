@@ -10,11 +10,7 @@ const Error404 = () => {
             const navbar = document.querySelector('#nav');
             navbar.style.display = 'none';
         }
-        if (window.location.pathname === '/error404') {
-            const warning = document.querySelector('.warning');
-            warning.style.display = 'none';
-        }
-    }, [])
+        }, [])
 
 
 
