@@ -26,7 +26,7 @@ const MenuBebidas = ({isLogueado}) => {
     
     return (
         <div id="menuBebidas" className="text-center">
-            <h1 className="text-menu mb-5">Bebidas</h1>
+            <h1 className="text-menu mb-4">Bebidas</h1>
             <Container>
                 <Row>
                     {

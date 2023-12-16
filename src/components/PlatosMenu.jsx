@@ -73,7 +73,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
                 {
                     cantidadPorItem > 0 && (
                         <Button className='card-button' onClick={() => removerDelCarrito(id)}>
-                            Eliminar
+                            <span>Eliminar</span>
                         </Button>
                     )
                 }
