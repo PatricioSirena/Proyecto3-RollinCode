@@ -7,8 +7,8 @@ import imagen3 from "../img/burguer-tarjeta.jpg";
 const tarjetas = [
     {
         id: 'tarjeta1',
-        titulo: 'Conocé nuestro menú WE MAKE BURGERS',
-        texto: 'Nuestras burgers están hechas con carne 100% Angus.',
+        titulo: 'Productos orgánicos de Productores regionales',
+        texto: 'Todos nuestros platos estan realizados con productos orgánicos y libres de pesticidas, provenientes de granjas y cultivos regionales.',
         imagen: imagen1
     },
     {
