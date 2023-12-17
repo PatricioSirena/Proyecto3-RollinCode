@@ -1,7 +1,7 @@
 import TarjetaInfo from "./TarjetaInfo";
-import imagen1 from "../img/burguer-tarjeta2.jpg";
-import imagen2 from "../img/lata-tarjeta.jpg";
-import imagen3 from "../img/burguer-tarjeta.jpg";
+import imagen1 from "../img/POrg.png";
+import imagen2 from "../img/cerv.png";
+import imagen3 from "../img/flor.png";
 
 
 const tarjetas = [
@@ -13,14 +13,14 @@ const tarjetas = [
     },
     {
         id: 'tarjeta2',
-        titulo: '20% OFF todos los jueves',
-        texto: 'Recibimos todos los medios de pago. :)',
+        titulo: 'Cervezas Artesanales',
+        texto: 'Contamos con una amplia variedad de Cervezas Artesanales y opciones libres de TACC.',
         imagen: imagen2
     },
     {
         id: 'tarjeta3',
-        titulo: 'Burger WARREN la recomendada del día',
-        texto: 'Dos medallones de 100 gr de pollo, doble queso cheddar, tomate, lechuga y nuestra exquisita salsa Ronnie.',
+        titulo: 'Cultivo Seguro',
+        texto: 'Trabajamos con sustratos y productos orgánicos para asegurar calidad y trazabilidad en nuestros cultivos',
         imagen: imagen3
     }
 ]
