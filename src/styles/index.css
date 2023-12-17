@@ -157,10 +157,12 @@ p {
     width: 350px;
     height: 330px;
     margin-top: 3.5%;
-    border-top-left-radius: 10cqw;
+    display: flex;
+    
+    /*border-top-left-radius: 10cqw;
     border-top-right-radius: 10cqw;
     border-bottom-left-radius: 10cqw;
-    border-bottom-right-radius: 10cqw;
+    border-bottom-right-radius: 10cqw;*/
     -webkit-transition: 1s linear;
     transition: 1s linear;
 }
@@ -348,10 +350,6 @@ p {
     .imagenTarjeta {
         width: 260px;
         margin-top: 3.5%;
-        border-top-left-radius: 10cqw;
-        border-top-right-radius: 10cqw;
-        border-bottom-left-radius: 10cqw;
-        border-bottom-right-radius: 10cqw;
         margin: 0 auto;
     }
 
@@ -460,10 +458,6 @@ p {
         width: 210px;
         height: 210px;
         margin-top: 3.5%;
-        border-top-left-radius: 10cqw;
-        border-top-right-radius: 10cqw;
-        border-bottom-left-radius: 10cqw;
-        border-bottom-right-radius: 10cqw;
         margin: 0 auto;
     }
 
@@ -514,10 +508,6 @@ p {
         width: 240px;
         height: 240px;
         margin-top: 3.5%;
-        border-top-left-radius: 10cqw;
-        border-top-right-radius: 10cqw;
-        border-bottom-left-radius: 10cqw;
-        border-bottom-right-radius: 10cqw;
         margin: 0 auto;
     }
 
@@ -867,10 +857,6 @@ p {
         width: 240px;
         height: 240px;
         margin-top: 3.5%;
-        border-top-left-radius: 10cqw;
-        border-top-right-radius: 10cqw;
-        border-bottom-left-radius: 10cqw;
-        border-bottom-right-radius: 10cqw;
         margin: 0 auto;
     }
 }
