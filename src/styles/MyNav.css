@@ -102,9 +102,8 @@
 /*===============================================================================*/
 
 @media screen and (min-width: 280px) and (max-width: 285px) {
-    
     .logoNav {
-        width: 8.2em;
+        width: 6em;
     }
     .logo {
         margin-left: 1%;
