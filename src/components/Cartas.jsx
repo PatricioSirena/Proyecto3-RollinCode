@@ -17,14 +17,14 @@ const cartas = [
         id: 2,
         titulo: 'Bebidas',
         imagen: imagen2,
-        texto: 'Para tomar',
+        texto: 'Para refrescarte',
         url: 'https://instagram.com'
     },
     {
         id: 3,
         titulo: 'Flores',
         imagen: imagen3,
-        texto: 'Para fumar',
+        texto: 'Para disfrutar',
         url: 'https://instagram.com'
     }
 ]
