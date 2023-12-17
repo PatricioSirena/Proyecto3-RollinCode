@@ -1,41 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Inter', sans-serif;
     position: relative;
 }
 
-.text-menu{
+.text-menu {
     font-weight: 700 !important;
     margin-top: 5%;
     color: rgb(51, 110, 93);
     -webkit-transition: color 1s linear;
     transition: color 1s linear;
 }
-.text-menu:hover{
+
+.text-menu:hover {
     color: #161616;
 }
 
 
 .cartaaaa-menu {
-    margin: 0 auto !important;
+    margin: 0 auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     padding: .8em;
     background: #f5f5f5;
     position: relative;
     overflow: visible;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     color: #000000;
 }
+
 .card-info::-webkit-scrollbar {
     display: none !important;
 }
-.card-footer::-webkit-scrollbar{
+
+.card-footer::-webkit-scrollbar {
     display: none !important;
 }
 
@@ -66,7 +69,7 @@ svg {
 }
 
 /*Text*/
-.text-title {
+.priceItem {
     font-weight: 900;
     font-size: 1.2em;
     line-height: 1.5;
@@ -89,7 +92,7 @@ svg {
     margin-left: 2% !important;
 }
 
-svg-icon{
+svg-icon {
     margin: auto !important;
 }
 
@@ -105,14 +108,69 @@ svg-icon{
     background-color: rgb(66, 102, 91) !important;
 }
 
+.accesoMenu {
+    list-style: none;
+    margin-right: 22px;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+.linkMenu a {
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 600;
+    color: rgb(51, 110, 93);
+}
+
 /*********************************************************/
+
+@media screen and (min-width: 280px) and (max-width: 285px) {
+    .linkMenu a {
+        text-decoration: none;
+        font-size: medium;
+        font-weight: 500;
+        margin: 10px;
+    }
+
+    .text-menu {
+        font-size: 25px;
+    }
+
+    .cartaaaa-menu {
+        width: 240px !important;
+        height: 400px !important;
+    }
+
+    .card-footer {
+        height: 120px;
+    }
+
+    .card-button {
+        width: 50px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+    }
+
+    .priceItem {
+        font-size: medium;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {}
+
+
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
     /*(móvil pequeño)*/
-    .cartaaaa-menu{
+    .cartaaaa-menu {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
     .card-button {
@@ -125,21 +183,55 @@ svg-icon{
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg-icon{
+    svg-icon {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1366px) {
+@media screen and (min-width: 375px) and (max-width: 667px) {
 
-    /*(ordenador portátil medio)*/
-    .cartaaaa-menu{
+    /*(móvil medio)*/
+    .cartaaaa-menu {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        display: flex;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 413px) {}
+
+
+@media screen and (min-width: 425px) and (max-width: 767px) {}
+
+
+@media screen and (min-width: 540px) and (max-width: 541px) {}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+    /*(móvil grande)*/
+    .cartaaaa-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .card-button {
@@ -153,58 +245,51 @@ svg-icon{
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg-icon{
+    svg-icon {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);  
+        transform: translate(-50%, -50%);
     }
-
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1920px) {
+@media screen and (min-width: 768px) and (max-width: 1366px) {
 
-    /*(escritorio grande)*/
-    .cartaaaa-menu{
+    /*(ordenador portátil medio)*/
+    .cartaaaa-menu {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    
-}
-
-@media screen and (min-width: 375px) and (max-width: 667px) {
-
-    /*(móvil medio)*/
-    .cartaaaa-menu{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
         padding: 1rem;
+        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg-icon{
+    svg-icon {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
+
 }
+
+@media screen and (min-width: 820px) and (max-width: 821px) {}
+
 
 @media screen and (min-width: 900px) and (max-width: 1440px) {
 
     /*(escritorio medio)*/
-    .cartaaaa-menu{
+    .cartaaaa-menu {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
     .card-button {
@@ -218,36 +303,26 @@ svg-icon{
         background-color: rgb(47, 87, 74) !important;
     }
 
-    svg-icon{
+    svg-icon {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1280px) {
+@media screen and (min-width: 912px) and (max-width: 913px) {}
 
-    /*(móvil grande)*/
-    .cartaaaa-menu{
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {}
+
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+    /*(escritorio grande)*/
+    .cartaaaa-menu {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    .card-button {
-        border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
-        padding: 1rem;
-        /*width: 40%;*/
-        cursor: pointer;
-        border-radius: 50px;
-        transition: .5s ease-in-out;
-        background-color: rgb(47, 87, 74) !important;
-    }
-
-    svg-icon{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
 }

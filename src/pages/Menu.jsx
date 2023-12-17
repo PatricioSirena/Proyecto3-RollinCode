@@ -2,7 +2,6 @@ import MenuComidas from "../components/MenuComidas";
 import MenuBebidas from "../components/MenuBebidas";
 import MenuFlores from "../components/MenuFlores";
 import Footer from "../components/Footer";
-import '../styles/menu.css'
 
 const Menu = ({isLogueado}) => {
 

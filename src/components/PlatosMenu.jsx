@@ -62,7 +62,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
             </div>
             {isLogueado?
             <div className="card-footer">
-                <span className="text-title">${precio ? precio : 'El precio es requerido'}</span>
+                <span className="priceItem">${precio ? precio : 'El precio es requerido'}</span>
 
                 {cantidadPorItem >= 0 && (
                     <Button className="card-button" onClick={() => agregarAlCarrito()}>
