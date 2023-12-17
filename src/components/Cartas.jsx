@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Carta from "./Carta";
-import imagen1 from "../img/burger-1.jpg";
-import imagen2 from "../img/beer.jpg";
-import imagen3 from "../img/flores.jpg";
+import imagen1 from "../img/MenuComida.png";
+import imagen2 from "../img/MenuBebida.png";
+import imagen3 from "../img/MenuFlores.png";
 import '../styles/index.css'
 
 const cartas = [
@@ -33,7 +33,7 @@ const Cartas = () => {
     return (
         <>
             <Container className="containerCartas text-center">
-                    <h1 className="spoiler animate__zoomInLeft">Spoilers que sí.</h1>
+                    <h1 className="spoiler animate__zoomInLeft">Dejate Tentar...</h1>
                 <Row className="rowCartas">
                     {
                         cartas.map((carta) => (
