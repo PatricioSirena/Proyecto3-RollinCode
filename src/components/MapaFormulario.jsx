@@ -38,17 +38,17 @@ const MapaFormulario = () => {
                         loading="lazy">
                     </iframe>
                 </Col>
-                <Col lg={6} md={6} className="align-items-center">
+                <Col lg={6} md={6}>
                     <Form className="contact text-center">
                         <h3 className="tituloFormulario mt-3 mb-3">Contáctanos</h3>
                         <p className="parrafoFormulario">Si tenés alguna consulta, podés escribirnos.<br /> La responderemos lo antes posible.</p>
-                        <Form.Group className="mb-3 formularioEmail">
+                        <Form.Group className="formularioEmail mb-3 text-center">
                             <Form.Label>Email</Form.Label>
                             <Form.Control className="emailFormulario" type="email" placeholder="name@example.com" />
                         </Form.Group>
                         <Form.Group className="mb-3 formularioMensaje text-center" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Mensaje</Form.Label>
-                            <Form.Control as="textarea" placeholder="Mensaje..." className="mensajeFormulario"/>
+                            <Form.Control as="textarea" placeholder="Mensaje..." className="mensajeFormulario" />
                             <Button variant="secondary" className="botonFormulario mt-4" onClick={() => enviarConsulta()}>Enviar</Button>{' '}
                         </Form.Group>
                     </Form>

@@ -22,7 +22,7 @@ body {
 
 
 .cartaaaa-menu {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -82,6 +82,8 @@ svg {
 
 /*Button*/
 .card-button {
+    width: 70px;
+        height: 50px;
     border: 1px solid rgb(47, 87, 74) !important;
     display: flex;
     padding: 1rem;
@@ -89,11 +91,16 @@ svg {
     border-radius: 100px !important;
     transition: .5s ease-in-out;
     background-color: rgb(47, 87, 74) !important;
-    margin-left: 2% !important;
+    /* margin-left: 2% !important; */
 }
 
-svg-icon {
-    margin: auto !important;
+.svg-icon{
+    width: 60px;
+    margin-left: -1px;
+}
+
+.textoEliminar{
+    font-size: 10px;
 }
 
 /*Hover*/
@@ -121,10 +128,22 @@ svg-icon {
     font-weight: 600;
     color: rgb(51, 110, 93);
 }
+.accesoMenu{
+    margin-top: 130px;
+    margin-right: 1.8rem;
+}
+
+.itemCantidad{
+    font-weight: bold;
+}
 
 /*********************************************************/
 
 @media screen and (min-width: 280px) and (max-width: 285px) {
+    .accesoMenu{
+        margin-top: 90px;
+        margin-left: 0.6rem;
+    }
     .linkMenu a {
         text-decoration: none;
         font-size: medium;
@@ -133,16 +152,17 @@ svg-icon {
     }
 
     .text-menu {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .cartaaaa-menu {
-        width: 240px !important;
-        height: 400px !important;
+        width: 230px !important;
+        height: 350px !important;
+        margin-left: 1px;
     }
 
     .card-footer {
-        height: 120px;
+        height: 80px;
     }
 
     .card-button {
@@ -151,36 +171,79 @@ svg-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 8px;
+        margin: 5px;
     }
 
     .priceItem {
-        font-size: medium;
-        font-weight: 700;
-        margin-right: 5px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .svg-icon{
+        width: 40px;
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 374px) {}
+@media screen and (min-width: 320px) and (max-width: 321px) {
+    .accesoMenu{
+        margin-top: 90px;
+        margin-bottom: 30px;
+        margin-left: 8px;
+    }
+    .linkMenu a{
+        font-size: 18px;
+        margin: 13px;
+    }
+    .cartaaaa-menu{
+        width: 80vw !important;
+        height: 370px !important;
+    }
+    .card-footer{
+        height: 90px;
+    }
+    .card-button{
+        width: 60px;
+        height: 40px;
+        margin: 3px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .priceItem{
+        font-size: 17px;
+    }
+}
 
 
-@media screen and (min-width: 360px) and (max-width: 640px) {
+@media screen and (min-width: 360px) and (max-width: 361px) {
 
     /*(móvil pequeño)*/
+    .accesoMenu{
+        margin-top: 80px;
+        margin-left: 5px;
+    }
+    .linkMenu a{
+        font-size: 20px;
+        margin: 15px;
+    }
     .cartaaaa-menu {
+        width: 300px !important;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
+    .card-footer{
+        height: 110px;
+    }
+
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        width: 35% !important;
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
+        margin: 0.2rem;
     }
 
     svg-icon {
@@ -191,25 +254,45 @@ svg-icon {
 
 }
 
-@media screen and (min-width: 375px) and (max-width: 667px) {
+@media screen and (min-width: 375px) and (max-width: 380px) {
 
     /*(móvil medio)*/
+    .accesoMenu{
+        margin-top: 90px;
+        margin-left: 6px;
+    }
+    .linkMenu a{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .text-menu{
+        margin-top: 35px;
+    }
     .cartaaaa-menu {
+        width: 80vw !important;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .card-button {
+        width: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
-        padding: 1rem;
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
         background-color: rgb(47, 87, 74) !important;
     }
-
+    .card-footer{
+        height: 100px;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
     svg-icon {
         top: 50%;
         left: 50%;
@@ -217,13 +300,83 @@ svg-icon {
     }
 }
 
-@media screen and (min-width: 412px) and (max-width: 413px) {}
+@media screen and (min-width: 412px) and (max-width: 413px) {
+    .accesoMenu{
+        margin-top: 90px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
+    .card-footer{
+        height: 110px;
+    }
+    .card-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textoEliminar{
+        font-size: 13px;
+    }
+}
 
+@media screen and (min-width: 425px) and (max-width: 426px) {
+    .card-footer{
+        height: 100px;
+    }
+    .card-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+}
 
-@media screen and (min-width: 425px) and (max-width: 767px) {}
-
-
-@media screen and (min-width: 540px) and (max-width: 541px) {}
+@media screen and (min-width: 540px) and (max-width: 541px) {
+    .accesoMenu{
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
+    .cartaaaa-menu{
+        width: 75vw !important;
+        height: 550px !important;
+    }
+    .text-title{
+        font-size: 30px;
+    }
+    .card-info{
+        font-size: large;
+    }
+    .card-footer{
+        height: 140px;
+    }
+    .card-button{
+        margin: 10px;
+        width: 100px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .svg-icon{
+        width: 80px;
+    }
+    .textoEliminar{
+        font-size: 20px;
+    }
+    .priceItem{
+        font-size: 23px;
+    }
+    .itemCantidad{
+        font-size: 23px;
+        font-weight: bold;
+    }
+}
 
 @media screen and (min-width: 720px) and (max-width: 1280px) {
 
@@ -252,18 +405,29 @@ svg-icon {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1366px) {
+@media screen and (min-width: 768px) and (max-width: 770px) {
 
     /*(ordenador portátil medio)*/
+    .accesoMenu{
+        margin-top: 100px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
     .cartaaaa-menu {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .card-footer{
+        height: 100px;
+    }
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
         display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 1rem;
         /*width: 40%;*/
         cursor: pointer;
@@ -277,7 +441,9 @@ svg-icon {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
+    .textoEliminar{
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 820px) and (max-width: 821px) {}
@@ -313,7 +479,25 @@ svg-icon {
 @media screen and (min-width: 912px) and (max-width: 913px) {}
 
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .accesoMenu{
+        margin-top: 130px;
+    }
+    .card-footer{
+        height: 110px;
+    }
+    .card-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .svg-icon{
+        width: 55px;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+}
 
 
 @media screen and (min-width: 1080px) and (max-width: 1920px) {

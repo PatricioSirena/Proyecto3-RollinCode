@@ -195,15 +195,15 @@
 }
 
 @keyframes move-up6 {
-  to {
-    transform: translateY(-20px);
-  }
+    to {
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes move-down1 {
-  to {
-    transform: translateY(20px);
-  }
+    to {
+        transform: translateY(20px);
+    }
 }
 
 /*===================================================================================*/
@@ -211,11 +211,6 @@
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
     /*(móvil pequeño)*/
-    .row {
-        padding: 45px;
-        /*con esto modifico el ancho*/
-    }
-
     .wrapper {
         position: relative;
         width: 360px;

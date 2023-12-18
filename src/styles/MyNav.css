@@ -42,13 +42,14 @@
     justify-content: center;
     width: 40px;
     margin-right: 2% !important;
+    background-color: rgba(255, 255, 255, 0.178);
 }
 
 #hamburguesa {
     margin-right: 2% !important;
     border: transparent;
     transition: transform 0.4s ease;
-    background-color: #ffffff94;
+    background-color: #ffffff69;
 }
 
 .navbar-toggler {

@@ -53,7 +53,7 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
 
     return (
 
-        <Card className='cartaaaa-menu text-center' style={{ width: '21rem', height: '27rem' }}>
+        <Card className='cartaaaa-menu text-center mt-3' style={{ width: '21rem', height: '27rem' }}>
             <CardImg className='imagen-menu' variant="top" src={imgSource ? imgSource : 'La imagen es requerida'} ></CardImg>
 
             <div className="card-info">
@@ -66,19 +66,19 @@ const PlatosMenu = ({ titulo, text, imgSource, precio, id, isLogueado }) => {
 
                 {cantidadPorItem >= 0 && (
                     <Button className="card-button" onClick={() => agregarAlCarrito()}>
-                        <img src={carritoBlanco} style={{width: '40px'}} className='svg-icon' alt="" />
+                        <img src={carritoBlanco} className='svg-icon' alt="" />
                     </Button>
                 )
                 }
                 {
                     cantidadPorItem > 0 && (
                         <Button className='card-button' onClick={() => removerDelCarrito(id)}>
-                            <span>Eliminar</span>
+                            <span className='textoEliminar'>Eliminar</span>
                         </Button>
                     )
                 }
                 {cantidadPorItem > 0 && (
-                    <div>{cantidadPorItem}</div>)}
+                    <div className='itemCantidad'>{cantidadPorItem}</div>)}
             </div>
             : <span>Debe loguearse para poder agrear platos al carrito</span>}
         </Card>
