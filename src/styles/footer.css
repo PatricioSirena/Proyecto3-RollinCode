@@ -254,7 +254,6 @@ svg{
 
 @media screen and (min-width: 414px) and (max-width: 420px) {
   .mensajeFormulario{
-      width: 70vw;
       margin-bottom: 10px;
   }
 }

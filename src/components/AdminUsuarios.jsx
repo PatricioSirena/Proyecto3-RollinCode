@@ -1,4 +1,3 @@
-import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import { methGetUsers, methGetOneUser, methUpdateUser } from '../helpers/index'
 import Swal from "sweetalert2";

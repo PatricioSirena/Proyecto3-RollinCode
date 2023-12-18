@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form'
-import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -129,7 +128,7 @@ const AdminMenu = () => {
             <h3 className='mt-5 mb-2'>Productos</h3>
 
             <div className='w-100 text-center mb-3'>
-                <Button onClick={handleShow}>
+                <Button className='btnAgregar' onClick={handleShow}>
                     Agregar Plato
                 </Button>
             </div>
@@ -244,10 +243,9 @@ const AdminMenu = () => {
                             />
                         </div>
 
-                        <div className='botones'>
+                        <div className='botonesModal'>
                             <button className='btn btn-dark' type='submit'>Guardar</button>
                             <button className='btn btn-secondary' onClick={handleClose}>Cancelar</button>
-
                         </div>
 
                     </form>
@@ -366,7 +364,7 @@ const AdminMenu = () => {
                         />
                         {errors.imagen && <span>{errors.imagen.message}</span>}
 
-                        <div className='botones'>
+                        <div className='botonesModal'>
                             <button className='btn btn-dark' onClick={() => editar()}>Actualizar</button>
                             <button className='btn btn-secondary' onClick={() => setModalEditar(false)}>Cancelar</button>
                         </div>
@@ -387,7 +385,7 @@ const AdminMenu = () => {
                 <div className='text-center'>
                     <p>{platoSeleccionado.titulo}</p>
                 </div>
-                <div className='botonesEliminar d-flex justify-content-center'>
+                <div className='botonesModal d-flex justify-content-center'>
                     <button className='btn btn-danger' onClick={() => eliminar()}>Eliminar</button>
                     <button className='btn btn-secondary' onClick={() => setModalEliminar(false)}>Cancelar</button>
                 </div>

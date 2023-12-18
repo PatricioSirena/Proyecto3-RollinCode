@@ -3,6 +3,7 @@ import AdminMenu from "../components/AdminMenu"
 import AdminPedidos from "../components/AdminPedidos"
 import AdminUsuarios from "../components/AdminUsuarios"
 import { Navigate } from "react-router-dom"
+import '../styles/administrador.css'
 
 const Administrador = () => {
 
@@ -16,8 +17,8 @@ const Administrador = () => {
         return <Navigate to={'/'} />
     } else {
         return (
-            <>
-                <Container fluid className="mt-4">
+            <div className="containerAdmin">
+                <Container fluid>
                     <Row>
                         <Col>
                             <AdminPedidos />
@@ -28,7 +29,7 @@ const Administrador = () => {
                     </Row>
                 </Container>
                 <AdminMenu className="mt-5"/>
-            </>
+            </div>
         )
     }
 }

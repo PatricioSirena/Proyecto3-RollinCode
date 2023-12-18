@@ -1,4 +1,3 @@
-import '../styles/administrador.css'
 import { useEffect, useState } from 'react';
 import { methGetOneOrder, methGetOrders, methUpdateOrder, methDeleteOneOrder } from '../helpers/index'
 import Modal from 'react-bootstrap/Modal';

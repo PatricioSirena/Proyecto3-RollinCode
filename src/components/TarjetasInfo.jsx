@@ -31,7 +31,7 @@ const TarjetasInfo = () => {
         <>
             {
                 tarjetas.map(tarjeta => (
-                    <div key={tarjeta.id}>
+                    <div className="mt-5" key={tarjeta.id}>
                         <TarjetaInfo
                             id={tarjeta.id}
                             titulo={tarjeta.titulo}

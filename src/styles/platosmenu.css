@@ -83,9 +83,11 @@ svg {
 /*Button*/
 .card-button {
     width: 70px;
-        height: 50px;
+    height: 50px;
     border: 1px solid rgb(47, 87, 74) !important;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     cursor: pointer;
     border-radius: 100px !important;
@@ -168,9 +170,6 @@ svg {
     .card-button {
         width: 50px;
         height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin: 5px;
     }
 
@@ -204,9 +203,6 @@ svg {
         width: 60px;
         height: 40px;
         margin: 3px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
     }
     .priceItem{
         font-size: 17px;
@@ -218,7 +214,7 @@ svg {
 
     /*(móvil pequeño)*/
     .accesoMenu{
-        margin-top: 80px;
+        margin-top: 100px;
         margin-left: 5px;
     }
     .linkMenu a{
@@ -238,7 +234,6 @@ svg {
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
@@ -254,7 +249,7 @@ svg {
 
 }
 
-@media screen and (min-width: 375px) and (max-width: 380px) {
+@media screen and (min-width: 375px) and (max-width: 391px) {
 
     /*(móvil medio)*/
     .accesoMenu{
@@ -277,11 +272,7 @@ svg {
 
     .card-button {
         width: 65px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
@@ -300,7 +291,7 @@ svg {
     }
 }
 
-@media screen and (min-width: 412px) and (max-width: 413px) {
+@media screen and (min-width: 412px) and (max-width: 415px) {
     .accesoMenu{
         margin-top: 90px;
     }
@@ -310,24 +301,14 @@ svg {
     .card-footer{
         height: 110px;
     }
-    .card-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .textoEliminar{
         font-size: 13px;
     }
 }
 
-@media screen and (min-width: 425px) and (max-width: 426px) {
+@media screen and (min-width: 425px) and (max-width: 431px) {
     .card-footer{
         height: 100px;
-    }
-    .card-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .textoEliminar{
         font-size: 15px;
@@ -359,9 +340,6 @@ svg {
         margin: 10px;
         width: 100px;
         height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .svg-icon{
         width: 80px;
@@ -389,9 +367,7 @@ svg {
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
         padding: 1rem;
-        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
@@ -425,11 +401,7 @@ svg {
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 1rem;
-        /*width: 40%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
@@ -460,9 +432,7 @@ svg {
 
     .card-button {
         border: 1px solid rgb(47, 87, 74) !important;
-        display: flex;
         padding: 1rem;
-        /*width: 50%;*/
         cursor: pointer;
         border-radius: 50px;
         transition: .5s ease-in-out;
@@ -485,11 +455,6 @@ svg {
     }
     .card-footer{
         height: 110px;
-    }
-    .card-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .svg-icon{
         width: 55px;
