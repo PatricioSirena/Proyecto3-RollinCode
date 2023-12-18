@@ -7,12 +7,12 @@ const Carta = ({ titulo, text, imgSource, url }) => {
         <Card className='carta-index text-center bg-transparent border-dark'>
             <Card.Img className='imagen-carta-principal' src={imgSource ? imgSource : 'La imagen es requerida'} />
             <Card.Body className='cuerpoTarjeta'>
-                <Card.Title className='tituloCarta'>{titulo ? titulo : 'Pone el titulo carnero astudo'}</Card.Title>
+                <Card.Title className='tituloCarta'>{titulo ? titulo : 'El título es requerido'}</Card.Title>
                 <Card.Text className='textoCarta'>
                     {text ? text : 'El texto es requerido'}
                 </Card.Text>
                 <Button className='btn-dark botonCarta' variant="primary">
-                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Ver más</a>
+                    <a href={url ? url : '#!'} target='_blank' rel='noreferrer'>Ver Todo!</a>
                 </Button>
             </Card.Body>
         </Card>
