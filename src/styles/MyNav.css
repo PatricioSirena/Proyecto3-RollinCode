@@ -223,14 +223,16 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-   
+@media screen and (min-width: 1024px) and (max-width: 1435px) {
     .logoNav {
-        width: 9.2em;
+        width: 9em;
     }
 
     .logo {
         margin-left: 1%;
         margin-right: 1%;
+    }
+    .botonCarrito{
+        margin-right: 10px;
     }
 }

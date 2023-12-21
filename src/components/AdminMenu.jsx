@@ -81,7 +81,7 @@ const AdminMenu = () => {
         });
         Toast.fire({
             icon: 'success',
-            title: 'Plato editado con exito!'
+            title: 'Item editado con exito!'
         })
         methUpdate(platoSeleccionado.id, platoSeleccionado);
         setModalEditar(false)
@@ -125,9 +125,9 @@ const AdminMenu = () => {
     return (
         <>
 
-            <h3 className='mt-5 mb-2'>Productos</h3>
+            <h3 id='productos' className='mt-5 mb-4'>Productos</h3>
 
-            <div className='w-100 text-center mb-3'>
+            <div className='text-center mb-4'>
                 <Button className='btnAgregar' onClick={handleShow}>
                     Agregar Plato
                 </Button>
@@ -162,7 +162,7 @@ const AdminMenu = () => {
                             name='titulo'
                             type="text"
                         />
-                        {errors.titulo && <span>{errors.titulo.message}</span>}
+                        {errors.titulo && <span className='errorModal'>{errors.titulo.message}</span>}
 
                         <label htmlFor="precio">Precio</label>
                         <input
@@ -181,7 +181,7 @@ const AdminMenu = () => {
                             type="text"
                             name='precio'
                         />
-                        {errors.precio && <span>{errors.precio.message}</span>}
+                        {errors.precio && <span className='errorModal'>{errors.precio.message}</span>}
 
                         <label htmlFor="texto">Descripción</label>
                         <input
@@ -200,7 +200,7 @@ const AdminMenu = () => {
                             type="text"
                             name='texto'
                         />
-                        {errors.texto && <span>{errors.texto.message}</span>}
+                        {errors.texto && <span className='errorModal'>{errors.texto.message}</span>}
 
                         <label htmlFor="categoria">Categoria</label>
                         <select
@@ -218,7 +218,7 @@ const AdminMenu = () => {
                             <option value="bebida">Bebida</option>
                             <option value="flor">Flor</option>
                         </select>
-                        {errors.categoria && <span>{errors.categoria.message}</span>}
+                        {errors.categoria && <span className='errorModal'>{errors.categoria.message}</span>}
 
                         <label htmlFor="imagen">URL Imagen</label>
                         <input
@@ -232,7 +232,7 @@ const AdminMenu = () => {
                             type="text"
                             name='imagen'
                         />
-                        {errors.imagen && <span>{errors.imagen.message}</span>}
+                        {errors.imagen && <span className='errorModal'>{errors.imagen.message}</span>}
 
                         <div className='platoActivo mt-3'>
                             <label htmlFor="activo">Publicar</label>
@@ -244,8 +244,8 @@ const AdminMenu = () => {
                         </div>
 
                         <div className='botonesModal'>
-                            <button className='btn btn-dark' type='submit'>Guardar</button>
-                            <button className='btn btn-secondary' onClick={handleClose}>Cancelar</button>
+                            <button className='btn btn-dark m-1' type='submit'>Guardar</button>
+                            <button className='btn btn-secondary m-1' onClick={handleClose}>Cancelar</button>
                         </div>
 
                     </form>
@@ -283,7 +283,7 @@ const AdminMenu = () => {
                             value={platoSeleccionado && platoSeleccionado.titulo}
                             onChange={handleChange}
                         />
-                        {errors.titulo && <span>{errors.titulo.message}</span>}
+                        {errors.titulo && <span className='errorModal'>{errors.titulo.message}</span>}
 
                         <label htmlFor="precio">Precio</label>
                         <input
@@ -304,7 +304,7 @@ const AdminMenu = () => {
                             value={platoSeleccionado && platoSeleccionado.precio}
                             onChange={handleChange}
                         />
-                        {errors.precio && <span>{errors.precio.message}</span>}
+                        {errors.precio && <span className='errorModal'>{errors.precio.message}</span>}
 
                         <label htmlFor="texto">Descripción</label>
                         <input
@@ -325,7 +325,7 @@ const AdminMenu = () => {
                             value={platoSeleccionado && platoSeleccionado.texto}
                             onChange={handleChange}
                         />
-                        {errors.texto && <span>{errors.texto.message}</span>}
+                        {errors.texto && <span className='errorModal'>{errors.texto.message}</span>}
 
                         <label htmlFor="categoria">Categoria</label>
                         <select
@@ -345,7 +345,7 @@ const AdminMenu = () => {
                             <option value="bebida">Bebida</option>
                             <option value="flor">Flor</option>
                         </select>
-                        {errors.categoria && <span>{errors.categoria.message}</span>}
+                        {errors.categoria && <span className='errorModal'>{errors.categoria.message}</span>}
 
                         <label htmlFor="imagen">URL Imagen</label>
                         <input
@@ -362,11 +362,11 @@ const AdminMenu = () => {
                             value={platoSeleccionado && platoSeleccionado.imagen}
                             onChange={handleChange}
                         />
-                        {errors.imagen && <span>{errors.imagen.message}</span>}
+                        {errors.imagen && <span className='errorModal'>{errors.imagen.message}</span>}
 
                         <div className='botonesModal'>
-                            <button className='btn btn-dark' onClick={() => editar()}>Actualizar</button>
-                            <button className='btn btn-secondary' onClick={() => setModalEditar(false)}>Cancelar</button>
+                            <button className='btn btn-dark m-1' onClick={() => editar()}>Actualizar</button>
+                            <button className='btn btn-secondary m-1' onClick={() => setModalEditar(false)}>Cancelar</button>
                         </div>
                     </form>
                 </div>
@@ -386,35 +386,33 @@ const AdminMenu = () => {
                     <p>{platoSeleccionado.titulo}</p>
                 </div>
                 <div className='botonesModal d-flex justify-content-center'>
-                    <button className='btn btn-danger' onClick={() => eliminar()}>Eliminar</button>
-                    <button className='btn btn-secondary' onClick={() => setModalEliminar(false)}>Cancelar</button>
+                    <button className='btn btn-danger m-1' onClick={() => eliminar()}>Eliminar</button>
+                    <button className='btn btn-secondary m-1' onClick={() => setModalEliminar(false)}>Cancelar</button>
                 </div>
             </Modal>
 
-            <table className='container table table-bordered'>
+            <table className='table container-fluid'>
                 <thead>
-                    <tr className='text-center'>
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Descripción</th>
                         <th>Categoria</th>
                         <th>Publicado</th>
                         <th>Acciones</th>
-                    </tr>
                 </thead>
                 <tbody>
                     {
                         menu.map(plato => (
                             <tr className='text-center' key={plato.id}>
-                                <td>{plato.titulo}</td>
-                                <td>${plato.precio}</td>
-                                <td>{plato.texto}</td>
-                                <td>{plato.categoria}</td>
-                                <td>{plato.activo ? <button className='btn btn-danger' onClick={() => cambiarActivo(plato)}>No Publicar</button>
-                                    : <button className='btn btn-dark' onClick={() => cambiarActivo(plato)}>Publicar</button>}</td>
-                                <td className='text-center d-flex justify-content-center'>
-                                    <button className='btn btn-dark' onClick={() => seleccionarPlato(plato, 'Editar')}>Editar</button>
-                                    <button className='btn btn-danger' onClick={() => seleccionarPlato(plato, 'Eliminar')}>Eliminar</button>
+                                <td data-label='Nombre'>{plato.titulo}</td>
+                                <td data-label='Precio'>${plato.precio}</td>
+                                <td data-label='Descripción'>{plato.texto}</td>
+                                <td data-label='Categoria'>{plato.categoria}</td>
+                                <td data-label='Publicado'>{plato.activo ? <button className='botonAdmin btn btn-danger' onClick={() => cambiarActivo(plato)}>No Publicar</button>
+                                    : <button className='botonAdmin btn btn-dark' onClick={() => cambiarActivo(plato)}>Publicar</button>}</td>
+                                <td data-label='Acciones'>
+                                    <button className='botonAdmin btn btn-dark' onClick={() => seleccionarPlato(plato, 'Editar')}>Editar</button>
+                                    <button className='botonAdmin btn btn-danger' onClick={() => seleccionarPlato(plato, 'Eliminar')}>Eliminar</button>
                                 </td>
                             </tr>
                         ))

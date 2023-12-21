@@ -79,31 +79,29 @@ const AdminPedidos = () => {
                     <p>{pedidoSeleccionado.platos}</p>
                 </div>
                 <div className='botonesEliminar d-flex justify-content-center'>
-                    <button className='btn btn-danger' onClick={() => eliminarPedido(pedidoSeleccionado)}>Eliminar</button>
-                    <button className='btn btn-secondary' onClick={() => setModalEliminar(false)}>Cancelar</button>
+                    <button className='btn btn-danger m-2' onClick={() => eliminarPedido(pedidoSeleccionado)}>Eliminar</button>
+                    <button className='btn btn-secondary m-2' onClick={() => setModalEliminar(false)}>Cancelar</button>
                 </div>
             </Modal>
+        
+            <h3 id='pedidos' className='mb-3'>Pedidos</h3>
 
-            <h3 className='mb-3'>Pedidos</h3>
-
-            <table className='container-fluid table table-bordered'>
+            <table className='table'>
                 <thead>
-                    <tr className='text-center'>
                         <th>Usuario</th>
                         <th>Pedido</th>
                         <th>Costo</th>
                         <th>Aceptar/Rechazar</th>
-                    </tr>
                 </thead>
                 <tbody>
                     {
                         pedidos.map(pedido => (
                             <tr className='text-center' key={pedido.id}>
-                                <td>{pedido.usuario}</td>
-                                <td>{pedido.platos}</td>
-                                <td>{pedido.precio}</td>
-                                <td><button className='btn btn-dark' onClick={() => aceptarPedido(pedido)}>Aceptar</button>
-                                    <button className='btn btn-danger' onClick={() => seleccionarPedido(pedido)}>Rechazar</button></td>
+                                <td data-label='Usuario'>{pedido.usuario}</td>
+                                <td data-label='Pedido'>{pedido.platos}</td>
+                                <td data-label='Costo'>{pedido.precio}</td>
+                                <td data-label='Aceptar/Rechazar'><button className='botonAdmin btn btn-dark' onClick={() => aceptarPedido(pedido)}>Aceptar</button>
+                                    <button className='botonAdmin btn btn-danger' onClick={() => seleccionarPedido(pedido)}>Rechazar</button></td>
                             </tr>
                         ))
                     }

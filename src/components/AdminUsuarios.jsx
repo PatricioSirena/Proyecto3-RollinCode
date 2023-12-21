@@ -68,29 +68,27 @@ const AdminUsuarios = () => {
     return (
         <>
 
-            <h3 className='mb-3'>Usuarios</h3>
+            <h3 id='usuarios' className='mb-3'>Usuarios</h3>
 
-            <table className='container-fluid w-50 table table-bordered'>
+            <table className='table'>
                 <thead>
-                    <tr className='text-center'>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
                         <th>Usuario/Administrador</th>
                         <th>Activar/Desactivar</th>
-                    </tr>
                 </thead>
                 <tbody>
                     {
                         users.map(user => (
                             <tr className='text-center' key={user.uid}>
-                                <td>{user.nombre}</td>
-                                <td>{user.apellido}</td>
-                                <td>{user.correo}</td>
-                                <td>{user.admin ? <button className='btn btn-dark' onClick={() => cambiarAdmin(user)}>Hacer Usuario</button>
-                                    : <button className='btn btn-danger' onClick={() => cambiarAdmin(user)}>Hacer Admin</button>}</td>
-                                <td>{user.activo ? <button className='btn btn-dark' onClick={() => cambiarActivo(user)}>Desactivar</button>
-                                    : <button className='btn btn-danger' onClick={() => cambiarActivo(user)}>Activar</button>}</td>
+                                <td data-label='Nombre'>{user.nombre}</td>
+                                <td data-label='Apellido'>{user.apellido}</td>
+                                <td data-label='Correo'>{user.correo}</td>
+                                <td data-label='Usuario/Admin'>{user.admin ? <button className='botonAdmin btn btn-dark' onClick={() => cambiarAdmin(user)}>Hacer Usuario</button>
+                                    : <button className='botonAdmin btn btn-danger' onClick={() => cambiarAdmin(user)}>Hacer Admin</button>}</td>
+                                <td data-label='Activar/Desactivar'>{user.activo ? <button className='botonAdmin btn btn-dark' onClick={() => cambiarActivo(user)}>Desactivar</button>
+                                    : <button className='botonAdmin btn btn-danger' onClick={() => cambiarActivo(user)}>Activar</button>}</td>
                             </tr>
                         ))
                     }
