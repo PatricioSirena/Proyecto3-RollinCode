@@ -150,3 +150,9 @@ label {
         border: 1px solid rgba(209, 207, 207, 0.24);
     }
 }
+
+@media (max-width: 320px){
+    .accesosAdmin{
+        font-size: 16px;
+    }
+}

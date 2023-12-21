@@ -27,10 +27,10 @@ const Administrador = () => {
                 </div>
                 <Container fluid>
                     <Row>
-                        <Col xl={6} lg={12} md={12} sm={6} className='componentePedidos'>
+                        <Col xl={6} lg={12} md={12} sm={6} className='componentePedidos text-center'>
                             <AdminPedidos />
                         </Col>
-                        <Col xl={6} lg={12} md={12} sm={6} >
+                        <Col xl={6} lg={12} md={12} sm={6} className='componenteUsuaruis text-center' >
                             <AdminUsuarios />
                         </Col>
                     </Row>
