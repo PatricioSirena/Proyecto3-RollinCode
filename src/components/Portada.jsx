@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import { Row, Col, Container } from 'react-bootstrap';
 import Proptypes from 'prop-types'
-import HappyBurger from '../img/portada_burger.jpg'
+import HappyBurger from '../img/Porta.png'
 import LogoYunga from '../img/happy-yunga.jpg'
 import '../styles/portada.css'
 
