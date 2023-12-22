@@ -22,11 +22,8 @@ const Error404 = () => {
                 <div><p id='texto-arriba'>UPS! PAGINA NO ENCONTRADA.</p></div>
                 <div className='div-texto-abajo'><p id='texto-abajo'>Lo sentimos. La pagina que estas buscando no fue encontrada o no existe.</p></div>
                 <Link to="/" className='link'>
-                    <button className='botones' id='boton1'>Ir a la página de inicio</button>
+                    <button id='boton1' className='botones'>Ir a la página de inicio</button>
                 </Link>
-                {/* <Link to="/login" className='report'>
-                <button className='botones' id='boton2'>Reportar problema</button>
-            </Link> */}
             </div>
         </>
     );

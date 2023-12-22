@@ -87,7 +87,7 @@
 
 /*********************************************************/
 
-@media screen and (min-width: 280px) and (max-width: 285px) {
+@media screen and (min-width: 260px) and (max-width: 319px) {
     .containerPortada {
         height: 600px;
         margin-top: 21%;
@@ -128,6 +128,7 @@
 @media screen and (min-width: 320px) and (max-width: 374px){
     .containerPortada{
         height: 540px;
+        margin-top: 56px;
         margin-bottom: 2%;
     }
     .container-txt{
@@ -288,6 +289,7 @@
 @media screen and (min-width: 425px) and (max-width: 767px){
     .containerPortada{
         height: 600px;
+        margin-top: 56px;
         margin-bottom: 2%;
     }
     .container-txt{
@@ -339,7 +341,7 @@
     }
 }
 
-@media screen and (min-width: 540px) and (max-width: 541px){
+@media screen and (min-width: 540px) and (max-width: 690px){
     .containerPortada{
         height: 520px;
         margin-bottom: 2%;
@@ -421,7 +423,7 @@
     .containerPortada{
         height: 500px;
         margin-bottom: 2%;
-        margin-top: 60px;
+        margin-top: 56px;
     }
     .container-txt{
         margin: 0 auto;
@@ -447,9 +449,9 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1440px){
     .containerPortada{
-        height: 550px;
+        height: 500px;
         margin-bottom: 2%;
-        margin-top: 6   5px;
+        margin-top: 59px;
     }
     .container-txt{
         margin: 0 auto;

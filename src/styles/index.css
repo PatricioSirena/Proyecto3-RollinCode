@@ -148,7 +148,7 @@ p {
     height: 60vh;
     color: rgb(10, 10, 10) !important;
     margin-top: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 10%;
     vertical-align: middle !important;
     justify-content: center !important;
 }
@@ -158,11 +158,6 @@ p {
     height: 330px;
     margin-top: 3.5%;
     display: flex;
-    
-    /*border-top-left-radius: 10cqw;
-    border-top-right-radius: 10cqw;
-    border-bottom-left-radius: 10cqw;
-    border-bottom-right-radius: 10cqw;*/
     -webkit-transition: 1s linear;
     transition: 1s linear;
 }
@@ -293,6 +288,10 @@ p {
     padding: 10%;
 }
 
+.cuerpoTarjeta{
+    margin-top: 4%;
+}
+
 /*===================================================================================*/
 
 @media screen and (min-width: 280px) and (max-width: 281px) {
@@ -333,10 +332,21 @@ p {
     .pp{
         font-size: 13px;
     }
+    .dos{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
     .imagenTarjeta{
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         margin-top: -10px;
+    }
+    .cuerpoTarjeta{
+        margin-top: 1%;
+    }
+    .rowCartas{
+        margin-bottom: -20%;
     }
 }
 
@@ -796,25 +806,25 @@ p {
 
     .botonCarta a {
         display: block;
-        font-size: 11px;
+        font-size: 9px;
         align-items: center;
     }
     .tarjetaInfo{
-        height: 260px;
+        height: 340px;
         margin-top: -5px;
     }
     .card_tittle{
-        font-size: 13px;
-        margin-top: -35px;
+        font-size: 20px;
+        /* margin-top: -35px; */
     }
     .pp{
-        margin-top: -8px;
-        font-size: 9px;
+        /* margin-top: -8px; */
+        font-size: 14px;
     }
     .imagenTarjeta{
         margin-top: -8px;
-        width: 140px;
-        height: 140px;
+        width: 170px;
+        height: 170px;
     }
 }
 
@@ -843,7 +853,7 @@ p {
 
     .botonCarta a {
         display: block;
-        font-size: 11px;
+        font-size: 9px;
         align-items: center;
     }
 }
@@ -858,5 +868,8 @@ p {
         height: 240px;
         margin-top: 3.5%;
         margin: 0 auto;
+    }
+    .cuerpoTarjeta{
+        margin-top: 2%;
     }
 }
