@@ -156,3 +156,13 @@ label {
         font-size: 16px;
     }
 }
+
+@media (min-width: 1200px){
+    .componentePedidos,
+    .componenteUsuaruis{
+        margin-left: 20px;
+    }
+    #usuarios{
+        margin-left: 140px;
+    }
+}

@@ -307,6 +307,10 @@ svg {
 }
 
 @media screen and (min-width: 425px) and (max-width: 431px) {
+    .accesoMenu{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
     .card-footer{
         height: 100px;
     }

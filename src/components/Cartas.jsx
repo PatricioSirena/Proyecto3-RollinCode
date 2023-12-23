@@ -11,21 +11,21 @@ const cartas = [
         titulo: 'Comidas',
         imagen: imagen1,
         texto: 'Para bajonear',
-        url: 'https://instagram.com'
+        url: '/menu'
     },
     {
         id: 2,
         titulo: 'Bebidas',
         imagen: imagen2,
         texto: 'Para refrescarte',
-        url: 'https://instagram.com'
+        url: '/menu'
     },
     {
         id: 3,
         titulo: 'Flores',
         imagen: imagen3,
         texto: 'Para disfrutar',
-        url: 'https://instagram.com'
+        url: '/menu'
     }
 ]
 
