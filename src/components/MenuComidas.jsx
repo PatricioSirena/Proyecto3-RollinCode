@@ -8,12 +8,14 @@ const MenuComidas = ({isLogueado}) => {
 
     useEffect(() => {
         methGet()
-            .then((datos) => {return datos.data.data })
+            .then((datos) => {
+                console.log(datos.data.data);
+                return datos.data.data })
             .then((response) => {
                 function filtrarPorCategoria(objetos, categoria) {
                     let filtrados = [];
                     for (let i = 0; i < objetos.length; i++) {
-                        if (objetos[i].categoria === categoria) {
+                        if (objetos[i].categoria === categoria && objetos[i].activo == true) {
                             filtrados.push(objetos[i]);
                         }
                     }

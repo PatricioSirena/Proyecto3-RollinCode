@@ -52,6 +52,8 @@ body {
 
 .card-info {
     padding-top: 10%;
+    height: 35%;
+    text-wrap: balance;
 }
 
 svg {
