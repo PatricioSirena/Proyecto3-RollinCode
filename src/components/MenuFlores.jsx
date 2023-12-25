@@ -13,7 +13,7 @@ const MenuFlores = ({isLogueado}) => {
                 function filtrarPorCategoria(objetos, categoria) {
                     let filtrados = [];
                     for (let i = 0; i < objetos.length; i++) {
-                        if (objetos[i].categoria === categoria) {
+                        if (objetos[i].categoria === categoria && objetos[i].activo == true) {
                             filtrados.push(objetos[i]);
                         }
                     }
