@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Carta from "./Carta";
-import imagen1 from "../img/MenuComida.png";
-import imagen2 from "../img/MenuBebida.png";
-import imagen3 from "../img/MenuFlores.png";
+import imagen1 from "../img/MenuComida.jpg";
+import imagen2 from "../img/MenuBebida.jpg";
+import imagen3 from "../img/MenuFlores.jpg";
 import '../styles/index.css'
 
 const cartas = [
