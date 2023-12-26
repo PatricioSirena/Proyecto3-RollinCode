@@ -59,7 +59,7 @@ const AdminPedidos = () => {
             title: 'Pedido eliminado!'
         })
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 

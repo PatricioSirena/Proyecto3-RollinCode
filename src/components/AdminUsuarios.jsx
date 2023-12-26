@@ -41,7 +41,7 @@ const AdminUsuarios = () => {
                 })
             })
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 
@@ -61,7 +61,7 @@ const AdminUsuarios = () => {
                 })
             })
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 

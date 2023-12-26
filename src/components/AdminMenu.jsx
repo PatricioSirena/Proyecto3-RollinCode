@@ -46,7 +46,7 @@ const AdminMenu = () => {
         methPost(data);
         handleClose();
         setTimeout(() => {
-            window.location = "/admin";
+            window.location = "/admin.html";
         }, 2000);
     })
 
@@ -86,7 +86,7 @@ const AdminMenu = () => {
         methUpdate(platoSeleccionado.id, platoSeleccionado);
         setModalEditar(false)
         setTimeout(() => {
-            window.location = "/admin";
+            window.location = "/admin.html";
         }, 2000);
     }
 
@@ -106,7 +106,7 @@ const AdminMenu = () => {
                 methUpdate(response.id, response);
             })
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 
@@ -118,7 +118,7 @@ const AdminMenu = () => {
         })
         methDeleteOne(platoSeleccionado.id);
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 
