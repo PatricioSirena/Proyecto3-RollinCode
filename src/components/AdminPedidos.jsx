@@ -42,7 +42,7 @@ const AdminPedidos = () => {
             title: 'Pedido aceptado!'
         })
         setTimeout(() => {
-            window.location = '/admin.html'
+            window.location = '/admin'
         }, 2000);
     }
 
@@ -59,7 +59,7 @@ const AdminPedidos = () => {
             title: 'Pedido eliminado!'
         })
         setTimeout(() => {
-            window.location = '/admin.html'
+            window.location = '/admin'
         }, 2000);
     }
 

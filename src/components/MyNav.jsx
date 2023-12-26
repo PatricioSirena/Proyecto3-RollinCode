@@ -110,7 +110,7 @@ function MyNav({ isLogueado, setIslogueado, admin, setAdmin, setUser }) {
 
                         </Nav>
                             {admin &&
-                                <NavLink to="/admin.html" className={'nav-item nav-link'}>
+                                <NavLink to="/admin" className={'nav-item nav-link'}>
                                 <img src={logoAdmin} className='logoAdmin' alt="logo-admin" />
                                 </NavLink>
                             }
