@@ -42,7 +42,7 @@ const AdminPedidos = () => {
             title: 'Pedido aceptado!'
         })
         setTimeout(() => {
-            window.location = '/admin'
+            window.location = '/admin.html'
         }, 2000);
     }
 
