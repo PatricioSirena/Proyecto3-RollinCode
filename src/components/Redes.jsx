@@ -15,13 +15,13 @@ const Redes = () => {
                     <h5>Seguinos en:</h5>
                     <ul className="iconosRedes">
                         <li>
-                            <a className="iconoRedes" href="#!"><FaInstagram /></a>
+                            <a className="iconoRedes" href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram /></a>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!"><FaFacebook /></a>
+                            <a className="iconoRedes" href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FaFacebook /></a>
                         </li>
                         <li>
-                            <a className="iconoRedes" href="#!"><FaYoutube /></a>
+                            <a className="iconoRedes" href="https://www.youtube.com/" target="_blank" rel="noreferrer"><FaYoutube /></a>
                         </li>
                     </ul>
                 </Col>
@@ -34,8 +34,8 @@ const Redes = () => {
                     <h5 className="link_titulo mb-3">Mas contenido</h5>
                     <ul className="listaLink">
                         <li><NavLink className="links" to='/about'>Acerca de nosotros</NavLink></li>
-                        <li><NavLink className="links" to='/error404'>Acerca de nosotros</NavLink></li>
-                        <li><NavLink className="links" to='/error404'>Acerca de nosotros</NavLink></li>
+                        <li><NavLink className="links" to='https://reprocann.msal.gob.ar/' target="_blank">Acceso a Reprocann!</NavLink></li>
+                        <li><NavLink className="links" to='/error404'>Growshops cercanos!</NavLink></li>
                     </ul>
                 </Col>
             </Row>
