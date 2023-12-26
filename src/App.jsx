@@ -1,57 +1,65 @@
-import { useEffect, useState } from 'react'
-import ContextoCarrito from './context/ContextoCarrito'
-import Axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Admin from "./pages/Administrador";
 import MyNav from "./components/MyNav";
 import Home from './pages/Home';
-import Menu from './pages/Menu';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
-import Error404 from './pages/error404';
-
-
-const rutaUsuarios = import.meta.env.VITE_ENV_URL_USERS;
+import Menu from './pages/Menu';
+import { useEffect, useState } from 'react';
+import ContextoCarrito from './context/ContextoCarrito';
+import Administrador from './pages/Administrador';
+import AboutUs from './pages/AboutUs';
+import Error404 from './pages/Error404'
 
 function App() {
 
-    const [users, setUsers] = useState([])
-    const [products, setProducts] = useState([])
+    const [admin, setAdmin] = useState(false);
+    const [user, setUser] = useState({});
+    const [isLogueado, setIslogueado] = useState(false);
 
-    const backEnd = async () => {
-        try {
-            const result = await Axios.get(rutaUsuarios + '/getUsers');
-            setUsers(result.data.usuarios);
-        } catch (err) {
-            return
+
+    const recuperoUser = () => {
+        const usuario = JSON.parse(window.localStorage.getItem("user"));
+        if (usuario != null) {
+            setUser(usuario)
+            setAdmin(usuario.admin)
+            setIslogueado(true)
         }
     }
 
+    useEffect(() => {
+        recuperoUser()
+    }, [])
+
     return (
         <>
-        {/* <ContextoCarrito>
-        <Router>
-            <MyNav />
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route exact path='/Menu' element={<Menu />} />
-            </Routes>
-            </Router> */}
             <ContextoCarrito>
-            <Router>
-                <MyNav />
+                <Router>
+                    <MyNav
+                        isLogueado={isLogueado}
+                        admin={admin}
+                        setIslogueado={setIslogueado}
+                        setAdmin={setAdmin}
+                        setUser={setUser}
+                    />
                     <Routes>
-                        <Route exact path="/" element={<Home />} />
-                        <Route exact path="/Menu" element={<Menu />} />
-                        <Route exact path="/Admin" element={<Admin />} />
-                        <Route exact path="/Login" element={<Login />} />
-                        <Route exact path="/Registro" element={<Registro />} />
-                        <Route path="/error404" element={<Error404/>} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/menu" element={<Menu
+                            isLogueado={isLogueado}
+                        />} />
+                        <Route path='/admin' element={<Administrador admin={admin} />} />
+                        <Route path="/login" element=
+                            {<Login
+                                setUser={setUser}
+                                setAdmin={setAdmin}
+                                setIslogueado={setIslogueado}
+                                isLogueado={isLogueado}
+                            />} />
+                        <Route path="/registro" element={<Registro />} />
+                        <Route path='/about' element={<AboutUs />} />
+                        <Route path='/error404' element={<Error404/>}/>
                     </Routes>
-            </Router>
-        </ContextoCarrito>
+                </Router>
+            </ContextoCarrito>
         </>
     )
 }

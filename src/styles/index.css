@@ -1,0 +1,880 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*CON ESTO SE VE BIEN EN RESPONSIVE*/
+#root {
+    margin: 0 auto;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* All delay classes will take 2x longer to start */
+:root {
+    --animate-delay: 2s !important;
+    --animate-repeat: 2 !important;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-color: rgb(228, 228, 228);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    /* margin: 5%; */
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center !important;
+}
+
+.portada-descripccion {
+    overflow-y: hidden;
+    padding-right: 50px;
+}
+
+.spoiler {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.spoiler:hover {
+    color: rgb(57, 87, 73);
+}
+
+.card_tittle {
+    font-weight: 600;
+    padding: 5%;
+    font-family: 'inter';
+    color: rgb(10, 10, 10);
+}
+
+.pp {
+    padding: 1%;
+    color: rgb(20, 20, 20);
+}
+
+.carta-index {
+    color: rgb(8, 8, 8);
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    position: relative;
+    overflow: visible;
+}
+
+.carta:hover {
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+
+.animate__backInRight {
+    display: inline-block;
+    margin: 0 0.5rem;
+    text-align: center !important;
+    justify-content: center;
+    animation: backInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    animation-iteration-count: 1;
+}
+
+.row_portada {
+    height: 100vh;
+    width: 100.9%;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+}
+
+.row_portada>h1>p {
+    text-align: center !important;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.portada {
+    background-image: url('./assets/img/back-portada.jpg');
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    overflow-y: hidden;
+
+}
+
+.portada-imagen {
+    justify-content: center;
+}
+
+/*TODOS LOS BOTONES MENOS EL DEL FOOTER*/
+.btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-color: rgb(0, 0, 0);
+    font-weight: 500;
+    border-radius: 10cqw;
+}
+
+.btn:focus {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: white !important;
+    background: rgba(32, 32, 32, 0.993);
+    border-color: rgba(28, 29, 28, 0.993);
+    transition: 1s ease;
+}
+
+.btn>a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.tarjetaInfo {
+    height: 60vh;
+    color: rgb(10, 10, 10) !important;
+    margin-top: 60px;
+    margin-bottom: 10%;
+    vertical-align: middle !important;
+    justify-content: center !important;
+}
+
+.imagenTarjeta {
+    width: 350px;
+    height: 330px;
+    margin-top: 3.5%;
+    display: flex;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.imagenTarjeta:hover {
+    opacity: 0.7;
+}
+
+#tarjeta2 {
+    display: flex;
+    background: linear-gradient(to right, rgb(101, 117, 114), rgba(202, 202, 202, 0.76));
+    margin-left: 13%;
+}
+
+#tarjeta1,
+#tarjeta3 {
+    background: linear-gradient(to right, rgba(228, 243, 238, 0.836), rgba(83, 145, 126, 0.993));
+    margin-right: 13%;
+}
+
+#tarjeta2 .uno {
+    order: 1;
+}
+
+#tarjeta2 .dos {
+    order: 0;
+}
+
+/*=====ABOUT======*/
+.team {
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+
+.team:hover {
+    color: rgb(50, 107, 99);
+}
+
+.cuerpo-about {
+    margin-bottom: 5%;
+}
+
+.caja__aboutUs {
+    display: grid !important;
+    text-align: center;
+}
+
+.filaAboutUs {
+    margin: auto !important;
+}
+
+.colAboutUs {
+    display: grid;
+    /*con esto centro*/
+}
+
+.profile-AboutUs1 {
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.profile-AboutUs2 {
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza2.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.profile-AboutUs3 {
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.profile-AboutUs4 {
+    background-color: rgb(118, 121, 121);
+    background-image: url(../img/pieza3.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.profile-AboutUs1:hover {
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.profile-AboutUs2:hover {
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza2.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.profile-AboutUs3:hover {
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza1.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.profile-AboutUs4:hover {
+    transition: 2s linear;
+    background-color: rgb(95, 160, 146);
+    background-image: url(../img/pieza3.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.foto-about {
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+.cuerpoTarjeta{
+    margin-top: 4%;
+}
+
+/*===================================================================================*/
+
+@media screen and (min-width: 280px) and (max-width: 281px) {
+    .spoiler {
+        margin: 40px 0px;
+    }
+
+    .carta-index {
+        width: 70vw;
+        height: 330px;
+        margin-bottom: 3rem;
+    }
+
+    .imagen-carta-principal {
+        width: 100%;
+        height: 60%;
+    }
+
+    .botonCarta {
+        font-size: 12px;
+        margin-top: -3px;
+    }
+    #tarjeta2{
+        display: block;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    #tarjeta2 .dos {
+        order: 0;
+    }
+    .tarjetaInfo{
+        height: 350px;
+    }
+    .card_tittle{
+        font-size: 16px;
+    }
+    .pp{
+        font-size: 13px;
+    }
+    .dos{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .imagenTarjeta{
+        width: 150px;
+        height: 150px;
+        margin-top: -10px;
+    }
+    .cuerpoTarjeta{
+        margin-top: 1%;
+    }
+    .rowCartas{
+        margin-bottom: -20%;
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+    /*(móvil pequeño)*/
+    .card_tittle{
+        margin-top: -35px;
+    }
+    .imagenTarjeta {
+        width: 260px;
+        margin-top: 3.5%;
+        margin: 0 auto;
+    }
+
+    #tarjeta1,
+    #tarjeta3,
+    #tarjeta2 {
+        display: block !important;
+    }
+
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index {
+        margin: 0 auto !important;
+        margin-bottom: 6% !important;
+        margin-top: 4% !important;
+    }
+
+    .filaAboutUs,
+    .profile-AboutUs1,
+    .profile-AboutUs2,
+    .profile-AboutUs3,
+    .profile-AboutUs4,
+    .foto-about {
+        display: inline-block !important;
+    }
+
+    .foto-about {
+        width: 200px !important;
+    }
+
+    .profile-AboutUs1 {
+        background-image: url(../img/pieza2.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs2 {
+        background-image: url(../img/pieza1.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs3 {
+        background-image: url(../img/pieza1.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs4 {
+        background-image: url(../img/pieza3.jpg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+
+    /*(ordenador portátil medio)*/
+
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index {
+        margin: 0 auto !important;
+        margin-bottom: 6% !important;
+        margin-top: 3%;
+        width: 300px;
+        height: 400px;
+    }
+
+    .imagen-carta-principal {
+        width: 300px;
+        height: 250px;
+    }
+
+    .tarjetaInfo{
+        height: 270px;
+        padding-top: 20px;
+    }
+
+    .imagenTarjeta {
+        width: 210px;
+        height: 210px;
+        margin-top: 3.5%;
+        margin: 0 auto;
+    }
+
+    .profile-AboutUs1 {
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs2 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs3 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs4 {
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #tarjeta2 {
+        display: flex;
+        background: linear-gradient(to right, rgb(101, 117, 114), rgba(202, 202, 202, 0.76));
+        margin-left: 13%;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    
+    #tarjeta2 .dos {
+        order: 0;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+
+    /*(móvil medio)*/
+    .imagenTarjeta {
+        width: 240px;
+        height: 240px;
+        margin-top: 3.5%;
+        margin: 0 auto;
+    }
+
+    .imagenTarjeta,
+    #tarjeta1,
+    #tarjeta3,
+    #tarjeta2 {
+        display: block !important;
+    }
+
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index {
+        margin-top: 4% !important;
+        margin-bottom: 6% !important;
+    }
+
+    .profile-AboutUs1 {
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs2 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs3 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs4 {
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+
+    /*(escritorio medio)*/
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .profile-AboutUs1 {
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs2 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs3 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs4 {
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .tarjetaInfo {
+        max-height: 350px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+    /*(móvil grande)*/
+    .carta {
+        color: rgb(0, 0, 0);
+        margin: 0 auto !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: 1s linear;
+        transition: 1s linear;
+        width: 20rem !important;
+        position: relative;
+        overflow: visible;
+    }
+
+    .carta-index {
+        margin-bottom: 6% !important;
+    }
+
+    .profile-AboutUs1 {
+        background-image: url(../img/pieza2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs2 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs3 {
+        background-image: url(../img/pieza1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-y: bottom;
+    }
+
+    .profile-AboutUs4 {
+        background-image: url(../img/pieza3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+}
+
+/* ------------------------------------------------------------------- */
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .spoiler {
+        font-size: 23px;
+        margin: 20px;
+    }
+
+    .carta-index {
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+
+    .imagen-carta-principal {
+        width: 200px;
+        height: 170px;
+    }
+
+    .cuerpoTarjeta {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .botonCarta {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .textoCarta {
+        font-size: 13px;
+        margin-bottom: 9px;
+    }
+    #tarjeta2{
+        display: block;
+    }
+    #tarjeta2 .uno {
+        order: 1;
+    }
+    
+    #tarjeta2 .dos {
+        order: 0;
+    }
+    .tarjetaInfo{
+        height: 250px;
+        margin-top: 25px;
+    }
+    .card_tittle{
+        font-size: 13px;
+    }
+    .pp{
+        margin-top: -8px;
+        font-size: 9px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 140px;
+        height: 140px;
+    }
+    .dos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+    .spoiler {
+        font-size: 23px;
+        margin: 20px;
+    }
+
+    .carta-index {
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+
+    .imagen-carta-principal {
+        width: 200px;
+        height: 170px;
+    }
+
+    .cuerpoTarjeta {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .botonCarta {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .textoCarta {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+    .tarjetaInfo{
+        height: 270px;
+        margin-top: -5px;
+    }
+    .card_tittle{
+        font-size: 13px;
+        margin-top: -35px;
+    }
+    .pp{
+        margin-top: -8px;
+        font-size: 9px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .carta-index {
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+
+    .imagen-carta-principal {
+        width: 200px;
+        height: 170px;
+    }
+
+    .textoCarta {
+        font-size: 12px;
+    }
+
+    .botonCarta {
+        margin: 0 auto;
+        width: 70px;
+        height: 30px;
+    }
+
+    .botonCarta a {
+        display: block;
+        font-size: 9px;
+        align-items: center;
+    }
+    .tarjetaInfo{
+        height: 340px;
+        margin-top: -5px;
+    }
+    .card_tittle{
+        font-size: 20px;
+        /* margin-top: -35px; */
+    }
+    .pp{
+        /* margin-top: -8px; */
+        font-size: 14px;
+    }
+    .imagenTarjeta{
+        margin-top: -8px;
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .carta-index {
+        width: 200px;
+        height: 320px;
+        margin: 15px auto;
+        align-items: center;
+    }
+
+    .imagen-carta-principal {
+        width: 200px;
+        height: 170px;
+    }
+
+    .textoCarta {
+        font-size: 12px;
+    }
+
+    .botonCarta {
+        margin: 0 auto;
+        width: 70px;
+        height: 30px;
+    }
+
+    .botonCarta a {
+        display: block;
+        font-size: 9px;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .tarjetaInfo{
+        height: 310px;
+        padding-top: 20px;
+    }
+    .imagenTarjeta {
+        width: 240px;
+        height: 240px;
+        margin-top: 3.5%;
+        margin: 0 auto;
+    }
+    .cuerpoTarjeta{
+        margin-top: 2%;
+    }
+}

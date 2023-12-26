@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
 
-export const CarritoContexto = createContext(null);
+export const CarritoContexto = createContext({});
 
 const ContextoCarrito = ({ children }) => {
 

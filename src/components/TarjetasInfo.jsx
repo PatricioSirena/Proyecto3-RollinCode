@@ -1,25 +1,26 @@
 import TarjetaInfo from "./TarjetaInfo";
-import imagen1 from "../img/burger_4.jpg";
-import imagen2 from "../img/coquita.jpg";
-import imagen3 from "../img/burger_mano.jpg";
+import imagen1 from "../img/POrg.png";
+import imagen2 from "../img/cerv.png";
+import imagen3 from "../img/flores.png";
+
 
 const tarjetas = [
     {
         id: 'tarjeta1',
-        titulo: 'Conocé nuestro menú WE MAKE BURGERS',
-        texto: 'Nuestras burgers están hechas con carne 100% Angus.',
+        titulo: 'Productos orgánicos de Productores regionales',
+        texto: 'Todos nuestros platos estan realizados con productos orgánicos y libres de pesticidas, provenientes de granjas y cultivos regionales.',
         imagen: imagen1
     },
     {
         id: 'tarjeta2',
-        titulo: '20% OFF todos los jueves',
-        texto: 'Recibimos todos los medios de pago. :)',
+        titulo: 'Cervezas Artesanales',
+        texto: 'Contamos con una amplia variedad de Cervezas Artesanales y opciones libres de TACC.',
         imagen: imagen2
     },
     {
         id: 'tarjeta3',
-        titulo: 'Burger WARREN la recomendada del día',
-        texto: 'Dos medallones de 100 gr de pollo, doble queso cheddar, tomate, lechuga y nuestra exquisita salsa Ronnie.',
+        titulo: 'Cultivo Seguro',
+        texto: 'Trabajamos con sustratos y productos orgánicos para asegurar calidad y trazabilidad en nuestros cultivos',
         imagen: imagen3
     }
 ]
@@ -30,7 +31,7 @@ const TarjetasInfo = () => {
         <>
             {
                 tarjetas.map(tarjeta => (
-                    <div key={tarjeta.id}>
+                    <div className="mt-5" key={tarjeta.id}>
                         <TarjetaInfo
                             id={tarjeta.id}
                             titulo={tarjeta.titulo}

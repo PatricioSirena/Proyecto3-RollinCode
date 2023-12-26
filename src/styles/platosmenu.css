@@ -1,52 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background: linear-gradient(to left, rgba(244, 250, 244, 0.979), rgba(182, 184, 179, 0.952));
+body {
     font-family: 'Inter', sans-serif;
-    animation: cambiar 10s ease infinite !important;
     position: relative;
 }
 
-.text-menu{
+.text-menu {
     font-weight: 700 !important;
     margin-top: 5%;
-    color: #a1874a;
+    color: rgb(51, 110, 93);
     -webkit-transition: color 1s linear;
     transition: color 1s linear;
 }
-.text-menu:hover{
-    color: #375834;
+
+.text-menu:hover {
+    color: #161616;
 }
 
 
-.card {
-    margin: 0 auto !important;
+.cartaaaa-menu {
+    /* margin: 0 auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: .8em;
     background: #f5f5f5;
     position: relative;
     overflow: visible;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    color: #375834;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #000000;
 }
+
 .card-info::-webkit-scrollbar {
     display: none !important;
 }
-.card-footer::-webkit-scrollbar{
+
+.card-footer::-webkit-scrollbar {
     display: none !important;
 }
 
-.card-img {
+.imagen-menu {
     border-radius: .5rem;
-    transition: .3s ease;
     height: 40%;
     width: 100%;
+    object-fit: cover;
+    background-color: #86B6A3;
 }
 
 .card-info {
     padding-top: 10%;
+    height: 35%;
+    text-wrap: balance;
 }
 
 svg {
@@ -64,7 +71,7 @@ svg {
 }
 
 /*Text*/
-.text-title {
+.priceItem {
     font-weight: 900;
     font-size: 1.2em;
     line-height: 1.5;
@@ -77,30 +84,400 @@ svg {
 
 /*Button*/
 .card-button {
-    border: 1px solid #a3a7a1;
+    width: 70px;
+    height: 50px;
+    border: 1px solid rgb(47, 87, 74) !important;
     display: flex;
-    padding: .8em;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 100px !important;
     transition: .5s ease-in-out;
-    background-color: #ddd;
-    color: #375834;
+    background-color: rgb(47, 87, 74) !important;
+    /* margin-left: 2% !important; */
+}
+
+.svg-icon{
+    width: 60px;
+    margin-left: -1px;
+}
+
+.textoEliminar{
+    font-size: 10px;
 }
 
 /*Hover*/
-.card-img:hover {
-    transform: translateY(-25%);
-    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(103, 145, 102, 0.795) 0px 8px 16px -8px;
+.imagen-menu:hover {
+    transform: translateY(-25px) !important;
+    transition: 0.5s linear;
+    box-shadow: rgba(39, 39, 39, 0.25) 0px 13px 47px -5px, rgba(88, 88, 88, 0.795) 0px 8px 16px -8px;
 }
 
 .card-button:hover {
-    border: 1px solid #487745;
-    background-color: #4b7547;
+    border: 1px solid rgb(79, 117, 105) !important;
+    background-color: rgb(66, 102, 91) !important;
 }
 
-/*Animation*/
-@keyframes cambiar {
-    0%{background-position: 0 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0 50%;}
+.accesoMenu {
+    list-style: none;
+    margin-right: 22px;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+.linkMenu a {
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 600;
+    color: rgb(51, 110, 93);
+}
+.accesoMenu{
+    margin-top: 130px;
+    margin-right: 1.8rem;
+}
+
+.itemCantidad{
+    font-weight: bold;
+}
+
+/*********************************************************/
+
+@media screen and (min-width: 280px) and (max-width: 285px) {
+    .accesoMenu{
+        margin-top: 90px;
+        margin-left: 0.6rem;
+    }
+    .linkMenu a {
+        text-decoration: none;
+        font-size: medium;
+        font-weight: 500;
+        margin: 10px;
+    }
+
+    .text-menu {
+        font-size: 23px;
+    }
+
+    .cartaaaa-menu {
+        width: 230px !important;
+        height: 350px !important;
+        margin-left: 1px;
+    }
+
+    .card-footer {
+        height: 80px;
+    }
+
+    .card-button {
+        width: 50px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .priceItem {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .svg-icon{
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 321px) {
+    .accesoMenu{
+        margin-top: 90px;
+        margin-bottom: 30px;
+        margin-left: 8px;
+    }
+    .linkMenu a{
+        font-size: 18px;
+        margin: 13px;
+    }
+    .cartaaaa-menu{
+        width: 80vw !important;
+        height: 370px !important;
+    }
+    .card-footer{
+        height: 90px;
+    }
+    .card-button{
+        width: 60px;
+        height: 40px;
+        margin: 3px;
+    }
+    .priceItem{
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 361px) {
+
+    /*(móvil pequeño)*/
+    .accesoMenu{
+        margin-top: 100px;
+        margin-left: 5px;
+    }
+    .linkMenu a{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .cartaaaa-menu {
+        width: 300px !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-footer{
+        height: 110px;
+    }
+
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+        margin: 0.2rem;
+    }
+
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 391px) {
+
+    /*(móvil medio)*/
+    .accesoMenu{
+        margin-top: 90px;
+        margin-left: 6px;
+    }
+    .linkMenu a{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .text-menu{
+        margin-top: 35px;
+    }
+    .cartaaaa-menu {
+        width: 80vw !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-button {
+        width: 65px;
+        border: 1px solid rgb(47, 87, 74) !important;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+    .card-footer{
+        height: 100px;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 415px) {
+    .accesoMenu{
+        margin-top: 90px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
+    .card-footer{
+        height: 110px;
+    }
+    .textoEliminar{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 431px) {
+    .accesoMenu{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .card-footer{
+        height: 100px;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 541px) {
+    .accesoMenu{
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
+    .cartaaaa-menu{
+        width: 75vw !important;
+        height: 550px !important;
+    }
+    .text-title{
+        font-size: 30px;
+    }
+    .card-info{
+        font-size: large;
+    }
+    .card-footer{
+        height: 140px;
+    }
+    .card-button{
+        margin: 10px;
+        width: 100px;
+        height: 80px;
+    }
+    .svg-icon{
+        width: 80px;
+    }
+    .textoEliminar{
+        font-size: 20px;
+    }
+    .priceItem{
+        font-size: 23px;
+    }
+    .itemCantidad{
+        font-size: 23px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+    /*(móvil grande)*/
+    .cartaaaa-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 770px) {
+
+    /*(ordenador portátil medio)*/
+    .accesoMenu{
+        margin-top: 100px;
+    }
+    .linkMenu a{
+        font-size: x-large;
+    }
+    .cartaaaa-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .card-footer{
+        height: 100px;
+    }
+
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 821px) {}
+
+
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+
+    /*(escritorio medio)*/
+    .cartaaaa-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-button {
+        border: 1px solid rgb(47, 87, 74) !important;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s ease-in-out;
+        background-color: rgb(47, 87, 74) !important;
+    }
+
+    svg-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 912px) and (max-width: 913px) {}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .accesoMenu{
+        margin-top: 130px;
+    }
+    .card-footer{
+        height: 110px;
+    }
+    .svg-icon{
+        width: 55px;
+    }
+    .textoEliminar{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+    /*(escritorio grande)*/
+    .cartaaaa-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }

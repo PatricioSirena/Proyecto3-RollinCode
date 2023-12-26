@@ -1,69 +1,478 @@
-.imagenPortada{
-    /*background-image: url('../img/Portada.jpeg');*/
-    background: linear-gradient(to top, rgba(228, 243, 228, 0.836), rgb(73, 119, 75));
+.containerPortada {
+    height: 600px;
+    margin-top: 62px;
+    background-image: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.imagen_portada_logo{
+
+.imagen_portada_logo {
     animation: zoom 5s infinite;
 }
+
 @keyframes zoom {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
-.tituloo{
-    color: white !important;
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.titulo-portada {
+    color: rgb(0, 0, 0) !important;
     font-family: 'Archivo Black', sans-serif;
-    margin-top: 10% !important;
+    /* margin-top: 10% !important; */
     font-size: 40px;
     -webkit-transition: font-size 1.5s ease;
     transition: font-size 1.5s ease;
 }
-.tituloo:hover{
-  font-size: 50px;
-}
-.txt-portada{
-    color: white;
-}
-.container-txt{
-    margin-right: 4%;
+
+.tituloo:hover {
+    font-size: 40px;
 }
 
-.logoPortadaa , .container-txt{
-    display: block !important;
-    margin-top: 6%;
+.txt-portada {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
 }
 
-.logoPortadaa , .imagen_portada_yunga{
-    margin-left: 14%;
-    margin-top: 9.5%;
+.container-txt {
+    text-wrap: balance;
+    margin-top: 2%;
 }
-.imagen_portada_yunga{
+
+.imagen_portada_yunga {
+    width: 100%;
+    margin-left: 6%;
     transition: transform 0.2s ease;
     cursor: pointer;
 }
-.imagen_portada_yunga:hover{
+
+.imagen_portada_yunga:hover {
     transform: scale(1.1);
 }
 
-.boton-portada{
-    background-color: rgb(175, 141, 101);
-    border-color: rgb(175, 141, 101);
-    width: 50%;
+.boton-portada {
+    width: 30%;
     margin-bottom: 25%;
 }
-.boton-portada:focus{
+
+.boton-portada:focus {
     text-decoration: none;
 }
-.boton-portada:hover{
+
+.boton-portada:hover {
     color: white !important;
-    background: rgb(190, 153, 110);
-    border-color: rgb(190, 153, 110);
     transition: 2s ease;
+}
+
+.imagen_portada_logo{
+    width: 400px;
+    /* margin-left: -90px; */
+}
+
+.logoPortada{
+    margin-top: 5%;
+}
+
+
+/*********************************************************/
+
+@media screen and (min-width: 260px) and (max-width: 319px) {
+    .containerPortada {
+        height: 600px;
+        margin-top: 21%;
+        background-image: url(../img/fondo-portada3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        width: 90vw;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    .titulo-portada{
+        font-size: 30px;
+    }
+    .txt-portada{
+        font-size: medium;
+    }
+    .container-txt {
+        margin: 0 auto;
+    }
+    .boton-portada {
+        width: 50%;
+        height: 6%;
+        margin-bottom: 15%;
+    }
+    .logoPortada{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px){
+    .containerPortada{
+        height: 540px;
+        margin-top: 56px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .titulo-portada{
+        font-size: 30px;
+    }
+    .txt-portada{
+        font-size: medium;
+    }
+    .boton-portada {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 361px) {
+    .containerPortada {
+        height: 550px;
+        margin-top: 16%;
+        background-image: url(../img/fondo-portada3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        padding: 0px;
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin-left: 10%;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    .container-txt {
+        margin: 0 auto;
+    }
+    .boton-portada {
+        width: 50%;
+        height: 6%;
+        margin-bottom: 25%;
+    }
+    .logoPortada{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px){
+    .containerPortada{
+        height: 550px;
+        margin-bottom: 2%;
+        margin-top: 15%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 325px;
+        margin-top: -15px;
+        margin-left: 10%;
+    }
+    .titulo-portada{
+        font-size: 30px;
+    }
+    .txt-portada{
+        font-size: medium;
+    }
+    .boton-portada {
+        width: 50%;
+    }
+}
+
+/* @media screen and (min-width: 375px) and (max-width: 667px) {
+    .containerPortada {
+        height: 550px;
+        margin-top: 16%;
+        background-image: url(../img/fondo-portada2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+    .imagen_portada_yunga {
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin-top: 1%;
+        margin-left: -3%;
+        animation: zoom 5s infinite;
+    }
+
+    .container-txt {
+        margin: 0 auto !important;
+    }
+    .logoPortada{
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 412px) and (max-width: 420px) {
+    .containerPortada {
+        height: 520px;
+        margin-top: 14%;
+        background-image: url(../img/fondo-portada3.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        padding: 0px;
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin-left: 10%;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin-top: 1%;
+        margin-left: -3%;
+        animation: zoom 5s infinite;
+    }
+    .container-txt {
+        margin: 0 auto !important;
+    }
+    .boton-portada {
+        width: 50%;
+        height: 6%;
+        margin-bottom: 25%;
+    }
+    .logoPortada{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px){
+    .containerPortada{
+        height: 600px;
+        margin-top: 56px;
+        margin-bottom: 2%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+        margin-left: 10%;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 431px){
+    .containerPortada{
+        height: 620px;
+        margin-bottom: 2%;
+        margin-top: 14%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 690px){
+    .containerPortada{
+        height: 520px;
+        margin-bottom: 2%;
+        margin-top: 11%;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+    .containerPortada {
+        height: 800px;
+        margin-top: 0%;
+        background-image: url(../img/fondo-portada2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .div-portada-cel{
+        margin: 0 auto !important;
+    }
+
+    .imagen_portada_yunga {
+        margin: 0 auto;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .imagen_portada_logo {
+        width: 1px;
+        margin: 0 auto;
+        margin-left: -1%;
+        animation: zoom 5s infinite;
+    }
+
+    .container-txt {
+        margin: 0 auto !important;
+    }
+    .logoPortada{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 770px) {
+    .containerPortada {
+        height: 500px;
+        margin-top: 8%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .imagen_portada_yunga{
+        margin-left: 8%;
+    }
+    .logoPortada{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .containerPortada{
+        height: 500px;
+        margin-bottom: 2%;
+        margin-top: 59px;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .logoPortada{
+        display: none;
+    }
+    .imagen_portada_yunga{
+        margin-left: 5%;
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+    .containerPortada{
+        height: 500px;
+        margin-bottom: 2%;
+        margin-top: 64px;
+    }
+    .container-txt{
+        margin: 0 auto;
+    }
+    .imagen_portada_logo{
+        width: 370px;
+        margin-left: -110px;
+    }
+    .logoPortada{
+        margin-top: 3%;
+    }
+    .imagen_portada_yunga{
+        width: 350px;
+        margin-top: -15px;
+    }
+    .titulo-portada{
+        font-size: 40px;
+    }
+    .txt-portada{
+        font-size: large;
+    }
+    .boton-portada {
+        width: 20%;
+    }
 }

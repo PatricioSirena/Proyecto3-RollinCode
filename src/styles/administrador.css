@@ -1,0 +1,168 @@
+.containerAdmin {
+    margin-top: 80px;
+    font-size: 13px;
+    text-wrap: balance;
+}
+
+.table {
+    width: 93%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    padding: 8px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+.table th {
+    background-color: rgb(62, 114, 101);
+    color: black;
+    font-size: 13px;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgba(14, 14, 14, 0.349);
+}
+
+.indiceAdmin {
+    display: none;
+}
+
+.accesosAdmin {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.accesosAdmin li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(62, 114, 101);
+}
+
+.platoActivo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.botonesModal {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnAgregar {
+    font-size: 1rem !important;
+}
+
+.botonAdmin {
+    font-size: 0.7rem !important;
+    margin: 0.2rem;
+}
+
+label {
+    display: block;
+    margin: 10px;
+    margin-left: 1rem;
+}
+
+.form-control {
+    width: 95% !important;
+    margin: 0 auto;
+}
+
+.errorModal {
+    margin-left: 1rem;
+    font-size: small;
+}
+
+/* ================  RESPONSIVE  ================= */
+
+@media screen and (max-width: 1025px) {
+    .indiceAdmin {
+        display: block;
+        margin-right: 12px;
+    }
+
+    .componentePedidos {
+        margin-bottom: 50px;
+    }
+
+    .botonAdmin {
+        font-size: 0.49rem !important;
+        margin: 0.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerAdmin {
+        margin-left: -15px;
+        margin-right: 5px;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        /* text-wrap: balance; */
+        word-wrap: break-word;
+        text-align: right;
+        position: relative;
+        margin-right: -20px;
+    }
+
+    .table td::before {
+        color: rgb(62, 114, 101);
+        content: attr(data-label);
+        position: static;
+        display: flex;
+        justify-content: start;
+        width: 20%;
+        padding: 0.2rem;
+        margin-left: 5px;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .table td,
+    .table th {
+        padding: 8px 3px;
+        border: 1px solid rgba(209, 207, 207, 0.24);
+    }
+}
+
+@media (max-width: 320px){
+    .accesosAdmin{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px){
+    .componentePedidos,
+    .componenteUsuaruis{
+        margin-left: 20px;
+    }
+    #usuarios{
+        margin-left: 140px;
+    }
+}
