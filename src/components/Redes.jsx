@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logoPagina from "../img/logonuevo.jpg";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -26,9 +26,9 @@ const Redes = () => {
                     </ul>
                 </Col>
                 <Col lg={4} md={4} className="p-1 text-center">
-                    <a href="#promo">
+                    <Link to={'/'}>
                     <img src={logoPagina} className="logoFooter" alt="" />
-                    </a>
+                    </Link>
                 </Col>
                 <Col lg={4} md={4} className="p-1  text-center listaFooter">
                     <h5 className="link_titulo mb-3">Mas contenido</h5>

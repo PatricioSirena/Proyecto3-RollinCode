@@ -35,10 +35,14 @@ const Registro = () => {
 
                     if (!valores.nombre) {
                         errores.nombre = 'Por favor ingrese el nombre.'
+                    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/g.test(valores.nombre)) {
+                        errores.nombre = 'Solo se aceptan letras en el nombre.'
                     }
 
                     if (!valores.apellido) {
                         errores.apellido = 'Por favor ingrese el apellido.'
+                    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/g.test(valores.apellido)) {
+                        errores.apellido = 'Solo se aceptan letras en el apellido.'
                     }
 
                     if (!valores.correo) {
